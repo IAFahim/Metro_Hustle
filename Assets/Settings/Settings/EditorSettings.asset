@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8edbd0fa5e59a9344a83df1b3177d250, type: 3}
+  m_Name: EditorSettings
+  m_EditorClassIdentifier: 
+  paths:
+  - Key: settings
+    Path: Assets/Settings/Settings
+  - Key: settings.resource
+    Path: Assets/Settings/
+  - Key: object.definitions
+    Path: Assets/Settings/Definitions
+  - Key: object.groups
+    Path: Assets/Settings/Groups
+  - Key: bl.subscene-set
+    Path: Assets/Settings/Scenes/
+  - Key: bl.subscene-editor-set
+    Path: Assets/Settings/Scenes/Editor
+  - Key: bl.subscene-asset-set
+    Path: Assets/Settings/Scenes/Assets
+  - Key: definitions
+    Path: Assets/Settings/Definitions
+  - Key: reaction.conditions
+    Path: Assets/Settings/Schemas/Events/
+  - Key: stats.stats
+    Path: Assets/Settings/Schemas/Stats/
+  - Key: stats.intrinsics
+    Path: Assets/Settings/Schemas/Intrinsics/
+  - Key: distort.control
+    Path: Assets/Settings/Schemas/Control/
+  prebakeScenes: []
+  startupScene: {fileID: 0}
+  defaultSettingsAuthoring: {fileID: 0}
+  settingAuthoring: []

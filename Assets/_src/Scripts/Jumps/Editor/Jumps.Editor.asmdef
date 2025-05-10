@@ -1,0 +1,34 @@
+{
+    "name": "Jumps.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Entities",
+        "Unity.Transforms",
+        "Unity.Entities.Hybrid",
+        "Unity.Burst",
+        "Unity.Collections",
+        "Unity.Mathematics",
+        "Jumps.Runtime",
+        "ALINE",
+        "Easings.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_EDITOR"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.arongranberg.aline",
+            "expression": "1.0.0",
+            "define": "Aline"
+        }
+    ],
+    "noEngineReferences": false
+}

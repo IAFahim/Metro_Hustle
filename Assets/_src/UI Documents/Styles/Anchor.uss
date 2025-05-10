@@ -1,0 +1,12 @@
+:root {
+    /* Workaround for missing font in build when using the name Inter-Regular */
+    --appui-font-weights-100: url("Inter-Normal.ttf");
+}
+
+.appui {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.appui-navhost__container > .appui-navhost__item {
+    background-color: rgba(0, 0, 0, 0);
+}

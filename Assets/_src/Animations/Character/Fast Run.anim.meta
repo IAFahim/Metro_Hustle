@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_src/Animations/Character/Fast Run.anim.meta
+guid: 32f3c3bbfd9755843813689e3031f92c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+========
+guid: fa2ce7817333a28448f64360eef8e5bc
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> c809bc059118455ca00bae8b1c1c98cd12294d34:Assets/_src/Animations.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

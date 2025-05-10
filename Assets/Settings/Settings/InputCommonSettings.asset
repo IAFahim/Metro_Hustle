@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e76863afa56804993e13a71f71aa07, type: 3}
+  m_Name: InputCommonSettings
+  m_EditorClassIdentifier: 
+  asset: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  defaultEnabled:
+  - Player
+  - Debug
+  - UI
+  cursorPosition: {fileID: -1654692200621890270, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  settings:
+  - rid: 2087246033909186775
+  debugSettings:
+  - rid: 2258541242412171264
+  references:
+    version: 2
+    RefIds:
+    - rid: 2087246033909186775
+      type: {class: InputComponent/Settings, ns: BovineLabs.Core.Input, asm: RawInput}
+      data:
+        Name: InputComponent
+        MoveDelta: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    - rid: 2258541242412171264
+      type: {class: InputCoreDebug/Settings, ns: BovineLabs.Core.Input, asm: BovineLabs.Core.Extensions.Debug}
+      data:
+        Name: InputCoreDebug
+        TimeScaleDouble: {fileID: 4785413866448883788, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+        TimeScaleHalve: {fileID: -4621389477886909220, guid: 052faaac586de48259a63d0c4782560b, type: 3}

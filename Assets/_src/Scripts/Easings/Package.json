@@ -1,0 +1,34 @@
+{
+    "author": {
+        "email": "iafahim.dev@gmail.com",
+        "name": "Md. Ishtiaq Ahamed Fahim",
+        "url": "https://github.com/IAFahim"
+    },
+    "changelogUrl": "https://github.com/IAFahim/Easings",
+     "dependencies": {
+        "com.unity.entities": "1.7.2",
+        "com.unity.burst": "1.7.2",
+        "com.unity.collections": "1.4.0",
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.modules.physics": "1.0.0",
+        "com.arongranberg.aline": "1.4.0-exp.2"
+    },
+    "description": "Easings",
+    "displayName": "Easings",
+    "documentationUrl": "https://github.com/IAFahim/Easings",
+    "keywords": [
+        "ecs",
+        "Easings"
+    ],
+    "name": "easings",
+    "samples": [
+        {
+            "description": "Examples",
+            "displayName": "Sample",
+            "path": "Sample~"
+        }
+    ],
+    "unity": "6000.0.44f1",
+    "unityRelease": "44f1",
+    "version": "0.1.0"
+}
