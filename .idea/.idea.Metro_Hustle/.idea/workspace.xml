@@ -6,27 +6,40 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/ECS-Spline.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/ECS-Spline.Editor.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/SplineDebugSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/SplineDebugSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/CurveUtilityInternal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/CurveUtilityInternal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlob.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlobFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlobFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineContainerBlob.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineContainerBlob.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineContainerBlobFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineContainerBlobFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/SplineContainerBlobComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/SplineContainerBlobComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/SplineMovementSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/SplineMovementSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/SplinePositionData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/SplinePositionData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineContainerAuthoring.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineContainerAuthoring.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplinePositionAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplinePositionAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/copy.cs.md.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/copy.cs.md.py.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/image.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/SplinePositionData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/SplinePositionData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplinePositionAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplinePositionAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Editor/SplineMeshEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Editor/SplineMeshEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Editor/SplineMeshResolutionEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Editor/SplineMeshResolutionEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMesh.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMesh.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Misc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Misc/AnimateTextureOffset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Misc/AnimateTextureOffset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Misc/ConveyorBeltMover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Misc/ConveyorBeltMover.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Samples.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Samples.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Conveyors/Materials/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Conveyors/Materials/New Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Conveyors/Materials/Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Conveyors/Materials/Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Conveyors/Scenes/Conveyors.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Conveyors/Scenes/Conveyors.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Roads/Scenes/Roads.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Roads/Scenes/Roads.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Train Tracks/Scenes/Train Tracks.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Train Tracks/Scenes/Train Tracks.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineMovements.Data.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineMovements.Data.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/MoveAlongSplineSystemDebug.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/MoveAlongSplineSystemDebug.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,20 +61,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Spline__Movement",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Spline__Movement&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.2f1\Editor\Unity.exe" />
@@ -92,15 +105,13 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="16996">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="16996" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -118,6 +129,9 @@
       <updated>1746938402405</updated>
       <workItem from="1746938404343" duration="2839000" />
       <workItem from="1746946496871" duration="1674000" />
+      <workItem from="1746955622992" duration="5317000" />
+      <workItem from="1746964447765" duration="2196000" />
+      <workItem from="1746970602831" duration="1096000" />
     </task>
     <servers />
   </component>

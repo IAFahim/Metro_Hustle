@@ -1,6 +1,5 @@
 ﻿using BovineLabs.Core;
 using Drawing;
-using ECSSplines.Runtime;
 using ECSUnitySplineAddon.Runtime.Datas;
 using Unity.Burst;
 using Unity.Collections;
@@ -36,10 +35,9 @@ namespace ECSUnitySplineAddon.Editor
             // var debug = SystemAPI.GetSingleton<BLDebug>();
             ref var distanceLut = ref nativeSplineBlobComponentData.Value.Value.DistanceLUT;
             ref var length = ref nativeSplineBlobComponentData.Value.Value.Length;
-            var lutResolution = NativeSplineBlobFactory.LUT_RESOLUTION;
+            
             for (int i = 0, seg = 0; i < distanceLut.Length; i++, seg++)
             {
-                if (seg == lutResolution) seg = -1;
                 var t = distanceLut[i].Distance / length;
                 var position = nativeSplineBlobComponentData.Value.Value.EvaluatePosition(t);
                 builder.Cross(position);

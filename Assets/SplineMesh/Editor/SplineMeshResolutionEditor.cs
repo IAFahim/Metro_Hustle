@@ -1,8 +1,8 @@
+using SplineMesh.SplineMesh.Runtime.Core;
 using UnityEditor;
 using UnityEngine;
-using SplineMeshTools.Core;
 
-namespace SplineMeshTools.Editor
+namespace SplineMesh.Editor
 {
     [CustomEditor(typeof(SplineMeshResolution))]
     public class SplineMeshResolutionEditor : UnityEditor.Editor
@@ -17,7 +17,7 @@ namespace SplineMeshTools.Editor
         {
             GUILayout.Space(10f);
 
-            SplineMesh splineMesh = (SplineMesh)target;
+            SplineMeshResolution splineMeshResolution = (SplineMeshResolution)target;
 
             // Generate Mesh Button with custom color
             GUIStyle buttonStyle = new GUIStyle(GUI.skin.button);
@@ -35,7 +35,7 @@ namespace SplineMeshTools.Editor
 
             if (GUILayout.Button("Generate Mesh", buttonStyle))
             {
-                splineMesh.GenerateMeshAlongSpline();
+                splineMeshResolution.GenerateMeshAlongSpline();
             }
 
             GUI.backgroundColor = originalColor;
