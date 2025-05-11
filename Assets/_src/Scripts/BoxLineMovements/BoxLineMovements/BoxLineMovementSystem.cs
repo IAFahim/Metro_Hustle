@@ -14,7 +14,7 @@ namespace _src.Scripts.BoxLineMovements.BoxLineMovements
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-
+            
         }
 
         [BurstCompile]
