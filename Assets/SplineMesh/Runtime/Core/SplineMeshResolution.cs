@@ -35,7 +35,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
 
         [Tooltip("The UV Resolutions along spline(s). Count must match the same number of splines in the container.")]
         [SerializeField]
-        protected float uvResolutions;
+        protected float uvResolutions=1;
 
         [Space] [Header("Offsets")] [SerializeField]
         protected Vector3 positionAdjustment;
@@ -44,7 +44,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         [FormerlySerializedAs("meshResolution")]
         [Tooltip("Count must match the number of Splines in the Spline Container")]
         [SerializeField]
-        private int meshResolutions;
+        private int meshResolutions=10;
 
 
         private void Reset()
@@ -62,8 +62,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             var combinedUVs = new List<Vector2>();
             var combinedSubmeshTriangles = new List<int>[segmentMesh.subMeshCount];
 
-            for (int i = 0; i < segmentMesh.subMeshCount; i++)
-                combinedSubmeshTriangles[i] = new List<int>();
+            for (int i = 0; i < segmentMesh.subMeshCount; i++) combinedSubmeshTriangles[i] = new List<int>();
 
             int combinedVertexOffset = 0;
             var normalizedSegmentMesh = segmentMesh;

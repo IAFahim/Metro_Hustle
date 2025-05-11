@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Editor/SplineMeshResolutionEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Editor/SplineMeshResolutionEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Train Tracks/Mesh/Fbx/Track.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Train Tracks/Mesh/Fbx/Track.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Train Tracks/Scenes/Train Tracks.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Train Tracks/Scenes/Train Tracks.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +102,7 @@
       <workItem from="1746955622992" duration="5317000" />
       <workItem from="1746964447765" duration="2196000" />
       <workItem from="1746970602831" duration="1841000" />
-      <workItem from="1746981327347" duration="8335000" />
+      <workItem from="1746981327347" duration="10757000" />
     </task>
     <servers />
   </component>
