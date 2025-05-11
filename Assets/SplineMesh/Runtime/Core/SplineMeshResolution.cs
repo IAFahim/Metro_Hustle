@@ -1,7 +1,6 @@
-using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.Splines;
 
 namespace SplineMesh.SplineMesh.Runtime.Core
@@ -18,7 +17,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
     {
         public SplineContainer splineContainer;
         public MeshFilter meshFilter;
-        
+
         [Space] [Header("Spline Mesh Settings")] [SerializeField]
         protected Mesh segmentMesh;
 
@@ -40,12 +39,12 @@ namespace SplineMesh.SplineMesh.Runtime.Core
 
         [Space] [Header("Offsets")] [SerializeField]
         protected Vector3 positionAdjustment;
-        [SerializeField] protected Quaternion rotationAdjustment;
-        [SerializeField] protected Vector3 scaleAdjustment = Vector3.one;
 
-        
-        [Tooltip("Count must match the number of Splines in the Spline Container")] [SerializeField]
-        private int meshResolution;
+
+        [FormerlySerializedAs("meshResolution")]
+        [Tooltip("Count must match the number of Splines in the Spline Container")]
+        [SerializeField]
+        private int meshResolutions;
 
 
         private void Reset()
@@ -53,12 +52,9 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             splineContainer = GetComponent<SplineContainer>();
             meshFilter = GetComponent<MeshFilter>();
         }
-        
-        
 
-        
-        [MenuItem("GenerateMeshAlongSpline")]
 
+        [ContextMenu("GenerateMeshAlongSpline")]
         public void GenerateMeshAlongSpline()
         {
             var combinedVertices = new List<Vector3>();
@@ -70,16 +66,13 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 combinedSubmeshTriangles[i] = new List<int>();
 
             int combinedVertexOffset = 0;
-
-            var normalizedSegmentMesh = segmentMesh.NormalizeMesh(rotationAdjustment, scaleAdjustment);
-
-
+            var normalizedSegmentMesh = segmentMesh;
             var vertices = new List<Vector3>();
             var normals = new List<Vector3>();
             var uvs = new List<Vector2>();
             var spline = splineContainer.Splines[0];
 
-            for (int i = 0; i < meshResolution; i++)
+            for (int i = 0; i < meshResolutions; i++)
             {
                 float meshBoundsDistance =
                     Mathf.Abs(SplineMeshUtils.GetRequiredAxis(normalizedSegmentMesh.bounds.size, forwardAxis));
@@ -101,8 +94,8 @@ namespace SplineMesh.SplineMesh.Runtime.Core
 
                 foreach (var vertex in normalizedSegmentMesh.vertices)
                 {
-                    float point = (i / (float)meshResolution) +
-                                  (vertexRatios[counter] * (1 / (float)meshResolution));
+                    float point = (i / (float)meshResolutions) +
+                                  (vertexRatios[counter] * (1 / (float)meshResolutions));
                     var tangent = spline.EvaluateTangent(point);
                     Vector3 splinePosition = spline.EvaluatePosition(point);
 
@@ -117,13 +110,12 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 for (int j = 0; j < normalizedSegmentMesh.normals.Length; j++)
                 {
                     var normal = normalizedSegmentMesh.normals[j];
-                    float point = (i / (float)meshResolution) +
-                                  (vertexRatios[j] * (1 / (float)meshResolution));
+                    float point = (i / (float)meshResolutions) +
+                                  (vertexRatios[j] * (1 / (float)meshResolutions));
 
                     var tangent = spline.EvaluateTangent(point);
                     var splineRotation = Quaternion.LookRotation(tangent, Vector3.up);
                     var transformedNormal = splineRotation * normal;
-
                     normals.Add(transformedNormal);
                 }
 
@@ -147,16 +139,8 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 {
                     var uv = normalizedSegmentMesh.uv[j];
                     float point;
-
-                    if (uniformUVs)
-                    {
-                        point = i / (float)meshResolution + vertexRatios[j] * (1 / (float)meshResolution);
-                    }
-                    else
-                    {
-                        point = i / (float)segmentCount + vertexRatios[j] * (1 / (float)segmentCount);
-                    }
-
+                    if (uniformUVs) point = i / (float)meshResolutions + vertexRatios[j] * (1 / (float)meshResolutions);
+                    else point = i / (float)segmentCount + vertexRatios[j] * (1 / (float)segmentCount);
                     var splineUV = SplineMeshUtils.MakeUVs(uv, point, uvAxis, uvResolutions); // Apply UV resolution
                     uvs.Add(splineUV);
                 }
@@ -169,12 +153,14 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             combinedUVs.AddRange(uvs);
 
 
-            var generatedMesh = new Mesh();
-            generatedMesh.name = meshName;
-            generatedMesh.vertices = combinedVertices.ToArray();
-            generatedMesh.normals = combinedNormals.ToArray();
-            generatedMesh.uv = combinedUVs.ToArray();
-            generatedMesh.subMeshCount = segmentMesh.subMeshCount;
+            var generatedMesh = new Mesh
+            {
+                name = meshName,
+                vertices = combinedVertices.ToArray(),
+                normals = combinedNormals.ToArray(),
+                uv = combinedUVs.ToArray(),
+                subMeshCount = segmentMesh.subMeshCount
+            };
 
             for (int submeshIndex = 0; submeshIndex < segmentMesh.subMeshCount; submeshIndex++)
                 generatedMesh.SetTriangles(combinedSubmeshTriangles[submeshIndex].ToArray(), submeshIndex);
