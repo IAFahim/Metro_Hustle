@@ -1,12 +1,11 @@
-﻿using ECS_Spline.Runtime.Datas;
-using ECSUnitySplineAddon.Runtime.Datas;
+﻿using ECSUnitySplineAddon.Runtime.Datas;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
 
-namespace ECSSplines.Runtime
+namespace ECSUnitySplineAddon.Runtime
 {
     /// <summary>
     /// MonoBehaviour component to trigger the baking of a SplineContainer into an ECS Blob Asset.

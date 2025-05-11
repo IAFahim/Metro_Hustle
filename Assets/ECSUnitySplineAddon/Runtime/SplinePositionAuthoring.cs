@@ -1,4 +1,5 @@
-﻿using Unity.Entities;
+﻿using ECSUnitySplineAddon.Runtime.Datas;
+using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 
