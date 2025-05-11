@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 869273991}
   - component: {fileID: 869273992}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cesium OSM Buildings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 1493648927}
   - component: {fileID: 1493648926}
   - component: {fileID: 1493648925}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CesiumGeoreference
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 1845537739}
   - component: {fileID: 1845537741}
   - component: {fileID: 1845537742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cesium World Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
