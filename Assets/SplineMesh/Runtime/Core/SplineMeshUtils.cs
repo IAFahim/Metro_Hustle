@@ -30,20 +30,14 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             return normalizedMesh;
         }
 
-		public static Vector2 MakeUVs(Vector2 uv, float point, int splineCount, VectorAxis uvAxis, float[] uvResolutions)
+		public static Vector2 MakeUVs(Vector2 uv, float point, VectorAxis uvAxis, float uvResolutions)
 		{
-			if (uvResolutions.Length == 0)
-			{
-				Debug.LogError("The UV resolution array is empty");
-				return Vector2.zero;
-			}
-
 			switch (uvAxis)
 			{
 				case VectorAxis.X:
-					return new Vector2(point * uvResolutions[splineCount], uv.y);
+					return new Vector2(point * uvResolutions, uv.y);
 				default:
-					return new Vector2(uv.x, point * uvResolutions[splineCount]);
+					return new Vector2(uv.x, point * uvResolutions);
 			}
 		}
 
