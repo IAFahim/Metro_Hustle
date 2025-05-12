@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b897169a0e9f44aca19368969755e6d9, type: 3}
-  m_Name: Group
+  m_Script: {fileID: 11500000, guid: fae8bf25da0a405392fabd78f14fb4e1, type: 3}
+  m_Name: Track
   m_EditorClassIdentifier: 
-  id:
-    ID: 0
-  autoGroups: 1
-  groups: []
-  definitions: []
-  excludeGroups: []
-  excludeDefinitions: []
+  ID: 1
+  Scenes:
+  - {fileID: 102900000, guid: 5fec8a25fc9d8774fa9cd27e3b0b2da7, type: 3}
+  TargetWorld: 1
+  IsRequired: 1
+  WaitForLoad: 0
+  AutoLoad: 1

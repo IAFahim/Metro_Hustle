@@ -23,7 +23,7 @@
         "com.unity.collections": "2.5.3",
         "com.unity.dt.app-ui": "2.0.0-pre.19"
       },
-      "hash": "74eb66420e9bdec32b12bb158227bc7c9453be12"
+      "hash": "3e602a23a76ff12a565070cf4b359fc8177e3945"
     },
     "com.bovinelabs.core": {
       "version": "https://github.com/IAFahim/com.bovinelabs.core.git",
@@ -33,7 +33,7 @@
         "com.unity.entities": "1.4.0-exp.2",
         "com.unity.logging": "1.3.6"
       },
-      "hash": "4b767f15720a4d909a94f78563fda9e3d491f05e"
+      "hash": "b7e378d814a0466a8ef3aa994ba9f1488c0d6150"
     },
     "com.bovinelabs.reaction": {
       "version": "https://gitlab.com/tertle/com.bovinelabs.reaction.git",
@@ -108,15 +108,13 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.charactercontroller": {
-      "version": "1.3.11",
+    "com.unity.cinemachine": {
+      "version": "3.1.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.physics": "1.3.2",
-        "com.unity.entities": "1.3.2",
-        "com.unity.modules.physics": "1.0.0",
-        "com.unity.modules.uielements": "1.0.0"
+        "com.unity.splines": "2.0.0",
+        "com.unity.modules.imgui": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -200,15 +198,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.ide.visualstudio": {
-      "version": "2.0.23",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.test-framework": "1.1.9"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.inputsystem": {
       "version": "1.14.0",
       "depth": 0,
@@ -260,19 +249,19 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.physics": {
-      "version": "1.4.0-exp.2",
+      "version": "https://github.com/tertle/com.unity.physics.git",
       "depth": 0,
-      "source": "registry",
+      "source": "git",
       "dependencies": {
         "com.unity.burst": "1.8.19",
-        "com.unity.entities": "1.4.0-exp.2",
         "com.unity.collections": "2.6.0-exp.2",
+        "com.unity.entities": "1.4.0-exp.2",
         "com.unity.mathematics": "1.3.2",
-        "com.unity.modules.imgui": "1.0.0",
         "com.unity.test-framework": "1.4.6",
+        "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
-      "url": "https://packages.unity.com"
+      "hash": "df92075d73a67bd941e3d49e7d4f8f3e73f43748"
     },
     "com.unity.probuilder": {
       "version": "6.0.5",
@@ -410,6 +399,18 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.timeline": {
+      "version": "1.8.8",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.director": "1.0.0",
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.particlesystem": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ugui": {
       "version": "2.0.0",
       "depth": 1,
@@ -448,6 +449,15 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {}
+    },
+    "com.unity.modules.director": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.animation": "1.0.0"
+      }
     },
     "com.unity.modules.hierarchycore": {
       "version": "1.0.0",
@@ -583,6 +593,14 @@
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.assetbundle": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0"
+      }
+    },
+    "com.unity.modules.vehicles": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
       }
     },
     "com.unity.modules.vr": {

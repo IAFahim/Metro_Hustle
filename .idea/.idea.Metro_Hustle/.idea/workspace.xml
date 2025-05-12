@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Editor/SplineMeshResolutionEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Editor/SplineMeshResolutionEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Train Tracks/Scenes/Train Tracks.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Samples/Train Tracks/Scenes/Train Tracks.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Groups/Group.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Groups/Group.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Scenes/RequiredService.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Scenes/RequiredService.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/ObjectManagementSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/ObjectManagementSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/ReactionSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/ReactionSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/SubSceneSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/SubSceneSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +27,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89527d299cb64ba88f87240781b415e51ea400/fa/4ac07950/UnsafeUtility.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -103,6 +112,7 @@
       <workItem from="1746964447765" duration="2196000" />
       <workItem from="1746970602831" duration="1841000" />
       <workItem from="1746981327347" duration="10757000" />
+      <workItem from="1747026837278" duration="4473000" />
     </task>
     <servers />
   </component>
