@@ -206,10 +206,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ECS Player Character
       objectReference: {fileID: 0}
-    - target: {fileID: 1802234734911045692, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
-      propertyPath: m_MotionType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8421916860254639719, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

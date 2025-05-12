@@ -1,11 +1,12 @@
 {
-    "name": "CinemachineLink",
+    "name": "Focuses.Debug",
     "rootNamespace": "",
     "references": [
         "BovineLabs.Anchor",
         "BovineLabs.Core",
         "BovineLabs.Core.Extensions",
-        "CinemachineLink.Data",
+        "Focuses",
+        "Focuses.Data",
         "Unity.AppUI",
         "Unity.AppUI.MVVM",
         "Unity.AppUI.Navigation",
@@ -19,17 +20,18 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms",
-        "Unity.Cinemachine",
-        "Focuses.Data"
+        "Unity.Transforms"
     ],
+    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": false,
-    "defineConstraints": [],
+    "defineConstraints": [
+        "UNITY_EDITOR || BL_DEBUG"
+    ],
     "versionDefines": [],
     "noEngineReferences": false
 }

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1802234734911045692}
   - component: {fileID: 9059282733944899640}
   - component: {fileID: 8324719196882782700}
+  - component: {fileID: 4023328945692140627}
   m_Layer: 0
   m_Name: ECS Player Character
   m_TagString: Untagged
@@ -324,3 +325,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: -1
+--- !u!114 &4023328945692140627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485755097329585741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a0001c52ce4ae2834f779ec751940a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority: 0
