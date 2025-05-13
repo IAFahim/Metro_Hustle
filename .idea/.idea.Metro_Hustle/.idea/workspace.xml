@@ -6,33 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/ViewStates.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/ViewStates/UIGame.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/ViewStates/UIGame.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/Views/Menu/HomeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/Views/Menu/HomeView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UI/Style/Anchor Sample UI.tss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UI/Style/Anchor Sample UI.tss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses/FocusMangerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses/FocusMangerSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths.Data/HealthView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths.Data/HealthView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths.Data/HealthViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths.Data/HealthViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Styles.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Styles/Anchor UI.tss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Styles/Anchor UI.tss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Styles/Anchor.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Styles/Anchor.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Styles/Inter-Normal.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Styles/Inter-Normal.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Styles/Toolbar.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Styles/Toolbar.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,11 +24,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/6AF4001D6E12818327907998/SystemPropertyGenerator/BovineLabs.SourceGenerator.SystemPropertyGenerator/_src.Scripts.Healths.Healths.Data.Data.CurrentHealth.g.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/6AF4001D6E12818327907998/SystemPropertyGenerator/BovineLabs.SourceGenerator.SystemPropertyGenerator/_src.Scripts.Healths.Healths.Data.Data.MaxHealth.g.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fadc92f079247e0bd8ad14133f2e1371fe200/2e/7c4389e7/IStyle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fadc92f079247e0bd8ad14133f2e1371fe200/5a/a745760d/ProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fadc92f079247e0bd8ad14133f2e1371fe200/6a/41a564ef/VisualElement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fadc92f079247e0bd8ad14133f2e1371fe200/e1/ddb7723d/AbstractProgressBar.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fadc92f079247e0bd8ad14133f2e1371fe200/e1/ddb7723d/AbstractProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89527d299cb64ba88f87240781b415e51ea400/78/61d7e81c/Mesh.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89527d299cb64ba88f87240781b415e51ea400/c7/9fb97581/Transform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89527d299cb64ba88f87240781b415e51ea400/c8/8518404e/Camera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89527d299cb64ba88f87240781b415e51ea400/fa/4ac07950/UnsafeUtility.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,7 +61,7 @@
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Spline__Movement&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;BoxMovement&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -156,6 +133,8 @@
       <workItem from="1747088495399" duration="2817000" />
       <workItem from="1747092687635" duration="7711000" />
       <workItem from="1747101190773" duration="1143000" />
+      <workItem from="1747104674411" duration="462000" />
+      <workItem from="1747108076140" duration="3782000" />
     </task>
     <servers />
   </component>
