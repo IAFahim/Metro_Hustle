@@ -1,4 +1,4 @@
-﻿using ECSSplines.Runtime;
+﻿using System;
 using Unity.Entities;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -8,13 +8,19 @@ namespace ECSUnitySplineAddon.Runtime.Datas
     [RequireComponent(typeof(SplineContainer))]
     public class SplineComponentAuthoring : MonoBehaviour
     {
-        public bool cacheUpVectors = true;
+        public SplineContainer splineContainer;
+        public int LUT_RESOLUTION = 30;
+
+        private void Reset()
+        {
+            splineContainer = GetComponent<SplineContainer>();
+        }
 
         public class SplineComponentBaker : Baker<SplineComponentAuthoring>
         {
             public override void Bake(SplineComponentAuthoring authoring)
             {
-                var splineContainer = GetComponent<SplineContainer>();
+                var splineContainer = authoring.splineContainer;
 
                 if (splineContainer is null)
                 {
@@ -25,10 +31,8 @@ namespace ECSUnitySplineAddon.Runtime.Datas
                 var spline = splineContainer.Spline;
                 using var nativeSpline = new NativeSpline(spline);
 
-                var nativeSplineBlobAssetRef = NativeSplineBlobFactory.CreateBlob(
-                    nativeSpline,
-                    authoring.cacheUpVectors
-                );
+                var nativeSplineBlobAssetRef =
+                    NativeSplineBlobFactory.CreateBlob(nativeSpline, authoring.LUT_RESOLUTION);
 
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
 

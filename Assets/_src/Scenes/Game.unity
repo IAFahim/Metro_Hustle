@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 686383864}
   - component: {fileID: 686383865}
   - component: {fileID: 686383863}
+  - component: {fileID: 686383866}
   m_Layer: 0
   m_Name: GameSettings
   m_TagString: Untagged
@@ -180,6 +181,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46111ca8dec94e239ce9a228c8157f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &686383866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686383862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc355e2200c74152b7fb829f9150215e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMainCamera: 1
 --- !u!1001 &5781390144955228746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -192,9 +206,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: ECS Player Character
       objectReference: {fileID: 0}
-    - target: {fileID: 1802234734911045692, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
-      propertyPath: m_MotionType
-      value: 1
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: StatDefaults.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: StatDefaults.Array.data[2].Stat
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a3893ecd40144d4085560e32e75eba0, type: 2}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: StatDefaults.Array.data[2].Value
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8421916860254639719, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: m_LocalPosition.x

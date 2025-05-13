@@ -17,12 +17,12 @@ namespace ECSUnitySplineAddon.Runtime.Datas
     [BurstCompile]
     public struct NativeSplineBlob
     {
-        public BlobArray<BezierKnot> Knots;
         public BlobArray<BezierCurve> Curves;
         public BlobArray<DistanceToInterpolation> DistanceLUT;
         public BlobArray<float3> UpVectorLUT;
         public bool Closed;
         public float Length;
+        public int LUT_RESOLUTION;
 
         /// <summary>
         /// Gets the number of curves in the spline.
@@ -34,6 +34,7 @@ namespace ECSUnitySplineAddon.Runtime.Datas
         /// </summary>
         /// <param name="curveIndex">The index of the curve.</param>
         /// <returns>The BezierCurve data.</returns>
+        [BurstCompile]
         public BezierCurve GetCurve(int curveIndex)
         {
             if (curveIndex < 0 || curveIndex >= CurveCount)
@@ -46,6 +47,7 @@ namespace ECSUnitySplineAddon.Runtime.Datas
         /// </summary>
         /// <param name="curveIndex">The index of the curve.</param>
         /// <returns>The length of the curve.</returns>
+        [BurstCompile]
         public float GetCurveLength(int curveIndex)
         {
             if (curveIndex < 0 || curveIndex >= CurveCount)
@@ -67,10 +69,11 @@ namespace ECSUnitySplineAddon.Runtime.Datas
         /// <param name="splineT">Normalized interpolation along the entire spline (0-1).</param>
         /// <param name="curveT">Output: Normalized interpolation along the specific curve (0-1).</param>
         /// <returns>The index of the curve containing the point.</returns>
+        [BurstCompile]
         public int SplineToCurveT(float splineT, out float curveT)
         {
-            int knotCount = Knots.Length;
-            if (knotCount <= 1)
+            int curves = Curves.Length;
+            if (curves <= 1)
             {
                 curveT = 0f;
                 return 0;
@@ -105,6 +108,7 @@ namespace ECSUnitySplineAddon.Runtime.Datas
         /// <summary>
         /// Gets the curve-local normalized T value corresponding to a distance along that curve, using the LUT.
         /// </summary>
+        [BurstCompile]
         private float GetCurveInterpolationFromDistance(int curveIndex, float distanceInCurve, int lutResolution)
         {
             if (distanceInCurve <= 0f) return 0f;
@@ -139,11 +143,10 @@ namespace ECSUnitySplineAddon.Runtime.Datas
         /// </summary>
         /// <param name="splineT">Normalized interpolation along the entire spline (0-1).</param>
         /// <returns>The position on the spline.</returns>
+        [BurstCompile]
         public float3 EvaluatePosition(float splineT)
         {
-            if (Knots.Length == 0) return float3.zero;
-            if (Knots.Length == 1) return Knots[0].Position;
-
+            if (Curves.Length == 0) return float3.zero;
             int curveIndex = SplineToCurveT(splineT, out float curveT);
             return CurveUtility.EvaluatePosition(Curves[curveIndex], curveT);
         }
@@ -153,9 +156,10 @@ namespace ECSUnitySplineAddon.Runtime.Datas
         /// </summary>
         /// <param name="splineT">Normalized interpolation along the entire spline (0-1).</param>
         /// <returns>The tangent vector on the spline (not normalized).</returns>
+        [BurstCompile]
         public float3 EvaluateTangent(float splineT)
         {
-            if (Knots.Length < 2) return new float3(0, 0, 1);
+            if (Curves.Length < 2) return new float3(0, 0, 1);
 
             int curveIndex = SplineToCurveT(splineT, out float curveT);
             return CurveUtility.EvaluateTangent(Curves[curveIndex], curveT);
@@ -167,40 +171,26 @@ namespace ECSUnitySplineAddon.Runtime.Datas
         /// </summary>
         /// <param name="splineT">Normalized interpolation along the entire spline (0-1).</param>
         /// <returns>The up vector on the spline.</returns>
+        [BurstCompile]
         public float3 EvaluateUpVector(float splineT)
         {
-            if (Knots.Length < 2) return new float3(0, 1, 0);
+            if (Curves.Length < 2) return new float3(0, 1, 0);
 
             int curveIndex = SplineToCurveT(splineT, out float curveT);
 
-            if (UpVectorLUT.Length > 0)
-            {
-                int lutResolution = UpVectorLUT.Length / CurveCount;
-                int lutStartIndex = curveIndex * lutResolution;
+            int lutResolution = UpVectorLUT.Length / CurveCount;
+            int lutStartIndex = curveIndex * lutResolution;
 
-                float segmentT = curveT * (lutResolution - 1);
-                int index0 = math.min((int)math.floor(segmentT), lutResolution - 2);
-                int index1 = index0 + 1;
+            float segmentT = curveT * (lutResolution - 1);
+            int index0 = math.min((int)math.floor(segmentT), lutResolution - 2);
+            int index1 = index0 + 1;
 
-                float lerpFactor = segmentT - index0;
+            float lerpFactor = segmentT - index0;
 
-                float3 up0 = UpVectorLUT[lutStartIndex + index0];
-                float3 up1 = UpVectorLUT[lutStartIndex + index1];
+            float3 up0 = UpVectorLUT[lutStartIndex + index0];
+            float3 up1 = UpVectorLUT[lutStartIndex + index1];
 
-                return Vector3.Slerp(up0, up1, lerpFactor);
-            }
-            else
-            {
-                BezierCurve curve = Curves[curveIndex];
-                BezierKnot knotStart = Knots[curveIndex];
-                BezierKnot knotEnd =
-                    Knots[Closed ? (curveIndex + 1) % Knots.Length : math.min(curveIndex + 1, Knots.Length - 1)];
-
-                float3 startUp = math.rotate(knotStart.Rotation, math.up());
-                float3 endUp = math.rotate(knotEnd.Rotation, math.up());
-
-                return CurveUtilityInternal.EvaluateUpVector(curve, curveT, startUp, endUp);
-            }
+            return Vector3.Slerp(up0, up1, lerpFactor);
         }
 
         /// <summary>
@@ -211,6 +201,7 @@ namespace ECSUnitySplineAddon.Runtime.Datas
         /// <param name="position">Output: The position on the spline.</param>
         /// <param name="tangent">Output: The tangent vector on the spline (not normalized).</param>
         /// <param name="upVector">Output: The up vector on the spline.</param>
+        [BurstCompile]
         public void Evaluate(float splineT, out float3 position, out float3 tangent, out float3 upVector)
         {
             int curveIndex = SplineToCurveT(splineT, out float curveT);
@@ -225,26 +216,14 @@ namespace ECSUnitySplineAddon.Runtime.Datas
             position = CurveUtility.EvaluatePosition(curve, curveT);
             tangent = CurveUtility.EvaluateTangent(curve, curveT);
 
-            if (UpVectorLUT.Length > 0)
-            {
-                int lutResolution = UpVectorLUT.Length / CurveCount;
-                int lutStartIndex = curveIndex * lutResolution;
-                float segmentT = curveT * (lutResolution - 1);
-                int index0 = math.min((int)math.floor(segmentT), lutResolution - 2);
-                int index1 = index0 + 1;
-                float lerpFactor = segmentT - index0;
-                upVector = Vector3.Slerp(UpVectorLUT[lutStartIndex + index0], UpVectorLUT[lutStartIndex + index1],
-                    lerpFactor);
-            }
-            else
-            {
-                BezierKnot knotStart = Knots[curveIndex];
-                BezierKnot knotEnd =
-                    Knots[Closed ? (curveIndex + 1) % Knots.Length : math.min(curveIndex + 1, Knots.Length - 1)];
-                float3 startUp = math.rotate(knotStart.Rotation, math.up());
-                float3 endUp = math.rotate(knotEnd.Rotation, math.up());
-                upVector = CurveUtilityInternal.EvaluateUpVector(curve, curveT, startUp, endUp);
-            }
+            int lutResolution = UpVectorLUT.Length / CurveCount;
+            int lutStartIndex = curveIndex * lutResolution;
+            float segmentT = curveT * (lutResolution - 1);
+            int index0 = math.min((int)math.floor(segmentT), lutResolution - 2);
+            int index1 = index0 + 1;
+            float lerpFactor = segmentT - index0;
+            upVector = Vector3.Slerp(UpVectorLUT[lutStartIndex + index0], UpVectorLUT[lutStartIndex + index1],
+                lerpFactor);
         }
     }
 }

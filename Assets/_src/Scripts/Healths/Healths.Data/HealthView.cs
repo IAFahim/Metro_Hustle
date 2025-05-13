@@ -1,5 +1,6 @@
 ﻿using BovineLabs.Anchor;
 using Unity.AppUI.UI;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace _src.Scripts.Healths.Healths.Data
@@ -26,6 +27,7 @@ namespace _src.Scripts.Healths.Healths.Data
             var healthBar = new ProgressBar
             {
                 name = "health-bar", lowValue = 0, highValue = 1,
+                title = "123434w5546",
                 style =
                 {
                     minWidth = 100,
@@ -33,8 +35,7 @@ namespace _src.Scripts.Healths.Healths.Data
                 },
                 dataSource = ViewModel
             };
-            healthBar.SetBindingToUI(nameof(ProgressBar.value), nameof(HealthViewModel.CurrentHealth));
-            healthBar.SetBindingToUI(nameof(ProgressBar.value), nameof(HealthViewModel.MaxHealth));
+            healthBar.SetBindingToUI(nameof(ProgressBar.value), nameof(HealthViewModel.HealthNormalized));
             
             var healthTextValue = new Text
             {

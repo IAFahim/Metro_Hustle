@@ -43,7 +43,7 @@ namespace _src.Scripts.SplineMovement.Editor
                 );
             }
 
-            builder.Dispose();
+            builder.DisposeAfter(state.Dependency);
 #endif
         }
 
