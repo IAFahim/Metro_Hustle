@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.Splines;
@@ -35,7 +36,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
 
         [Tooltip("The UV Resolutions along spline(s). Count must match the same number of splines in the container.")]
         [SerializeField]
-        protected float uvResolutions=1;
+        protected float uvResolutions = 1;
 
         [Space] [Header("Offsets")] [SerializeField]
         protected Vector3 positionAdjustment;
@@ -44,7 +45,9 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         [FormerlySerializedAs("meshResolution")]
         [Tooltip("Count must match the number of Splines in the Spline Container")]
         [SerializeField]
-        private int meshResolutions=10;
+        private int meshResolutions = 10;
+
+        public Vector3 upDirection = Vector3.forward;
 
 
         private void Reset()
@@ -89,20 +92,17 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                     vertexOffsets.Add(offset);
                 }
 
-                int counter = 0;
 
-                foreach (var vertex in normalizedSegmentMesh.vertices)
+                for (var counter = 0; counter < normalizedSegmentMesh.vertices.Length; counter++)
                 {
-                    float point = (i / (float)meshResolutions) +
-                                  (vertexRatios[counter] * (1 / (float)meshResolutions));
-                    var tangent = spline.EvaluateTangent(point);
-                    Vector3 splinePosition = spline.EvaluatePosition(point);
+                    float t = (i / (float)meshResolutions) +
+                              (vertexRatios[counter] * (1 / (float)meshResolutions));
+                    Evaluate(spline, t, out float3 splinePosition, out var tangent);
 
-                    var splineRotation = Quaternion.LookRotation(tangent, Vector3.up);
-                    var transformedPosition = splinePosition + splineRotation * vertexOffsets[counter];
+                    var splineRotation = Quaternion.LookRotation(tangent, upDirection);
+                    var transformedPosition = (Vector3)splinePosition + splineRotation * vertexOffsets[counter];
 
-                    vertices.Add(transformedPosition + positionAdjustment);
-                    counter++;
+                    vertices.Add(transformedPosition + splineRotation * positionAdjustment);
                 }
 
                 // Add transformed normals
@@ -113,7 +113,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                                   (vertexRatios[j] * (1 / (float)meshResolutions));
 
                     var tangent = spline.EvaluateTangent(point);
-                    var splineRotation = Quaternion.LookRotation(tangent, Vector3.up);
+                    var splineRotation = Quaternion.LookRotation(tangent, upDirection);
                     var transformedNormal = splineRotation * normal;
                     normals.Add(transformedNormal);
                 }
@@ -169,6 +169,19 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             generatedMesh.RecalculateBounds();
             generatedMesh.RecalculateNormals();
             generatedMesh.RecalculateTangents();
+        }
+
+        public static void Evaluate(Spline spline,
+            float t,
+            out float3 position,
+            out float3 tangent
+        )
+        {
+            var curveIndex = spline.SplineToCurveT(t, out var curveT);
+            var curve = spline.GetCurve(curveIndex);
+
+            position = CurveUtility.EvaluatePosition(curve, curveT);
+            tangent = CurveUtility.EvaluateTangent(curve, curveT);
         }
     }
 }
