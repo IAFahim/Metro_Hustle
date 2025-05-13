@@ -36,7 +36,7 @@ namespace ECSUnitySplineAddon.Editor
             ref var distanceLut = ref nativeSplineBlobComponentData.Value.Value.DistanceLUT;
             ref var length = ref nativeSplineBlobComponentData.Value.Value.Length;
             
-            for (int i = 0, seg = 0; i < distanceLut.Length; i++, seg++)
+            for (int i = 0; i < distanceLut.Length; i++)
             {
                 var t = distanceLut[i].Distance / length;
                 var position = nativeSplineBlobComponentData.Value.Value.EvaluatePosition(t);
