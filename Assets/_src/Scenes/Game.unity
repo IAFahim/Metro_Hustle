@@ -206,6 +206,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ECS Player Character
       objectReference: {fileID: 0}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: StatDefaults.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: StatDefaults.Array.data[2].Stat
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a3893ecd40144d4085560e32e75eba0, type: 2}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: StatDefaults.Array.data[2].Value
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 8421916860254639719, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

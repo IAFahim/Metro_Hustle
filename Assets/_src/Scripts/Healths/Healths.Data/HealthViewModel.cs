@@ -18,13 +18,15 @@ namespace _src.Scripts.Healths.Healths.Data
 
         public string HealthText => $"{this.CurrentHealth} / {this.MaxHealth}";
         
-        public float HealthNormalized => this.MaxHealth > 0 ? (float)this.CurrentHealth / this.MaxHealth : 0f;
+        [CreateProperty(ReadOnly = true)] 
+        public float HealthNormalized => this.Value.HealthNormalized;
 
         [Serializable]
         public partial struct Data: IComponentData
         {
             [SystemProperty] [SerializeField] private int currentHealth;
             [SystemProperty] [SerializeField] private int maxHealth;
+            [SystemProperty] [SerializeField] private float healthNormalized;
         }
     }
 }

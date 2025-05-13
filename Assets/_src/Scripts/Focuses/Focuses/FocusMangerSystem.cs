@@ -10,7 +10,7 @@ namespace _src.Scripts.Focuses.Focuses
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            byte highestPriority = 0;
+            int highestPriority = -1;
             LocalTransform highestPriorityLocalTransform = LocalTransform.Identity;
             foreach (var (focusComponent, localTransform) in
                      SystemAPI.Query<RefRO<FocusComponent>, RefRO<LocalTransform>>())

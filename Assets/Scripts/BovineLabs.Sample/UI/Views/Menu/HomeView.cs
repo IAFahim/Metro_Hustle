@@ -22,7 +22,6 @@ namespace BovineLabs.Sample.UI.Views.Menu
 
         private const string ContinueText = "@UI:continue";
         private const string PlayText = "@UI:play";
-        private const string LoadText = "@UI:loadGame";
         private const string OptionsText = "@UI:options";
         private const string QuitText = "@UI:quit";
         private const string QuitTitleText = "@UI:quitTitle";
@@ -57,10 +56,6 @@ namespace BovineLabs.Sample.UI.Views.Menu
             playButton.AddToClassList(ButtonClassName);
             left.Add(playButton);
 
-            this.loadButton = new ActionButton(this.Load) { label = LoadText };
-            this.loadButton.AddToClassList(ButtonClassName);
-            left.Add(this.loadButton);
-
             var optionButton = new ActionButton(this.Options) { label = OptionsText };
             optionButton.AddToClassList(ButtonClassName);
             left.Add(optionButton);
@@ -83,7 +78,6 @@ namespace BovineLabs.Sample.UI.Views.Menu
 
             var hasSaveDisplay = false ? DisplayStyle.Flex : DisplayStyle.None;
             this.continueButton.style.display = hasSaveDisplay;
-            this.loadButton.style.display = hasSaveDisplay;
         }
 
 #if UNITY_STANDALONE
