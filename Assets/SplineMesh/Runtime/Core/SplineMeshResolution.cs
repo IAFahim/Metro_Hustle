@@ -68,7 +68,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
 
             int combinedVertexOffset = 0;
             var vertices = new NativeList<float3>(Allocator.Temp);
-            var normals = new List<Vector3>();
+            var normals = new NativeList<float3>();
             var uvs = new NativeList<float2>(Allocator.Temp);
             var combinedSubMeshTriangles = new NativeList<int>[mesh.subMeshCount];
             for (int i = 0; i < mesh.subMeshCount; i++)
@@ -87,7 +87,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
 
                     var splineRotation = quaternion.LookRotationSafe(tangent, upDirection);
                     var transformedPosition = splinePosition + math.mul(splineRotation, vertexOffsets[vertexIndex]);
-                    vertices.Add(transformedPosition + math.mul(splineRotation , positionAdjustment));
+                    vertices.Add(transformedPosition + math.mul(splineRotation, positionAdjustment));
                 }
 
                 // Add transformed normals
@@ -108,7 +108,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             }
 
 
-            SetMesh(TVector3S(vertices), normals.ToArray(), TVector2S(uvs), ToInt(combinedSubMeshTriangles));
+            SetMesh(TVector3S(vertices), TVector3S(normals), TVector2S(uvs), ToInt(combinedSubMeshTriangles));
             vertices.Dispose();
             uvs.Dispose();
             foreach (var nativeList in combinedSubMeshTriangles) nativeList.Dispose();
@@ -256,7 +256,8 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 _ => new float2(uv.x, point * uvResolutions)
             };
         }
-
+        
+        [BurstCompile]
         private static void Evaluate(Spline spline,
             float t,
             out float3 position,
