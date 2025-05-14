@@ -98,13 +98,15 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33720">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="33720" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -133,7 +135,7 @@
       <workItem from="1747101190773" duration="1143000" />
       <workItem from="1747104674411" duration="462000" />
       <workItem from="1747108076140" duration="3782000" />
-      <workItem from="1747186467962" duration="9020000" />
+      <workItem from="1747186467962" duration="13983000" />
     </task>
     <servers />
   </component>
@@ -179,6 +181,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs</url>
+          <line>95</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\SplineMesh\Runtime\Core\SplineMeshResolution.cs" containingFunctionPresentation="Method 'GenerateMeshAlongSpline'">
+            <startOffsets>
+              <option value="3440" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3789" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs</url>
+          <line>174</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\SplineMesh\Runtime\Core\SplineMeshResolution.cs" containingFunctionPresentation="Method 'GetMeshData'">
+            <startOffsets>
+              <option value="7922" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7970" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
