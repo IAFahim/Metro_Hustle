@@ -47,7 +47,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         };
 
 
-        [FormerlySerializedAs("meshResolution")]
+
         [Tooltip("Count must match the number of Splines in the Spline Container")]
         [SerializeField]
         private int meshResolutions = 10;
@@ -61,17 +61,17 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         }
 
 
+
         [ContextMenu("GenerateMeshAlongSpline")]
         public void GenerateMeshAlongSpline() => GenerateMeshAlongSpline(modelMesh, splineContainer.Splines[0]);
 
         private void GenerateMeshAlongSpline(Mesh mesh, Spline spline)
         {
             int curveCount = spline.GetCurveCount() - 1;
-
             int combinedVertexOffset = 0;
             int meshVertexCount = mesh.vertexCount;
             int meshVerticesLength = mesh.vertices.Length;
-            float meshBoundsDistance = Mathf.Abs(GetRequiredAxis(mesh.bounds.size, forwardAxis));
+            float meshBoundsDistance = math.abs(GetRequiredAxis(mesh.bounds.size, forwardAxis));
 
             var meshNormal = NativeMeshNormal(mesh, Allocator.Temp);
             var meshUV = NativeMeshUV(mesh, Allocator.Temp);
@@ -85,7 +85,8 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 meshVerticesLength, vertexRatios, meshNormal, Allocator.Temp,
                 out var nativeSplinePosTan, out var nativeSplineNormalTan
             );
-
+            
+            
             for (var i = 0; i < meshFilters.Length; i++)
             {
                 var vertices = new NativeList<float3>(Allocator.Temp);
@@ -106,7 +107,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 uvs.Dispose();
             }
 
-            Dispose( meshNormal, meshUV, combinedSubMeshTriangles, nativeMeshTriangle,
+            Dispose(meshNormal, meshUV, combinedSubMeshTriangles, nativeMeshTriangle,
                 nativeSplinePosTan, nativeSplineNormalTan);
         }
 
@@ -151,6 +152,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             }
         }
 
+        [BurstCompile]
         private void GetMeshData(NativeArray<float3x2> nativeSplinePosTan, NativeArray<float3> nativeSplineNormalTan,
             int meshVerticesLength, NativeList<float> vertexRatios,
             NativeList<float3> vertexOffsets,
@@ -170,8 +172,6 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                     var verticesPosition =
                         nativeSplinePosTan[c0].c0 + math.mul(splineRotation, vertexOffsets[vertexIndex]);
                     var positionOffset = math.mul(splineRotation, positionAdjustment);
-                    Debug.DrawLine(transform.position + (Vector3)verticesPosition,
-                        transform.position + (Vector3)positionOffset, Color.white, 10);
                     vertices.Add(verticesPosition + positionOffset);
                     c0++;
                 }
@@ -292,7 +292,6 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             generatedMesh.RecalculateTangents();
         }
 
-        [BurstCompile]
         private static int[][] ToInt(NativeArray<NativeList<int>> nativeList)
         {
             int[][] managedArray = new int[nativeList.Length][];
@@ -309,7 +308,6 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             return managedArray;
         }
 
-        [BurstCompile]
         private static Vector3[] TVector3S(NativeList<float3> nativeList)
         {
             Vector3[] managedArray = new Vector3[nativeList.Length];
@@ -338,7 +336,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             // Calculate vertex ratios and offsets
             foreach (var vertex in mesh.vertices)
             {
-                float ratio = Mathf.Abs(GetRequiredAxis(vertex, forwardAxis)) / meshBoundsDistance;
+                float ratio = math.abs(GetRequiredAxis(vertex, forwardAxis)) / meshBoundsDistance;
                 var offset = GetRequiredOffset(vertex, forwardAxis);
                 vertexRatios.Add(ratio);
                 vertexOffsets.Add(offset);
@@ -350,9 +348,9 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         {
             return axis switch
             {
-                VectorAxis.X => new Vector3(vector.y, vector.z, 0f),
-                VectorAxis.Y => new Vector3(vector.x, vector.z, 0f),
-                _ => new Vector3(vector.x, vector.z, 0f)
+                VectorAxis.X => new float3(vector.y, vector.z, 0f),
+                VectorAxis.Y => new float3(vector.x, vector.z, 0f),
+                _ => new float3(vector.x, vector.z, 0f)
             };
         }
 
@@ -385,8 +383,21 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         )
         {
             var curveIndex = spline.SplineToCurveT(t, out var curveT);
-            var curve = spline.GetCurve(curveIndex);
+            BezierCurve curve = spline.GetCurve(curveIndex);
 
+            position = CurveUtility.EvaluatePosition(curve, curveT);
+            tangent = CurveUtility.EvaluateTangent(curve, curveT);
+        }
+
+
+        [BurstCompile]
+        private static void Evaluate(
+            BezierCurve curve,
+            float curveT,
+            out float3 position,
+            out float3 tangent
+        )
+        {
             position = CurveUtility.EvaluatePosition(curve, curveT);
             tangent = CurveUtility.EvaluateTangent(curve, curveT);
         }

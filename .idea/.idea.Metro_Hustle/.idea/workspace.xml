@@ -8,6 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +137,7 @@
       <workItem from="1747101190773" duration="1143000" />
       <workItem from="1747104674411" duration="462000" />
       <workItem from="1747108076140" duration="3782000" />
-      <workItem from="1747186467962" duration="13983000" />
+      <workItem from="1747186467962" duration="16995000" />
     </task>
     <servers />
   </component>
@@ -154,62 +156,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs</url>
-          <line>41</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Healths\Healths\UpdateHealthUISystem.cs" containingFunctionPresentation="Method 'OnUpdate'">
-            <startOffsets>
-              <option value="1301" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1345" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Prefabs/Prefabs.Data/AssetRequestMonoBehaviour.cs</url>
-          <line>59</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Prefabs\Prefabs.Data\AssetRequestMonoBehaviour.cs" containingFunctionPresentation="Method 'OnDisable'">
-            <startOffsets>
-              <option value="2044" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2073" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs</url>
-          <line>95</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\SplineMesh\Runtime\Core\SplineMeshResolution.cs" containingFunctionPresentation="Method 'GenerateMeshAlongSpline'">
-            <startOffsets>
-              <option value="3440" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3789" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs</url>
-          <line>174</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\SplineMesh\Runtime\Core\SplineMeshResolution.cs" containingFunctionPresentation="Method 'GetMeshData'">
-            <startOffsets>
-              <option value="7922" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7970" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
         <watch expression="log" />
