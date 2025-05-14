@@ -7,7 +7,7 @@
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/SplineMesh.Runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/SplineMesh.Runtime.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +133,7 @@
       <workItem from="1747101190773" duration="1143000" />
       <workItem from="1747104674411" duration="462000" />
       <workItem from="1747108076140" duration="3782000" />
-      <workItem from="1747186467962" duration="5651000" />
+      <workItem from="1747186467962" duration="6619000" />
     </task>
     <servers />
   </component>
