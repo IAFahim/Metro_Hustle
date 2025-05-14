@@ -303,9 +303,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c865c9e7a545628da622e6999eaed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enable: 1
+  playerInputEnable: 1
+  upInputEnable: 1
+  downInputEnable: 1
   rightInputEnable: 1
   leftInputEnable: 1
+  upInputLive: 0
+  downInputLive: 0
   rightInputLive: 0
   leftInputLive: 0
 --- !u!1660057539 &9223372036854775807
