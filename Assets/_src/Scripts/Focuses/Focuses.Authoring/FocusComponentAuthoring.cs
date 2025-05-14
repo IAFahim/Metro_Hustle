@@ -1,18 +1,19 @@
-﻿using Unity.Entities;
+﻿using _src.Scripts.Focuses.Focuses.Data;
+using Unity.Entities;
 using UnityEngine;
 
-namespace _src.Scripts.Focuses.Focuses.Data
+namespace _src.Scripts.Focuses.Focuses.Authoring
 {
     public class FocusComponentAuthoring : MonoBehaviour
     {
-        public byte Priority = 0;
+        public byte priority = 0;
 
         public class FocusComponentBaker : Baker<FocusComponentAuthoring>
         {
             public override void Bake(FocusComponentAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
-                AddComponent(entity, new FocusComponent { Priority = authoring.Priority });
+                AddComponent(entity, new FocusComponent { Priority = authoring.priority });
             }
         }
     }
