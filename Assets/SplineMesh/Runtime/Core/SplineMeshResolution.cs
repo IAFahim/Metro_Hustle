@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.Splines;
+using UnityEngine.XR;
 
 namespace SplineMesh.SplineMesh.Runtime.Core
 {
@@ -24,8 +25,53 @@ namespace SplineMesh.SplineMesh.Runtime.Core
     {
         public NativeArray<float3> Normals;
         public NativeArray<float2> UV;
+        public NativeArray<NativeArray<int>> Triangles;
         public NativeList<float> VertexRatios;
         public NativeList<float3> VertexOffsets;
+
+        public MeshAssetInfo(Mesh mesh, float meshForwardDistance, VectorAxis forward, Allocator allocator)
+        {
+            Normals = MeshUtil.CreateNativeArray(mesh.normals, Allocator.Temp);
+            UV = MeshUtil.CreateNativeArray(mesh.uv, Allocator.Temp);
+            VertexRatioOffset(mesh, meshForwardDistance, forward, Allocator.Temp, out VertexRatios, out VertexOffsets);
+            Triangles = NativeMeshTriangle(mesh, allocator);
+        }
+
+        private static void VertexRatioOffset(
+            Mesh mesh,
+            float meshForwardDistance,
+            VectorAxis forward,
+            Allocator allocator,
+            out NativeList<float> vertexRatios,
+            out NativeList<float3> vertexOffsets)
+        {
+            int vertexCount = mesh.vertices.Length;
+            vertexRatios = new NativeList<float>(vertexCount, allocator);
+            vertexOffsets = new NativeList<float3>(vertexCount, allocator);
+
+            for (int i = 0; i < vertexCount; ++i)
+            {
+                var vertex = mesh.vertices[i];
+                float ratio = math.abs(MeshUtil.GetRequiredAxis(vertex, forward)) / meshForwardDistance;
+                var offset = MeshUtil.GetRequiredOffset(vertex, forward);
+                vertexRatios.Add(ratio);
+                vertexOffsets.Add(offset);
+            }
+        }
+
+        private static NativeArray<NativeArray<int>> NativeMeshTriangle(Mesh mesh, Allocator allocator)
+        {
+            var nativeSubMeshTriangles = new NativeArray<NativeArray<int>>(mesh.subMeshCount, allocator);
+            for (int subMeshIndex = 0; subMeshIndex < mesh.subMeshCount; subMeshIndex++)
+            {
+                var triangles = mesh.GetTriangles(subMeshIndex);
+                var nativeTriangles = new NativeArray<int>(triangles.Length, allocator);
+                nativeTriangles.CopyFrom(triangles);
+                nativeSubMeshTriangles[subMeshIndex] = nativeTriangles;
+            }
+
+            return nativeSubMeshTriangles;
+        }
 
 
         public void Dispose()
@@ -34,6 +80,8 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             if (UV.IsCreated) UV.Dispose();
             if (VertexRatios.IsCreated) VertexRatios.Dispose();
             if (VertexOffsets.IsCreated) VertexOffsets.Dispose();
+            foreach (var nativeArr in Triangles) nativeArr.Dispose();
+            if (Triangles.IsCreated) Triangles.Dispose();
         }
     }
 
@@ -136,30 +184,18 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             }
 
 
-            GenerateMeshAlongSpline(modelMesh, splineContainer.Splines[0]);
+            GenerateMeshAlongSpline(modelMesh, splineContainer.Splines[0], forwardAxis);
         }
 
-        private void GenerateMeshAlongSpline(Mesh sourceMesh, Spline spline)
+        private void GenerateMeshAlongSpline(Mesh mesh, Spline spline, VectorAxis forward)
         {
             int curveCount = spline.GetCurveCount() - 1;
-            float meshBoundsForwardAxisDistance = math.abs(GetRequiredAxis(sourceMesh.bounds.size, forwardAxis));
+            float meshForwardDistance = math.abs(MeshUtil.GetRequiredAxis(mesh.bounds.size, forward));
+            MeshAssetInfo meshAssetInfo = new(mesh, meshForwardDistance, forward, Allocator.Temp);
 
-            NativeModelVertexRatioOffset(sourceMesh, meshBoundsForwardAxisDistance, Allocator.Temp,
-                out var vertexRatios, out var vertexOffsets);
-            MeshAssetInfo meshAssetInfo = new MeshAssetInfo
-            {
-                Normals = CreateNativeArray(sourceMesh.normals, Allocator.Temp),
-                UV = CreateNativeArray(sourceMesh.uv, Allocator.Temp),
-                VertexOffsets = vertexOffsets,
-                VertexRatios = vertexRatios
-            };
-            var nativeSourceMeshTriangles = NativeMeshTriangle(sourceMesh, Allocator.Temp);
+            CreateSplineCache(spline, meshAssetInfo, Allocator.Temp, out var splineCache);
 
-
-            CreateSplineCache(sourceMesh.vertices.Length, spline, vertexRatios, meshAssetInfo.Normals, Allocator.Temp,
-                out var splineCache);
-
-            var combinedOutputSubMeshTriangles = NativeCombinedSubMeshTriangles(sourceMesh, Allocator.Temp);
+            var combinedOutputSubMeshTriangles = NativeCombinedSubMeshTriangles(mesh, Allocator.Temp);
 
             for (var i = 0; i < meshFilters.Length; i++)
             {
@@ -170,8 +206,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 int combinedVertexOffsetForCurrentMesh = 0;
                 float3 currentPositionAdjustment = positionAdjustments[i];
 
-                GetMeshData(splineCache, meshAssetInfo, sourceMesh.vertices.Length, sourceMesh.vertexCount,
-                    ref bakeInfo, nativeSourceMeshTriangles,
+                GetMeshData(splineCache, meshAssetInfo, mesh.vertices.Length, mesh.vertexCount, ref bakeInfo,
                     combinedVertexOffsetForCurrentMesh, curveCount, currentPositionAdjustment);
 
                 SetMesh(meshFilters[i],
@@ -189,9 +224,6 @@ namespace SplineMesh.SplineMesh.Runtime.Core
 
             foreach (var nativeList in combinedOutputSubMeshTriangles) nativeList.Dispose();
             if (combinedOutputSubMeshTriangles.IsCreated) combinedOutputSubMeshTriangles.Dispose();
-
-            foreach (var nativeArr in nativeSourceMeshTriangles) nativeArr.Dispose();
-            if (nativeSourceMeshTriangles.IsCreated) nativeSourceMeshTriangles.Dispose();
         }
 
         [BurstCompile]
@@ -200,7 +232,6 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             int sourceMeshVerticesLength,
             int sourceMeshVertexCount,
             ref MeshBakeInfo bakeInfo,
-            NativeArray<NativeArray<int>> sourcePerSubMeshTriangles,
             int initialCombinedVertexOffset,
             int curveCount, float3 positionAdjustment)
         {
@@ -214,10 +245,10 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 {
                     var splineRotation =
                         quaternion.LookRotationSafe(splineCache.NativeSplinePosTan[c0].c1, upDirection);
-                    var verticesPosition = splineCache.NativeSplinePosTan[c0].c0 +
-                                           math.mul(splineRotation, meshAssetInfo.VertexOffsets[vertexIndex]);
-                    var posOffset = math.mul(splineRotation, positionAdjustment);
-                    bakeInfo.Vertices.Add(verticesPosition + posOffset);
+                    var vertexOffset = math.mul(splineRotation, meshAssetInfo.VertexOffsets[vertexIndex]);
+                    var verticesPosition = splineCache.NativeSplinePosTan[c0].c0 + vertexOffset;
+                    var adjustment = math.mul(splineRotation, positionAdjustment);
+                    bakeInfo.Vertices.Add(verticesPosition + adjustment);
                     c0++;
                 }
 
@@ -225,12 +256,11 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 {
                     var tangent = splineCache.NativeSplineNormalTan[c1++];
                     var splineRotation = quaternion.LookRotationSafe(tangent, upDirection);
-                    var transformedNormal =
-                        math.mul(splineRotation, meshAssetInfo.Normals[normalIndex]);
+                    var transformedNormal = math.mul(splineRotation, meshAssetInfo.Normals[normalIndex]);
                     bakeInfo.Normals.Add(transformedNormal);
                 }
 
-                AddTriangulation(sourceMeshVertexCount, sourcePerSubMeshTriangles, bakeInfo.SubMeshTriangles,
+                AddTriangulation(sourceMeshVertexCount, meshAssetInfo.Triangles, bakeInfo.SubMeshTriangles,
                     ref currentVertexOffset);
 
                 SetUV(meshAssetInfo.UV, resolutionFraction, meshAssetInfo.VertexRatios, resIncrement, curveCount,
@@ -239,89 +269,40 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         }
 
         [BurstCompile]
-        private void CreateSplineCache(int meshVerticesLength, Spline spline, NativeList<float> vertexRatios,
-            NativeArray<float3> sourceMeshNormals, Allocator allocator,
-            out SplineCache splineCache
+        private void CreateSplineCache(Spline spline,
+            MeshAssetInfo meshAssetInfo, Allocator allocator, out SplineCache splineCache
         )
         {
-            var nativeSplinePosTan = new NativeArray<float3x2>(meshResolutions * meshVerticesLength, allocator);
-            var nativeSplineNormalTan = new NativeArray<float3>(meshResolutions * sourceMeshNormals.Length, allocator);
+            var positionTangent =
+                new NativeArray<float3x2>(meshResolutions * meshAssetInfo.VertexOffsets.Length, allocator);
+            var nativeSplineNormalTan =
+                new NativeArray<float3>(meshResolutions * meshAssetInfo.Normals.Length, allocator);
 
             for (int resIncrement = 0, pIndex = 0, nIndex = 0; resIncrement < meshResolutions; resIncrement++)
             {
                 var resolutionFraction = resIncrement / (float)meshResolutions;
 
-                for (var vertexIndex = 0; vertexIndex < meshVerticesLength; vertexIndex++)
+                for (var vertexIndex = 0; vertexIndex < meshAssetInfo.VertexOffsets.Length; vertexIndex++)
                 {
-                    float t = resolutionFraction + vertexRatios[vertexIndex] * (1f / meshResolutions);
-                    Evaluate(spline, t, out float3 splinePosition, out float3 tangent);
-                    nativeSplinePosTan[pIndex++] = new float3x2(splinePosition, tangent);
+                    float t = resolutionFraction + meshAssetInfo.VertexRatios[vertexIndex] * (1f / meshResolutions);
+                    MeshUtil.Evaluate(spline, t, out float3 splinePosition, out float3 tangent);
+                    positionTangent[pIndex++] = new float3x2(splinePosition, tangent);
                 }
 
-                for (int normalIndex = 0; normalIndex < sourceMeshNormals.Length; normalIndex++)
+                for (int normalIndex = 0; normalIndex < meshAssetInfo.Normals.Length; normalIndex++)
                 {
-                    float point = resolutionFraction + vertexRatios[normalIndex] * (1f / meshResolutions);
+                    float point = resolutionFraction + meshAssetInfo.VertexRatios[normalIndex] * (1f / meshResolutions);
                     nativeSplineNormalTan[nIndex++] = math.normalize(spline.EvaluateTangent(point));
                 }
             }
 
             splineCache = new SplineCache()
             {
-                NativeSplinePosTan = nativeSplinePosTan,
+                NativeSplinePosTan = positionTangent,
                 NativeSplineNormalTan = nativeSplineNormalTan
             };
         }
 
-        [BurstCompile]
-        private void NativeModelVertexRatioOffset(
-            Mesh mesh,
-            float meshBoundsDistance,
-            Allocator allocator,
-            out NativeList<float> vertexRatios,
-            out NativeList<float3> vertexOffsets)
-        {
-            int vertexCount = mesh.vertices.Length;
-            vertexRatios = new NativeList<float>(vertexCount, allocator);
-            vertexOffsets = new NativeList<float3>(vertexCount, allocator);
-
-            for (int i = 0; i < vertexCount; ++i)
-            {
-                var vertex = mesh.vertices[i];
-                float ratio = math.abs(GetRequiredAxis(vertex, forwardAxis)) / meshBoundsDistance;
-                var offset = GetRequiredOffset(vertex, forwardAxis);
-                vertexRatios.Add(ratio);
-                vertexOffsets.Add(offset);
-            }
-        }
-
-        private static NativeArray<float3> CreateNativeArray(Vector3[] array, Allocator allocator)
-        {
-            var nativeArray = new NativeArray<float3>(array.Length, allocator);
-            for (int i = 0; i < array.Length; i++) nativeArray[i] = array[i];
-            return nativeArray;
-        }
-
-        private static NativeArray<float2> CreateNativeArray(Vector2[] array, Allocator allocator)
-        {
-            var nativeArray = new NativeArray<float2>(array.Length, allocator);
-            for (int i = 0; i < array.Length; i++) nativeArray[i] = array[i];
-            return nativeArray;
-        }
-
-        [BurstCompile]
-        private static NativeArray<NativeArray<int>> NativeMeshTriangle(Mesh mesh, Allocator allocator)
-        {
-            var nativeSubMeshTriangles = new NativeArray<NativeArray<int>>(mesh.subMeshCount, allocator);
-            for (int subMeshIndex = 0; subMeshIndex < mesh.subMeshCount; subMeshIndex++)
-            {
-                var triangles = mesh.GetTriangles(subMeshIndex);
-                var nativeTriangles = new NativeArray<int>(triangles.Length, allocator);
-                nativeTriangles.CopyFrom(triangles);
-                nativeSubMeshTriangles[subMeshIndex] = nativeTriangles;
-            }
-
-            return nativeSubMeshTriangles;
-        }
 
         [BurstCompile]
         private static NativeArray<NativeList<int>> NativeCombinedSubMeshTriangles(Mesh mesh, Allocator allocator)
@@ -412,41 +393,9 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             generatedMesh.RecalculateTangents();
         }
 
-        [BurstCompile]
-        private static void Evaluate(Spline spline, float t, out float3 position, out float3 tangent)
-        {
-            t = math.saturate(t);
-            var curveIndex = spline.SplineToCurveT(t, out var curveT);
-            BezierCurve curve = spline.GetCurve(curveIndex);
-
-            position = CurveUtility.EvaluatePosition(curve, curveT);
-            tangent = math.normalize(CurveUtility.EvaluateTangent(curve, curveT));
-        }
 
         [BurstCompile]
-        private static float3 GetRequiredOffset(float3 vector, VectorAxis axis)
-        {
-            return axis switch
-            {
-                VectorAxis.X => new float3(vector.y, vector.z, 0f),
-                VectorAxis.Y => new float3(vector.x, vector.z, 0f),
-                _ => new float3(vector.x, vector.z, 0f)
-            };
-        }
-
-        [BurstCompile]
-        private static float GetRequiredAxis(float3 vector, VectorAxis axis)
-        {
-            return axis switch
-            {
-                VectorAxis.X => vector.x,
-                VectorAxis.Y => vector.y,
-                _ => vector.y
-            };
-        }
-
-        [BurstCompile]
-        private static float2 MakeUVs(float2 uv, float point, VectorAxis uvAxis, float uvResolutions)
+        public static float2 MakeUVs(float2 uv, float point, VectorAxis uvAxis, float uvResolutions)
         {
             return uvAxis switch
             {
@@ -474,6 +423,59 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             }
 
             return managedArray;
+        }
+    }
+
+    [BurstCompile]
+    public static class MeshUtil
+    {
+        public static void Evaluate(Spline spline, float t, out float3 position, out float3 tangent)
+        {
+            t = math.saturate(t);
+            var curveIndex = spline.SplineToCurveT(t, out var curveT);
+            BezierCurve curve = spline.GetCurve(curveIndex);
+
+            position = CurveUtility.EvaluatePosition(curve, curveT);
+            tangent = math.normalize(CurveUtility.EvaluateTangent(curve, curveT));
+        }
+
+        [BurstCompile]
+        public static float3 GetRequiredOffset(float3 vector, VectorAxis axis)
+        {
+            return axis switch
+            {
+                VectorAxis.X => new float3(vector.y, vector.z, 0f),
+                VectorAxis.Y => new float3(vector.x, vector.z, 0f),
+                _ => new float3(vector.x, vector.z, 0f)
+            };
+        }
+
+        [BurstCompile]
+        public static float GetRequiredAxis(float3 vector, VectorAxis axis)
+        {
+            return axis switch
+            {
+                VectorAxis.X => vector.x,
+                VectorAxis.Y => vector.y,
+                _ => vector.y
+            };
+        }
+
+        [BurstCompile]
+        public static NativeArray<float2> CreateNativeArray(Vector2[] array, Allocator allocator)
+        {
+            var nativeArray = new NativeArray<float2>(array.Length, allocator);
+            for (int i = 0; i < array.Length; i++) nativeArray[i] = array[i];
+            return nativeArray;
+        }
+
+
+        [BurstCompile]
+        public static NativeArray<float3> CreateNativeArray(Vector3[] array, Allocator allocator)
+        {
+            var nativeArray = new NativeArray<float3>(array.Length, allocator);
+            for (int i = 0; i < array.Length; i++) nativeArray[i] = array[i];
+            return nativeArray;
         }
     }
 }
