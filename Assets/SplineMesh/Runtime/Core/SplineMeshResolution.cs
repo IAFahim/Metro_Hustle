@@ -1,23 +1,48 @@
 using System;
 using Unity.Burst;
 using Unity.Collections;
+using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.Splines;
-using UnityEngine.XR;
 
 namespace SplineMesh.SplineMesh.Runtime.Core
 {
     public struct SplineCache : IDisposable
     {
-        public NativeArray<float3x2> NativeSplinePosTan;
-        public NativeArray<float3> NativeSplineNormalTan;
+        public NativeArray<float3x2> PositionTangent;
+        public NativeArray<float3> NormalTangent;
+
+        public SplineCache(Spline spline, int meshResolutions, MeshAssetInfo meshAssetInfo, Allocator allocator)
+        {
+            PositionTangent =
+                new NativeArray<float3x2>(meshResolutions * meshAssetInfo.VertexOffsets.Length, allocator);
+            NormalTangent = new NativeArray<float3>(meshResolutions * meshAssetInfo.Normals.Length, allocator);
+
+            for (int resIncrement = 0, pIndex = 0, nIndex = 0; resIncrement < meshResolutions; resIncrement++)
+            {
+                var resolutionFraction = resIncrement / (float)meshResolutions;
+
+                for (var vertexIndex = 0; vertexIndex < meshAssetInfo.VertexOffsets.Length; vertexIndex++)
+                {
+                    float t = resolutionFraction + meshAssetInfo.VertexRatios[vertexIndex] * (1f / meshResolutions);
+                    MeshUtil.Evaluate(spline, t, out float3 splinePosition, out float3 tangent);
+                    PositionTangent[pIndex++] = new float3x2(splinePosition, tangent);
+                }
+
+                for (int normalIndex = 0; normalIndex < meshAssetInfo.Normals.Length; normalIndex++)
+                {
+                    float point = resolutionFraction + meshAssetInfo.VertexRatios[normalIndex] * (1f / meshResolutions);
+                    NormalTangent[nIndex++] = math.normalize(spline.EvaluateTangent(point));
+                }
+            }
+        }
 
         public void Dispose()
         {
-            if (NativeSplinePosTan.IsCreated) NativeSplinePosTan.Dispose();
-            if (NativeSplineNormalTan.IsCreated) NativeSplineNormalTan.Dispose();
+            if (PositionTangent.IsCreated) PositionTangent.Dispose();
+            if (NormalTangent.IsCreated) NormalTangent.Dispose();
         }
     }
 
@@ -85,6 +110,8 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         }
     }
 
+
+    [BurstCompile]
     public struct MeshBakeInfo : IDisposable
     {
         public NativeList<float3> Vertices;
@@ -92,11 +119,22 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         public NativeList<float2> UV;
         public NativeArray<NativeList<int>> SubMeshTriangles;
 
-        public void InitializePerFilterData(Allocator allocator)
+
+        public MeshBakeInfo(int subMeshCount, Allocator allocator)
         {
             Vertices = new NativeList<float3>(allocator);
             Normals = new NativeList<float3>(allocator);
             UV = new NativeList<float2>(allocator);
+            SubMeshTriangles = InitSubMeshTriangles(subMeshCount, allocator);
+        }
+
+
+        [BurstCompile]
+        private static NativeArray<NativeList<int>> InitSubMeshTriangles(int subMeshCount, Allocator allocator)
+        {
+            var combinedSubMeshTriangles = new NativeArray<NativeList<int>>(subMeshCount, allocator);
+            for (int i = 0; i < subMeshCount; i++) combinedSubMeshTriangles[i] = new NativeList<int>(allocator);
+            return combinedSubMeshTriangles;
         }
 
         public void Dispose()
@@ -104,6 +142,112 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             if (Vertices.IsCreated) Vertices.Dispose();
             if (Normals.IsCreated) Normals.Dispose();
             if (UV.IsCreated) UV.Dispose();
+            foreach (var nativeList in SubMeshTriangles) nativeList.Dispose();
+            if (SubMeshTriangles.IsCreated) SubMeshTriangles.Dispose();
+        }
+    }
+
+    [BurstCompile]
+    public struct MakeMeshJob : IJob
+    {
+        [ReadOnly] public SplineCache SplineCache;
+        [ReadOnly] public MeshAssetInfo meshAssetInfo;
+
+        public bool uniformUVs;
+        public VectorAxis uvAxis;
+        public float uvResolutions;
+        public int curveCount;
+        public MeshBakeInfo bakeInfo;
+        public int meshResolutions;
+        public int sourceMeshVerticesLength;
+        public int sourceMeshVertexCount;
+        public int initialCombinedVertexOffset;
+        public float upDirection;
+        public float3 positionAdjustment;
+
+        public void Execute()
+        {
+            int currentVertexOffset = initialCombinedVertexOffset;
+
+            for (int resIncrement = 0, c0 = 0, c1 = 0; resIncrement < meshResolutions; resIncrement++)
+            {
+                var resolutionFraction = resIncrement / (float)meshResolutions;
+                for (var vertexIndex = 0; vertexIndex < sourceMeshVerticesLength; vertexIndex++)
+                {
+                    var splineRotation =
+                        quaternion.LookRotationSafe(SplineCache.PositionTangent[c0].c1, upDirection);
+                    var vertexOffset = math.mul(splineRotation, meshAssetInfo.VertexOffsets[vertexIndex]);
+                    var verticesPosition = SplineCache.PositionTangent[c0].c0 + vertexOffset;
+                    var adjustment = math.mul(splineRotation, positionAdjustment);
+                    bakeInfo.Vertices.Add(verticesPosition + adjustment);
+                    c0++;
+                }
+
+                for (int normalIndex = 0; normalIndex < meshAssetInfo.Normals.Length; normalIndex++)
+                {
+                    var tangent = SplineCache.NormalTangent[c1++];
+                    var splineRotation = quaternion.LookRotationSafe(tangent, upDirection);
+                    var transformedNormal = math.mul(splineRotation, meshAssetInfo.Normals[normalIndex]);
+                    bakeInfo.Normals.Add(transformedNormal);
+                }
+
+                AddTriangulation(sourceMeshVertexCount, meshAssetInfo.Triangles, bakeInfo.SubMeshTriangles,
+                    ref currentVertexOffset);
+
+                SetUV(resolutionFraction, meshAssetInfo.VertexRatios, resIncrement, bakeInfo.UV);
+            }
+        }
+
+        [BurstCompile]
+        private void AddTriangulation(int meshVertexCount,
+            NativeArray<NativeArray<int>> sourcePerSubMeshTriangles,
+            NativeArray<NativeList<int>> outputBakedSubMeshTriangles,
+            ref int currentCombinedVertexOffset)
+        {
+            for (int subMeshIndex = 0; subMeshIndex < sourcePerSubMeshTriangles.Length; subMeshIndex++)
+            {
+                var sourceTriangles = sourcePerSubMeshTriangles[subMeshIndex];
+                var outputTriangleList = outputBakedSubMeshTriangles[subMeshIndex];
+
+                for (int k = 0; k < sourceTriangles.Length; k += 3)
+                {
+                    outputTriangleList.Add(sourceTriangles[k] + currentCombinedVertexOffset);
+                    outputTriangleList.Add(sourceTriangles[k + 2] + currentCombinedVertexOffset);
+                    outputTriangleList.Add(sourceTriangles[k + 1] + currentCombinedVertexOffset);
+                }
+            }
+
+            currentCombinedVertexOffset += meshVertexCount;
+        }
+
+        [BurstCompile]
+        private void SetUV(float resolutionFraction, NativeList<float> vertexRatios, int resIncrement,
+            NativeList<float2> bakedUVsList)
+        {
+            for (int uvIndex = 0; uvIndex < meshAssetInfo.UV.Length; uvIndex++)
+            {
+                var uv = meshAssetInfo.UV[uvIndex];
+                float point;
+                float vertexRatio = vertexRatios[uvIndex];
+
+                if (uniformUVs)
+                    point = resolutionFraction + vertexRatio * (1f / meshResolutions);
+                else
+                    point = (float)resIncrement / curveCount + vertexRatio * (1f / curveCount);
+
+                var splineUV = MakeUVs(uv, point);
+                bakedUVsList.Add(splineUV);
+            }
+        }
+
+        [BurstCompile]
+        private float2 MakeUVs(float2 uv, float point)
+        {
+            return uvAxis switch
+            {
+                VectorAxis.X => new float2(point * uvResolutions, uv.y),
+                _ => new float2(uv.x, point * uvResolutions)
+            };
         }
     }
 
@@ -191,17 +335,13 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         {
             int curveCount = spline.GetCurveCount() - 1;
             float meshForwardDistance = math.abs(MeshUtil.GetRequiredAxis(mesh.bounds.size, forward));
-            MeshAssetInfo meshAssetInfo = new(mesh, meshForwardDistance, forward, Allocator.Temp);
+            var meshAssetInfo = new MeshAssetInfo(mesh, meshForwardDistance, forward, Allocator.Temp);
+            var splineCache = new SplineCache(spline, meshResolutions, meshAssetInfo, Allocator.Temp);
 
-            CreateSplineCache(spline, meshAssetInfo, Allocator.Temp, out var splineCache);
-
-            var combinedOutputSubMeshTriangles = NativeCombinedSubMeshTriangles(mesh, Allocator.Temp);
 
             for (var i = 0; i < meshFilters.Length; i++)
             {
-                MeshBakeInfo bakeInfo = new MeshBakeInfo();
-                bakeInfo.InitializePerFilterData(Allocator.Temp);
-                bakeInfo.SubMeshTriangles = combinedOutputSubMeshTriangles;
+                MeshBakeInfo bakeInfo = new MeshBakeInfo(mesh.subMeshCount, Allocator.Temp);
 
                 int combinedVertexOffsetForCurrentMesh = 0;
                 float3 currentPositionAdjustment = positionAdjustments[i];
@@ -209,21 +349,14 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 GetMeshData(splineCache, meshAssetInfo, mesh.vertices.Length, mesh.vertexCount, ref bakeInfo,
                     combinedVertexOffsetForCurrentMesh, curveCount, currentPositionAdjustment);
 
-                SetMesh(meshFilters[i],
-                    TVector3S(bakeInfo.Vertices),
-                    TVector3S(bakeInfo.Normals),
-                    TVector2S(bakeInfo.UV),
-                    ToInt(bakeInfo
-                        .SubMeshTriangles));
+                SetMesh(meshFilters[i], TVector3S(bakeInfo.Vertices), TVector3S(bakeInfo.Normals),
+                    TVector2S(bakeInfo.UV), ToInt(bakeInfo.SubMeshTriangles));
 
                 bakeInfo.Dispose();
             }
 
             meshAssetInfo.Dispose();
             splineCache.Dispose();
-
-            foreach (var nativeList in combinedOutputSubMeshTriangles) nativeList.Dispose();
-            if (combinedOutputSubMeshTriangles.IsCreated) combinedOutputSubMeshTriangles.Dispose();
         }
 
         [BurstCompile]
@@ -244,9 +377,9 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 for (var vertexIndex = 0; vertexIndex < sourceMeshVerticesLength; vertexIndex++)
                 {
                     var splineRotation =
-                        quaternion.LookRotationSafe(splineCache.NativeSplinePosTan[c0].c1, upDirection);
+                        quaternion.LookRotationSafe(splineCache.PositionTangent[c0].c1, upDirection);
                     var vertexOffset = math.mul(splineRotation, meshAssetInfo.VertexOffsets[vertexIndex]);
-                    var verticesPosition = splineCache.NativeSplinePosTan[c0].c0 + vertexOffset;
+                    var verticesPosition = splineCache.PositionTangent[c0].c0 + vertexOffset;
                     var adjustment = math.mul(splineRotation, positionAdjustment);
                     bakeInfo.Vertices.Add(verticesPosition + adjustment);
                     c0++;
@@ -254,7 +387,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
 
                 for (int normalIndex = 0; normalIndex < meshAssetInfo.Normals.Length; normalIndex++)
                 {
-                    var tangent = splineCache.NativeSplineNormalTan[c1++];
+                    var tangent = splineCache.NormalTangent[c1++];
                     var splineRotation = quaternion.LookRotationSafe(tangent, upDirection);
                     var transformedNormal = math.mul(splineRotation, meshAssetInfo.Normals[normalIndex]);
                     bakeInfo.Normals.Add(transformedNormal);
@@ -268,49 +401,6 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             }
         }
 
-        [BurstCompile]
-        private void CreateSplineCache(Spline spline,
-            MeshAssetInfo meshAssetInfo, Allocator allocator, out SplineCache splineCache
-        )
-        {
-            var positionTangent =
-                new NativeArray<float3x2>(meshResolutions * meshAssetInfo.VertexOffsets.Length, allocator);
-            var nativeSplineNormalTan =
-                new NativeArray<float3>(meshResolutions * meshAssetInfo.Normals.Length, allocator);
-
-            for (int resIncrement = 0, pIndex = 0, nIndex = 0; resIncrement < meshResolutions; resIncrement++)
-            {
-                var resolutionFraction = resIncrement / (float)meshResolutions;
-
-                for (var vertexIndex = 0; vertexIndex < meshAssetInfo.VertexOffsets.Length; vertexIndex++)
-                {
-                    float t = resolutionFraction + meshAssetInfo.VertexRatios[vertexIndex] * (1f / meshResolutions);
-                    MeshUtil.Evaluate(spline, t, out float3 splinePosition, out float3 tangent);
-                    positionTangent[pIndex++] = new float3x2(splinePosition, tangent);
-                }
-
-                for (int normalIndex = 0; normalIndex < meshAssetInfo.Normals.Length; normalIndex++)
-                {
-                    float point = resolutionFraction + meshAssetInfo.VertexRatios[normalIndex] * (1f / meshResolutions);
-                    nativeSplineNormalTan[nIndex++] = math.normalize(spline.EvaluateTangent(point));
-                }
-            }
-
-            splineCache = new SplineCache()
-            {
-                NativeSplinePosTan = positionTangent,
-                NativeSplineNormalTan = nativeSplineNormalTan
-            };
-        }
-
-
-        [BurstCompile]
-        private static NativeArray<NativeList<int>> NativeCombinedSubMeshTriangles(Mesh mesh, Allocator allocator)
-        {
-            var combinedSubMeshTriangles = new NativeArray<NativeList<int>>(mesh.subMeshCount, allocator);
-            for (int i = 0; i < mesh.subMeshCount; i++) combinedSubMeshTriangles[i] = new NativeList<int>(allocator);
-            return combinedSubMeshTriangles;
-        }
 
         [BurstCompile]
         private void SetUV(
@@ -373,16 +463,9 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             generatedMesh.uv = uvs;
             generatedMesh.subMeshCount = modelMesh.subMeshCount;
 
-            for (int submeshIndex = 0; submeshIndex < modelMesh.subMeshCount; submeshIndex++)
+            for (int subMeshIndex = 0; subMeshIndex < modelMesh.subMeshCount; subMeshIndex++)
             {
-                if (submeshIndex < subMeshTriangles.Length)
-                {
-                    generatedMesh.SetTriangles(subMeshTriangles[submeshIndex], submeshIndex);
-                }
-                else
-                {
-                    generatedMesh.SetTriangles(new int[0], submeshIndex);
-                }
+                generatedMesh.SetTriangles(subMeshTriangles[subMeshIndex], subMeshIndex);
             }
 
             if (newMesh) meshFilter.mesh = generatedMesh;
