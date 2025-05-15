@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/TouchInputThresholdSingleton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/DirectionInputAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/DirectionInputAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/InputThresholdSingletonAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/InputThresholdSingletonAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/DownInputEnabledTag.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/DownInputEnabledTag.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/LeftInputEnabledTag.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/LeftInputEnabledTag.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/RightInputEnabledTag.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/RightInputEnabledTag.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/UpInputEnabledTag.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/UpInputEnabledTag.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputThreshold.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputThreshold.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/TouchInputThresholdSingleton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/PlayerInputEnableTag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/PlayerInputEnableTag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionControlSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionControlSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +47,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89527d299cb64ba88f87240781b415e51ea400/fa/4ac07950/UnsafeUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/19fda883e70569fa15e2a3ef5626dc37d123597/_src.Scripts.Healths.Healths.Data.Data.CurrentHealth.g.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e5791a597cf08ecceca4e85fdeabd6a1c5a7a8/_src.Scripts.Healths.Healths.Data.Data.MaxHealth.g.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Metro_Hustle/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink.Data/CinemachineLinkerSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink/CinemachineLinkerSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/RightInputEnabledTag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections/FixedString.gen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@1d12ba0090ff/Unity.Entities/SourceGenerators/Source~/Mock/Unity.Entities.Mock/EntitiesInternalMock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@8017b507cc74/Unity.Mathematics/math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -138,7 +150,8 @@
       <workItem from="1747212741803" duration="7637000" />
       <workItem from="1747234702171" duration="822000" />
       <workItem from="1747274194796" duration="7351000" />
-      <workItem from="1747285453868" duration="7608000" />
+      <workItem from="1747285453868" duration="8238000" />
+      <workItem from="1747301212476" duration="5025000" />
     </task>
     <servers />
   </component>
@@ -157,23 +170,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionControlSystem.cs</url>
-          <line>17</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\InputControls\InputControls\MoveDirectionControlSystem.cs" containingFunctionPresentation="Method 'OnUpdate'">
-            <startOffsets>
-              <option value="391" />
-            </startOffsets>
-            <endOffsets>
-              <option value="465" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
         <watch expression="log" />

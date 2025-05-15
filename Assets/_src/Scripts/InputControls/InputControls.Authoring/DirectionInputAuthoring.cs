@@ -7,17 +7,17 @@ namespace _src.Scripts.InputControls.InputControls.Authoring
 {
     public class DirectionInputAuthoring : MonoBehaviour
     {
+        public bool inputEnabled = true;
         public bool playerInputEnable;
         
         [Header("ComponentEnable")] public bool upInputEnable = true;
         public bool downInputEnable = true;
-        public bool rightInputEnable = true;
-        public bool leftInputEnable = true;
+        public bool sideMoveInputEnable = true;
 
-        [Header("LiveInput")] public bool upInputLive;
-        public bool downInputLive;
-        public bool rightInputLive;
-        public bool leftInputLive;
+        [Header("LiveInput")] 
+        public sbyte speedLevel;
+        public bool sideInputLive;
+        public bool isRight;
 
 
         private class DirectionInputBaker : Baker<DirectionInputAuthoring>
@@ -26,50 +26,32 @@ namespace _src.Scripts.InputControls.InputControls.Authoring
             {
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
 
+                AddComponent<InputEnabledTag>(entity);
+                SetComponentEnabled<InputEnabledTag>(entity, authoring.inputEnabled);
                 AddComponent<PlayerInputEnableTag>(entity);
                 SetComponentEnabled<PlayerInputEnableTag>(entity, authoring.playerInputEnable);
 
-                SetUp(authoring, entity);
-                SetDown(authoring, entity);
-                SetRight(authoring, entity);
-                SetLeft(authoring, entity);
+                SetSpeed(authoring, entity);
+                SetSideMove(authoring, entity);
             }
 
-            private void SetUp(DirectionInputAuthoring authoring, Entity entity)
+            private void SetSpeed(DirectionInputAuthoring authoring, Entity entity)
             {
-                AddComponent(entity, new UpInputEnabledTag
+                AddComponent(entity, new SpeedValueEnabledTag
                 {
-                    Live = authoring.upInputLive
+                   Level = authoring.speedLevel
                 });
-                SetComponentEnabled<UpInputEnabledTag>(entity, authoring.upInputEnable);
+                SetComponentEnabled<SpeedValueEnabledTag>(entity, authoring.upInputEnable);
             }
-
-            private void SetDown(DirectionInputAuthoring authoring, Entity entity)
+            
+            private void SetSideMove(DirectionInputAuthoring authoring, Entity entity)
             {
-                AddComponent(entity, new DownInputEnabledTag
+                AddComponent(entity, new SideMoveInputEnableTag
                 {
-                    Live = authoring.downInputLive
+                    Live = authoring.sideInputLive,
+                    IsRight = authoring.isRight
                 });
-                SetComponentEnabled<DownInputEnabledTag>(entity, authoring.downInputEnable);
-            }
-
-
-            private void SetLeft(DirectionInputAuthoring authoring, Entity entity)
-            {
-                AddComponent(entity, new LeftInputEnabledTag
-                {
-                    Live = authoring.leftInputLive
-                });
-                SetComponentEnabled<LeftInputEnabledTag>(entity, authoring.leftInputEnable);
-            }
-
-            private void SetRight(DirectionInputAuthoring authoring, Entity entity)
-            {
-                AddComponent(entity, new RightInputEnabledTag
-                {
-                    Live = authoring.rightInputLive
-                });
-                SetComponentEnabled<RightInputEnabledTag>(entity, authoring.rightInputEnable);
+                SetComponentEnabled<SideMoveInputEnableTag>(entity, authoring.sideMoveInputEnable);
             }
         }
     }
