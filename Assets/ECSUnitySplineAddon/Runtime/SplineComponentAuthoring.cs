@@ -1,9 +1,9 @@
-﻿using System;
+﻿using ECSUnitySplineAddon.Runtime.Datas;
 using Unity.Entities;
 using UnityEngine;
 using UnityEngine.Splines;
 
-namespace ECSUnitySplineAddon.Runtime.Datas
+namespace ECSUnitySplineAddon.Runtime
 {
     [RequireComponent(typeof(SplineContainer))]
     public class SplineComponentAuthoring : MonoBehaviour

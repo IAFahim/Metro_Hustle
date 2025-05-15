@@ -1,6 +1,7 @@
 using System;
 using Unity.Burst;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
@@ -146,108 +147,61 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             if (SubMeshTriangles.IsCreated) SubMeshTriangles.Dispose();
         }
     }
+    
+    public struct TriangleListContainer 
+    {
+        public NativeArray<int> Tris;
+    }
 
+    [BurstCompile]
+    public struct TriangleOutputListContainer 
+    {
+        public NativeList<int> Tris;
+
+        public TriangleOutputListContainer(int initialCapacity, Allocator allocator)
+        {
+            Tris = new NativeList<int>(initialCapacity, allocator);
+        }
+
+        public void Dispose()
+        {
+            if (Tris.IsCreated) Tris.Dispose();
+        }
+    }
+    
     [BurstCompile]
     public struct MakeMeshJob : IJob
     {
-        [ReadOnly] public SplineCache SplineCache;
-        [ReadOnly] public MeshAssetInfo meshAssetInfo;
+        [ReadOnly] public NativeArray<float3x2> SplinePositionTangent;
+        [ReadOnly] public NativeArray<float3> SplineNormalTangent;
+        [ReadOnly] public NativeArray<float3> SourceNormals;
+        [ReadOnly] public NativeArray<float2> SourceUV;
+        
+        [ReadOnly] 
+        [NativeDisableContainerSafetyRestriction] 
+        public NativeArray<TriangleListContainer> SourceTriangles; 
+        
+        [ReadOnly] public NativeArray<float> SourceVertexRatios;
+        [ReadOnly] public NativeArray<float3> SourceVertexOffsets;
 
-        public bool uniformUVs;
-        public VectorAxis uvAxis;
-        public float uvResolutions;
-        public int curveCount;
-        public MeshBakeInfo bakeInfo;
-        public int meshResolutions;
-        public int sourceMeshVerticesLength;
-        public int sourceMeshVertexCount;
-        public int initialCombinedVertexOffset;
-        public float upDirection;
-        public float3 positionAdjustment;
+        public bool UniformUVs;
+        public VectorAxis UvAxis;
+        public float UvResolutions;
+        public int CurveCount;
+        public int MeshResolutions;
+        public float3 UpDirection; 
+        public float3 PositionAdjustment;
+
+        public NativeList<float3> OutVertices;
+        public NativeList<float3> OutNormals;
+        public NativeList<float2> OutUV;
+
+        [NativeDisableContainerSafetyRestriction] 
+        public NativeArray<TriangleOutputListContainer> OutSubMeshTriangles;
 
         public void Execute()
         {
-            int currentVertexOffset = initialCombinedVertexOffset;
-
-            for (int resIncrement = 0, c0 = 0, c1 = 0; resIncrement < meshResolutions; resIncrement++)
-            {
-                var resolutionFraction = resIncrement / (float)meshResolutions;
-                for (var vertexIndex = 0; vertexIndex < sourceMeshVerticesLength; vertexIndex++)
-                {
-                    var splineRotation =
-                        quaternion.LookRotationSafe(SplineCache.PositionTangent[c0].c1, upDirection);
-                    var vertexOffset = math.mul(splineRotation, meshAssetInfo.VertexOffsets[vertexIndex]);
-                    var verticesPosition = SplineCache.PositionTangent[c0].c0 + vertexOffset;
-                    var adjustment = math.mul(splineRotation, positionAdjustment);
-                    bakeInfo.Vertices.Add(verticesPosition + adjustment);
-                    c0++;
-                }
-
-                for (int normalIndex = 0; normalIndex < meshAssetInfo.Normals.Length; normalIndex++)
-                {
-                    var tangent = SplineCache.NormalTangent[c1++];
-                    var splineRotation = quaternion.LookRotationSafe(tangent, upDirection);
-                    var transformedNormal = math.mul(splineRotation, meshAssetInfo.Normals[normalIndex]);
-                    bakeInfo.Normals.Add(transformedNormal);
-                }
-
-                AddTriangulation(sourceMeshVertexCount, meshAssetInfo.Triangles, bakeInfo.SubMeshTriangles,
-                    ref currentVertexOffset);
-
-                SetUV(resolutionFraction, meshAssetInfo.VertexRatios, resIncrement, bakeInfo.UV);
-            }
-        }
-
-        [BurstCompile]
-        private void AddTriangulation(int meshVertexCount,
-            NativeArray<NativeArray<int>> sourcePerSubMeshTriangles,
-            NativeArray<NativeList<int>> outputBakedSubMeshTriangles,
-            ref int currentCombinedVertexOffset)
-        {
-            for (int subMeshIndex = 0; subMeshIndex < sourcePerSubMeshTriangles.Length; subMeshIndex++)
-            {
-                var sourceTriangles = sourcePerSubMeshTriangles[subMeshIndex];
-                var outputTriangleList = outputBakedSubMeshTriangles[subMeshIndex];
-
-                for (int k = 0; k < sourceTriangles.Length; k += 3)
-                {
-                    outputTriangleList.Add(sourceTriangles[k] + currentCombinedVertexOffset);
-                    outputTriangleList.Add(sourceTriangles[k + 2] + currentCombinedVertexOffset);
-                    outputTriangleList.Add(sourceTriangles[k + 1] + currentCombinedVertexOffset);
-                }
-            }
-
-            currentCombinedVertexOffset += meshVertexCount;
-        }
-
-        [BurstCompile]
-        private void SetUV(float resolutionFraction, NativeList<float> vertexRatios, int resIncrement,
-            NativeList<float2> bakedUVsList)
-        {
-            for (int uvIndex = 0; uvIndex < meshAssetInfo.UV.Length; uvIndex++)
-            {
-                var uv = meshAssetInfo.UV[uvIndex];
-                float point;
-                float vertexRatio = vertexRatios[uvIndex];
-
-                if (uniformUVs)
-                    point = resolutionFraction + vertexRatio * (1f / meshResolutions);
-                else
-                    point = (float)resIncrement / curveCount + vertexRatio * (1f / curveCount);
-
-                var splineUV = MakeUVs(uv, point);
-                bakedUVsList.Add(splineUV);
-            }
-        }
-
-        [BurstCompile]
-        private float2 MakeUVs(float2 uv, float point)
-        {
-            return uvAxis switch
-            {
-                VectorAxis.X => new float2(point * uvResolutions, uv.y),
-                _ => new float2(uv.x, point * uvResolutions)
-            };
+            
         }
     }
 
