@@ -2,8 +2,8 @@
 
 namespace _src.Scripts.InputControls.InputControls.Data.Direction
 {
-    public struct SpeedValueEnabledTag : IComponentData, IEnableableComponent
+    public struct DirectionInputComponent : IComponentData
     {
-        public sbyte Level;
+        public DirectionFlag DirectionFlag;
     }
 }

@@ -5,6 +5,7 @@ namespace _src.Scripts.InputControls.InputControls.Data
 {
     public struct TouchInputThresholdSingleton : IComponentData
     {
-        public half SideMinimum;
+        public half Horizontal;
+        public half Vertical;
     }
 }

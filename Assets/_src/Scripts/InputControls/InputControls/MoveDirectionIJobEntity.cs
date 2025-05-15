@@ -1,19 +1,22 @@
-﻿// using _src.Scripts.InputControls.InputControls.Data;
-// using Unity.Entities;
-//
-// namespace _src.Scripts.InputControls.InputControls
-// {
-//     public partial struct MoveDirectionIJobEntity : IJobEntity
-//     {
-//         public bool InputLive;
-//         public bool UpInput;
-//         public bool DownInput;
-//         public bool LeftInput;
-//         public bool RightInput;
-//         
-//         public void Execute(in InputEnabledTag _, ref PlayerInputEnableTag playerInputEnableTag)
-//         {
-//             if (InputLive > )
-//         }
-//     }
-// }
+﻿using _src.Scripts.InputControls.InputControls.Data;
+using _src.Scripts.InputControls.InputControls.Data.Direction;
+using Unity.Burst;
+using Unity.Entities;
+using UnityEngine;
+
+namespace _src.Scripts.InputControls.InputControls
+{
+    [WithAll(typeof(InputEnableTag), typeof(PlayerInputEnableTag))]
+    [BurstCompile]
+    public partial struct MoveDirectionIJobEntity : IJobEntity
+    {
+        public DirectionFlag RawInputCommand;
+
+        [BurstCompile]
+        private void Execute(ref DirectionInputComponent directionInputComponent)
+        {
+            var directionFlag = directionInputComponent.DirectionFlag & DirectionFlag.EnableFlagsMask;
+            directionInputComponent.DirectionFlag = RawInputCommand | directionFlag;
+        }
+    }
+}

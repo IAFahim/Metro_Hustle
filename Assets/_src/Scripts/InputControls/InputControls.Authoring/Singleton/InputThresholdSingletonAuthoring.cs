@@ -3,12 +3,13 @@ using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace _src.Scripts.InputControls.InputControls.Authoring
+namespace _src.Scripts.InputControls.InputControls.Authoring.Singleton
 {
     [DisallowMultipleComponent]
     public class InputThresholdSingletonAuthoring : MonoBehaviour
     {
-        public half minimum = new(5);
+        public half horizontal = new(0.005);
+        public half vertical  = new(0.01);
 
         public class UpDownInputThresholdBaker : Baker<InputThresholdSingletonAuthoring>
         {
@@ -17,7 +18,8 @@ namespace _src.Scripts.InputControls.InputControls.Authoring
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
                 AddComponent(entity, new TouchInputThresholdSingleton
                 {
-                    SideMinimum = authoring.minimum
+                    Horizontal = authoring.horizontal,
+                    Vertical = authoring.vertical
                 });
             }
         }

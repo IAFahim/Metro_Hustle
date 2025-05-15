@@ -163,7 +163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686383862}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -207,9 +207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a650dde92645039a28265b75f00df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upThreshold: 0.1
-  sideThreshold: 0.2
-  downThreshold: 0.1
+  horizontal:
+    value: 8480
+  vertical:
+    value: 9503
 --- !u!1001 &5781390144955228746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -284,6 +285,12 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 485755097329585741, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 5781390144955228760}
+    - targetCorrespondingSourceObject: {fileID: 485755097329585741, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5781390144955228759}
+    - targetCorrespondingSourceObject: {fileID: 485755097329585741, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 5781390144955228748}
   m_SourcePrefab: {fileID: 100100000, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
 --- !u!1 &5781390144955228747 stripped
@@ -303,18 +310,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c865c9e7a545628da622e6999eaed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionFlag: 240
+--- !u!114 &5781390144955228759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5781390144955228747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5727913db5a6406ead3b623a9b76724d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   playerInputEnable: 1
-  upInputEnable: 1
-  downInputEnable: 1
-  rightInputEnable: 1
-  leftInputEnable: 1
-  upInputLive: 0
-  downInputLive: 0
-  rightInputLive: 0
-  leftInputLive: 0
+--- !u!114 &5781390144955228760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5781390144955228747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e4bffb60ad4098abc1d09a76539b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enable: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 5781390144955228746}
   - {fileID: 686383864}
+  - {fileID: 5781390144955228746}
