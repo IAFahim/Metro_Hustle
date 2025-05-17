@@ -3,6 +3,7 @@ using Drawing;
 using System.ComponentModel;
 using _src.Scripts.Colliders.Colliders.Data;
 using Unity.Entities;
+using Unity.Mathematics;
 using Unity.Transforms;
 
 namespace _src.Scripts.SplineColliders.SplineColliders.Editor
@@ -13,11 +14,11 @@ namespace _src.Scripts.SplineColliders.SplineColliders.Editor
 
         private void Execute(in LocalToWorld localToWorld,
             in ColliderHeightComponent colliderHeightComponent,
-            in ColliderRadiusComponent colliderRadiusComponent
+            in ColliderRadiusSqComponent colliderRadiusSqComponent
         )
         {
             var up = localToWorld.Up * colliderHeightComponent.Height;
-            Drawing.WireSphere(localToWorld.Position + up, colliderRadiusComponent.Radius);
+            Drawing.WireSphere(localToWorld.Position + up, math.sqrt(colliderRadiusSqComponent.RadiusSq));
         }
     }
 }

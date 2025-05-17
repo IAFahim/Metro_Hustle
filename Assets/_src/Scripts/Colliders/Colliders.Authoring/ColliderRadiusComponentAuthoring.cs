@@ -7,16 +7,16 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
 {
     public class ColliderRadiusComponentAuthoring : MonoBehaviour
     {
-        public half radius = new(4.5f / 3f);
+        public half radiusSq = new(math.pow(4.5f / 3f, 2));
 
         private class SplineColliderRadiusBaker : Baker<ColliderRadiusComponentAuthoring>
         {
             public override void Bake(ColliderRadiusComponentAuthoring componentAuthoring)
             {
                 var entity = GetEntity(TransformUsageFlags.None);
-                AddComponent(entity, new ColliderRadiusComponent
+                AddComponent(entity, new ColliderRadiusSqComponent
                 {
-                    Radius = componentAuthoring.radius
+                    RadiusSq = componentAuthoring.radiusSq
                 });
             }
         }
