@@ -361,8 +361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da1480f08d204b80a1112f0600b5524e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spline: 31
-  line: 3
+  spline: 0
+  line: 1
 --- !u!114 &5781390144955228762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,8 +375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff9d1e4ae75400182632c1214071efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height:
-    value: 0
   radius:
     value: 15872
 --- !u!1660057539 &9223372036854775807
