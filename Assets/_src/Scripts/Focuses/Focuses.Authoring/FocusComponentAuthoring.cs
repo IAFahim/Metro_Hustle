@@ -12,7 +12,7 @@ namespace _src.Scripts.Focuses.Focuses.Authoring
         {
             public override void Bake(FocusComponentAuthoring authoring)
             {
-                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, new FocusComponent { Priority = authoring.priority });
             }
         }

@@ -1,7 +1,7 @@
 ﻿#if ALINE
 using Drawing;
 using System.ComponentModel;
-using _src.Scripts.SplineColliders.SplineColliders.Data;
+using _src.Scripts.Colliders.Colliders.Data;
 using Unity.Entities;
 using Unity.Transforms;
 
@@ -11,13 +11,13 @@ namespace _src.Scripts.SplineColliders.SplineColliders.Editor
     {
         [ReadOnly(true)] public CommandBuilder Drawing;
 
-        private void Execute(in LocalTransform localTransform,
-            in SplineColliderHeightComponent splineColliderHeightComponent,
-            in SplineColliderRadiusComponent splineColliderRadiusComponent
+        private void Execute(in LocalToWorld localToWorld,
+            in ColliderHeightComponent colliderHeightComponent,
+            in ColliderRadiusComponent colliderRadiusComponent
         )
         {
-            var up = localTransform.Up() * splineColliderHeightComponent.Height;
-            Drawing.WireSphere(localTransform.Position + up, splineColliderRadiusComponent.Radius);
+            var up = localToWorld.Up * colliderHeightComponent.Height;
+            Drawing.WireSphere(localToWorld.Position + up, colliderRadiusComponent.Radius);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace _src.Scripts.SplineConfigs.SplineConfigs.Authoring
         {
             public override void Bake(SplineLineComponentAuthoring authoring)
             {
-                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, SplineLineComponent.Create(authoring.spline, authoring.line));
             }
         }

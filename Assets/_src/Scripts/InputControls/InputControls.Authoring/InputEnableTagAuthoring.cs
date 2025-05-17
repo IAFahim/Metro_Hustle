@@ -12,7 +12,7 @@ namespace _src.Scripts.InputControls.InputControls.Authoring
         {
             public override void Bake(InputEnableTagAuthoring authoring)
             {
-                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent<InputEnableTag>(entity);
                 SetComponentEnabled<InputEnableTag>(entity, authoring.enable);
             }

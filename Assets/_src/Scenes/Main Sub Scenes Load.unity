@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height:
-    value: 16384
+    value: 0
 --- !u!114 &1563051586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius:
-    value: 15360
+    value: 14336
 --- !u!1 &1902738499
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ namespace _src.Scripts.Focuses.Focuses.Authoring
         {
             public override void Bake(FocusManagerAuthoring managerAuthoring)
             {
-                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, new FocusManagerCurrentInfoComponent());
             }
         }

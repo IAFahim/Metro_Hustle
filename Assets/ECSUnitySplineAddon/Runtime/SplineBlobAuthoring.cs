@@ -34,7 +34,7 @@ namespace ECSUnitySplineAddon.Runtime
                 var nativeSplineBlobAssetRef =
                     NativeSplineBlobFactory.CreateBlob(nativeSpline, authoring.LUT_RESOLUTION);
 
-                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                var entity = GetEntity(TransformUsageFlags.None);
 
                 AddBlobAsset(ref nativeSplineBlobAssetRef, out _);
 

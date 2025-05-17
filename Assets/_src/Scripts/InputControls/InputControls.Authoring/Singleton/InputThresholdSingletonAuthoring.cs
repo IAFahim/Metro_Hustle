@@ -15,7 +15,7 @@ namespace _src.Scripts.InputControls.InputControls.Authoring.Singleton
         {
             public override void Bake(InputThresholdSingletonAuthoring authoring)
             {
-                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, new TouchInputThresholdSingleton
                 {
                     Horizontal = authoring.horizontal,

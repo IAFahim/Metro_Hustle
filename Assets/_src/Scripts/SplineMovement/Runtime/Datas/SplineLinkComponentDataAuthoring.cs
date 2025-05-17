@@ -7,7 +7,6 @@ namespace _src.Scripts.SplineMovement.Runtime.Datas
 {
     public class SplineLinkComponentDataAuthoring : MonoBehaviour
     {
-        public TransformUsageFlags transformUsageFlags = TransformUsageFlags.Dynamic;
         public byte splineIndex;
         public byte curveIndex;
         public sbyte lineNumber;
@@ -19,7 +18,7 @@ namespace _src.Scripts.SplineMovement.Runtime.Datas
         {
             public override void Bake(SplineLinkComponentDataAuthoring authoring)
             {
-                var entity = GetEntity(authoring.transformUsageFlags);
+                var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, new SplineLinkComponentData
                     {
                         SplineIndex = authoring.splineIndex,

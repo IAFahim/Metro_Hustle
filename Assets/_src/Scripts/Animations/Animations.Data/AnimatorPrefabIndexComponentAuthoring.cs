@@ -13,7 +13,7 @@ namespace _src.Scripts.Animations.Animations.Data
         {
             public override void Bake(AnimatorPrefabIndexComponentAuthoring authoring)
             {
-                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, new AnimatorPrefabIndexComponent { Index = authoring.index });
             }
         }

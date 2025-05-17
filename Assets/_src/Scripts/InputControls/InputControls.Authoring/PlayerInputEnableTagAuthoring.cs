@@ -1,7 +1,8 @@
-﻿using Unity.Entities;
+﻿using _src.Scripts.InputControls.InputControls.Data;
+using Unity.Entities;
 using UnityEngine;
 
-namespace _src.Scripts.InputControls.InputControls.Data
+namespace _src.Scripts.InputControls.InputControls.Authoring
 {
     public class PlayerInputEnableTagAuthoring : MonoBehaviour
     {
@@ -10,7 +11,7 @@ namespace _src.Scripts.InputControls.InputControls.Data
         {
             public override void Bake(PlayerInputEnableTagAuthoring authoring)
             {
-                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent<PlayerInputEnableTag>(entity);
                 SetComponentEnabled<PlayerInputEnableTag>(entity, authoring.playerInputEnable);
 

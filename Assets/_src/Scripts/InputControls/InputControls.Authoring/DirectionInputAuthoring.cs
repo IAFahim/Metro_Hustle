@@ -13,7 +13,7 @@ namespace _src.Scripts.InputControls.InputControls.Authoring
         {
             public override void Bake(DirectionInputAuthoring authoring)
             {
-                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, new DirectionInputComponent
                 {
                     DirectionFlag = authoring.directionFlag
