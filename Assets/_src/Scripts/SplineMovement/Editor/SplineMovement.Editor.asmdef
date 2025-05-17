@@ -28,7 +28,7 @@
         {
             "name": "com.arongranberg.aline",
             "expression": "1.0.0",
-            "define": "Aline"
+            "define": "ALINE"
         }
     ],
     "noEngineReferences": false

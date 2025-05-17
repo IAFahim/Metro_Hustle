@@ -1,14 +1,12 @@
-﻿#if Aline
+﻿#if ALINE
 using Drawing;
-using UnityEngine;
 #endif
 
 using _src.Scripts.SplineMovement.Runtime.Datas;
-using _src.Scripts.SplineMovement.Runtime.Systems;
 using BovineLabs.Core.Groups;
-using Unity.Transforms;
 using Unity.Burst;
 using Unity.Entities;
+using Unity.Transforms;
 
 namespace _src.Scripts.SplineMovement.Editor
 {
@@ -25,7 +23,7 @@ namespace _src.Scripts.SplineMovement.Editor
 
         public void OnUpdate(ref SystemState state)
         {
-#if Aline
+#if ALINE
             
             var builder = DrawingManager.GetBuilder();
             foreach (var (

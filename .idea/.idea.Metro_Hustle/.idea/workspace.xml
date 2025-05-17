@@ -5,164 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineCollisionComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/SplineColliderRadiusAuthoring.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineColliderRadiusComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineBlobAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineComponentAuthoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineBlobAuthoring.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/EditorTools.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/EditorTools/BeveledBoxBoundsHandle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/EditorTools/BeveledBoxBoundsHandle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/EditorTools/BeveledCylinderBoundsHandle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/EditorTools/BeveledCylinderBoundsHandle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/EditorTools/PhysicsBoundsHandleUtility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/EditorTools/PhysicsBoundsHandleUtility.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/EditorTools/PhysicsCapsuleBoundsHandle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/EditorTools/PhysicsCapsuleBoundsHandle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/EditorTools/PhysicsSphereBoundsHandle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/EditorTools/PhysicsSphereBoundsHandle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/BallAndSocketJointEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/BallAndSocketJointEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/CustomPhysicsMaterialTagNamesEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/CustomPhysicsMaterialTagNamesEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/EditorUtilities.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/EditorUtilities.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/LimitedHingeJointEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/LimitedHingeJointEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/PhysicsBodyAuthoringEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/PhysicsBodyAuthoringEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/PhysicsCategoryNamesEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/PhysicsCategoryNamesEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/PhysicsShapeAuthoringEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/PhysicsShapeAuthoringEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/RagdollJointEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Editors/RagdollJointEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/BaseDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/BaseDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/EnumFlagsDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/EnumFlagsDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/EulerAnglesDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/EulerAnglesDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/ExpandChildrenDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/ExpandChildrenDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/PhysicsMaterialCoefficientDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/PhysicsMaterialCoefficientDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/PhysicsMaterialPropertiesDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/PhysicsMaterialPropertiesDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/SoftRangeDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/SoftRangeDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/TagsDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/PropertyDrawers/TagsDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Unity.Physics.Custom.Editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Unity.Physics.Custom.Editor.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Utilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Utilities/EditorGUIControls.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Utilities/EditorGUIControls.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Utilities/ManipulatorUtility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Utilities/ManipulatorUtility.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Utilities/SceneViewUtility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Utilities/SceneViewUtility.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Utilities/StatusMessageUtility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.Editor/Utilities/StatusMessageUtility.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/BaseBodyPairConnector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/BaseBodyPairConnector.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Bodies.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Bodies/BakingSystems.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Bodies/BakingSystems/PhysicsBodyBakingSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Bodies/BakingSystems/PhysicsBodyBakingSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Bodies/BakingSystems/PhysicsShapeBakingSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Bodies/BakingSystems/PhysicsShapeBakingSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Bodies/PhysicsBodyAuthoring.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Bodies/PhysicsBodyAuthoring.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Bodies/PhysicsShapeAuthoring.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Bodies/PhysicsShapeAuthoring.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/CustomPhysicsMaterialTagNames.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/CustomPhysicsMaterialTagNames.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/CustomPhysicsMaterialTags.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/CustomPhysicsMaterialTags.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/EditorInitialization.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/EditorInitialization.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/BallAndSocketJoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/BallAndSocketJoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/BaseJoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/BaseJoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/FreeHingeJoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/FreeHingeJoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/LimitDOFJoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/LimitDOFJoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/LimitedDistanceJoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/LimitedDistanceJoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/LimitedHingeJoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/LimitedHingeJoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/ModifyJointLimitsAuthoring.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/ModifyJointLimitsAuthoring.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/PrismaticJoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/PrismaticJoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/RagdollJoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/RagdollJoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/RigidJoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Joints/RigidJoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Motors.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Motors/AngularVelocityMotor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Motors/AngularVelocityMotor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Motors/LinearVelocityMotor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Motors/LinearVelocityMotor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Motors/PositionMotor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Motors/PositionMotor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Motors/RotationalMotor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Motors/RotationalMotor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/PhysicsCategoryNames.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/PhysicsCategoryNames.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/PhysicsCategoryTags.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/PhysicsCategoryTags.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/PhysicsMaterialProperties.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/PhysicsMaterialProperties.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/PhysicsMaterialTemplate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/PhysicsMaterialTemplate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/PhysicsRenderEntityAuthoring.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/PhysicsRenderEntityAuthoring.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Unity.Physics.Custom.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Unity.Physics.Custom.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/BakeGeometryJobs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/BakeGeometryJobs.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/BakeGeometryJobsExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/BakeGeometryJobsExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/CapsuleGeometryAuthoring.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/CapsuleGeometryAuthoring.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/ConvexHullGenerationParametersExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/ConvexHullGenerationParametersExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/EulerAngles.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/EulerAngles.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/GetActiveChildrenScope.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/GetActiveChildrenScope.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/PhysicsShapeExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/PhysicsShapeExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/PropertyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Unity Physics/1.4.0-exp.2/Custom Physics Authoring/Unity.Physics.Custom/Utilities/PropertyAttributes.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineBlob.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineBlob.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineCollisionComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovementSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovements.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovements.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/BoxLineCollisionRangeComponentAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/BoxLineCollisionRangeComponentAuthoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/SplineColliderRadiusAuthoring.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/BoxLineMovements.Authoring.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/BoxLineMovements.Authoring.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineCollisionComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineCollisionComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineColliderRadiusComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineMovements.Data.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineMovements.Data.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Debug.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Debug/BoxLineMovements.Debug.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Debug/BoxLineMovements.Debug.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovementSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovementSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovements.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovements.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineCollisions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Debug.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Debug/SplineConfigs.Debug.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Debug/SplineConfigs.Debug.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/MoveAlongSplineSystemDebug.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/MoveAlongSplineSystemDebug.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/SplineMovement.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/SplineMovement.Editor.asmdef" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,7 +177,7 @@
       <workItem from="1747333836488" duration="1159000" />
       <workItem from="1747387124672" duration="6384000" />
       <workItem from="1747400780026" duration="2156000" />
-      <workItem from="1747436725048" duration="2428000" />
+      <workItem from="1747436725048" duration="5171000" />
     </task>
     <servers />
   </component>
