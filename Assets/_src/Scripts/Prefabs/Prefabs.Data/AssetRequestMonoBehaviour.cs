@@ -23,22 +23,22 @@ namespace _src.Scripts.Prefabs.Prefabs.Data
             _pending = false;
         }
 
-        public bool TryRequest(sbyte index, in LocalTransform localTransform, out GameObject obj)
+        public bool TryRequest(sbyte index, in LocalToWorld localToWorld, out GameObject obj)
         {
             if (index < 0) index = mainCharacterIndex;
             if (TryGetFromCache(index, out obj)) return true;
-            return TryInstanstateNew(index, localTransform);
+            return TryInstantiateNew(index, localToWorld);
         }
 
-        private bool TryInstanstateNew(sbyte index, LocalTransform localTransform)
+        private bool TryInstantiateNew(sbyte index, LocalToWorld localToWorld)
         {
             if (_pending) return false;
             _pending = true;
             var assetReferenceGameObject = bodies.assets[mainCharacterIndex].assetReferenceGameObject;
             var asyncOperationHandle = Addressables.InstantiateAsync(
                 assetReferenceGameObject,
-                localTransform.Position,
-                localTransform.Rotation
+                localToWorld.Position,
+                localToWorld.Rotation
             );
             asyncOperationHandle.Completed += handle => AsyncOperationHandleOnCompleted(index, handle);
             return asyncOperationHandle.IsDone;

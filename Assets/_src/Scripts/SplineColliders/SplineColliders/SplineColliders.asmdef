@@ -19,7 +19,9 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms"
+        "Unity.Transforms",
+        "Colliders.Data",
+        "SplineConfigs.Data"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
