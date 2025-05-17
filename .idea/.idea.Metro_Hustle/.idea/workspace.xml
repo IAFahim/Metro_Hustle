@@ -4,42 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/SplineColliderRadiusAuthoring.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineColliderRadiusComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/BoxLineCollisionRangeComponentAuthoring.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/BoxLineCollisionRangeComponentAuthoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/SplineColliderRadiusAuthoring.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/BoxLineMovements.Authoring.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Authoring/BoxLineMovements.Authoring.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineCollisionComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineCollisionComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineColliderRadiusComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineMovements.Data.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Data/BoxLineMovements.Data.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Debug.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Debug/BoxLineMovements.Debug.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.Debug/BoxLineMovements.Debug.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovementSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovementSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovements.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/BoxLineMovements/BoxLineMovements/BoxLineMovements.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineCollisions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Debug.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Debug/SplineConfigs.Debug.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Debug/SplineConfigs.Debug.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/MoveAlongSplineSystemDebug.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/MoveAlongSplineSystemDebug.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/SplineMovement.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/SplineMovement.Editor.asmdef" afterDir="false" />
-    </list>
+    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +142,7 @@
       <workItem from="1747333836488" duration="1159000" />
       <workItem from="1747387124672" duration="6384000" />
       <workItem from="1747400780026" duration="2156000" />
-      <workItem from="1747436725048" duration="5171000" />
+      <workItem from="1747436725048" duration="5497000" />
     </task>
     <servers />
   </component>
