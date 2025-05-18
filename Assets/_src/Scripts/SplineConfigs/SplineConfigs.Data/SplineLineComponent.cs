@@ -7,11 +7,11 @@ namespace _src.Scripts.SplineConfigs.SplineConfigs.Data
     [BurstCompile]
     public struct SplineLineComponent : IComponentData
     {
-        public byte SplineLine;
+        public byte Value;
 
         [BurstCompile]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public readonly int GetSpline() => SplineLine >> 5;
+        public readonly int GetSpline() => Value >> 5;
 
         [BurstCompile]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -24,10 +24,10 @@ namespace _src.Scripts.SplineConfigs.SplineConfigs.Data
         [BurstCompile]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SplineLineComponent Create(byte spline, byte line) =>
-            new() { SplineLine = SplineLineEncode(spline, line) };
+            new() { Value = SplineLineEncode(spline, line) };
 
         [BurstCompile]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public readonly int GetLine() => SplineLine & 0x1111_1000;
+        public readonly int GetLine() => Value & 0x1111_1000;
     }
 }

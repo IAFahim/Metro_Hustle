@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using _src.Scripts.CollisionHints.CollisionHints.Data.enums;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -10,7 +11,7 @@ namespace _src.Scripts.SplineColliders.SplineColliders.Data
     {
         public Entity Entity;
         public byte SplineLine;
-        public byte CollisionEvent;
+        public CollisionFlag CollisionFlag;
         public float3 Position;
 
         [BurstCompile]
