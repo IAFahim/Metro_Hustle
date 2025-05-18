@@ -221,7 +221,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 686383862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 143dc0d1ac4e4f0c89c1875f4e26d5a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 75f47a9e9ac24068ae7898e7234d03cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &5781390144955228746
@@ -236,6 +236,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: ECS Player Character
       objectReference: {fileID: 0}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: IntrinsicDefaults.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: IntrinsicDefaults.Array.data[0].Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: IntrinsicDefaults.Array.data[1].Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: IntrinsicDefaults.Array.data[2].Value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: IntrinsicDefaults.Array.data[0].Intrinsic
+      value: 
+      objectReference: {fileID: 11400000, guid: b251256c4426b6049beddd30e9794ff8, type: 2}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: IntrinsicDefaults.Array.data[1].Intrinsic
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ef4d268ceca15c43b6015f10305562e, type: 2}
+    - target: {fileID: 8022924840038842049, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: IntrinsicDefaults.Array.data[2].Intrinsic
+      value: 
+      objectReference: {fileID: 11400000, guid: 8565abda34f9832488170238e016da29, type: 2}
     - target: {fileID: 8421916860254639719, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

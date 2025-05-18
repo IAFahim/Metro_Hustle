@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36ac892a84ab4fcfad4f0a55f02d0cda, type: 3}
-  m_Name: Health
+  m_Name: 1 Collision Hint
   m_EditorClassIdentifier: 
   isGlobal: 0
   key:
-    Value: 0
+    Value: 1
   defaultValue: 0
-  range: {x: 0, y: 2147483647}
+  range: {x: -2147483648, y: 2147483647}

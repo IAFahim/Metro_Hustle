@@ -12,7 +12,7 @@ namespace _src.Scripts.SplineColliders.SplineColliders.Data
         public byte SplineLine;
         public byte CollisionEvent;
         public float3 Position;
-        
+
         [BurstCompile]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public readonly bool InSphere(float3 colliderOrigin, float3 offset, float radiusSq)

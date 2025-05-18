@@ -1,59 +1,49 @@
 ﻿using _src.Scripts.SplineColliders.SplineColliders.Data;
-using _src.Scripts.SplineColliders.SplineColliders.Jobs;
-using _src.Scripts.SplineConfigs.SplineConfigs.Data;
-using BovineLabs.Reaction.Conditions;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
-using Unity.Transforms;
 
 namespace _src.Scripts.SplineColliders.SplineColliders
 {
     [UpdateInGroup(typeof(SimulationSystemGroup), OrderFirst = true)]
     public partial struct SplineMainColliderTrackSystem : ISystem
     {
-        public ConditionEventWriter.Lookup lookup;
-        [BurstCompile]
+        private NativeQueue<SplineCollideAbleBuffer> _queue;
         public void OnCreate(ref SystemState state)
         {
-            lookup.Create(ref state);
+            
         }
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            var collideAbleList = new NativeList<SplineCollideAbleBuffer>(Allocator.TempJob);
-            foreach (
-                var (
-                    localToWorld,
-                    splineLineComponent,
-                    entity
-                    )
-                in SystemAPI.Query<
-                        RefRO<LocalToWorld>,
-                        RefRO<SplineLineComponent>
-                    >()
-                    .WithEntityAccess()
-                    .WithAll<SplineMainColliderTag>()
-            )
-            {
-                collideAbleList.Add(new()
-                {
-                    Entity = entity,
-                    SplineLine = splineLineComponent.ValueRO.SplineLine,
-                    Position = localToWorld.ValueRO.Position
-                });
-            }
+            _queue = new NativeQueue<SplineCollideAbleBuffer>(Allocator.TempJob);
+            // var collideAbleList = new NativeList<SplineCollideAbleData>(Allocator.TempJob);
+            // foreach (
+            //     var (
+            //         localToWorld,
+            //         splineLineComponent,
+            //         entity
+            //         )
+            //     in SystemAPI.Query<
+            //             RefRO<LocalToWorld>,
+            //             RefRO<SplineLineComponent>
+            //         >()
+            //         .WithEntityAccess()
+            //         .WithAll<SplineMainColliderTag>()
+            // )
+            // {
+            //     collideAbleList.Add(new()
+            //     {
+            //         Entity = entity,
+            //         SplineLine = splineLineComponent.ValueRO.SplineLine,
+            //         Position = localToWorld.ValueRO.Position
+            //     });
+            // }
             
-            lookup.Update(ref state);
-            new TestCondition()
-            {
-                Lookup = lookup
-            }.Schedule();
-
-            var splineCollideAbleBuffers = SystemAPI.GetSingletonBuffer<SplineCollideAbleBuffer>();
-            splineCollideAbleBuffers.Clear();
-            splineCollideAbleBuffers.AddRange(collideAbleList.AsArray());
+            // var splineCollideAbleBuffers = SystemAPI.GetSingletonBuffer<SplineCollideAbleData>();
+            // splineCollideAbleBuffers.Clear();
+            // splineCollideAbleBuffers.AddRange(collideAbleList.AsArray());
             // new TestBuffer()
             // {
             //     db = splineCollideAbleBuffers.
@@ -77,4 +67,5 @@ namespace _src.Scripts.SplineColliders.SplineColliders
         {
         }
     }
+
 }
