@@ -37,7 +37,7 @@ namespace _src.Scripts.SplineColliders.SplineColliders
                 mainCollidersQueue.Enqueue(new()
                 {
                     Entity = entity,
-                    SplineLineComponent = splineLineComponent.ValueRO,
+                    SplineLine = splineLineComponent.ValueRO.SplineLine,
                     Position = localToWorld.ValueRO.Position
                 });
             }

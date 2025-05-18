@@ -29,7 +29,7 @@ namespace _src.Scripts.SplineColliders.SplineColliders
             for (var i = 0; i < MainColliders.Length; i++)
             {
                 var main = MainColliders[i];
-                if (splineLineComponent.SplineLine != main.SplineLineComponent.SplineLine) continue;
+                if (splineLineComponent.SplineLine != main.SplineLine) continue;
                 var colliderOrigin = localToWorld.Position;
                 var upOffset = localToWorld.Up * colliderUpHeightComponent.Value;
                 if (!main.InSphere(colliderOrigin, upOffset, colliderRadiusSqComponent.RadiusSq)) continue;
