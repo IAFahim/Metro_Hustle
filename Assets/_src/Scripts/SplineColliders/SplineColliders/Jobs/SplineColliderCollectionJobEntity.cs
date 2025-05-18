@@ -10,7 +10,7 @@ namespace _src.Scripts.SplineColliders.SplineColliders.Jobs
     [BurstCompile]
     public partial struct SplineColliderCollectionJobEntity : IJobEntity
     {
-        public NativeQueue<SplineCollideAbleBuffer>.ParallelWriter ColliderQueue;
+        public NativeQueue<SplinePointColliderBuffer>.ParallelWriter ColliderQueue;
 
         private void Execute(
             Entity entity,
@@ -19,12 +19,12 @@ namespace _src.Scripts.SplineColliders.SplineColliders.Jobs
             in PointColliderComponent pointColliderComponent
         )
         {
-            ColliderQueue.Enqueue(new SplineCollideAbleBuffer()
+            ColliderQueue.Enqueue(new SplinePointColliderBuffer()
             {
                 Entity = entity,
                 SplineLine = splineLineComponent.Value,
                 Position = localToWorld.Position,
-                CollisionFlag = pointColliderComponent.CollisionFlag
+                ColliderFlag = pointColliderComponent.ColliderFlag
             });
         }
     }

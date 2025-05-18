@@ -1,12 +1,12 @@
 {
-    "name": "Colliders.Authoring",
+    "name": "Collisions.Authoring",
     "rootNamespace": "",
     "references": [
         "BovineLabs.Core",
         "BovineLabs.Core.Authoring",
         "BovineLabs.Core.Extensions",
         "BovineLabs.Core.Extensions.Authoring",
-        "Colliders.Data",
+        "Collisions.Data",
         "Unity.Burst",
         "Unity.Collections",
         "Unity.Entities",
@@ -17,8 +17,7 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms",
-        "Collisions.Data"
+        "Unity.Transforms"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

@@ -16,7 +16,9 @@
         "Unity.Physics",
         "Unity.Transforms",
         "SplineConfigs.Data",
-        "CollisionHints.Data"
+        "CollisionHints.Data",
+        "Colliders.Data",
+        "Collisions.Data"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

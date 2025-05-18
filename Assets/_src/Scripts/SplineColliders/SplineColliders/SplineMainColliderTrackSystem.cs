@@ -8,7 +8,7 @@ namespace _src.Scripts.SplineColliders.SplineColliders
     [UpdateInGroup(typeof(SimulationSystemGroup), OrderFirst = true)]
     public partial struct SplineMainColliderTrackSystem : ISystem
     {
-        private NativeQueue<SplineCollideAbleBuffer> _queue;
+        private NativeQueue<SplinePointColliderBuffer> _queue;
         public void OnCreate(ref SystemState state)
         {
             
@@ -17,7 +17,7 @@ namespace _src.Scripts.SplineColliders.SplineColliders
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            _queue = new NativeQueue<SplineCollideAbleBuffer>(Allocator.TempJob);
+            _queue = new NativeQueue<SplinePointColliderBuffer>(Allocator.TempJob);
             // var collideAbleList = new NativeList<SplineCollideAbleData>(Allocator.TempJob);
             // foreach (
             //     var (

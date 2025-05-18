@@ -1,9 +1,9 @@
 ﻿using _src.Scripts.Colliders.Colliders.Data.enums;
 using Unity.Entities;
 
-namespace _src.Scripts.SplineColliders.SplineColliders.Data
+namespace _src.Scripts.Colliders.Colliders.Data
 {
-    public struct PointColliderComponent : IComponentData
+    public struct ColliderFlagComponent : IComponentData
     {
         public ColliderFlag ColliderFlag;
     }

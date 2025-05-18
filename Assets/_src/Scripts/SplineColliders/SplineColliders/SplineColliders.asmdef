@@ -22,12 +22,8 @@
         "Unity.Transforms",
         "Colliders.Data",
         "SplineConfigs.Data",
-        "CollisionHints.Data",
-        "BovineLabs.Stats",
-        "BovineLabs.Reaction",
-        "BovineLabs.Reaction.Data"
+        "Collisions.Data"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,

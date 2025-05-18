@@ -18,7 +18,7 @@
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
         "Unity.Transforms",
-        "CollisionHints.Data"
+        "Colliders.Data"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

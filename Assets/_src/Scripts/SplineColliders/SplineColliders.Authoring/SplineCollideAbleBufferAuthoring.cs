@@ -11,7 +11,7 @@ namespace _src.Scripts.SplineColliders.SplineColliders.Authoring
             public override void Bake(SplineCollideAbleBufferAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.None);
-                AddBuffer<SplineCollideAbleBuffer>(entity);
+                AddBuffer<SplinePointColliderBuffer>(entity);
             }
         }
     }

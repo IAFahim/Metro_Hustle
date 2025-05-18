@@ -8,14 +8,14 @@ namespace _src.Scripts.SplineColliders.SplineColliders
 {
     public partial struct SplineColliderCollection : ISystem
     {
-        private NativeQueue<SplineCollideAbleBuffer> _queue;
+        private NativeQueue<SplinePointColliderBuffer> _queue;
         
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             if (_queue.IsCreated)
             {
-                var splineCollideAbleBuffers = SystemAPI.GetSingletonBuffer<SplineCollideAbleBuffer>();
+                var splineCollideAbleBuffers = SystemAPI.GetSingletonBuffer<SplinePointColliderBuffer>();
                 int index = 0;
                 while (!_queue.IsEmpty())
                 {
