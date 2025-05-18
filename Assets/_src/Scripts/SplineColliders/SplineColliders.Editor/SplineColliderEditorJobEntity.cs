@@ -13,11 +13,11 @@ namespace _src.Scripts.SplineColliders.SplineColliders.Editor
         [ReadOnly(true)] public CommandBuilder Drawing;
 
         private void Execute(in LocalToWorld localToWorld,
-            in ColliderHeightComponent colliderHeightComponent,
+            in ColliderUpHeightComponent colliderUpHeightComponent,
             in ColliderRadiusSqComponent colliderRadiusSqComponent
         )
         {
-            var up = localToWorld.Up * colliderHeightComponent.Height;
+            var up = localToWorld.Up * colliderUpHeightComponent.Value;
             Drawing.WireSphere(localToWorld.Position + up, math.sqrt(colliderRadiusSqComponent.RadiusSq));
         }
     }

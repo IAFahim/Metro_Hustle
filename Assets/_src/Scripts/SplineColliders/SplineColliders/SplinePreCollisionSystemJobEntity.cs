@@ -7,23 +7,23 @@ using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Transforms;
+using UnityEngine;
 
 namespace _src.Scripts.SplineColliders.SplineColliders
 {
     [WithAbsent(typeof(SplineMainColliderTag))]
     [BurstCompile]
-    public partial struct SplineCollisionSystemJobEntity : IJobEntity
+    public partial struct SplinePreCollisionSystemJobEntity : IJobEntity
     {
         [ReadOnly] public NativeArray<SplineCollideAbleBuffer>.ReadOnly MainColliders;
-        public NativeQueue<CollisionData>.ParallelWriter CollisionDataQueue;
+        public NativeQueue<PreCollisionData>.ParallelWriter PreCollisionDataQueue;
 
         [BurstCompile]
         private void Execute(
             in SplineLineComponent splineLineComponent,
             in LocalToWorld localToWorld,
-            in ColliderUpHeightComponent colliderUpHeightComponent,
-            in ColliderRadiusSqComponent colliderRadiusSqComponent,
-            in CollisionHitComponent collisionHitComponent
+            in PreHitColliderComponent preHitColliderComponent,
+            in PreCollisionHintComponent preCollisionHintComponent
         )
         {
             for (var i = 0; i < MainColliders.Length; i++)
@@ -31,12 +31,12 @@ namespace _src.Scripts.SplineColliders.SplineColliders
                 var main = MainColliders[i];
                 if (splineLineComponent.SplineLine != main.SplineLineComponent.SplineLine) continue;
                 var colliderOrigin = localToWorld.Position;
-                var upOffset = localToWorld.Up * colliderUpHeightComponent.Value;
-                if (!main.InSphere(colliderOrigin, upOffset, colliderRadiusSqComponent.RadiusSq)) continue;
-                CollisionDataQueue.Enqueue(new ()
+                var backOffset = localToWorld.Forward * preHitColliderComponent.Forward;
+                if (!main.InSphere(colliderOrigin, backOffset, preHitColliderComponent.RadiusSq)) continue;
+                PreCollisionDataQueue.Enqueue(new()
                 {
                     Entity = main.Entity,
-                    CollisionHint = collisionHitComponent.Value
+                    PreCollisionHint = preCollisionHintComponent.Value
                 });
             }
         }

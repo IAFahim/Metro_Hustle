@@ -1,14 +1,14 @@
 {
-    "name": "SplineColliders",
+    "name": "CollisionHints.Editor",
     "rootNamespace": "",
     "references": [
-        "BovineLabs.Anchor",
         "BovineLabs.Core",
+        "BovineLabs.Core.Editor",
         "BovineLabs.Core.Extensions",
-        "SplineColliders.Data",
-        "Unity.AppUI",
-        "Unity.AppUI.MVVM",
-        "Unity.AppUI.Navigation",
+        "BovineLabs.Core.Extensions.Editor",
+        "CollisionHints",
+        "CollisionHints.Authoring",
+        "CollisionHints.Data",
         "Unity.Burst",
         "Unity.Collections",
         "Unity.Entities",
@@ -19,13 +19,12 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms",
-        "Colliders.Data",
-        "SplineConfigs.Data",
-        "CollisionHints.Data"
+        "Unity.Transforms"
     ],
     "optionalUnityReferences": [],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": false,

@@ -5,15 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineCollideAbleBuffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplinePreCollisionSystemJobEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/ColliderHeightComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/ColliderUpHeightComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/ColliderHeightComponentAuthoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/ColliderUpHeightComponentAuthoring.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/ColliderRadiusComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/ColliderRadiusComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/ColliderRadiusComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/ColliderRadiusSqComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/ColliderRadiusComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/ColliderRadiusSqComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/ColliderHeightComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/ColliderUpHeightComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/ColliderHeightComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/ColliderUpHeightComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/SplineCollideAbleBufferSingletonAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/SplineCollideAbleBufferSingletonAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/ColliderEntityData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/ColliderEntityData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineCollideAbleBuffer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineColliders.Data.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineColliders.Data.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Editor/SplineColliderEditorJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Editor/SplineColliderEditorJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineCollisionSystemJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineCollisionSystemJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Systems/MoveAlongSplineSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Systems/MoveAlongSplineSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/CollectSplineMainCollidersJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/CollectSplineMainCollidersJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineColliders.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineColliders.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineCollisionSystemJobEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineCollisionSystemJobEntity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplinePreCollisionSystemJobEntity.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineMainColliderTrackSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineMainColliderTrackSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +166,7 @@
       <workItem from="1747436725048" duration="5497000" />
       <workItem from="1747454276124" duration="10238000" />
       <workItem from="1747478242002" duration="1855000" />
+      <workItem from="1747535598480" duration="14306000" />
     </task>
     <servers />
   </component>

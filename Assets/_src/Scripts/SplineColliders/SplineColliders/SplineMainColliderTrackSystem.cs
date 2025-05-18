@@ -1,16 +1,16 @@
-﻿using _src.Scripts.SplineColliders.SplineColliders.Data;
+﻿using _src.Scripts.CollisionHints.CollisionHints.Data.Datas;
+using _src.Scripts.SplineColliders.SplineColliders.Data;
+using _src.Scripts.SplineConfigs.SplineConfigs.Data;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.Transforms;
 
 namespace _src.Scripts.SplineColliders.SplineColliders
 {
     [UpdateInGroup(typeof(SimulationSystemGroup), OrderFirst = true)]
     public partial struct SplineMainColliderTrackSystem : ISystem
     {
-        private NativeQueue<ColliderEntityData> _mainCollidersQueue;
-        private NativeArray<ColliderEntityData>.ReadOnly _mainColliderArray;
-
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
@@ -19,22 +19,40 @@ namespace _src.Scripts.SplineColliders.SplineColliders
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            if (_mainCollidersQueue.IsCreated)
+            var mainCollidersQueue = new NativeQueue<SplineCollideAbleBuffer>(Allocator.TempJob);
+            foreach (
+                var (
+                    localToWorld,
+                    splineLineComponent,
+                    entity
+                    )
+                in SystemAPI.Query<
+                        RefRO<LocalToWorld>,
+                        RefRO<SplineLineComponent>
+                    >()
+                    .WithEntityAccess()
+                    .WithAll<SplineMainColliderTag>()
+            )
             {
-                _mainColliderArray = _mainCollidersQueue.ToArray(Allocator.TempJob).AsReadOnly();
-                var splineCollisionSystemJobEntity = new SplineCollisionSystemJobEntity
+                mainCollidersQueue.Enqueue(new()
                 {
-                    MainColliders = _mainColliderArray
-                };
-                splineCollisionSystemJobEntity.ScheduleParallel();
+                    Entity = entity,
+                    SplineLineComponent = splineLineComponent.ValueRO,
+                    Position = localToWorld.ValueRO.Position
+                });
             }
 
-            _mainCollidersQueue = new(Allocator.TempJob);
-            var collectSplineMainCollidersJobEntity = new CollectSplineMainCollidersJobEntity
-            {
-                MainTrackQueue = _mainCollidersQueue.AsParallelWriter()
-            };
-            collectSplineMainCollidersJobEntity.ScheduleParallel();
+            // var a = collectSplineMainCollidersJobEntity.Schedule(state.Dependency);
+            // var preCollisionSystemJobEntity = new SplinePreCollisionSystemJobEntity
+            // {
+            //     MainColliders = _mainCollidersQueue.ToArray(Allocator.TempJob).AsReadOnly()
+            // };
+            // var b = preCollisionSystemJobEntity.Schedule(a);
+            // var collisionSystemJobEntity = new SplineCollisionSystemJobEntity
+            // {
+            //     MainColliders = _mainCollidersQueue.ToArray(Allocator.TempJob).AsReadOnly()
+            // };
+            // collisionSystemJobEntity.ScheduleParallel(b);
         }
 
         [BurstCompile]
