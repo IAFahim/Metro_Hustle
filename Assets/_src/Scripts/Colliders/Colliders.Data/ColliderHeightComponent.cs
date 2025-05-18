@@ -3,8 +3,8 @@ using Unity.Mathematics;
 
 namespace _src.Scripts.Colliders.Colliders.Data
 {
-    public struct ColliderUpHeightComponent : IComponentData
+    public struct ColliderHeightComponent : IComponentData
     {
-        public half Value;
+        public half Up;
     }
 }

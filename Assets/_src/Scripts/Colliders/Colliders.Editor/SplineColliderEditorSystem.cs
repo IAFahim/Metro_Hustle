@@ -1,10 +1,8 @@
-﻿#if ALINE
-using Drawing;
-#endif
+﻿using Drawing;
 using Unity.Burst;
 using Unity.Entities;
 
-namespace _src.Scripts.SplineColliders.SplineColliders.Editor
+namespace _src.Scripts.Colliders.Colliders.Editor
 {
     [BurstCompile]
     [WorldSystemFilter(WorldSystemFilterFlags.Editor | WorldSystemFilterFlags.Default)]

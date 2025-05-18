@@ -187,10 +187,9 @@ GameObject:
   - component: {fileID: 1563051584}
   - component: {fileID: 1563051583}
   - component: {fileID: 1563051582}
-  - component: {fileID: 1563051586}
-  - component: {fileID: 1563051585}
   - component: {fileID: 1563051587}
   - component: {fileID: 1563051588}
+  - component: {fileID: 1563051589}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -259,41 +258,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563051580}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.6881426, z: -0, w: 0.7255755}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.163, z: -5.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -86.967, z: 0}
---- !u!114 &1563051585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563051580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5170b6f6ed2442e0a57f125f75ac72a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  height:
-    value: 0
---- !u!114 &1563051586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563051580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ff9d1e4ae75400182632c1214071efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius:
-    value: 16512
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1563051587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +292,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preCollisionHint: 0
+--- !u!114 &1563051589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563051580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a13fe93382291a4b8aeb198f78d0376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  up:
+    value: 0
+  radius:
+    value: 14336
+  preHitForward:
+    value: 16384
+  preHitRadius:
+    value: 15360
 --- !u!1 &1902738499
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,17 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8421916860254639719}
   - component: {fileID: 3815211770138604049}
-  - component: {fileID: 8022924840038842049}
-  - component: {fileID: 6354419208148766516}
-  - component: {fileID: 1268918147626955921}
-  - component: {fileID: 3251898541047358209}
   - component: {fileID: 8324719196882782700}
   - component: {fileID: 4023328945692140627}
   - component: {fileID: 1899904069802882923}
   - component: {fileID: 7351773347600660288}
   - component: {fileID: 8090602221781120662}
-  - component: {fileID: 801045381689853267}
-  - component: {fileID: 54807638249720498}
+  - component: {fileID: 8429556940116368003}
   - component: {fileID: 2063459915288948632}
   - component: {fileID: 2493078973159338449}
   m_Layer: 0
@@ -57,75 +52,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb25ee967ef54dd7a7d3be4ffc8dd264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8022924840038842049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485755097329585741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7305cdf55c354c0eb811d408fe38ad23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AddStats: 1
-  StatDefaults:
-  - Stat: {fileID: 11400000, guid: bd2028683b3f5ef43bdcfd581f8ec590, type: 2}
-    ModifyType: 0
-    Value: 3
-  - Stat: {fileID: 11400000, guid: 5f35dd79e111ee64fb9911d88f9c7d26, type: 2}
-    ModifyType: 0
-    Value: 3
-  - Stat: {fileID: 11400000, guid: 8a3893ecd40144d4085560e32e75eba0, type: 2}
-    ModifyType: 0
-    Value: 110
-  StatDefaultGroups: []
-  StatsCanBeModified: 1
-  AddIntrinsics: 1
-  IntrinsicDefaults:
-  - Intrinsic: {fileID: 11400000, guid: 8565abda34f9832488170238e016da29, type: 2}
-    Value: 100
-  IntrinsicDefaultGroups: []
-  Initialize:
-    CopyFrom: 3
---- !u!114 &6354419208148766516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485755097329585741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c16549610bfe4458aa9389201d072bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1268918147626955921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485755097329585741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d1839be73e81ae4c97132df4493e93f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3251898541047358209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485755097329585741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9741827b9d1c4e3da5cd60880e31ec59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  subscriptionOnly: 1
 --- !u!114 &8324719196882782700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionFlag: 240
---- !u!114 &801045381689853267
+--- !u!114 &8429556940116368003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,23 +126,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 485755097329585741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ff9d1e4ae75400182632c1214071efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b370979705848ba92d810521dd0b579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius:
-    value: 15872
---- !u!114 &54807638249720498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485755097329585741}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7a2cfef9bee4a2196b39bc5bb4dcd29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  collisionFlag: 0
 --- !u!114 &2063459915288948632
 MonoBehaviour:
   m_ObjectHideFlags: 0

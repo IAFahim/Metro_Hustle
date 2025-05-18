@@ -20,7 +20,6 @@
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
         "Unity.Transforms",
-        "ALINE",
         "Colliders.Data"
     ],
     "includePlatforms": [
