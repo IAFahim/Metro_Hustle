@@ -5,10 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Events/ConditionEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Events/ConditionEvent.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/Experience.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/Experience.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/ReactionSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/ReactionSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Character/ECS Player Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Prefabs/Character/ECS Player Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/CollisionHints/CollisionHints.Authoring/CollisionHinComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/CollisionHints/CollisionHints.Authoring/CollisionHintComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/CollisionHints/CollisionHints.Authoring/CollisionHinComponentAuthoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/CollisionHints/CollisionHints.Authoring/CollisionHintComponentAuthoring.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SetTransformUsageFlags.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SetTransformUsageFlags/SetTransformUsageFlags.Authoring.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SetTransformUsageFlags/SetTransformUsageFlags.Authoring/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SetTransformUsageFlags/SetTransformUsageFlags.Authoring/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SetTransformUsageFlags/SetTransformUsageFlags.Authoring/SetTransformUsageFlags.Authoring.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SetTransformUsageFlags/SetTransformUsageFlags.Authoring/SetTransformUsageFlags.Authoring.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SetTransformUsageFlags/SetTransformUsageFlags.Authoring/TransformUsageFlagsSetterAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SetTransformUsageFlags/SetTransformUsageFlags.Authoring/TransformUsageFlagsSetterAuthoring.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineCollideAbleBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineCollideAbleBuffer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineCollisionSystemJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineCollisionSystemJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineCollideSingleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineCollideSingleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineCollideSingletonAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineCollideSingletonAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/MySystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/MySystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineColliders.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineColliders.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineCollisionSystemJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplineCollisionSystemJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineCollisionSystemJobEntity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplineCollisionSystemJobEntity.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineMainColliderTrackSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineMainColliderTrackSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplinePreCollisionSystemJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplinePreCollisionSystemJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplinePreCollisionSystemJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplinePreCollisionSystemJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplinePreCollisionSystemJobEntity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplinePreCollisionSystemJobEntity.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +66,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e5791a597cf08ecceca4e85fdeabd6a1c5a7a8/_src.Scripts.Healths.Healths.Data.Data.MaxHealth.g.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink.Data/CinemachineLinkerSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink/CinemachineLinkerSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/CollisionHints/CollisionHints.Authoring/CollisionHintComponentAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/TestCondition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections.PerformanceTests/QueueParallelPerformanceTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections/FixedString.gen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@1d12ba0090ff/Unity.Entities/SourceGenerators/Source~/Mock/Unity.Entities.Mock/EntitiesInternalMock.cs" root0="SKIP_HIGHLIGHTING" />
@@ -104,13 +133,15 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12896">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="12896" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -152,7 +183,8 @@
       <workItem from="1747436725048" duration="5497000" />
       <workItem from="1747454276124" duration="10238000" />
       <workItem from="1747478242002" duration="1855000" />
-      <workItem from="1747535598480" duration="14639000" />
+      <workItem from="1747535598480" duration="16818000" />
+      <workItem from="1747558347156" duration="7441000" />
     </task>
     <servers />
   </component>
@@ -171,6 +203,23 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.reaction@fccb058fc8b5/BovineLabs.Reaction/Conditions/ConditionEventWriter.cs</url>
+          <line>30</line>
+          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.reaction@fccb058fc8b5\BovineLabs.Reaction\Conditions\ConditionEventWriter.cs" containingFunctionPresentation="Method 'Trigger'">
+            <startOffsets>
+              <option value="1019" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1053" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
         <watch expression="log" />
