@@ -1,4 +1,6 @@
-﻿using Drawing;
+﻿#if ALINE
+using Drawing;
+#endif
 using Unity.Burst;
 using Unity.Entities;
 
@@ -18,7 +20,7 @@ namespace _src.Scripts.Colliders.Colliders.Editor
         {
 #if ALINE
             CommandBuilder builder = DrawingManager.GetBuilder();
-            var splineColliderEditorJobEntity = new SplineColliderEditorJobEntity()
+            var splineColliderEditorJobEntity = new SplineColliderEditorAlineJobEntity()
             {
                 Drawing = builder
             };

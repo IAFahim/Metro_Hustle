@@ -31,12 +31,12 @@
 //                 var main = MainColliders[i];
 //                 if (splineLineComponent.SplineLine != main.SplineLine) continue;
 //                 var colliderOrigin = localToWorld.Position;
-//                 var upOffset = localToWorld.Up * colliderUpHeightComponent.Value;
+//                 var upOffset = localToWorld.Up * colliderUpHeightComponent.HalfExtents;
 //                 if (!main.InSphere(colliderOrigin, upOffset, colliderRadiusSqComponent.RadiusSq)) continue;
 //                 // CollisionDataQueue.Enqueue(new ()
 //                 // {
 //                 //     Entity = main.Entity,
-//                 //     CollisionHint = collisionHitComponent.Value
+//                 //     CollisionHint = collisionHitComponent.HalfExtents
 //                 // });
 //             }
 //         }

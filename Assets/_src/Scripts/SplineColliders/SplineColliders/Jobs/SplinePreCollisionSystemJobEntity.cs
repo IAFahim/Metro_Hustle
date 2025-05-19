@@ -31,7 +31,6 @@ namespace _src.Scripts.SplineColliders.SplineColliders.Jobs
                 var colliderOrigin = localToWorld.Position;
                 var backOffset = localToWorld.Forward * preHitColliderComponent.Forward;
                 if (!main.InSphere(colliderOrigin, backOffset, preHitColliderComponent.RadiusSq)) continue;
-                
             }
         }
     }

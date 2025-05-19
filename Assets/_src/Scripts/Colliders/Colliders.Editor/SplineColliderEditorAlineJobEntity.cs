@@ -1,14 +1,14 @@
 ﻿#if ALINE
+using Drawing;
 using System.ComponentModel;
 using _src.Scripts.Colliders.Colliders.Data;
-using Drawing;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
 namespace _src.Scripts.Colliders.Colliders.Editor
 {
-    public partial struct SplineColliderEditorJobEntity : IJobEntity
+    public partial struct SplineColliderEditorAlineJobEntity : IJobEntity
     {
         [ReadOnly(true)] public CommandBuilder Drawing;
 

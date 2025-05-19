@@ -72,13 +72,6 @@ namespace ECSUnitySplineAddon.Runtime.Datas
         [BurstCompile]
         public int SplineToCurveT(float splineT, out float curveT)
         {
-            int curves = Curves.Length;
-            if (curves <= 1)
-            {
-                curveT = 0f;
-                return 0;
-            }
-
             splineT = math.clamp(splineT, 0f, 1f);
             float targetDistance = splineT * Length;
 
@@ -104,6 +97,21 @@ namespace ECSUnitySplineAddon.Runtime.Datas
             curveT = 1f;
             return curveCount - 1;
         }
+
+        //
+        // [BurstCompile]
+        // public int ToCurveT(int curve, float distance, out int currentCurve, out float curveT)
+        // {
+        //     if (distance < 0)
+        //     {
+        //         curve--;
+        //         currentCurve = curve;
+        //         float currentCurveLength = GetCurveLength(i);
+        //     }
+        //     float currentCurveLength = GetCurveLength(i);
+        //     currentCurve = curve;
+        //     if (currentCurveLength - 0.0001f < distance) currentCurve++;
+        // }
 
         /// <summary>
         /// Gets the curve-local normalized T value corresponding to a distance along that curve, using the LUT.

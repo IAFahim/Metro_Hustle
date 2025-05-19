@@ -1,9 +1,9 @@
 ﻿using _src.Scripts.Colliders.Colliders.Data.enums;
+using _src.Scripts.SplineColliders.SplineColliders.Data;
 using Unity.Entities;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace _src.Scripts.SplineColliders.SplineColliders.Data
+namespace _src.Scripts.SplineColliders.SplineColliders.Authoring
 {
     public class PointColliderComponentAuthoring : MonoBehaviour
     {
