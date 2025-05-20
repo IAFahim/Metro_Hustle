@@ -21,7 +21,6 @@ namespace _src.Scripts.Colliders.Colliders.Editor
 
             float3 boxUpWorld = ltw.Up;
             float3 boxForwardWorld = ltw.Forward;
-            // float3 boxRightWorld = ltw.Right;
 
             Drawing.WireBox(ltw.Position, ltw.Rotation, halfExtents * 2, Color.green);
 
@@ -29,27 +28,31 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             var targetPosition = TargetLTW.Position;
             float3 playerRelativePosToBoxCenter = targetPosition - boxCenterWorld;
 
-            // float localX = math.dot(playerRelativePosToBoxCenter, boxRightWorld);
             float localY = math.dot(playerRelativePosToBoxCenter, boxUpWorld);
             float localZ = math.dot(playerRelativePosToBoxCenter, boxForwardWorld);
-            if (localZ - halfExtents.z <= ForwardTip)
+            var targetLtwForward = TargetLTW.Forward;
+            float tipZ = math.dot(playerRelativePosToBoxCenter, targetLtwForward);
+            var targetTipForward = targetLtwForward * ForwardTip;
+            
+            if (tipZ <0 && ForwardTip + halfExtents.z > -tipZ)
             {
-                Debug.Log("Tip Entered");
+                // Debug.Log("Tip entered");
             }
 
-            Drawing.Arrow(targetPosition, targetPosition + TargetLTW.Forward * ForwardTip);
+            Drawing.Arrow(targetPosition, targetPosition + targetTipForward);
 
             if (
                 // math.abs(localX) <= halfExtents.x & 
-                math.abs(localY) <= halfExtents.y &
-                math.abs(localZ) <= halfExtents.z)
+                math.abs(localZ) <= halfExtents.z &
+                math.abs(localY) <= halfExtents.y
+            )
             {
+                Debug.Log($"is INSIDE");
                 Drawing.Line(boxCenterWorld, targetPosition);
                 Drawing.SphereOutline(targetPosition, 0.1f);
-                Debug.Log($"is INSIDE");
             }
 
-            Debug.Log($"{localY}, {localZ}");
+            // Debug.Log($"{localY}, {localZ} TipZ:{tipZ} targetTipForward.z:{targetTipForward.z}");
         }
     }
 }
