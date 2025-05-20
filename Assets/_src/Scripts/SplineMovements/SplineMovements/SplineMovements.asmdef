@@ -19,7 +19,8 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms"
+        "Unity.Transforms",
+        "ECS-Spline.Runtime"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
