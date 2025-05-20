@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: ReactionSettings
   m_EditorClassIdentifier: 
   conditionEvents:
+  - {fileID: 11400000, guid: a3d51f67b6de089458ccc1af1dd5405e, type: 2}
   - {fileID: 11400000, guid: cba461cf573664840aeb60f185dd07ab, type: 2}
+  - {fileID: -803222682573877133, guid: dafee56513ac08946ba87c41a5f894ef, type: 2}
   enableables: 6faecba2e0e2ef46

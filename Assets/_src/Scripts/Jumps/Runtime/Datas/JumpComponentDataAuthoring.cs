@@ -24,7 +24,7 @@ namespace _src.Scripts.Jumps.Runtime.Datas
         {
             public override void Bake(JumpComponentDataAuthoring authoring)
             {
-                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                var entity = GetEntity(TransformUsageFlags.None);
                 var height = authoring.transform.position.y;
                 AddComponent(entity, new JumpComponentData
                     {

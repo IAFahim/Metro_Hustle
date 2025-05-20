@@ -16,7 +16,7 @@ namespace _src.Scripts.Animations.Animations
                 .CreateCommandBuffer(state.WorldUnmanaged);
             foreach (
                 var (animationComponent, localTransform, entity) in
-                SystemAPI.Query<AnimatorAssetIndexComponent, RefRO<LocalTransform>>().WithEntityAccess()
+                SystemAPI.Query<AnimatorAssetIndexComponent, RefRO<LocalToWorld>>().WithEntityAccess()
             )
             {
                 if (false == AssetRequestMonoBehaviour.Instance.TryRequest(

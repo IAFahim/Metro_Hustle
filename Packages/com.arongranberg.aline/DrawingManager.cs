@@ -1,19 +1,16 @@
+// TODO: Check HDRP custom pass support, and log a warning if it is disabled
 #pragma warning disable 649 // Field `Drawing.GizmoContext.activeTransform' is never assigned to, and will always have its default value `null'. Not used outside of the unity editor.
 using UnityEngine;
-using System.Collections;
-using System;
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.SceneManagement;
 #endif
 using System.Collections.Generic;
 using Unity.Jobs;
-using Unity.Mathematics;
 using UnityEngine.Rendering;
 using Unity.Profiling;
 #if MODULE_RENDER_PIPELINES_UNIVERSAL
 using UnityEngine.Rendering.Universal;
-using UnityEngine.Profiling;
 #endif
 #if MODULE_RENDER_PIPELINES_HIGH_DEFINITION
 using UnityEngine.Rendering.HighDefinition;
@@ -140,6 +137,7 @@ namespace Drawing {
 		public DrawingData gizmos;
 		static List<GizmoDrawerGroup> gizmoDrawers = new List<GizmoDrawerGroup>();
 		static Dictionary<System.Type, int> gizmoDrawerIndices = new Dictionary<System.Type, int>();
+		static bool ignoreAllDrawing;
 		static DrawingManager _instance;
 		bool framePassed;
 		int lastFrameCount = int.MinValue;
@@ -238,6 +236,14 @@ namespace Drawing {
 			};
 			_instance = go.AddComponent<DrawingManager>();
 			if (Application.isPlaying) DontDestroyOnLoad(go);
+
+			if (Application.isBatchMode) {
+				// In batch mode, we never want to draw anything.
+				// See https://forum.arongranberg.com/t/drawingmanager-holds-on-to-memory-in-batch-mode/17765
+				ignoreAllDrawing = true;
+				gizmoDrawers.Clear();
+				gizmoDrawerIndices.Clear();
+			}
 		}
 
 		/// <summary>Detects which render pipeline is being used and configures them for rendering</summary>
@@ -594,6 +600,10 @@ namespace Drawing {
 #if UNITY_EDITOR
 		void DrawGizmos (bool usingRenderPipeline) {
 			GizmoContext.SetDirty();
+
+			// Reduce overhead if there's nothing to render
+			if (gizmoDrawers.Count == 0) return;
+
 			MarkerGizmosAllowed.Begin();
 
 			// Figure out which component types should be rendered
@@ -721,6 +731,8 @@ namespace Drawing {
 		/// The DrawGizmos method on the object will be called every frame until it is destroyed (assuming there are cameras with gizmos enabled).
 		/// </summary>
 		public static void Register (IDrawGizmos item) {
+			if (ignoreAllDrawing) return;
+
 			var tp = item.GetType();
 
 			int index;

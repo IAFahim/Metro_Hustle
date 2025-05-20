@@ -586,6 +586,18 @@ namespace Drawing {
 			public void Submit (DrawingData gizmos) {
 				if (state != State.Initialized) throw new System.InvalidOperationException();
 
+#if !UNITY_EDITOR
+				if (meta.isGizmos) {
+					// Gizmos are never drawn in standalone builds.
+					// Draw.Line, and similar draw commands, will already have been removed in standalone builds,
+					// but if users use e.g. Draw.editor directly, then the commands will be added to the command buffer.
+					// For performance we can just discard the whole buffer here.
+					Release();
+					return;
+				}
+#endif
+
+
 				unsafe {
 					// There are about 128 buffers we need to check and it's faster to do that using Burst
 					if (meshes.Count == 0 && !AnyBuffersWrittenToInvoke((UnsafeAppendBuffer*)commandBuffers.GetUnsafeReadOnlyPtr(), commandBuffers.Length)) {
@@ -795,6 +807,8 @@ namespace Drawing {
 			Dictionary<ulong, List<int> > hash2index;
 			Stack<int> freeSlots;
 			Stack<List<int> > freeLists;
+
+			public bool isEmpty => data == null || freeSlots.Count == data.Length;
 
 			public int memoryUsage {
 				get {
@@ -1520,6 +1534,9 @@ namespace Drawing {
 		/// <summary>Call after all <see cref="Draw"/> commands for the frame have been done to draw everything.</summary>
 		/// <param name="allowCameraDefault">Indicates if built-in command builders and custom ones without a custom CommandBuilder.cameraTargets should render to this camera.</param>
 		public void Render (Camera cam, bool allowGizmos, CommandBufferWrapper commandBuffer, bool allowCameraDefault) {
+			// Early out when there's nothing to render
+			if (processedData.isEmpty) return;
+
 			LoadMaterials();
 
 			// Warn if the materials could not be found
