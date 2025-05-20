@@ -169,41 +169,42 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         }
     }
     
-    [BurstCompile]
-    public struct MakeMeshJob : IJob
-    {
-        [ReadOnly] public NativeArray<float3x2> SplinePositionTangent;
-        [ReadOnly] public NativeArray<float3> SplineNormalTangent;
-        [ReadOnly] public NativeArray<float3> SourceNormals;
-        [ReadOnly] public NativeArray<float2> SourceUV;
-        
-        [ReadOnly] 
-        [NativeDisableContainerSafetyRestriction] 
-        public NativeArray<TriangleListContainer> SourceTriangles; 
-        
-        [ReadOnly] public NativeArray<float> SourceVertexRatios;
-        [ReadOnly] public NativeArray<float3> SourceVertexOffsets;
-
-        public bool UniformUVs;
-        public VectorAxis UvAxis;
-        public float UvResolutions;
-        public int CurveCount;
-        public int MeshResolutions;
-        public float3 UpDirection; 
-        public float3 PositionAdjustment;
-
-        public NativeList<float3> OutVertices;
-        public NativeList<float3> OutNormals;
-        public NativeList<float2> OutUV;
-
-        [NativeDisableContainerSafetyRestriction] 
-        public NativeArray<TriangleOutputListContainer> OutSubMeshTriangles;
-
-        public void Execute()
-        {
-            
-        }
-    }
+    // Ignore job for now
+    // [BurstCompile]
+    // public struct MakeMeshJob : IJob
+    // {
+    //     [ReadOnly] public NativeArray<float3x2> SplinePositionTangent;
+    //     [ReadOnly] public NativeArray<float3> SplineNormalTangent;
+    //     [ReadOnly] public NativeArray<float3> SourceNormals;
+    //     [ReadOnly] public NativeArray<float2> SourceUV;
+    //     
+    //     [ReadOnly] 
+    //     [NativeDisableContainerSafetyRestriction] 
+    //     public NativeArray<TriangleListContainer> SourceTriangles; 
+    //     
+    //     [ReadOnly] public NativeArray<float> SourceVertexRatios;
+    //     [ReadOnly] public NativeArray<float3> SourceVertexOffsets;
+    //
+    //     public bool UniformUVs;
+    //     public VectorAxis UvAxis;
+    //     public float UvResolutions;
+    //     public int CurveCount;
+    //     public int MeshResolutions;
+    //     public float3 UpDirection; 
+    //     public float3 PositionAdjustment;
+    //
+    //     public NativeList<float3> OutVertices;
+    //     public NativeList<float3> OutNormals;
+    //     public NativeList<float2> OutUV;
+    //
+    //     [NativeDisableContainerSafetyRestriction] 
+    //     public NativeArray<TriangleOutputListContainer> OutSubMeshTriangles;
+    //
+    //     public void Execute()
+    //     {
+    //         
+    //     }
+    // }
 
     public enum VectorAxis
     {
@@ -391,9 +392,9 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 for (int k = 0; k < sourceTriangles.Length; k += 3)
                 {
                     outputTriangleList.Add(sourceTriangles[k] + currentCombinedVertexOffset);
-                    outputTriangleList.Add(sourceTriangles[k + 2] +
+                    outputTriangleList.Add(sourceTriangles[k + 1] +
                                            currentCombinedVertexOffset);
-                    outputTriangleList.Add(sourceTriangles[k + 1] + currentCombinedVertexOffset);
+                    outputTriangleList.Add(sourceTriangles[k + 2] + currentCombinedVertexOffset);
                 }
             }
 

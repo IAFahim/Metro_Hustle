@@ -6,10 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/ReactionSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/ReactionSettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplineMesh/Runtime/Core/SplineMeshResolution.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Character/ECS Player Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Prefabs/Character/ECS Player Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses/FocusMangerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses/FocusMangerSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/Baranagar Station.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/Baranagar Station.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/Dakshinerswar Metro Station with sky walk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/Dakshinerswar Metro Station with sky walk.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/DumDum Station.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/DumDum Station.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/Screenshot 2025-04-07 at 11-48-30 Howrah Railway Station - Google Maps.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/Screenshot 2025-04-07 at 11-48-30 Howrah Railway Station - Google Maps.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.asset-manager-for-unity/ImportedAssetInfo/67f8a4c61e5bb8d0d26eb849" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.asset-manager-for-unity/ImportedAssetInfo/67fb45470b1675ea378ed84f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.asset-manager-for-unity/ImportedAssetInfo/67fb4547f57992a142152606" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.asset-manager-for-unity/ImportedAssetInfo/67fb454c2b618cf5025457cd" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +84,7 @@
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "env",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -168,6 +183,7 @@
       <workItem from="1747667932389" duration="2879000" />
       <workItem from="1747712988333" duration="6728000" />
       <workItem from="1747723573215" duration="28000" />
+      <workItem from="1747728502470" duration="1936000" />
     </task>
     <servers />
   </component>

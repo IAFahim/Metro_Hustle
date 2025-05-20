@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8585106485500926562}
   - component: {fileID: 7297034926185220290}
-  - component: {fileID: 8427733048969722424}
-  - component: {fileID: 1341815960214317448}
   - component: {fileID: 2125502019539087010}
+  - component: {fileID: 7329472037735907351}
+  - component: {fileID: 1160530064474365902}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
---- !u!114 &8427733048969722424
+--- !u!114 &2125502019539087010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,17 +87,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 254359163543494736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0260d1a655324cda993aa33628c367c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackerSettings:
-    BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
-    AngularDampingMode: 0
-    RotationDamping: {x: 1, y: 1, z: 1}
-    QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 5, z: -10}
---- !u!114 &1341815960214317448
+  cinemachineCamera: {fileID: 7297034926185220290}
+--- !u!114 &7329472037735907351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,17 +110,17 @@ MonoBehaviour:
       Size: {x: 0.2, y: 0.2}
     HardLimits:
       Enabled: 0
-      Size: {x: 0.8, y: 0.8}
+      Size: {x: 3, y: 3}
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
-  TargetOffset: {x: 0, y: 2, z: 0}
+  TargetOffset: {x: 0, y: 3, z: 0}
   Damping: {x: 0.5, y: 0.5}
   Lookahead:
     Enabled: 0
     Time: 0
     Smoothing: 0
     IgnoreY: 0
---- !u!114 &2125502019539087010
+--- !u!114 &1160530064474365902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,7 +129,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 254359163543494736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0260d1a655324cda993aa33628c367c1, type: 3}
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineCamera: {fileID: 7297034926185220290}
+  TrackerSettings:
+    BindingMode: 1
+    PositionDamping: {x: 1, y: 1, z: 1}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: 0, y: 4.35, z: -9.89}
