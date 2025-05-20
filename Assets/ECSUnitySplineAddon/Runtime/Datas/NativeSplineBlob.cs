@@ -98,20 +98,39 @@ namespace ECSUnitySplineAddon.Runtime.Datas
             return curveCount - 1;
         }
 
-        //
-        // [BurstCompile]
-        // public int ToCurveT(int curve, float distance, out int currentCurve, out float curveT)
-        // {
-        //     if (distance < 0)
-        //     {
-        //         curve--;
-        //         currentCurve = curve;
-        //         float currentCurveLength = GetCurveLength(i);
-        //     }
-        //     float currentCurveLength = GetCurveLength(i);
-        //     currentCurve = curve;
-        //     if (currentCurveLength - 0.0001f < distance) currentCurve++;
-        // }
+        /// <summary>
+        /// Consecutive increamen/decrement distance along a curve instead of using spline abuslite distance.
+        /// Useful and faster when per say we are trivisring with a train and train keeps track of its index and distance. 
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="distance"></param>
+        /// <param name="newIndex"></param>
+        /// <param name="newDistance"></param>
+        /// <param name="curveT"></param>
+        [BurstCompile]
+        public void ToCurveT(int index, float distance, out int newIndex, out float newDistance, out float curveT)
+        {
+            float currentCurveLength = 0f;
+            newIndex = index;
+            currentCurveLength = GetCurveLength(newIndex);
+            newDistance = distance;
+
+            if (distance <= 0)
+            {
+                newIndex = index - 1;
+                currentCurveLength = GetCurveLength(newIndex);
+                newDistance = currentCurveLength - distance;
+            }
+            else if (distance > currentCurveLength)
+            {
+                newIndex = index + 1;
+                currentCurveLength = GetCurveLength(newIndex);
+                newDistance = currentCurveLength + distance;
+            }
+
+            int lutResolution = DistanceLUT.Length / CurveCount;
+            curveT = GetCurveInterpolationFromDistance(newIndex, newDistance, lutResolution);
+        }
 
         /// <summary>
         /// Gets the curve-local normalized T value corresponding to a distance along that curve, using the LUT.
