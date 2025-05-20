@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/BovineLabs.Sample.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/BovineLabs.Sample.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/InputControls.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/InputControls.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RawInputs/Runtime/RawInput.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RawInputs/Runtime/RawInput.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/InputCommonSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/InputCommonSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +164,7 @@
       <workItem from="1747643709725" duration="9532000" />
       <workItem from="1747663270813" duration="1407000" />
       <workItem from="1747667932389" duration="2879000" />
-      <workItem from="1747712988333" duration="6293000" />
+      <workItem from="1747712988333" duration="6728000" />
     </task>
     <servers />
   </component>
