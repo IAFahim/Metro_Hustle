@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="" />
+    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionControlSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionControlSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,15 +101,13 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2728">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="2728" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -162,6 +165,7 @@
       <workItem from="1747728502470" duration="3566000" />
       <workItem from="1747735435089" duration="795000" />
       <workItem from="1747736360107" duration="3056000" />
+      <workItem from="1747749410705" duration="1795000" />
     </task>
     <servers />
   </component>
@@ -187,20 +191,6 @@
           <line>30</line>
           <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.reaction@fccb058fc8b5\BovineLabs.Reaction\Conditions\ConditionEventWriter.cs" containingFunctionPresentation="Method 'Trigger'" />
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <condition expression="t&gt;.9f" language="C#" />
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs</url>
-          <line>28</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\SplineMovements\SplineMovements\SplineMovementSystem.cs" containingFunctionPresentation="Method 'OnUpdate'">
-            <startOffsets>
-              <option value="1142" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1243" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlob.cs</url>

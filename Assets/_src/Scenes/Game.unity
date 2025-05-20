@@ -378,7 +378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2493078973159338449, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: TransformUsageFlags
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8421916860254639719, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: m_LocalPosition.x

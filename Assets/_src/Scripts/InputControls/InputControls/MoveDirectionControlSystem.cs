@@ -4,7 +4,6 @@ using BovineLabs.Core.Input;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
-using UnityEngine;
 
 namespace _src.Scripts.InputControls.InputControls
 {
@@ -52,9 +51,7 @@ namespace _src.Scripts.InputControls.InputControls
             {
                 RawInputCommand = determinedRawInputFlag
             };
-
-            // Schedule the job with dependency management
-            state.Dependency = moveDirectionIJobEntity.ScheduleParallel(state.Dependency);
+            moveDirectionIJobEntity.ScheduleParallel();
         }
 
         [BurstCompile]

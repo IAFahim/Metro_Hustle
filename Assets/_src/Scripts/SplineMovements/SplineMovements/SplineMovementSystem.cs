@@ -21,7 +21,7 @@ namespace _src.Scripts.SplineMovements.SplineMovements
             var nativeSplineBlobComponentData = SystemAPI.GetSingleton<NativeSplineBlobComponentData>();
             ref var nativeSpline = ref nativeSplineBlobComponentData.Value.Value;
             var timeDeltaTime = SystemAPI.Time.DeltaTime;
-            foreach (var (splineMoveComponent, localToWorld) in SystemAPI.Query<RefRW<SplineMoveComponent>, RefRW<LocalToWorld>>())
+            foreach (var (splineMoveComponent, localTransform, localToWorld) in SystemAPI.Query<RefRW<SplineMoveComponent>, RefRW<LocalTransform>, RefRO<LocalToWorld>>())
             {
                 var curveIndex = splineMoveComponent.ValueRO.CurveIndex;
                 var distance = splineMoveComponent.ValueRO.Distance;
@@ -31,13 +31,8 @@ namespace _src.Scripts.SplineMovements.SplineMovements
                 splineMoveComponent.ValueRW.Distance = (half)newDistance;
                 
                 nativeSpline.Evaluate(index, t, out float3 position, out var tangent, out var upVector );
-                localToWorld.ValueRW.Value = new LocalTransform
-                {
-                    Position = position,
-                    Rotation = quaternion.LookRotationSafe(tangent, upVector),
-                    Scale = 1
-                }.ToMatrix();
-                Debug.Log($"curveT: {t}");
+                localTransform.ValueRW.Position = position + localToWorld.ValueRO.Right * splineMoveComponent.ValueRO.SideOffset;
+                localTransform.ValueRW.Rotation = quaternion.LookRotationSafe(tangent, upVector);
             }
         }
 
