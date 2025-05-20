@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlob.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineBlobAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineBlobAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovements.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovements.asmdef" afterDir="false" />
-    </list>
+    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,7 +161,7 @@
       <workItem from="1747723573215" duration="28000" />
       <workItem from="1747728502470" duration="3566000" />
       <workItem from="1747735435089" duration="795000" />
-      <workItem from="1747736360107" duration="2872000" />
+      <workItem from="1747736360107" duration="3056000" />
     </task>
     <servers />
   </component>
