@@ -361,7 +361,7 @@ MonoBehaviour:
   speed:
     value: 19712
   sideOffset:
-    value: 0
+    value: 15360
   distance:
     value: 0
 --- !u!1001 &5781390144955228746
