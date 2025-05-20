@@ -37,7 +37,7 @@ namespace _src.Scripts.SplineMovements.SplineMovements
                                                   localToWorld.ValueRO.Right * moveOffset.ValueRO.SideOffset;
                 localTransform.ValueRW.Rotation = quaternion.LookRotationSafe(tangent, upVector);
 
-                if (math.abs(moveOffset.ValueRO.SideOffset - moveOffset.ValueRO.TargetSideOffset) > 0.01)
+                if (moveOffset.ValueRW.SideT < 0.99)
                 {
                     var step = timeDeltaTime + moveOffset.ValueRO.SideT;
                     moveOffset.ValueRW.SideOffset = (half)math.lerp(moveOffset.ValueRO.SideOffset,

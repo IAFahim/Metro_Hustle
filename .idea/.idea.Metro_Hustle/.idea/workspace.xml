@@ -7,58 +7,7 @@
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Authoring.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Authoring/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Authoring/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Authoring/InputConsumers.Authoring.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Authoring/InputConsumers.Authoring.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Data/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Data/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Data/InputConsumers.Data.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Data/InputConsumers.Data.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Editor/InputConsumers.Editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.Editor/InputConsumers.Editor.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers/InputConsumerJobEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers/InputConsumerJobEntity.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers/InputConsumerSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers/InputConsumerSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers/InputConsumers.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputConsumers/InputConsumers/InputConsumers.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplineColliderCollectionJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplineColliderCollectionJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplinePreCollisionSystemJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplinePreCollisionSystemJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineColliders.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineColliders.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Authoring.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Authoring/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Authoring/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Authoring/SplineConfigs.Authoring.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Authoring/SplineConfigs.Authoring.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Authoring/SplineLineComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineLineComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Authoring/SplineLineComponentAuthoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineLineComponentAuthoring.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Data/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Data/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Data/SplineConfigs.Data.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Data/SplineConfigs.Data.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Data/SplineLineComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineLineComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.Data/SplineLineComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineLineComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs/SplineConfigs.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineConfigs/SplineConfigs/SplineConfigs.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineMoveComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineMoveComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineMovements.Authoring.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineMovements.Authoring.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineMoveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineMoveComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineMovements.Data.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineMovements.Data.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovements.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovements.asmdef" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,15 +101,13 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14848">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="14848" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -220,6 +167,7 @@
       <workItem from="1747736360107" duration="3056000" />
       <workItem from="1747749410705" duration="1795000" />
       <workItem from="1747761104591" duration="6661000" />
+      <workItem from="1747769392989" duration="202000" />
     </task>
     <servers />
   </component>
@@ -254,7 +202,7 @@
               <option value="1966" />
             </startOffsets>
             <endOffsets>
-              <option value="2055" />
+              <option value="2002" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="38" />

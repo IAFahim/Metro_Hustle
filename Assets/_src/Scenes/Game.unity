@@ -377,7 +377,7 @@ MonoBehaviour:
   sideOffset:
     value: 0
   targetOffset:
-    value: 18688
+    value: 16384
   Ease: 0
 --- !u!1001 &5781390144955228746
 PrefabInstance:
