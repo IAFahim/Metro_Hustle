@@ -1,4 +1,4 @@
-﻿using _src.Scripts.SplineConfigs.SplineConfigs.Data;
+﻿using _src.Scripts.SplineMovements.SplineMovements.Data;
 using Unity.Entities;
 using UnityEngine;
 

@@ -1,6 +1,6 @@
 ﻿using _src.Scripts.Colliders.Colliders.Data;
 using _src.Scripts.SplineColliders.SplineColliders.Data;
-using _src.Scripts.SplineConfigs.SplineConfigs.Data;
+using _src.Scripts.SplineMovements.SplineMovements.Data;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;

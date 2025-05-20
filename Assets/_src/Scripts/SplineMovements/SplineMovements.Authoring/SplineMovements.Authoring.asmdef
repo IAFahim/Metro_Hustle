@@ -17,9 +17,9 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms"
+        "Unity.Transforms",
+        "Easings.Runtime"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,

@@ -9,7 +9,6 @@ namespace _src.Scripts.SplineMovements.SplineMovements.Authoring
     {
         public byte curveIndex;
         public half speed = new(2);
-        public half sideOffset;
         public half distance;
 
         public class SplineMoveComponentBaker : Baker<SplineMoveComponentAuthoring>
@@ -21,7 +20,6 @@ namespace _src.Scripts.SplineMovements.SplineMovements.Authoring
                 {
                     CurveIndex = authoring.curveIndex,
                     Speed = authoring.speed,
-                    SideOffset = authoring.sideOffset,
                     Distance = authoring.distance
                 });
             }

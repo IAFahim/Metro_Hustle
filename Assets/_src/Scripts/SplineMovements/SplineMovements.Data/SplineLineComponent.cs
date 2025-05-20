@@ -2,7 +2,7 @@
 using Unity.Burst;
 using Unity.Entities;
 
-namespace _src.Scripts.SplineConfigs.SplineConfigs.Data
+namespace _src.Scripts.SplineMovements.SplineMovements.Data
 {
     [BurstCompile]
     public struct SplineLineComponent : IComponentData

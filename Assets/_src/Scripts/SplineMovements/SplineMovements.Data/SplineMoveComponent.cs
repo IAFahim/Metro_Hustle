@@ -7,7 +7,6 @@ namespace _src.Scripts.SplineMovements.SplineMovements.Data
     {
         public byte CurveIndex;
         public half Speed;
-        public half SideOffset;
         public half Distance;
     }
 }
