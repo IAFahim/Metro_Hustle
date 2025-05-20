@@ -20,9 +20,9 @@
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
         "Unity.Transforms",
-        "RawInput"
+        "RawInput",
+        "BovineLabs.Core.Input"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,

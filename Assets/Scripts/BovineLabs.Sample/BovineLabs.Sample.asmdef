@@ -25,7 +25,8 @@
         "Unity.Physics",
         "Unity.ResourceManager",
         "Unity.Transforms",
-        "Healths.Data"
+        "Healths.Data",
+        "BovineLabs.Core.Input"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
