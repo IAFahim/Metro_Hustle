@@ -14,11 +14,11 @@ namespace _src.Scripts.Animations.Animations
 
         public void OnUpdate(ref SystemState state)
         {
-            foreach (var (animatorComponent, localTransform) in SystemAPI
-                         .Query<RefRW<AnimatorComponent>, RefRO<LocalTransform>>())
+            foreach (var (animatorComponent, localToWorld) in SystemAPI
+                         .Query<RefRW<AnimatorComponent>, RefRO<LocalToWorld>>())
             {
-                var position = localTransform.ValueRO.Position;
-                var rotation = localTransform.ValueRO.Rotation;
+                var position = localToWorld.ValueRO.Position;
+                var rotation = localToWorld.ValueRO.Rotation;
                 animatorComponent.ValueRO.Ref.Value.transform.SetPositionAndRotation(
                     position,
                     rotation

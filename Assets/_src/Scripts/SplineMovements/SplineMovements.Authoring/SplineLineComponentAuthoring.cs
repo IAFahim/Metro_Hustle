@@ -2,7 +2,7 @@
 using Unity.Entities;
 using UnityEngine;
 
-namespace _src.Scripts.SplineConfigs.SplineConfigs.Authoring
+namespace _src.Scripts.SplineMovements.SplineMovements.Authoring
 {
     public class SplineLineComponentAuthoring : MonoBehaviour
     {

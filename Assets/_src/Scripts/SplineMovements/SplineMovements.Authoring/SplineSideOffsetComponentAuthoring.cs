@@ -1,5 +1,4 @@
-﻿using _src.Scripts.Easings.Runtime.Datas;
-using _src.Scripts.SplineMovements.SplineMovements.Data;
+﻿using _src.Scripts.SplineMovements.SplineMovements.Data;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
@@ -10,8 +9,7 @@ namespace _src.Scripts.SplineMovements.SplineMovements.Authoring
     {
         public half startOffset;
         public half endOffset;
-        public half easingT;
-        public Ease ease;
+        public half speed = new(1);
         
         
 
@@ -24,8 +22,7 @@ namespace _src.Scripts.SplineMovements.SplineMovements.Authoring
                 {
                     StartOffset = authoring.startOffset,
                     EndOffset = authoring.endOffset,
-                    EasingT = authoring.easingT,
-                    Ease = authoring.ease,
+                    Speed = authoring.speed,
                 });
             }
         }

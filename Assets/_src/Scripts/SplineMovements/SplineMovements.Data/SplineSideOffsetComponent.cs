@@ -8,7 +8,6 @@ namespace _src.Scripts.SplineMovements.SplineMovements.Data
     {
         public half StartOffset;
         public half EndOffset;
-        public half EasingT;
-        public Ease Ease;
+        public half Speed;
     }
 }
