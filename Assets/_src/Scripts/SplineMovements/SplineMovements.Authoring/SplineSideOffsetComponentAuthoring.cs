@@ -20,7 +20,7 @@ namespace _src.Scripts.SplineMovements.SplineMovements.Authoring
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
                 AddComponent(entity, new SplineSideOffsetComponent
                 {
-                    StartOffset = authoring.startOffset,
+                    CurrentOffset = authoring.startOffset,
                     EndOffset = authoring.endOffset,
                     Speed = authoring.speed,
                 });

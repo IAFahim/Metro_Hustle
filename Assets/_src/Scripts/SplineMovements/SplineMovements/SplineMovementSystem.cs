@@ -14,22 +14,21 @@ namespace _src.Scripts.SplineMovements.SplineMovements
         {
         }
 
+        [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             var nativeSplineBlobComponentData = SystemAPI.GetSingleton<NativeSplineBlobComponentData>();
             ref var nativeSpline = ref nativeSplineBlobComponentData.Value.Value;
             var timeDeltaTime = SystemAPI.Time.DeltaTime;
             foreach (var (
-                         splineMoveComponent, 
-                         moveOffset, 
-                         splineLineComponent, 
+                         splineMoveComponent,
+                         moveOffset,
                          localToWorld
                          )
                      in SystemAPI
                          .Query<
                              RefRW<SplineMoveComponent>,
-                             RefRW<SplineSideOffsetComponent>,
-                             RefRO<SplineLineComponent>,
+                             RefRO<SplineSideOffsetComponent>,
                              RefRW<LocalToWorld>>()
                     )
             {
@@ -42,18 +41,9 @@ namespace _src.Scripts.SplineMovements.SplineMovements
 
                 nativeSpline.Evaluate(index, t, out float3 position, out var tangent, out var upVector);
 
-                float offset = moveOffset.ValueRO.EndOffset;
-                // if (math.abs(moveOffset.ValueRW.StartOffset - moveOffset.ValueRW.EndOffset) < 0.05f)
-                // {
-                //     var step = timeDeltaTime + moveOffset.ValueRO.Speed;
-                //     moveOffset.ValueRW.StartOffset = (half)math.lerp(moveOffset.ValueRO.StartOffset,
-                //         moveOffset.ValueRO.EndOffset, step);
-                // }
-
-                localToWorld.ValueRW.Value = float4x4.TRS(position + localToWorld.ValueRO.Right * offset,
+                localToWorld.ValueRW.Value = float4x4.TRS(
+                    position + localToWorld.ValueRO.Right * moveOffset.ValueRO.CurrentOffset,
                     quaternion.LookRotationSafe(tangent, upVector), 1);
-                // localTransform.ValueRW.Position = position + localToWorld.ValueRO.Right * offset;
-                // localTransform.ValueRW.Rotation = quaternion.LookRotationSafe(tangent, upVector);
             }
         }
 

@@ -9,7 +9,6 @@ namespace _src.Scripts.InputControls.InputControls.Authoring
     public class DirectionInputAuthoring : MonoBehaviour
     {
         public DirectionEnableActiveFlag directionEnableActiveFlag = DirectionEnableActiveFlag.EnableFlagsMask;
-        public bool addLock;
         public DirectionLockFlag directionLockFlag;
 
         private class DirectionInputBaker : Baker<DirectionInputAuthoring>
@@ -22,7 +21,6 @@ namespace _src.Scripts.InputControls.InputControls.Authoring
                     Flag = authoring.directionEnableActiveFlag
                 });
 
-                if (!authoring.addLock) return;
                 AddComponent(entity, new DirectionLockComponent
                 {
                     Flag = authoring.directionLockFlag

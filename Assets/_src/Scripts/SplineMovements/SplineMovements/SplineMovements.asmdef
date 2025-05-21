@@ -21,7 +21,8 @@
         "Unity.Physics",
         "Unity.Transforms",
         "ECS-Spline.Runtime",
-        "Easings.Runtime"
+        "Easings.Runtime",
+        "InputControls.Data"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
