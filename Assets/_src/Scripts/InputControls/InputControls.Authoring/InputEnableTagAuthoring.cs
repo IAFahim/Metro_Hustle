@@ -7,6 +7,7 @@ namespace _src.Scripts.InputControls.InputControls.Authoring
     public class InputEnableTagAuthoring : MonoBehaviour
     {
         public bool enable = true;
+        public bool playerInputEnable;
 
         private class InputEnableTagBaker : Baker<InputEnableTagAuthoring>
         {
@@ -15,6 +16,8 @@ namespace _src.Scripts.InputControls.InputControls.Authoring
                 var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent<InputEnableTag>(entity);
                 SetComponentEnabled<InputEnableTag>(entity, authoring.enable);
+                AddComponent<PlayerInputEnableTag>(entity);
+                SetComponentEnabled<PlayerInputEnableTag>(entity, authoring.playerInputEnable);
             }
         }
     }

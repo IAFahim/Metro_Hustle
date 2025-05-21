@@ -6,9 +6,9 @@ namespace _src.Scripts.SplineMovements.SplineMovements.Data
 {
     public struct SplineSideOffsetComponent : IComponentData
     {
-        public Ease SideEase;
-        public half SideOffset;
-        public half TargetSideOffset;
-        public half SideT;
+        public half StartOffset;
+        public half EndOffset;
+        public half EasingT;
+        public Ease Ease;
     }
 }

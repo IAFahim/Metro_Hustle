@@ -28,23 +28,22 @@ namespace _src.Scripts.SplineMovements.SplineMovements
                 var curveIndex = splineMoveComponent.ValueRO.CurveIndex;
                 var distance = splineMoveComponent.ValueRO.Distance;
                 var speed = splineMoveComponent.ValueRO.Speed * timeDeltaTime;
-                nativeSpline.ToCurveT(curveIndex, distance + speed, out int index, out var newDistance, out float t);
+                nativeSpline.ToCurveT(curveIndex, distance + speed, out int index, out var newDistance, out var t);
                 splineMoveComponent.ValueRW.CurveIndex = (byte)index;
                 splineMoveComponent.ValueRW.Distance = (half)newDistance;
 
                 nativeSpline.Evaluate(index, t, out float3 position, out var tangent, out var upVector);
-                localTransform.ValueRW.Position = position +
-                                                  localToWorld.ValueRO.Right * moveOffset.ValueRO.SideOffset;
-                localTransform.ValueRW.Rotation = quaternion.LookRotationSafe(tangent, upVector);
 
-                if (moveOffset.ValueRW.SideT < 0.99)
+                float offset = moveOffset.ValueRO.EndOffset;
+                if (moveOffset.ValueRW.EasingT < 0.995)
                 {
-                    var step = timeDeltaTime + moveOffset.ValueRO.SideT;
-                    moveOffset.ValueRW.SideOffset = (half)math.lerp(moveOffset.ValueRO.SideOffset,
-                        moveOffset.ValueRO.TargetSideOffset, step);
-                    moveOffset.ValueRW.SideT = (half)step;
+                    var step = timeDeltaTime + moveOffset.ValueRO.EasingT;
+                    offset = (half)math.lerp(moveOffset.ValueRO.StartOffset, moveOffset.ValueRO.EndOffset, step);
+                    moveOffset.ValueRW.EasingT = (half)step;
                 }
-               
+
+                localTransform.ValueRW.Position = position + localToWorld.ValueRO.Right * offset;
+                localTransform.ValueRW.Rotation = quaternion.LookRotationSafe(tangent, upVector);
             }
         }
 

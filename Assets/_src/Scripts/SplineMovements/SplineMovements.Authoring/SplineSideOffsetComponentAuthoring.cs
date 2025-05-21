@@ -8,9 +8,12 @@ namespace _src.Scripts.SplineMovements.SplineMovements.Authoring
 {
     public class SplineSideOffsetComponentAuthoring : MonoBehaviour
     {
-        public half sideOffset;
-        public half targetOffset;
-        public Ease Ease;
+        public half startOffset;
+        public half endOffset;
+        public half easingT;
+        public Ease ease;
+        
+        
 
         private class SplineMoveOffsetBaker : Baker<SplineSideOffsetComponentAuthoring>
         {
@@ -19,9 +22,10 @@ namespace _src.Scripts.SplineMovements.SplineMovements.Authoring
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
                 AddComponent(entity, new SplineSideOffsetComponent
                 {
-                    SideOffset = authoring.sideOffset,
-                    TargetSideOffset = authoring.targetOffset,
-                    SideEase = authoring.Ease,
+                    StartOffset = authoring.startOffset,
+                    EndOffset = authoring.endOffset,
+                    EasingT = authoring.easingT,
+                    Ease = authoring.ease,
                 });
             }
         }

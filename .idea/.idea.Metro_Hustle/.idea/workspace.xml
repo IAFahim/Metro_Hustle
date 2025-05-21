@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/DirectionInputAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/DirectionInputAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/InputEnableTagAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/InputEnableTagAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/PlayerInputEnableTagAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/PlayerInputEnableTagAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/DirectionFlag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/DirectionEnableActiveFlag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/DirectionFlag.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/DirectionEnableActiveFlag.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/DirectionInputComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/Direction/DirectionInputComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionControlSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionControlSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionIJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionIJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineSideOffsetComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineSideOffsetComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineSideOffsetComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineSideOffsetComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +40,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/afa96e494c0f47cebc4decf9444925a61fe800/e3/da07c1d3/RenderChain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink.Data/CinemachineLinkerSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink/CinemachineLinkerSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplinePointColliderBuffer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineMainColliderTrackSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections.PerformanceTests/QueueParallelPerformanceTests.cs" root0="SKIP_HIGHLIGHTING" />
@@ -168,6 +182,8 @@
       <workItem from="1747749410705" duration="1795000" />
       <workItem from="1747761104591" duration="6661000" />
       <workItem from="1747769392989" duration="202000" />
+      <workItem from="1747805217656" duration="1666000" />
+      <workItem from="1747806927423" duration="430000" />
     </task>
     <servers />
   </component>
@@ -193,19 +209,6 @@
           <line>30</line>
           <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.reaction@fccb058fc8b5\BovineLabs.Reaction\Conditions\ConditionEventWriter.cs" containingFunctionPresentation="Method 'Trigger'" />
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs</url>
-          <line>39</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\SplineMovements\SplineMovements\SplineMovementSystem.cs" containingFunctionPresentation="Method 'OnUpdate'">
-            <startOffsets>
-              <option value="1966" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2002" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="38" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />

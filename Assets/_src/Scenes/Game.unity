@@ -359,7 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curveIndex: 0
   speed:
-    value: 19712
+    value: 18688
   distance:
     value: 0
 --- !u!114 &1923392695
@@ -374,11 +374,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19bc3a577b142d581bf3579c9fa59a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideOffset:
+  startOffset:
     value: 0
-  targetOffset:
-    value: 16384
-  Ease: 0
+  endOffset:
+    value: 0
+  easingT:
+    value: 0
+  ease: 0
 --- !u!1001 &5781390144955228746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -391,9 +393,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: ECS Player Character
       objectReference: {fileID: 0}
+    - target: {fileID: 1899904069802882923, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: playerInputEnable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2493078973159338449, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: TransformUsageFlags
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8090602221781120662, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: addLock
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8421916860254639719, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -435,7 +445,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7351773347600660288, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
