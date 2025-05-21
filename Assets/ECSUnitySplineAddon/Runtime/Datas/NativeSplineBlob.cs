@@ -244,8 +244,7 @@ namespace ECSUnitySplineAddon.Runtime.Datas
             }
             else if (distance > currentCurveLength)
             {
-                newIndex = index + 1;
-                if (newIndex == CurveCount)
+                if (newIndex == CurveCount - 1)
                 {
                     newIndex = CurveCount - 1;
                     newDistance = currentCurveLength;
@@ -253,6 +252,7 @@ namespace ECSUnitySplineAddon.Runtime.Datas
                     return;
                 }
 
+                newIndex = index + 1;
                 newDistance = distance - currentCurveLength;
             }
 

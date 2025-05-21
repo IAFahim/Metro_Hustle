@@ -6,18 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/ECS-Spline.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/ECS-Spline.Editor.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/SplineDebugSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/SplineDebugSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlob.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/Camera.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Animations/Animations/SyncAnimationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Animations/Animations/SyncAnimationData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineLineComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineLineComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineSideOffsetComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineSideOffsetComponentAuthoring.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineMoveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineMoveComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineSideOffsetComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineSideOffsetComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,15 +107,13 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7860">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7860" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -184,7 +176,7 @@
       <workItem from="1747769392989" duration="202000" />
       <workItem from="1747805217656" duration="1666000" />
       <workItem from="1747806927423" duration="1239000" />
-      <workItem from="1747817229604" duration="4145000" />
+      <workItem from="1747817229604" duration="8371000" />
     </task>
     <servers />
   </component>
@@ -213,16 +205,29 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Animations/Animations/SyncAnimationData.cs</url>
-          <line>16</line>
+          <line>19</line>
           <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Animations\Animations\SyncAnimationData.cs" containingFunctionPresentation="Method 'OnUpdate'">
             <startOffsets>
-              <option value="531" />
+              <option value="703" />
             </startOffsets>
             <endOffsets>
-              <option value="672" />
+              <option value="748" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/SplineDebugSystem.cs</url>
+          <line>38</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\ECSUnitySplineAddon\Editor\SplineDebugSystem.cs" containingFunctionPresentation="Method 'OnUpdate'">
+            <startOffsets>
+              <option value="1339" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1351" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
