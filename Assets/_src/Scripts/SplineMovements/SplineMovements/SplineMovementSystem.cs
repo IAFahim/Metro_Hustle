@@ -38,7 +38,7 @@ namespace _src.Scripts.SplineMovements.SplineMovements
                 var speed = splineMoveComponent.ValueRO.Speed * timeDeltaTime;
                 nativeSpline.ToCurveT(curveIndex, distance + speed, out int index, out var newDistance, out var t);
                 splineMoveComponent.ValueRW.CurveIndex = (byte)index;
-                splineMoveComponent.ValueRW.Distance = newDistance;
+                splineMoveComponent.ValueRW.Distance = (half)newDistance;
 
                 nativeSpline.Evaluate(index, t, out float3 position, out var tangent, out var upVector);
 
