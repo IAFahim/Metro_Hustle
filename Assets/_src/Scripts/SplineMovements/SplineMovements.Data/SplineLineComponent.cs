@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using Unity.Burst;
 using Unity.Entities;
+using Unity.Properties;
 
 namespace _src.Scripts.SplineMovements.SplineMovements.Data
 {
@@ -26,8 +27,10 @@ namespace _src.Scripts.SplineMovements.SplineMovements.Data
         public static SplineLineComponent Create(byte spline, byte line) =>
             new() { Value = SplineLineEncode(spline, line) };
 
-        [BurstCompile]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public readonly int GetLine() => Value & 0x1111_1000;
+        [CreateProperty]
+        public int Line => Value & ~MaxLine;
+
+        public const int MaxLine = 0x1111_1000;
+
     }
 }

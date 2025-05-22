@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CinemachineCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 254359163543494736, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7297034926185220290, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -267,9 +271,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal:
-    value: 11880
+    value: 16896
   vertical:
-    value: 12903
+    value: 16896
 --- !u!1001 &856964717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -322,6 +326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 3128099512496072901, guid: 1279a3cc2baa98f498102f74e29a0a2e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -351,7 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curveIndex: 0
   speed:
-    value: 19712
+    value: 17664
   distance:
     value: 0
 --- !u!114 &1923392695
@@ -371,7 +379,7 @@ MonoBehaviour:
   endOffset:
     value: 0
   speed:
-    value: 15360
+    value: 19712
 --- !u!1001 &5781390144955228746
 PrefabInstance:
   m_ObjectHideFlags: 0

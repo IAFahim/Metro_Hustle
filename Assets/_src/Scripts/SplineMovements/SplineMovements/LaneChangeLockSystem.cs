@@ -11,10 +11,12 @@ namespace _src.Scripts.SplineMovements.SplineMovements
             
         }
 
-        [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-
+            new LaneChangeLockJobEntity
+            {
+                TimeDelta = SystemAPI.Time.DeltaTime
+            }.ScheduleParallel();
         }
 
         [BurstCompile]

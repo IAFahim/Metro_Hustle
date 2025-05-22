@@ -11,5 +11,6 @@ namespace _src.Scripts.InputControls.InputControls.Data.enums
         LockUpOnly = 0b0000_0100, 
         LockDownOnly = 0b0000_0010,
         LockRightOnly = 0b0000_0001,
+        LockSideWays = LockLeftOnly | LockRightOnly
     }
 }
