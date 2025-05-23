@@ -1,6 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement style="flex-grow: 1;">
-        <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement name="Top" style="flex-grow: 1;">
             <ui:VisualElement style="flex-grow: 1; flex-direction: row; background-size: 100% 128px; height: 128px; min-height: 128px; max-height: 128px; border-left-width: 16px; border-right-width: 16px; justify-content: space-between;">
                 <ui:VisualElement style="flex-grow: 0; width: 128px; height: 128px; min-width: 128px; max-width: 128px; max-height: 128px; min-height: 128px; background-color: rgb(255, 255, 255); margin-right: 16px;" />
                 <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: flex-end; align-items: center; margin-left: 0;">
@@ -29,6 +29,8 @@
             </ui:VisualElement>
             <ui:VisualElement style="flex-grow: 1;" />
         </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 1;" />
+        <ui:VisualElement name="Bottom" style="flex-grow: 1;">
+            <ui:VisualElement style="flex-grow: 1;" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
