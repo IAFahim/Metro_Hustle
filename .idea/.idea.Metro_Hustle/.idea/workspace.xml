@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Bush Main Scene.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Bush Main Scene.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/In Game.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/In Game/options-bar.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/In Game/options-bar.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Main Menu 1.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Main Menu 1.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Main Menu.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Main Menu.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Main Screen.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Main Screen.uxml.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,7 +173,7 @@
       <workItem from="1747817229604" duration="4145000" />
       <workItem from="1747903107349" duration="9305000" />
       <workItem from="1747915063807" duration="1054000" />
-      <workItem from="1747990053696" duration="2750000" />
+      <workItem from="1747990053696" duration="3346000" />
     </task>
     <servers />
   </component>

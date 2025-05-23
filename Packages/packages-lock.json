@@ -35,6 +35,25 @@
       },
       "hash": "0eda64bfb80d3b70388c651dbba53b50f27df9e3"
     },
+    "com.bovinelabs.reaction": {
+      "version": "https://gitlab.com/tertle/com.bovinelabs.reaction.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.bovinelabs.core": "1.4.3"
+      },
+      "hash": "467d7ac84fb9d59d78d611a8a1bb6e6f44a8b2e5"
+    },
+    "com.bovinelabs.stats": {
+      "version": "https://gitlab.com/tertle/com.bovinelabs.stats.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.bovinelabs.core": "1.4.3",
+        "com.bovinelabs.reaction": "0.5.0"
+      },
+      "hash": "e17c4b00c208742c459e7e4174eddeb257fe5367"
+    },
     "com.cesium.unity": {
       "version": "1.16.0",
       "depth": 0,
