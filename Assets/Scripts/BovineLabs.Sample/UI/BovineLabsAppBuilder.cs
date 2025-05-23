@@ -2,6 +2,8 @@
 //     Copyright (c) BovineLabs. All rights reserved.
 // </copyright>
 
+using _src.Scripts.UXMLs.UXMLs.Data;
+
 namespace BovineLabs.Sample.UI
 {
     using BovineLabs.Anchor;
@@ -17,6 +19,7 @@ namespace BovineLabs.Sample.UI
             base.OnConfiguringApp(builder);
 
             builder.services.AddSingleton<IControlService, ControlService>();
+            builder.services.AddSingleton<IUxmlService, UxmlService>();
         }
 
         /// <inheritdoc/>
@@ -28,6 +31,7 @@ namespace BovineLabs.Sample.UI
             anchor.services.GetRequiredService<OptionsAudioViewModel>().Load();
             anchor.services.GetRequiredService<OptionsGameplayViewModel>().Load();
             anchor.services.GetRequiredService<OptionsGraphicsViewModel>().Load();
+            
         }
     }
 }
