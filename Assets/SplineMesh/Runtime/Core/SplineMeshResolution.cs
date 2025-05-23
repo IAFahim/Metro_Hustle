@@ -1,8 +1,6 @@
 using System;
 using Unity.Burst;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
-using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -147,63 +145,64 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             if (SubMeshTriangles.IsCreated) SubMeshTriangles.Dispose();
         }
     }
-    
-    public struct TriangleListContainer 
-    {
-        public NativeArray<int> Tris;
-    }
 
-    [BurstCompile]
-    public struct TriangleOutputListContainer 
-    {
-        public NativeList<int> Tris;
+    // public struct TriangleListContainer
+    // {
+    //     public NativeArray<int> Tris;
+    // }
+    //
+    // [BurstCompile]
+    // public struct TriangleOutputListContainer
+    // {
+    //     public NativeList<int> Tris;
+    //
+    //     public TriangleOutputListContainer(int initialCapacity, Allocator allocator)
+    //     {
+    //         Tris = new NativeList<int>(initialCapacity, allocator);
+    //     }
+    //
+    //     public void Dispose()
+    //     {
+    //         if (Tris.IsCreated) Tris.Dispose();
+    //     }
+    // }
 
-        public TriangleOutputListContainer(int initialCapacity, Allocator allocator)
-        {
-            Tris = new NativeList<int>(initialCapacity, allocator);
-        }
-
-        public void Dispose()
-        {
-            if (Tris.IsCreated) Tris.Dispose();
-        }
-    }
-    
-    [BurstCompile]
-    public struct MakeMeshJob : IJob
-    {
-        [ReadOnly] public NativeArray<float3x2> SplinePositionTangent;
-        [ReadOnly] public NativeArray<float3> SplineNormalTangent;
-        [ReadOnly] public NativeArray<float3> SourceNormals;
-        [ReadOnly] public NativeArray<float2> SourceUV;
-        
-        [ReadOnly] 
-        [NativeDisableContainerSafetyRestriction] 
-        public NativeArray<TriangleListContainer> SourceTriangles; 
-        
-        [ReadOnly] public NativeArray<float> SourceVertexRatios;
-        [ReadOnly] public NativeArray<float3> SourceVertexOffsets;
-
-        public bool UniformUVs;
-        public VectorAxis UvAxis;
-        public float UvResolutions;
-        public int CurveCount;
-        public int MeshResolutions;
-        public float3 UpDirection; 
-        public float3 PositionAdjustment;
-
-        public NativeList<float3> OutVertices;
-        public NativeList<float3> OutNormals;
-        public NativeList<float2> OutUV;
-
-        [NativeDisableContainerSafetyRestriction] 
-        public NativeArray<TriangleOutputListContainer> OutSubMeshTriangles;
-
-        public void Execute()
-        {
-            
-        }
-    }
+    // Ignore job for now
+    // [BurstCompile]
+    // public struct MakeMeshJob : IJob
+    // {
+    //     [ReadOnly] public NativeArray<float3x2> SplinePositionTangent;
+    //     [ReadOnly] public NativeArray<float3> SplineNormalTangent;
+    //     [ReadOnly] public NativeArray<float3> SourceNormals;
+    //     [ReadOnly] public NativeArray<float2> SourceUV;
+    //     
+    //     [ReadOnly] 
+    //     [NativeDisableContainerSafetyRestriction] 
+    //     public NativeArray<TriangleListContainer> SourceTriangles; 
+    //     
+    //     [ReadOnly] public NativeArray<float> SourceVertexRatios;
+    //     [ReadOnly] public NativeArray<float3> SourceVertexOffsets;
+    //
+    //     public bool UniformUVs;
+    //     public VectorAxis UvAxis;
+    //     public float UvResolutions;
+    //     public int CurveCount;
+    //     public int MeshResolutions;
+    //     public float3 UpDirection; 
+    //     public float3 PositionAdjustment;
+    //
+    //     public NativeList<float3> OutVertices;
+    //     public NativeList<float3> OutNormals;
+    //     public NativeList<float2> OutUV;
+    //
+    //     [NativeDisableContainerSafetyRestriction] 
+    //     public NativeArray<TriangleOutputListContainer> OutSubMeshTriangles;
+    //
+    //     public void Execute()
+    //     {
+    //         
+    //     }
+    // }
 
     public enum VectorAxis
     {
@@ -246,7 +245,6 @@ namespace SplineMesh.SplineMesh.Runtime.Core
 
         [Tooltip("Number of segments to divide the spline into for mesh generation.")] [SerializeField]
         private int meshResolutions = 10;
-
         public float3 upDirection = Vector3.forward;
 
 
@@ -282,10 +280,10 @@ namespace SplineMesh.SplineMesh.Runtime.Core
             }
 
 
-            GenerateMeshAlongSpline(modelMesh, splineContainer.Splines[0], forwardAxis);
+            GenerateMeshAlongSpline(modelMesh, splineContainer.Splines[0], meshResolutions, forwardAxis);
         }
 
-        private void GenerateMeshAlongSpline(Mesh mesh, Spline spline, VectorAxis forward)
+        private void GenerateMeshAlongSpline(Mesh mesh, Spline spline, int meshResolutions, VectorAxis forward)
         {
             int curveCount = spline.GetCurveCount() - 1;
             float meshForwardDistance = math.abs(MeshUtil.GetRequiredAxis(mesh.bounds.size, forward));
@@ -300,7 +298,8 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 int combinedVertexOffsetForCurrentMesh = 0;
                 float3 currentPositionAdjustment = positionAdjustments[i];
 
-                GetMeshData(splineCache, meshAssetInfo, mesh.vertices.Length, mesh.vertexCount, ref bakeInfo,
+                GetMeshData(splineCache, meshResolutions, meshAssetInfo, mesh.vertices.Length, mesh.vertexCount,
+                    ref bakeInfo,
                     combinedVertexOffsetForCurrentMesh, curveCount, currentPositionAdjustment);
 
                 SetMesh(meshFilters[i], TVector3S(bakeInfo.Vertices), TVector3S(bakeInfo.Normals),
@@ -314,7 +313,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
         }
 
         [BurstCompile]
-        private void GetMeshData(SplineCache splineCache,
+        private void GetMeshData(SplineCache splineCache, int meshResolutions,
             MeshAssetInfo meshAssetInfo,
             int sourceMeshVerticesLength,
             int sourceMeshVertexCount,
@@ -350,7 +349,8 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 AddTriangulation(sourceMeshVertexCount, meshAssetInfo.Triangles, bakeInfo.SubMeshTriangles,
                     ref currentVertexOffset);
 
-                SetUV(meshAssetInfo.UV, resolutionFraction, meshAssetInfo.VertexRatios, resIncrement, curveCount,
+                SetUV(meshAssetInfo.UV, meshResolutions, resolutionFraction, meshAssetInfo.VertexRatios, resIncrement,
+                    curveCount,
                     bakeInfo.UV);
             }
         }
@@ -358,7 +358,7 @@ namespace SplineMesh.SplineMesh.Runtime.Core
 
         [BurstCompile]
         private void SetUV(
-            NativeArray<float2> sourceMeshUV,
+            NativeArray<float2> sourceMeshUV, int meshResolutions,
             float resolutionFraction, NativeList<float> vertexRatios, int resIncrement,
             int curveCount, NativeList<float2> bakedUVsList)
         {
@@ -391,9 +391,9 @@ namespace SplineMesh.SplineMesh.Runtime.Core
                 for (int k = 0; k < sourceTriangles.Length; k += 3)
                 {
                     outputTriangleList.Add(sourceTriangles[k] + currentCombinedVertexOffset);
-                    outputTriangleList.Add(sourceTriangles[k + 2] +
+                    outputTriangleList.Add(sourceTriangles[k + 1] +
                                            currentCombinedVertexOffset);
-                    outputTriangleList.Add(sourceTriangles[k + 1] + currentCombinedVertexOffset);
+                    outputTriangleList.Add(sourceTriangles[k + 2] + currentCombinedVertexOffset);
                 }
             }
 
@@ -468,7 +468,6 @@ namespace SplineMesh.SplineMesh.Runtime.Core
     {
         public static void Evaluate(Spline spline, float t, out float3 position, out float3 tangent)
         {
-            t = math.saturate(t);
             var curveIndex = spline.SplineToCurveT(t, out var curveT);
             BezierCurve curve = spline.GetCurve(curveIndex);
 

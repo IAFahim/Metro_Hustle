@@ -1,8 +1,7 @@
 ﻿using _src.Scripts.InputControls.InputControls.Data;
-using _src.Scripts.InputControls.InputControls.Data.Direction;
+using _src.Scripts.InputControls.InputControls.Data.enums;
 using Unity.Burst;
 using Unity.Entities;
-using UnityEngine;
 
 namespace _src.Scripts.InputControls.InputControls
 {
@@ -10,13 +9,13 @@ namespace _src.Scripts.InputControls.InputControls
     [BurstCompile]
     public partial struct MoveDirectionIJobEntity : IJobEntity
     {
-        public DirectionFlag RawInputCommand;
+        public DirectionEnableActiveFlag RawInputCommand;
 
         [BurstCompile]
-        private void Execute(ref DirectionInputComponent directionInputComponent)
+        private void Execute(ref DirectionInputEnableActiveComponent directionInputEnableActiveComponent)
         {
-            var directionFlag = directionInputComponent.DirectionFlag & DirectionFlag.EnableFlagsMask;
-            directionInputComponent.DirectionFlag = RawInputCommand | directionFlag;
+            var directionFlag = directionInputEnableActiveComponent.Flag & DirectionEnableActiveFlag.EnableFlagsMask;
+            directionInputEnableActiveComponent.Flag = RawInputCommand | directionFlag;
         }
     }
 }

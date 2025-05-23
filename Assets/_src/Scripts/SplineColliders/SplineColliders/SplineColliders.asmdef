@@ -22,7 +22,8 @@
         "Unity.Transforms",
         "Colliders.Data",
         "SplineConfigs.Data",
-        "Collisions.Data"
+        "Collisions.Data",
+        "SplineMovements.Data"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

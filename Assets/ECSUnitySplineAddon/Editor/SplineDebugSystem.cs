@@ -1,9 +1,10 @@
-﻿using BovineLabs.Core;
+﻿using _src.Scripts.SplineMovements.SplineMovements.Data;
+using BovineLabs.Core;
 using Drawing;
 using ECSUnitySplineAddon.Runtime.Datas;
 using Unity.Burst;
-using Unity.Collections;
 using Unity.Entities;
+using Unity.Mathematics;
 
 namespace ECSUnitySplineAddon.Editor
 {
@@ -11,6 +12,8 @@ namespace ECSUnitySplineAddon.Editor
     [WorldSystemFilter(WorldSystemFilterFlags.Editor | WorldSystemFilterFlags.Default)]
     public partial struct SplineDebugSystem : ISystem
     {
+        public SplineMoveComponent splineMoveComponent;
+
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
@@ -18,32 +21,33 @@ namespace ECSUnitySplineAddon.Editor
             state.RequireForUpdate<NativeSplineBlobComponentData>();
         }
 
+
         public void OnUpdate(ref SystemState state)
         {
             Entity splineEntity = SystemAPI.GetSingletonEntity<NativeSplineBlobComponentData>();
             NativeSplineBlobComponentData nativeSplineBlobComponentData =
                 SystemAPI.GetComponent<NativeSplineBlobComponentData>(splineEntity);
 
-            ref var curves = ref nativeSplineBlobComponentData.Value.Value.Curves;
+            ref var splineBlob = ref nativeSplineBlobComponentData.Value.Value;
             var builder = DrawingManager.GetBuilder();
-            for (int i = 0; i < curves.Length; i++)
+            splineMoveComponent = new SplineMoveComponent()
             {
-                var bezierCurve = curves[i];
-                builder.Bezier(bezierCurve.P0, bezierCurve.P1, bezierCurve.P2, bezierCurve.P3);
-            }
-
-            // var debug = SystemAPI.GetSingleton<BLDebug>();
-            ref var distanceLut = ref nativeSplineBlobComponentData.Value.Value.DistanceLUT;
-            ref var length = ref nativeSplineBlobComponentData.Value.Value.Length;
-            
-            for (int i = 0; i < distanceLut.Length; i++)
+                Speed = new(0.2),
+                CurveIndex = 0,
+                Distance = new half(0)
+            };
+            while (true)
             {
-                var t = distanceLut[i].Distance / length;
-                var position = nativeSplineBlobComponentData.Value.Value.EvaluatePosition(t);
+                splineBlob.ToCurveT(splineMoveComponent.CurveIndex,
+                    splineMoveComponent.Distance + splineMoveComponent.Speed, out int index,
+                    out float distance, out var t);
+                splineBlob.Evaluate(index, t, out float3 position, out float3 tangent, out var upVector);
                 builder.Cross(position);
+                if (splineMoveComponent.CurveIndex == (byte)index &&
+                    splineMoveComponent.Distance == (half)distance) break;
+                splineMoveComponent.CurveIndex = (byte)index;
+                splineMoveComponent.Distance = (half)distance;
             }
-            // ref var curves = ref nativeSplineBlobComponentData.Value.Value.EvaluatePosition();
-
 
             builder.DisposeAfter(state.Dependency);
         }

@@ -44,11 +44,20 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             // Draw.WireBox(a.Center, a.Size);
             // Draw.WireBox(b.Center, b.Size);
             // Debug.Log(Overlaps(a, b));
+
+            quaternion editorCamRot = quaternion.identity;
+#if UNITY_EDITOR
+            if (UnityEditor.SceneView.lastActiveSceneView != null )
+            {
+                editorCamRot = UnityEditor.SceneView.lastActiveSceneView.camera.transform.rotation;
+            }
+#endif
             var boxColliderEditorAlineJobEntity = new BoxColliderEditorAlineJobEntity
             {
                 Drawing = builder,
                 TargetLTW = targetTLW,
-                ForwardTip = forward
+                ForwardTip = forward,
+                EditorCameraRotation = editorCamRot
             };
             boxColliderEditorAlineJobEntity.ScheduleParallel();
             builder.DisposeAfter(state.Dependency);

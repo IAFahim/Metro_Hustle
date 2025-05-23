@@ -1,4 +1,5 @@
-﻿using _src.Scripts.InputControls.InputControls.Data.Direction;
+﻿using _src.Scripts.InputControls.InputControls.Data;
+using _src.Scripts.InputControls.InputControls.Data.enums;
 using Unity.Entities;
 using UnityEngine;
 
@@ -7,16 +8,22 @@ namespace _src.Scripts.InputControls.InputControls.Authoring
     [RequireComponent(typeof(InputEnableTagAuthoring))]
     public class DirectionInputAuthoring : MonoBehaviour
     {
-        public DirectionFlag directionFlag = DirectionFlag.EnableFlagsMask;
+        public DirectionEnableActiveFlag directionEnableActiveFlag = DirectionEnableActiveFlag.EnableFlagsMask;
+        public DirectionLockFlag directionLockFlag;
 
         private class DirectionInputBaker : Baker<DirectionInputAuthoring>
         {
             public override void Bake(DirectionInputAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.None);
-                AddComponent(entity, new DirectionInputComponent
+                AddComponent(entity, new DirectionInputEnableActiveComponent
                 {
-                    DirectionFlag = authoring.directionFlag
+                    Flag = authoring.directionEnableActiveFlag
+                });
+
+                AddComponent(entity, new DirectionLockComponent
+                {
+                    Flag = authoring.directionLockFlag
                 });
             }
         }

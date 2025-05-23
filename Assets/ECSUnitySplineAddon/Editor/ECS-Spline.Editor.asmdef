@@ -14,7 +14,8 @@
         "BovineLabs.Core.Extensions",
         "ECS-Spline.Runtime",
         "Unity.Splines",
-        "Unity.Logging"
+        "Unity.Logging",
+        "SplineMovements.Data"
     ],
     "includePlatforms": [
         "Editor"

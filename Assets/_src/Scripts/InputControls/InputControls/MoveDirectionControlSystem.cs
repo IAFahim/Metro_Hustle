@@ -1,5 +1,5 @@
 ﻿using _src.Scripts.InputControls.InputControls.Data;
-using _src.Scripts.InputControls.InputControls.Data.Direction;
+using _src.Scripts.InputControls.InputControls.Data.enums;
 using BovineLabs.Core.Input;
 using Unity.Burst;
 using Unity.Entities;
@@ -22,9 +22,32 @@ namespace _src.Scripts.InputControls.InputControls
             var inputComponentEntity = SystemAPI.GetSingletonEntity<InputCommon>();
             var inputCommon = SystemAPI.GetSingleton<InputCommon>();
 
-            if (inputCommon.InputOverUI) return;
+            if (!inputCommon.AnyButtonPress)
+            {
+                new MoveDirectionIJobEntity()
+                {
+                    RawInputCommand = DirectionEnableActiveFlag.EnableFlagsMask
+                }.ScheduleParallel();
+                return;
+            }
+
+            if (inputCommon.InputOverUI)
+            {
+                new MoveDirectionIJobEntity()
+                {
+                    RawInputCommand = DirectionEnableActiveFlag.EnableFlagsMask
+                }.ScheduleParallel();
+                return;
+            }
 #if UNITY_EDITOR
-            if (!inputCommon.CursorInViewPort) return;
+            if (!inputCommon.CursorInViewPort)
+            {
+                new MoveDirectionIJobEntity()
+                {
+                    RawInputCommand = DirectionEnableActiveFlag.EnableFlagsMask
+                }.ScheduleParallel();
+                return;
+            }
 #endif
 
 
@@ -32,29 +55,28 @@ namespace _src.Scripts.InputControls.InputControls
             var threshold = SystemAPI.GetComponent<TouchInputThresholdSingleton>(inputComponentEntity);
             var moveDelta = inputComponent.MoveDelta;
 
-            DirectionFlag determinedRawInputFlag = DirectionFlag.None;
+            DirectionEnableActiveFlag determinedRawInputFlag = DirectionEnableActiveFlag.Nothing;
             var absDelta = math.abs(moveDelta);
             var isUpDownDominant = absDelta.y > absDelta.x;
             if (isUpDownDominant)
             {
                 if (absDelta.y < threshold.Vertical) return;
-                if (moveDelta.y > 0) determinedRawInputFlag |= DirectionFlag.IsUp;
-                else if (moveDelta.y < 0) determinedRawInputFlag |= DirectionFlag.IsDown;
+                // Debug.Log($"absDelta.y {absDelta.y}, threshold.Vertical {threshold.Vertical}");
+                if (moveDelta.y > 0) determinedRawInputFlag |= DirectionEnableActiveFlag.IsUp;
+                else if (moveDelta.y < 0) determinedRawInputFlag |= DirectionEnableActiveFlag.IsDown;
             }
             else
             {
                 if (absDelta.x < threshold.Horizontal) return;
-                if (moveDelta.x > 0) determinedRawInputFlag |= DirectionFlag.IsRight;
-                else if (moveDelta.x < 0) determinedRawInputFlag |= DirectionFlag.IsLeft;
+                // Debug.Log($"absDelta.x  {absDelta.x}, threshold.Horizontal {threshold.Horizontal}");
+                if (moveDelta.x > 0) determinedRawInputFlag |= DirectionEnableActiveFlag.IsRight;
+                else if (moveDelta.x < 0) determinedRawInputFlag |= DirectionEnableActiveFlag.IsLeft;
             }
 
-            MoveDirectionIJobEntity moveDirectionIJobEntity = new MoveDirectionIJobEntity()
+            new MoveDirectionIJobEntity()
             {
                 RawInputCommand = determinedRawInputFlag
-            };
-
-            // Schedule the job with dependency management
-            state.Dependency = moveDirectionIJobEntity.ScheduleParallel(state.Dependency);
+            }.ScheduleParallel();
         }
 
         [BurstCompile]
