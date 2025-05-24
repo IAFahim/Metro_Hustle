@@ -2,6 +2,7 @@
 //     Copyright (c) BovineLabs. All rights reserved.
 // </copyright>
 
+using _src.Scripts.Sprites.Sprites.Data;
 using _src.Scripts.UXMLs.UXMLs.Data;
 
 namespace BovineLabs.Sample.UI
@@ -20,6 +21,7 @@ namespace BovineLabs.Sample.UI
 
             builder.services.AddSingleton<IControlService, ControlService>();
             builder.services.AddSingleton<IUxmlService, UxmlService>();
+            builder.services.AddSingleton<ISpriteService, SpriteService>();
         }
 
         /// <inheritdoc/>

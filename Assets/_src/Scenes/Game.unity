@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 686383863}
   - component: {fileID: 686383866}
   - component: {fileID: 686383867}
+  - component: {fileID: 686383868}
   m_Layer: 0
   m_Name: GameSettings
   m_TagString: Untagged
@@ -276,6 +277,27 @@ MonoBehaviour:
     value: 16896
   vertical:
     value: 16896
+--- !u!114 &686383868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686383862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7305cdf55c354c0eb811d408fe38ad23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddStats: 1
+  StatDefaults: []
+  StatDefaultGroups: []
+  StatsCanBeModified: 1
+  AddIntrinsics: 1
+  IntrinsicDefaults: []
+  IntrinsicDefaultGroups: []
+  Initialize:
+    CopyFrom: 3
 --- !u!1001 &856964717
 PrefabInstance:
   m_ObjectHideFlags: 0

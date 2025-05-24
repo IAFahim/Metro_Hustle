@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5287987355161702116}
   - component: {fileID: 1888095633616440346}
   - component: {fileID: 1959814603957885919}
+  - component: {fileID: 4030623073371236027}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -96,3 +97,18 @@ MonoBehaviour:
   values:
   - Key: Mobile
     Asset: {fileID: 9197481963319205126, guid: 125749038c1f7d843878ff5cea7251ae, type: 3}
+--- !u!114 &4030623073371236027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7009687390992542841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c72c88e112467d41ab3cd4bff2ffe80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  values:
+  - Key: Coin
+    Asset: {fileID: 21300000, guid: d9c2f34cc742dfe4e8a1fe5581fa05e0, type: 3}
