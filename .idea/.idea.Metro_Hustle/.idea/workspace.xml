@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/BovineLabs.Sample.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/BovineLabs.Sample.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/BovineLabsAppBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/BovineLabsAppBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/ViewModels/Game.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/ViewModels/Game/GameViewModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/ViewModels/Game/GameViewModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/Views/Game/GameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/Views/Game/GameView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UI/Style/Game.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UI/Style/Game.uss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings/Building Floor 2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings/Building Floor 2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings/Building floor.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings/Building floor.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Mobile.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/UI Documents/Mobile.uxml" afterDir="false" />
-    </list>
+    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,7 +173,7 @@
       <workItem from="1747903107349" duration="9305000" />
       <workItem from="1747915063807" duration="1054000" />
       <workItem from="1747990053696" duration="3346000" />
-      <workItem from="1748020276453" duration="4028000" />
+      <workItem from="1748020276453" duration="4338000" />
     </task>
     <servers />
   </component>
