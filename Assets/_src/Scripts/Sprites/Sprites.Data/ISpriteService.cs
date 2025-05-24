@@ -4,6 +4,6 @@ namespace _src.Scripts.Sprites.Sprites.Data
 {
     public interface ISpriteService
     {
-        Sprite GetAsset(string assetName);
+        Sprite GetAsset(ushort id);
     }
 }

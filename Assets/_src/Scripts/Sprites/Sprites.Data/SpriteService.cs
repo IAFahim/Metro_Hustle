@@ -10,7 +10,7 @@ namespace _src.Scripts.Sprites.Sprites.Data
     [UsedImplicitly]
     public class SpriteService: ISpriteService
     {
-        private readonly Dictionary<string, Sprite> assets;
+        private readonly Dictionary<ushort, Sprite> assets;
         
         public SpriteService()
         {
@@ -18,7 +18,7 @@ namespace _src.Scripts.Sprites.Sprites.Data
             this.assets = uxmls.ToDictionary(t => t.Key, t => t.Asset);
         }
         
-        public Sprite GetAsset(string assetName)
+        public Sprite GetAsset(ushort assetName)
         {
             try
             {

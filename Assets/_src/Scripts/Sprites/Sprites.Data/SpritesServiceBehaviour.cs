@@ -12,7 +12,7 @@ namespace _src.Scripts.Sprites.Sprites.Data
         [Serializable]
         public class KeySprites
         {
-            public string Key;
+            public ushort Key;
             public Sprite Asset;
         }
     }
