@@ -9,23 +9,6 @@ namespace ECSUnitySplineAddon.Runtime.Datas
     public static class NativeSplineBlobFactory
     {
         /// <summary>
-        /// Creates a BlobAssetReference for a NativeSplineBlob from a managed Spline.
-        /// </summary>
-        /// <param name="spline">The managed Spline object.</param>
-        /// <param name="bakingTransform">Transform to bake the spline into (e.g., localToWorld or identity for local space).</param>
-        /// <param name="allocator">The allocator for the Blob Builder.</param>
-        /// <returns>A BlobAssetReference to the created spline data.</returns>
-        public static BlobAssetReference<NativeSplineBlob> CreateBlob(
-            Spline spline,
-            float4x4 bakingTransform,
-            int LUT_RESOLUTION,
-            Allocator allocator = Allocator.Temp)
-        {
-            using var nativeSpline = new NativeSpline(spline, bakingTransform, Allocator.Temp);
-            return CreateBlob(nativeSpline, LUT_RESOLUTION, allocator);
-        }
-
-        /// <summary>
         /// Creates a BlobAssetReference for a NativeSplineBlob from an existing NativeSpline.
         /// </summary>
         /// <param name="nativeSpline">The NativeSpline data source. Assumes transform is already applied.</param>

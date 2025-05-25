@@ -32,7 +32,7 @@
         {
             "name": "com.arongranberg.aline",
             "expression": "1.0.0",
-            "define": "Aline"
+            "define": "Disable_ALINE"
         }
     ],
     "noEngineReferences": false
