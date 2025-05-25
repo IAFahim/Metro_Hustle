@@ -1,14 +1,8 @@
-﻿#if ALINE
-using Drawing;
-using UnityEngine;
-#endif
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 using _src.Scripts.Colliders.Colliders.Authoring;
-using _src.Scripts.Colliders.Colliders.Data;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
-using Unity.Rendering;
 using Unity.Transforms;
 
 namespace _src.Scripts.Colliders.Colliders.Editor
@@ -31,7 +25,7 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             // }
 
             var targetTLW = new LocalToWorld();
-            half forward = new (0);
+            half forward = new(0);
             foreach (var (localToWorld, targetLtwTag) in SystemAPI.Query<RefRO<LocalToWorld>, RefRO<TargetLtwTag>>())
             {
                 targetTLW = localToWorld.ValueRO;
@@ -40,18 +34,17 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             }
 
 #if ALINE
-            CommandBuilder builder = DrawingManager.GetBuilder();
+            var builder = Drawing.DrawingManager.GetBuilder();
             // Draw.WireBox(a.Center, a.Size);
             // Draw.WireBox(b.Center, b.Size);
             // Debug.Log(Overlaps(a, b));
 
             quaternion editorCamRot = quaternion.identity;
-#if UNITY_EDITOR
-            if (UnityEditor.SceneView.lastActiveSceneView != null )
+            if (UnityEditor.SceneView.lastActiveSceneView != null)
             {
                 editorCamRot = UnityEditor.SceneView.lastActiveSceneView.camera.transform.rotation;
             }
-#endif
+
             var boxColliderEditorAlineJobEntity = new BoxColliderEditorAlineJobEntity
             {
                 Drawing = builder,

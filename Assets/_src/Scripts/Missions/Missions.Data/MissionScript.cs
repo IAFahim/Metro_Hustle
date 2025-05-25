@@ -35,7 +35,7 @@ namespace _src.Scripts.Missions.Missions.Data
     {
         public string name;
         public IntrinsicKey intrinsicKey;
-        public IntrinsicData IntrinsicData;
+        public Goal goal;
     }
     
     [Serializable]
@@ -43,10 +43,17 @@ namespace _src.Scripts.Missions.Missions.Data
     {
         public string name;
         public IntrinsicKey intrinsicKey;
-        public IntrinsicData IntrinsicData;
+        public Goal goal;
+    }
+
+    [Serializable]
+    public class Goal
+    {
+        public ushort defaultValue;
+        public ushort min;
+        public ushort max;
     }
     
-
     public enum DayTime : byte
     {
         Morning = 0,
