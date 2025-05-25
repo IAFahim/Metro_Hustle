@@ -15,4 +15,4 @@ MonoBehaviour:
   Values:
   - Stat: {fileID: 11400000, guid: 2ac3c31d19138d445a95f0be3099ccd5, type: 2}
     ModifyType: 0
-    Value: 0
+    Value: 5

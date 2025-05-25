@@ -240,12 +240,12 @@ MonoBehaviour:
   _ellipsoidOverride: {fileID: 0}
   _originPlacement: 1
   _originAuthority: 0
-  _latitude: 22.65393
-  _longitude: 88.3628
-  _height: -45
-  _ecefX: 168250.6534592104
-  _ecefY: 5886530.959929875
-  _ecefZ: 2441379.243053439
+  _latitude: 22.57730451752553
+  _longitude: 88.35866
+  _height: -47
+  _ecefX: 168769.40307217743
+  _ecefY: 5889778.615511062
+  _ecefZ: 2433545.6086117644
   _scale: 1
 --- !u!4 &1493648927
 Transform:

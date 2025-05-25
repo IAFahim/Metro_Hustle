@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/StatsHelperEditorJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/StatsHelperEditorJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/StatsHelperEditorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/StatsHelperEditorSystem.cs" afterDir="false" />
-    </list>
+    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,7 +190,7 @@
       <workItem from="1748088496351" duration="2130000" />
       <workItem from="1748101855679" duration="7743000" />
       <workItem from="1748152657281" duration="2178000" />
-      <workItem from="1748164948859" duration="1858000" />
+      <workItem from="1748164948859" duration="2085000" />
     </task>
     <servers />
   </component>
@@ -270,19 +266,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/StatsHelperEditorJobEntity.cs</url>
-          <line>17</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\StatsHelpers\StatsHelpers.Editor\StatsHelperEditorJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
-            <startOffsets>
-              <option value="518" />
-            </startOffsets>
-            <endOffsets>
-              <option value="567" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
