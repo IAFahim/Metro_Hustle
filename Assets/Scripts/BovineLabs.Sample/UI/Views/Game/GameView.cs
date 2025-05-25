@@ -14,10 +14,10 @@ namespace BovineLabs.Sample.UI.Views.Game
             : base(new HealthViewModel())
         {
             // Add(healthView);
-            var templateContainer = service.GetAsset("Mobile").Instantiate();
-            var visualElement = templateContainer.ElementAt(0);
-            Add(visualElement);
-            AddToClassList(".mobile__full");
+            // var templateContainer = service.GetAsset("Mobile").Instantiate();
+            // var visualElement = templateContainer.ElementAt(0);
+            // Add(visualElement);
+            // AddToClassList(".mobile__full");
 
         }
     }
