@@ -3,8 +3,9 @@ using Unity.Mathematics;
 
 namespace _src.Scripts.Colliders.Colliders.Authoring
 {
-    public struct TargetLtwTag : IComponentData
+    public struct TargetTrack : IComponentData
     {
+        public half Leg;
         public half ForwardTip;
     }
 }

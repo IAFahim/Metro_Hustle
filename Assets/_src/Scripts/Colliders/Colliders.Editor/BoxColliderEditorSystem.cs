@@ -25,11 +25,11 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             // }
 
             var targetTLW = new LocalToWorld();
-            half forward = new(0);
-            foreach (var (localToWorld, targetLtwTag) in SystemAPI.Query<RefRO<LocalToWorld>, RefRO<TargetLtwTag>>())
+            TargetTrack targetTrack = new();
+            foreach (var (localToWorld, targetLtwTag) in SystemAPI.Query<RefRO<LocalToWorld>, RefRO<TargetTrack>>())
             {
                 targetTLW = localToWorld.ValueRO;
-                forward = targetLtwTag.ValueRO.ForwardTip;
+                targetTrack = targetLtwTag.ValueRO;
                 break;
             }
 
@@ -49,7 +49,7 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             {
                 Drawing = builder,
                 TargetLTW = targetTLW,
-                ForwardTip = forward,
+                TargetTrack = targetTrack,
                 EditorCameraRotation = editorCamRot
             };
             boxColliderEditorAlineJobEntity.ScheduleParallel();
