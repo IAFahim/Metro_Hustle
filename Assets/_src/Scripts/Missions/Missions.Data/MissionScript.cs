@@ -34,7 +34,7 @@ namespace _src.Scripts.Missions.Missions.Data
     public class Objective
     {
         public string name;
-        public IntrinsicKey intrinsicKey;
+        public ushort stats;
         public Goal goal;
     }
     
