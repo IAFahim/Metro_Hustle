@@ -12,6 +12,7 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
         public bool IsInside;
         public bool IsOnTopOfBox;
         public half ActualHeightOnTop;
+        public bool HasInteraction => IsTipEntered || IsInside || IsOnTopOfBox;
 
         [BurstCompile]
         public static bool Try(
@@ -58,8 +59,8 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
                 collisionResult.ActualHeightOnTop = (half)actualHeightOnTop;
                 collisionResult.IsOnTopOfBox = true;
             }
-
-            return collisionResult.IsTipEntered || collisionResult.IsInside || collisionResult.IsOnTopOfBox;
+            
+            return collisionResult.HasInteraction;
         }
     }
 }

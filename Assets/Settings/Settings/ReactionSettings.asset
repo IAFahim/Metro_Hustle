@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f8a5def80249169fb86f23077b8286, type: 3}
   m_Name: ReactionSettings
   m_EditorClassIdentifier: 
-  conditionEvents: []
-  enableables: 
+  conditionEvents:
+  - {fileID: 5617871429471638917, guid: ff388874515eda04f8103cb02d8836ba, type: 2}
+  enableables: f4651c22e4f91df7

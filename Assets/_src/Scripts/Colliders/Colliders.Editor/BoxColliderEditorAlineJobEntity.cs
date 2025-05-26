@@ -1,6 +1,8 @@
 ﻿#if ALINE
 using _src.Scripts.Colliders.Colliders.Authoring;
 using _src.Scripts.Colliders.Colliders.Data;
+using BovineLabs.Core;
+using BovineLabs.Stats.Data;
 using Drawing;
 using Unity.Burst;
 using Unity.Collections;
@@ -16,18 +18,21 @@ namespace _src.Scripts.Colliders.Colliders.Editor
     {
         public CommandBuilder Drawing;
         public quaternion EditorCameraRotation;
+        [ReadOnly] public BufferLookup<Stat> StatLookup;
+        public NativeQueue<IStatsBuffer>.ParallelWriter IStatsBuffer;
 
-        [ReadOnly] public NativeArray<(LocalToWorld targetLtw, TargetBody targetBody)>.ReadOnly TargetBodyLtwList;
+        [ReadOnly]
+        public NativeArray<(Entity entity, LocalToWorld targetLtw, TargetBody targetBody)>.ReadOnly TargetBodyLtwList;
 
         // Color management
-        private static readonly Color BaseBoxColor = new Color(0.5f, 0.5f, 0.5f, 0.4f);
-        private static readonly Color DefaultTargetColor = new Color(0.5f, 0.7f, 1f);
-        private static readonly Color TipEnteredColor = new Color(1f, 0.92f, 0.016f);
+        private static readonly Color BaseBoxColor = new(0.5f, 0.5f, 0.5f, 0.4f);
+        private static readonly Color DefaultTargetColor = new(0.5f, 0.7f, 1f);
+        private static readonly Color TipEnteredColor = new(1f, 0.92f, 0.016f);
         private static readonly Color InsideColor = Color.red;
         private static readonly Color InsideLineColor = Color.magenta;
-        private static readonly Color OnTopColor = new Color(0.8f, 0.4f, 1f);
-        private static readonly Color StandableZoneColor = new Color(0.5f, 0.7f, 1f, 0.7f);
-        private static readonly Color InactivePlaneColor = new Color(0.6f, 0.6f, 0.6f, 0.3f);
+        private static readonly Color OnTopColor = new(0.8f, 0.4f, 1f);
+        private static readonly Color StandableZoneColor = new(0.5f, 0.7f, 1f, 0.7f);
+        private static readonly Color InactivePlaneColor = new(0.6f, 0.6f, 0.6f, 0.3f);
         private static readonly Color HeightLabelColor = Color.white;
 
         // Target identification colors (cycling through different hues)
@@ -54,61 +59,41 @@ namespace _src.Scripts.Colliders.Colliders.Editor
         }
 
         [BurstCompile]
-        private void Execute(in LocalToWorld boxLtw, in BoxColliderComponent boxCollider)
+        private void Execute(Entity entity, in LocalToWorld boxLtw, in BoxColliderComponent boxCollider)
         {
-            // First pass: collect all colliding targets and their info
-            var collidingTargets =
-                new NativeList<(int index, BoxCollisionResult collision, LocalToWorld targetLtw, TargetBody targetBody
-                    )>(
-                    TargetBodyLtwList.Length, Allocator.Temp);
-
+            if (!StatLookup.TryGetBuffer(entity, out var statsBuffer)) return;
+            var statsMap = statsBuffer.AsMap();
+            var statsPair = statsMap.GetKeyValueArrays(Allocator.Temp);
+            var singleStatsKey = statsPair.Keys;
+            var singleStatsValue = statsPair.Values;
             for (var i = 0; i < TargetBodyLtwList.Length; i++)
             {
-                var (targetLtw, bodyTrack) = TargetBodyLtwList[i];
+                var (targetEntity, targetLtw, bodyTrack) = TargetBodyLtwList[i];
                 if (BoxCollisionResult.Try(boxLtw, boxCollider, targetLtw, bodyTrack, out var collision))
                 {
-                    collidingTargets.Add((i, collision, targetLtw, bodyTrack));
+                    for (int j = 0; j < statsPair.Length; j++)
+                    {
+                        IStatsBuffer.Enqueue(new IStatsBuffer()
+                        {
+                            Entity = targetEntity,
+                            Key = singleStatsKey[i],
+                            Value = singleStatsValue[i].Value
+                        });
+                    }
+                    DrawTarget(boxLtw, boxCollider, targetLtw, bodyTrack, i, collision);
                 }
+
+                statsPair.Dispose();
             }
 
             // Draw box once
             Drawing.WireBox(boxLtw.Position, boxLtw.Rotation, (float3)boxCollider.HalfExtents * 2, BaseBoxColor);
-
-            // Draw all targets (including non-colliding ones)
-            for (var i = 0; i < TargetBodyLtwList.Length; i++)
-            {
-                var (targetLtw, bodyTrack) = TargetBodyLtwList[i];
-                bool hasCollision = false;
-                BoxCollisionResult collision = default;
-
-                // Check if this target has collision
-                for (int j = 0; j < collidingTargets.Length; j++)
-                {
-                    if (collidingTargets[j].index == i)
-                    {
-                        hasCollision = true;
-                        collision = collidingTargets[j].collision;
-                        break;
-                    }
-                }
-
-                DrawTarget(boxLtw, boxCollider, targetLtw, bodyTrack, i, hasCollision, collision);
-            }
-
-            // Draw consolidated collision status for all colliding targets
-            if (collidingTargets.Length > 0)
-            {
-                DrawConsolidatedStatus(boxLtw, collidingTargets);
-            }
-
-            collidingTargets.Dispose();
         }
 
         [BurstCompile]
         private void DrawTarget(
             in LocalToWorld boxLtw, in BoxColliderComponent boxCollider,
-            in LocalToWorld targetLtw, in TargetBody targetBody, int targetIndex,
-            bool hasCollision, in BoxCollisionResult collision
+            in LocalToWorld targetLtw, in TargetBody targetBody, int targetIndex, in BoxCollisionResult collision
         )
         {
             float3 targetPosition = targetLtw.Position;
@@ -125,7 +110,7 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             float3 targetIdLabelPos = targetPosition + targetLtw.Up * (targetBaseSphereRadius + 0.15f);
             Drawing.Label3D(targetIdLabelPos, EditorCameraRotation, $"T{targetIndex}", LabelSize * 1.2f, targetIdColor);
 
-            if (!hasCollision)
+            if (!collision.HasInteraction)
             {
                 // Draw basic target gizmo in muted colors when no collision
                 Color mutedTargetColor = new Color(targetIdColor.r * 0.5f, targetIdColor.g * 0.5f,
@@ -193,87 +178,6 @@ namespace _src.Scripts.Colliders.Colliders.Editor
                     LabelSize * 0.7f, HeightLabelColor);
             }
             else Drawing.WirePlane(boxTopFaceCenter, topPlaneActualRotation, topBottomFaceSize, InactivePlaneColor);
-        }
-
-        [BurstCompile]
-        private void DrawConsolidatedStatus(
-            in LocalToWorld boxLtw,
-            in NativeList<(int index, BoxCollisionResult collision, LocalToWorld targetLtw, TargetBody targetBody)>
-                collidingTargets
-        )
-        {
-            float3 boxCenterWorld = boxLtw.Position;
-            float3 boxUpWorld = boxLtw.Up;
-            float targetBaseSphereRadius = 0.08f;
-
-            // Position status labels to the side of the box to avoid overlap
-            float3 statusLabelAnchor = boxCenterWorld +
-                                       boxLtw.Right * (boxLtw.Value.c0.x * 1.5f) + // Offset to side
-                                       boxUpWorld * (targetBaseSphereRadius + TextVerticalOffset + 0.2f);
-
-            int statusLabelCount = 0;
-            float labelLineHeight = LabelSize + 0.03f;
-
-            // Header
-            Drawing.Label3D(statusLabelAnchor + boxUpWorld * statusLabelCount++ * labelLineHeight,
-                EditorCameraRotation, $"Interaction ({collidingTargets.Length})", LabelSize * 0.9f, Color.white);
-
-            // Group by collision type for cleaner display
-            var tipEnteredTargets = new NativeList<int>(collidingTargets.Length, Allocator.Temp);
-            var insideTargets = new NativeList<int>(collidingTargets.Length, Allocator.Temp);
-            var onTopTargets = new NativeList<int>(collidingTargets.Length, Allocator.Temp);
-
-            for (int i = 0; i < collidingTargets.Length; i++)
-            {
-                var (index, collision, _, _) = collidingTargets[i];
-                if (collision.IsTipEntered) tipEnteredTargets.Add(index);
-                if (collision.IsInside) insideTargets.Add(index);
-                if (collision.IsOnTopOfBox) onTopTargets.Add(index);
-            }
-
-            // Display grouped results
-            if (tipEnteredTargets.Length > 0)
-            {
-                string targets = "";
-                for (int i = 0; i < tipEnteredTargets.Length; i++)
-                {
-                    if (i > 0) targets += ", ";
-                    targets += $"T{tipEnteredTargets[i]}";
-                }
-
-                Drawing.Label3D(statusLabelAnchor + boxUpWorld * statusLabelCount++ * labelLineHeight,
-                    EditorCameraRotation, $"Tip Entered: {targets}", LabelSize, TipEnteredColor);
-            }
-
-            if (insideTargets.Length > 0)
-            {
-                string targets = "";
-                for (int i = 0; i < insideTargets.Length; i++)
-                {
-                    if (i > 0) targets += ", ";
-                    targets += $"T{insideTargets[i]}";
-                }
-
-                Drawing.Label3D(statusLabelAnchor + boxUpWorld * statusLabelCount++ * labelLineHeight,
-                    EditorCameraRotation, $"INSIDE: {targets}", LabelSize, InsideColor);
-            }
-
-            if (onTopTargets.Length > 0)
-            {
-                string targets = "";
-                for (int i = 0; i < onTopTargets.Length; i++)
-                {
-                    if (i > 0) targets += ", ";
-                    targets += $"T{onTopTargets[i]}";
-                }
-
-                Drawing.Label3D(statusLabelAnchor + boxUpWorld * statusLabelCount++ * labelLineHeight,
-                    EditorCameraRotation, $"On Top: {targets}", LabelSize, OnTopColor);
-            }
-
-            tipEnteredTargets.Dispose();
-            insideTargets.Dispose();
-            onTopTargets.Dispose();
         }
     }
 }
