@@ -48,7 +48,7 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             var boxColliderEditorAlineJobEntity = new BoxColliderEditorAlineJobEntity
             {
                 Drawing = builder,
-                TargetLTW = targetTLW,
+                TargetLtw = targetTLW,
                 TargetTrack = targetTrack,
                 EditorCameraRotation = editorCamRot
             };

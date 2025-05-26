@@ -9,18 +9,17 @@ using UnityEngine;
 
 namespace _src.Scripts.Colliders.Colliders.Editor
 {
+    // Separate collision result struct
+
     public partial struct BoxColliderEditorAlineJobEntity : IJobEntity
     {
         public CommandBuilder Drawing;
-        public LocalToWorld TargetLTW;
+        public LocalToWorld TargetLtw;
         public TargetTrack TargetTrack;
-
         public quaternion EditorCameraRotation;
-
 
         private const float LabelSize = 0.1f;
         private const float TextVerticalOffset = 0.1f;
-
 
         private static quaternion GetPlaneRotationForAline(float3 planeNormalY, float3 planeLocalX)
         {
@@ -31,58 +30,29 @@ namespace _src.Scripts.Colliders.Colliders.Editor
 
         private void Execute(in LocalToWorld ltw, in BoxColliderComponent boxColliderComponent)
         {
+            // Calculate collision once
+            bool isCollision =
+                BoxCollisionResult.Calculate(boxColliderComponent, ltw, TargetLtw, TargetTrack, out var collision);
+
+            // Visualization setup
             float3 boxCenterWorld = ltw.Position;
             float3 boxHalfExtents = boxColliderComponent.HalfExtents;
-
             float3 boxUpWorld = ltw.Up;
             float3 boxRightWorld = ltw.Right;
-
-            float3 targetPosition = TargetLTW.Position;
-            float3 targetForward = TargetLTW.Forward;
-            float3 targetTipPosition = targetPosition + targetForward * TargetTrack.ForwardTip;
-
-            float3 targetRelativePosToBoxCenter = targetPosition - boxCenterWorld;
-            float localY = math.dot(targetRelativePosToBoxCenter, boxUpWorld);
-            float localX = math.dot(targetRelativePosToBoxCenter, boxRightWorld);
-            float projectionOnTargetForward = math.dot(targetRelativePosToBoxCenter, targetForward);
-
-            float3 boxTopFaceCenter = boxCenterWorld + boxUpWorld * boxHalfExtents.y;
-
-            bool isTipEntered = false;
-            bool isInside = false;
-            bool isOnTopOfBox = false;
-
-            if (
-                projectionOnTargetForward < 0 &&
-                TargetTrack.ForwardTip + boxHalfExtents.z > -projectionOnTargetForward
-            ) isTipEntered = true;
-
-            var insideZ = math.abs(projectionOnTargetForward) <= boxHalfExtents.z;
-            var insideX = math.abs(localX) <= boxHalfExtents.x;
-            if (
-                math.abs(localY) <= boxHalfExtents.y &&
-                insideZ &&
-                insideX
-            ) isInside = true;
-
-            if (insideZ && insideX && localY < boxHalfExtents.y + TargetTrack.Leg)
-            {
-                isOnTopOfBox = true;
-            }
-
-
-            #region Visualization Logic
-            
             float3 boxForwardWorld = ltw.Forward;
             quaternion boxRotation = ltw.Rotation;
 
-            float actualHeightOnTop = 0f;
-            if (isOnTopOfBox)
-            {
-                actualHeightOnTop = localY - boxHalfExtents.y;
-            }
+            float3 targetPosition = TargetLtw.Position;
+            float3 targetForward = TargetLtw.Forward;
+            float3 targetTipPosition = targetPosition + targetForward * TargetTrack.ForwardTip;
+
+            #region Visualization Logic
 
             Color baseBoxColor = new Color(0.5f, 0.5f, 0.5f, 0.4f);
+            Drawing.WireBox(boxCenterWorld, boxRotation, boxHalfExtents * 2, baseBoxColor);
+            if (!isCollision) return;
+
+            float3 boxTopFaceCenter = boxCenterWorld + boxUpWorld * boxHalfExtents.y;
             Color targetGizmoColor = new Color(0.5f, 0.7f, 1f);
             float targetBaseSphereRadius = 0.08f;
             float targetTipSphereRadius = 0.05f;
@@ -92,16 +62,17 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             int statusLabelCount = 0;
             float labelLineHeight = LabelSize + 0.03f;
 
-            Drawing.WireBox(boxCenterWorld, boxRotation, boxHalfExtents * 2, baseBoxColor);
 
-            if (isTipEntered)
+            // Handle tip entered state
+            if (collision.IsTipEntered)
             {
                 targetGizmoColor = new Color(1f, 0.92f, 0.016f);
                 Drawing.Label3D(statusLabelAnchor + boxUpWorld * statusLabelCount++ * labelLineHeight,
                     EditorCameraRotation, "Tip Entered", LabelSize, targetGizmoColor);
             }
 
-            if (isInside)
+            // Handle inside state
+            if (collision.IsInside)
             {
                 targetGizmoColor = Color.red;
                 Drawing.Line(boxCenterWorld, targetPosition, Color.magenta);
@@ -110,25 +81,24 @@ namespace _src.Scripts.Colliders.Colliders.Editor
                     EditorCameraRotation, "INSIDE", LabelSize, targetGizmoColor);
             }
 
+            // Draw target gizmos
             Drawing.SphereOutline(targetPosition, targetBaseSphereRadius, targetGizmoColor);
             Drawing.Arrow(targetPosition, targetTipPosition, targetGizmoColor);
 
-            float3 targetCenter = targetPosition + TargetLTW.Up * TargetTrack.Leg;
+            float3 targetCenter = targetPosition + TargetLtw.Up * TargetTrack.Leg;
             Drawing.Arrow(targetPosition, targetCenter, targetGizmoColor);
             Drawing.SphereOutline(targetTipPosition, targetTipSphereRadius, targetGizmoColor);
 
-            float2 frontBackFaceSize = new float2(boxHalfExtents.x * 2, boxHalfExtents.y * 2);
             float2 topBottomFaceSize = new float2(boxHalfExtents.x * 2, boxHalfExtents.z * 2);
 
-            quaternion frontPlaneActualRotation = GetPlaneRotationForAline(boxForwardWorld, boxRightWorld);
-            quaternion backPlaneActualRotation = GetPlaneRotationForAline(-boxForwardWorld, boxRightWorld);
+
             quaternion topPlaneActualRotation = GetPlaneRotationForAline(boxUpWorld, boxRightWorld);
-
-
-            if (isOnTopOfBox)
+            // Handle on top of box state
+            if (collision.IsOnTopOfBox)
             {
                 Color aboveColor = new Color(0.8f, 0.4f, 1f);
                 Drawing.WirePlane(boxTopFaceCenter, topPlaneActualRotation, topBottomFaceSize, aboveColor);
+
                 float3 standableZoneTopCenter = boxTopFaceCenter + boxUpWorld * TargetTrack.Leg;
                 Drawing.WirePlane(standableZoneTopCenter, topPlaneActualRotation, topBottomFaceSize,
                     new Color(0.5f, 0.7f, 1f, 0.7f));
@@ -137,13 +107,14 @@ namespace _src.Scripts.Colliders.Colliders.Editor
                     EditorCameraRotation, "ON TOP OF BOX", LabelSize, aboveColor);
                 Drawing.SphereOutline(targetPosition, targetBaseSphereRadius * 1.1f, aboveColor);
 
-                float3 targetProjectionOnBoxTopSurface = targetPosition - boxUpWorld * actualHeightOnTop;
+                // Draw height visualization
+                float3 targetProjectionOnBoxTopSurface = targetPosition - boxUpWorld * collision.ActualHeightOnTop;
                 Drawing.Line(targetProjectionOnBoxTopSurface, targetPosition, aboveColor);
 
                 float3 heightLabelPos = (targetProjectionOnBoxTopSurface + targetPosition) * 0.5f +
                                         math.mul(EditorCameraRotation, new float3(LabelSize * 0.5f, 0, 0));
-                Drawing.Label3D(heightLabelPos, EditorCameraRotation, $"{actualHeightOnTop:F2}m", LabelSize * 0.8f,
-                    Color.white);
+                Drawing.Label3D(heightLabelPos, EditorCameraRotation, $"{collision.ActualHeightOnTop:F2}m",
+                    LabelSize * 0.8f, Color.white);
             }
             else
             {
