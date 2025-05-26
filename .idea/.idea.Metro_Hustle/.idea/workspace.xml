@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/TargetLtwTagAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/TargetLtwTagAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/TargetTrack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/TargetBody.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/TargetTrack.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/TargetBody.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorAlineJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorAlineJobEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxCollisionResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/BoxCollisionResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxCollisionResult.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/BoxCollisionResult.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +202,7 @@
       <workItem from="1748170130189" duration="1345000" />
       <workItem from="1748182105012" duration="776000" />
       <workItem from="1748186014832" duration="5548000" />
-      <workItem from="1748235793327" duration="3746000" />
+      <workItem from="1748235793327" duration="6675000" />
     </task>
     <servers />
   </component>

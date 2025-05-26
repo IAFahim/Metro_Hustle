@@ -15,7 +15,7 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
             public override void Bake(TargetLtwTagAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
-                AddComponent(entity, new TargetTrack
+                AddComponent(entity, new TargetBody
                 {
                     ForwardTip = authoring.forwardTip,
                     Leg = authoring.leg

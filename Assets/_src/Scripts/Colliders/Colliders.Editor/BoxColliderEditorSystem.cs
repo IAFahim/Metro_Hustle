@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using _src.Scripts.Colliders.Colliders.Authoring;
 using Unity.Burst;
+using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
@@ -24,14 +25,13 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             //     c++;
             // }
 
-            var targetTLW = new LocalToWorld();
-            TargetTrack targetTrack = new();
-            foreach (var (localToWorld, targetLtwTag) in SystemAPI.Query<RefRO<LocalToWorld>, RefRO<TargetTrack>>())
+            var targetBodyLtwList = new NativeList<(LocalToWorld targetLtw, TargetBody targetBody)>(Allocator.TempJob);
+            foreach (var (localToWorld, bodyTrack) in SystemAPI.Query<RefRO<LocalToWorld>, RefRO<TargetBody>>())
             {
-                targetTLW = localToWorld.ValueRO;
-                targetTrack = targetLtwTag.ValueRO;
-                break;
+                targetBodyLtwList.Add((localToWorld.ValueRO, bodyTrack.ValueRO));
             }
+
+            ;
 
 #if ALINE
             var builder = Drawing.DrawingManager.GetBuilder();
@@ -48,9 +48,8 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             var boxColliderEditorAlineJobEntity = new BoxColliderEditorAlineJobEntity
             {
                 Drawing = builder,
-                TargetLtw = targetTLW,
-                TargetTrack = targetTrack,
-                EditorCameraRotation = editorCamRot
+                EditorCameraRotation = editorCamRot,
+                TargetBodyLtwList = targetBodyLtwList.AsReadOnly(),
             };
             boxColliderEditorAlineJobEntity.ScheduleParallel();
             builder.DisposeAfter(state.Dependency);
