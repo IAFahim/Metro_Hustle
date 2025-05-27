@@ -1,4 +1,5 @@
-﻿using _src.Scripts.SplineMovements.SplineMovements.Data;
+﻿#if ALINE
+using _src.Scripts.SplineMovements.SplineMovements.Data;
 using BovineLabs.Core;
 using Drawing;
 using ECSUnitySplineAddon.Runtime.Datas;
@@ -24,6 +25,7 @@ namespace ECSUnitySplineAddon.Editor
 
         public void OnUpdate(ref SystemState state)
         {
+            
             Entity splineEntity = SystemAPI.GetSingletonEntity<NativeSplineBlobComponentData>();
             NativeSplineBlobComponentData nativeSplineBlobComponentData =
                 SystemAPI.GetComponent<NativeSplineBlobComponentData>(splineEntity);
@@ -58,3 +60,4 @@ namespace ECSUnitySplineAddon.Editor
         }
     }
 }
+#endif

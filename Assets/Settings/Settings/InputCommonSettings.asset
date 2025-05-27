@@ -34,5 +34,5 @@ MonoBehaviour:
       type: {class: InputCoreDebug/Settings, ns: BovineLabs.Core.Input.Debug, asm: BovineLabs.Core.Input.Debug}
       data:
         Name: InputCoreDebug
-        TimeScaleDouble: {fileID: 0}
-        TimeScaleHalve: {fileID: 0}
+        TimeScaleDouble: {fileID: 4785413866448883788, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+        TimeScaleHalve: {fileID: -4621389477886909220, guid: 052faaac586de48259a63d0c4782560b, type: 3}

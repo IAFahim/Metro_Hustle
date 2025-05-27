@@ -1,3 +1,9 @@
-.unity-progress-bar__progress{
+.unity-progress-bar__progress {
     background-color: green;
+}
+
+.mobile__full {
+    flex-grow: 1;
+    justify-content: space-between;
+    align-content: stretch;
 }

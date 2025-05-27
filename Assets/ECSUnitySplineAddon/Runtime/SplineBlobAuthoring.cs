@@ -1,5 +1,6 @@
 ﻿using ECSUnitySplineAddon.Runtime.Datas;
 using Unity.Entities;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -29,9 +30,12 @@ namespace ECSUnitySplineAddon.Runtime
                 }
 
                 var spline = splineContainer.Spline;
-                using var nativeSpline = new NativeSpline(spline);
+                Matrix4x4 transformWorldToLocalMatrix = authoring.transform.localToWorldMatrix;
+                float4x4 worldToLocalMatrix = transformWorldToLocalMatrix;
+                using var nativeSpline = new NativeSpline(spline, worldToLocalMatrix);
 
-                var nativeSplineBlobAssetRef = NativeSplineBlobFactory.CreateBlob(nativeSpline, authoring.LUT_RESOLUTION);
+                var nativeSplineBlobAssetRef =
+                    NativeSplineBlobFactory.CreateBlob(nativeSpline, authoring.LUT_RESOLUTION);
 
                 var entity = GetEntity(TransformUsageFlags.None);
 

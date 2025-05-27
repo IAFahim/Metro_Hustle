@@ -1,8 +1,9 @@
 {
   "dependencies": {
-    "com.cesium.unity": "1.16.0",
     "com.bovinelabs.anchor": "https://gitlab.com/tertle/com.bovinelabs.anchor.git",
     "com.bovinelabs.core": "https://github.com/IAFahim/com.bovinelabs.core.git",
+    "com.bovinelabs.reaction": "https://gitlab.com/tertle/com.bovinelabs.reaction.git",
+    "com.bovinelabs.stats": "https://gitlab.com/tertle/com.bovinelabs.stats.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.animation.rigging": "1.3.0",
     "com.unity.asset-manager-for-unity": "1.4.0",
