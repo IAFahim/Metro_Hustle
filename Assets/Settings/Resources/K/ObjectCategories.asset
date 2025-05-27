@@ -13,10 +13,4 @@ MonoBehaviour:
   m_Name: ObjectCategories
   m_EditorClassIdentifier: 
   description: 
-  keys:
-  - name: character
-    value: 0
-    component: 0
-  - name: building
-    value: 1
-    component: 0
+  keys: []

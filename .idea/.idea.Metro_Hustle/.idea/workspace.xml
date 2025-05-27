@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/back.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/down.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/down.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/front.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/front.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/left.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/left.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/right.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/right.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/up.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/up.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Bending.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Bending.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/BendingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/CurveWorlds/CurveWorlds.Data/CurveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/BendingManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/CurveWorlds/CurveWorlds.Data/CurveManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/BoxCollisionResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/BoxCollisionResult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorAlineJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorAlineJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/Curve.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/Curve.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/s-l1600-2785209290.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/s-l1600-2785209290.png.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,20 +61,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.4f1\Editor\Unity.exe" />
@@ -141,15 +112,13 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="36108">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="36108" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -230,7 +199,7 @@
       <workItem from="1748261175690" duration="2248000" />
       <workItem from="1748276659747" duration="5916000" />
       <workItem from="1748327934246" duration="592000" />
-      <workItem from="1748335710922" duration="6515000" />
+      <workItem from="1748335710922" duration="6552000" />
     </task>
     <servers />
   </component>
