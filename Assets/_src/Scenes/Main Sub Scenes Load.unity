@@ -343,7 +343,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2493078973159338449, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: TransformUsageFlags
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920821480623403197, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: StatDefaults.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920821480623403197, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: StatDefaults.Array.data[1].Stat
+      value: 
+      objectReference: {fileID: 11400000, guid: 594b6d0f6224dd0419b6b6924d2961f4, type: 2}
+    - target: {fileID: 4920821480623403197, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: StatDefaults.Array.data[1].Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8421916860254639719, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: m_LocalPosition.x
