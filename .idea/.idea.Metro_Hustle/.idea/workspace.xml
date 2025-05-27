@@ -4,7 +4,321 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="" />
+    <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/ECS-Spline.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/ECS-Spline.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/SplineDebugSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Editor/SplineDebugSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/CurveUtilityInternal.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/CurveUtilityInternal.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlob.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlob.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlobComponentData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlobComponentData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlobFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/Datas/NativeSplineBlobFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/ECS-Spline.Runtime.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/ECS-Spline.Runtime.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineBlobAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ECSUnitySplineAddon/Runtime/SplineBlobAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Scenes/RequiredGame.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Scenes/RequiredGame.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Scenes/Track.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Scenes/Track.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/SubSceneSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/SubSceneSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Curve.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Materials/Curve.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Balcony.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Balcony.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_05.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_05.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_06.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_06.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_07.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_07.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_08.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_08.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_piller.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_piller.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_props.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Door_props.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Groud_floor.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Groud_floor.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Roof.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Roof.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Roof_railing.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Roof_railing.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Roof_railing01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Roof_railing01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Sidewall_brick.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Sidewall_brick.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Sidewall_brick01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Sidewall_brick01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Sidewall_brick02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Sidewall_brick02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Stairs.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Stairs.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Stairs_wall.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Stairs_wall.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Tri_Roof.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Tri_Roof.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_05fbx.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_05fbx.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_06.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_06.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_props.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_props.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_side_Piller.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/Window_side_Piller.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_05.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_05.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_06.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_06.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_07.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_07.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_08.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_08.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_09.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_09.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_10.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_10.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_11.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_11.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_12.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/block_12.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/building_props.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/building_props.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/building_props02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/building_props02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/floor.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/floor.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/pipe01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/pipe01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/pipe02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/pipe02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/pipe03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/pipe03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/pipe_props.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/pipe_props.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/round_Roof.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/round_Roof.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/round_floor.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/round_floor.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/sign_board_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/sign_board_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/sign_board_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/sign_board_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/sign_board_03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/sign_board_03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/sign_board_04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/sign_board_04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/sign_board_05.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/sign_board_05.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/tri_floor.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/tri_floor.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/wall_Props_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Environment_props/wall_Props_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/Environment011_pCube82.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/Environment011_pCube82.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/Environment011_polySurface523.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/Environment011_polySurface523.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/Environment011_polySurface523_001.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/Environment011_polySurface523_001.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/bed_2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/bed_2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/drone_1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/drone_1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/drone_2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/drone_2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/drone_3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/drone_3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/drone_4.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/drone_4.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pCylinder42.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pCylinder42.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pTorus1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pTorus1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pTorus2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pTorus2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pTorus3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pTorus3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pTorus4.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pTorus4.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/polySurface271.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/polySurface271.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/polySurface424_001.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/polySurface424_001.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/polySurface426.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/polySurface426.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/polySurface427.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/polySurface427.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pot_1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pot_1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pot_2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pot_2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pot_3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pot_3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pot_4.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pot_4.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pot_5.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/pot_5.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_5.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_5.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_6.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_6.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_7.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_7.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_8.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_8.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_9.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/prop_9.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/wheel_1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/wheel_1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/wheel_2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Models/Station/wheel_2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Kolkata/1. Dakshineswar Sub Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/PointColliderComponentAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/PointColliderComponentAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/SplineCollideAbleBufferAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/SplineCollideAbleBufferAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/SplineColliders.Authoring.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Authoring/SplineColliders.Authoring.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/PointColliderComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/PointColliderComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineColliders.Data.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplineColliders.Data.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplinePointColliderBuffer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplinePointColliderBuffer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Editor/SplineColliders.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Editor/SplineColliders.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplineColliderCollectionJobEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplineColliderCollectionJobEntity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplineCollisionSystemJobEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplineCollisionSystemJobEntity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplinePreCollisionSystemJobEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/Jobs/SplinePreCollisionSystemJobEntity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineColliderCollection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineColliderCollection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineColliders.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineColliders.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineMainColliderTrackSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineMainColliderTrackSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/MoveAlongSplineSystemDebug.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/MoveAlongSplineSystemDebug.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/SplineMovement.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Editor/SplineMovement.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Datas.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Datas/SplineEntityLocationComponentData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Datas/SplineEntityLocationComponentData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Datas/SplineLinkComponentData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Datas/SplineLinkComponentData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Datas/SplineLinkComponentDataAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Datas/SplineLinkComponentDataAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/SplineMovement.Runtime.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/SplineMovement.Runtime.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Systems.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Systems/MoveAlongIJobEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Systems/MoveAlongIJobEntity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Systems/MoveAlongSplineSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Systems/MoveAlongSplineSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Systems/PlayerLineMovementSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Systems/PlayerLineMovementSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Systems/SplineForwardMovementJobEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovement/Runtime/Systems/SplineForwardMovementJobEntity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineLineComponentAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineLineComponentAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineMoveComponentAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineMoveComponentAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineMovements.Authoring.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineMovements.Authoring.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineSideOffsetComponentAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Authoring/SplineSideOffsetComponentAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineLineComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineLineComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineMoveComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineMoveComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineMovements.Data.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineMovements.Data.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineSideOffsetComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Data/SplineSideOffsetComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Editor/SplineMovements.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.Editor/SplineMovements.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/LaneChangeLockJobEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/LaneChangeLockJobEntity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/LaneChangeLockSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/LaneChangeLockSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovementSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovements.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/SplineMovements/SplineMovements/SplineMovements.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/Curve.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Shaders/Curve.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.asset-manager-for-unity/ImportedAssetInfo/680151cff53cae17c7cadaca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.asset-manager-for-unity/ImportedAssetInfo/68238123213403c9045c6202" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,10 +350,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/InputEnableTagAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders.Data/SplinePointColliderBuffer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/SplineColliders/SplineColliders/SplineMainColliderTrackSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/SpritesServiceBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Data/Actions/ActionIntrinsic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Data/Builders/ActionIntrinsicBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections.PerformanceTests/QueueParallelPerformanceTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections/FixedString.gen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@1d12ba0090ff/Unity.Entities/SourceGenerators/Source~/Mock/Unity.Entities.Mock/EntitiesInternalMock.cs" root0="SKIP_HIGHLIGHTING" />
@@ -200,6 +513,7 @@
       <workItem from="1748276659747" duration="5916000" />
       <workItem from="1748327934246" duration="592000" />
       <workItem from="1748335710922" duration="6552000" />
+      <workItem from="1748353528448" duration="2112000" />
     </task>
     <servers />
   </component>

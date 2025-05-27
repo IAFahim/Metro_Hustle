@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0c1e301f314df1ae81afa77eb3373e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curveVector: {x: 0.005, y: 0, z: 0}
-  enablePreview: 1
+  curveVector: {x: 0.0015, y: 0, z: 0}
+  enablePreview: 0
 --- !u!4 &144375162
 Transform:
   m_ObjectHideFlags: 0
