@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Resources/K/PhysicsTags.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Resources/K/PhysicsTags.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/InputCommonSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/InputCommonSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings/Ground Floor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings/Ground Floor/Ground Floor 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings/Ground Floor/Ground Floor 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings/Ground Floor/Ground Floor 2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings/Ground Floor/Ground Floor 2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings/Middle Floor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Buildings/Rooftop Floor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/New.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/New/Curve.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/New/Curve.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/New/Water.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/New/Water.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +208,7 @@
       <workItem from="1748261175690" duration="2248000" />
       <workItem from="1748276659747" duration="5916000" />
       <workItem from="1748327934246" duration="592000" />
-      <workItem from="1748335710922" duration="4426000" />
+      <workItem from="1748335710922" duration="4973000" />
     </task>
     <servers />
   </component>

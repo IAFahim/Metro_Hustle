@@ -53,18 +53,6 @@
       },
       "hash": "e17c4b00c208742c459e7e4174eddeb257fe5367"
     },
-    "com.cesium.unity": {
-      "version": "1.16.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.mathematics": "1.2.0",
-        "com.unity.test-framework": "1.1.31",
-        "com.unity.shadergraph": "12.1.6",
-        "com.unity.inputsystem": "1.4.2"
-      },
-      "url": "https://unity.pkg.cesium.com"
-    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
