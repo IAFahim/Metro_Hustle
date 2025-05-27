@@ -5,12 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/New.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/New/Curve.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/New/Curve.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/New/Water.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/New/Water.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/back.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/back.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/down.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/down.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/front.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/front.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/left.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/left.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/right.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/right.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/up.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Materials/Skybox/up.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Bending.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Bending.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/BendingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/CurveWorlds/CurveWorlds.Data/CurveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/BendingManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/CurveWorlds/CurveWorlds.Data/CurveManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/BoxCollisionResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/BoxCollisionResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorAlineJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorAlineJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/BoxColliderEditorSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/Curve.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Shaders/Curve.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/s-l1600-2785209290.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Sprites/Map Ref/Kolkata/s-l1600-2785209290.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,20 +90,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Interaction&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.4f1\Editor\Unity.exe" />
@@ -208,7 +230,7 @@
       <workItem from="1748261175690" duration="2248000" />
       <workItem from="1748276659747" duration="5916000" />
       <workItem from="1748327934246" duration="592000" />
-      <workItem from="1748335710922" duration="4973000" />
+      <workItem from="1748335710922" duration="6515000" />
     </task>
     <servers />
   </component>

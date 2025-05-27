@@ -68,8 +68,8 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             var singleStatsValue = statsPair.Values;
             for (var i = 0; i < TargetBodyLtwList.Length; i++)
             {
-                var (targetEntity, targetLtw, bodyTrack) = TargetBodyLtwList[i];
-                if (BoxCollisionResult.Try(boxLtw, boxCollider, targetLtw, bodyTrack, out var collision))
+                var (targetEntity, targetLtw, targetBody) = TargetBodyLtwList[i];
+                if (BoxCollisionResult.Try(boxLtw, boxCollider, targetLtw, targetBody, out BoxCollisionResult result))
                 {
                     for (int j = 0; j < statsPair.Length; j++)
                     {
@@ -80,7 +80,8 @@ namespace _src.Scripts.Colliders.Colliders.Editor
                             Value = singleStatsValue[i].Value
                         });
                     }
-                    DrawTarget(boxLtw, boxCollider, targetLtw, bodyTrack, i, collision);
+
+                    Draw(boxLtw, boxCollider, targetLtw, targetBody, result);
                 }
 
                 statsPair.Dispose();
@@ -90,94 +91,101 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             Drawing.WireBox(boxLtw.Position, boxLtw.Rotation, (float3)boxCollider.HalfExtents * 2, BaseBoxColor);
         }
 
-        [BurstCompile]
-        private void DrawTarget(
-            in LocalToWorld boxLtw, in BoxColliderComponent boxCollider,
-            in LocalToWorld targetLtw, in TargetBody targetBody, int targetIndex, in BoxCollisionResult collision
+        private void Draw(
+            in LocalToWorld boxLtw, in BoxColliderComponent boxColliderComponent,
+            in LocalToWorld targetLtw, in TargetBody targetBody, in BoxCollisionResult result
         )
         {
+            // Visualization setup
+            float3 boxCenterWorld = boxLtw.Position;
+            float3 boxHalfExtents = boxColliderComponent.HalfExtents;
+            float3 boxUpWorld = boxLtw.Up;
+            float3 boxRightWorld = boxLtw.Right;
+            float3 boxForwardWorld = boxLtw.Forward;
+            quaternion boxRotation = boxLtw.Rotation;
+
             float3 targetPosition = targetLtw.Position;
             float3 targetForward = targetLtw.Forward;
             float3 targetTipPosition = targetPosition + targetForward * targetBody.ForwardTip;
 
+            #region Visualization Logic
+
+            float3 boxTopFaceCenter = boxCenterWorld + boxUpWorld * boxHalfExtents.y;
+
+            Color baseBoxColor = new Color(0.5f, 0.5f, 0.5f, 0.4f);
+            Color targetGizmoColor = new Color(0.5f, 0.7f, 1f);
             float targetBaseSphereRadius = 0.08f;
             float targetTipSphereRadius = 0.05f;
 
-            // Get target identification color
-            Color targetIdColor = TargetIdentificationColors[targetIndex % TargetIdentificationColors.Length];
+            float3 statusLabelAnchor =
+                boxCenterWorld + boxUpWorld * (targetBaseSphereRadius + TextVerticalOffset + 0.2f);
+            int statusLabelCount = 0;
+            float labelLineHeight = LabelSize + 0.03f;
 
-            // Draw target ID number (always visible)
-            float3 targetIdLabelPos = targetPosition + targetLtw.Up * (targetBaseSphereRadius + 0.15f);
-            Drawing.Label3D(targetIdLabelPos, EditorCameraRotation, $"T{targetIndex}", LabelSize * 1.2f, targetIdColor);
-
-            if (!collision.HasInteraction)
-            {
-                // Draw basic target gizmo in muted colors when no collision
-                Color mutedTargetColor = new Color(targetIdColor.r * 0.5f, targetIdColor.g * 0.5f,
-                    targetIdColor.b * 0.5f, 0.6f);
-                Drawing.SphereOutline(targetPosition, targetBaseSphereRadius, mutedTargetColor);
-                Drawing.Arrow(targetPosition, targetTipPosition, mutedTargetColor);
-                return;
-            }
-
-            // Handle collision visualization
-            float3 boxCenterWorld = boxLtw.Position;
-            float3 boxUpWorld = boxLtw.Up;
-            float3 boxRightWorld = boxLtw.Right;
-            float3 boxHalfExtents = boxCollider.HalfExtents;
-            float3 boxTopFaceCenter = boxCenterWorld + boxUpWorld * boxHalfExtents.y;
-
-            Color targetGizmoColor = DefaultTargetColor;
+            Drawing.WireBox(boxCenterWorld, boxRotation, boxHalfExtents * 2, baseBoxColor);
 
             // Handle tip entered state
-            if (collision.IsTipEntered)
+            if (result.IsTipEntered)
             {
-                targetGizmoColor = TipEnteredColor;
+                targetGizmoColor = new Color(1f, 0.92f, 0.016f);
+                Drawing.Label3D(statusLabelAnchor + boxUpWorld * statusLabelCount++ * labelLineHeight,
+                    EditorCameraRotation, "Tip Entered", LabelSize, targetGizmoColor);
             }
 
             // Handle inside state
-            if (collision.IsInside)
+            if (result.IsInside)
             {
-                targetGizmoColor = InsideColor;
-                Drawing.Line(boxCenterWorld, targetPosition, InsideLineColor);
-                Drawing.SphereOutline(targetPosition, targetBaseSphereRadius * 1.2f, InsideLineColor);
+                targetGizmoColor = Color.red;
+                Drawing.Line(boxCenterWorld, targetPosition, Color.magenta);
+                Drawing.SphereOutline(targetPosition, targetBaseSphereRadius * 1.2f, Color.magenta);
+                Drawing.Label3D(statusLabelAnchor + boxUpWorld * statusLabelCount++ * labelLineHeight,
+                    EditorCameraRotation, "INSIDE", LabelSize, targetGizmoColor);
             }
 
-            // Draw target gizmos with identification color mixed in
-            Color finalTargetColor = Color.Lerp(targetGizmoColor, targetIdColor, 0.3f);
-            Drawing.SphereOutline(targetPosition, targetBaseSphereRadius, finalTargetColor);
-            Drawing.Arrow(targetPosition, targetTipPosition, finalTargetColor);
+            // Draw target gizmos
+            Drawing.SphereOutline(targetPosition, targetBaseSphereRadius, targetGizmoColor);
+            Drawing.Arrow(targetPosition, targetTipPosition, targetGizmoColor);
 
             float3 targetCenter = targetPosition + targetLtw.Up * targetBody.Leg;
-            Drawing.Arrow(targetPosition, targetCenter, finalTargetColor);
-            Drawing.SphereOutline(targetTipPosition, targetTipSphereRadius, finalTargetColor);
+            Drawing.Arrow(targetPosition, targetCenter, targetGizmoColor);
+            Drawing.SphereOutline(targetTipPosition, targetTipSphereRadius, targetGizmoColor);
 
+            // Setup plane visualizations
+            float2 frontBackFaceSize = new float2(boxHalfExtents.x * 2, boxHalfExtents.y * 2);
             float2 topBottomFaceSize = new float2(boxHalfExtents.x * 2, boxHalfExtents.z * 2);
+
             quaternion topPlaneActualRotation = GetPlaneRotationForAline(boxUpWorld, boxRightWorld);
 
             // Handle on top of box state
-            if (collision.IsOnTopOfBox)
+            if (result.IsOnTopOfBox)
             {
-                Drawing.WirePlane(boxTopFaceCenter, topPlaneActualRotation, topBottomFaceSize, OnTopColor);
+                Color aboveColor = new Color(0.8f, 0.4f, 1f);
+                Drawing.WirePlane(boxTopFaceCenter, topPlaneActualRotation, topBottomFaceSize, aboveColor);
 
                 float3 standableZoneTopCenter = boxTopFaceCenter + boxUpWorld * targetBody.Leg;
                 Drawing.WirePlane(standableZoneTopCenter, topPlaneActualRotation, topBottomFaceSize,
-                    StandableZoneColor);
+                    new Color(0.5f, 0.7f, 1f, 0.7f));
 
-                Color onTopTargetColor = Color.Lerp(OnTopColor, targetIdColor, 0.3f);
-                Drawing.SphereOutline(targetPosition, targetBaseSphereRadius * 1.1f, onTopTargetColor);
+                Drawing.Label3D(statusLabelAnchor + boxUpWorld * statusLabelCount++ * labelLineHeight,
+                    EditorCameraRotation, "ON TOP OF BOX", LabelSize, aboveColor);
+                Drawing.SphereOutline(targetPosition, targetBaseSphereRadius * 1.1f, aboveColor);
 
-                // Draw height visualization with individual label
-                float3 targetProjectionOnBoxTopSurface = targetPosition - boxUpWorld * collision.ActualHeightOnTop;
-                Drawing.Line(targetProjectionOnBoxTopSurface, targetPosition, onTopTargetColor);
+                // Draw height visualization
+                float3 targetProjectionOnBoxTopSurface = targetPosition - boxUpWorld * result.ActualHeightOnTop;
+                Drawing.Line(targetProjectionOnBoxTopSurface, targetPosition, aboveColor);
 
                 float3 heightLabelPos = (targetProjectionOnBoxTopSurface + targetPosition) * 0.5f +
                                         math.mul(EditorCameraRotation, new float3(LabelSize * 0.5f, 0, 0));
-                Drawing.Label3D(heightLabelPos, EditorCameraRotation,
-                    $"T{targetIndex}: {collision.ActualHeightOnTop:F2}m",
-                    LabelSize * 0.7f, HeightLabelColor);
+                Drawing.Label3D(heightLabelPos, EditorCameraRotation, $"{result.ActualHeightOnTop:F2}m",
+                    LabelSize * 0.8f, Color.white);
             }
-            else Drawing.WirePlane(boxTopFaceCenter, topPlaneActualRotation, topBottomFaceSize, InactivePlaneColor);
+            else
+            {
+                Drawing.WirePlane(boxTopFaceCenter, topPlaneActualRotation, topBottomFaceSize,
+                    new Color(0.6f, 0.6f, 0.6f, 0.3f));
+            }
+
+            #endregion
         }
     }
 }

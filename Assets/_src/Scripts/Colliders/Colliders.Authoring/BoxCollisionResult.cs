@@ -18,14 +18,14 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
         public static bool Try(
             in LocalToWorld boxLtw, in BoxColliderComponent boxCollider,
             in LocalToWorld targetLtw, in TargetBody targetBody,
-            out BoxCollisionResult collisionResult
+            out BoxCollisionResult result
         )
         {
             float3 targetRelativePosToBoxCenter = targetLtw.Position - boxLtw.Position;
             float3 boxHalfExtents = boxCollider.HalfExtents;
             float projectionOnTargetForward = math.dot(targetRelativePosToBoxCenter, targetLtw.Forward);
 
-            collisionResult = new BoxCollisionResult
+            result = new BoxCollisionResult
             {
                 IsTipEntered = false,
                 IsInside = false,
@@ -37,7 +37,7 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
             // Check if tip entered
             if (projectionOnTargetForward < 0 && targetBody.ForwardTip + boxHalfExtents.z > -projectionOnTargetForward)
             {
-                collisionResult.IsTipEntered = true;
+                result.IsTipEntered = true;
             }
 
             var localX = math.dot(targetRelativePosToBoxCenter, boxLtw.Right);
@@ -47,7 +47,7 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
             bool insideY = math.abs(localY) <= boxHalfExtents.y;
             bool insideZ = math.abs(projectionOnTargetForward) <= boxHalfExtents.z;
 
-            if (insideX && insideY && insideZ) collisionResult.IsInside = true;
+            if (insideX && insideY && insideZ) result.IsInside = true;
 
             var actualHeightOnTop = boxHalfExtents.y - localY;
             if (
@@ -56,11 +56,11 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
                 actualHeightOnTop < targetBody.Leg
             )
             {
-                collisionResult.ActualHeightOnTop = (half)actualHeightOnTop;
-                collisionResult.IsOnTopOfBox = true;
+                result.ActualHeightOnTop = (half)actualHeightOnTop;
+                result.IsOnTopOfBox = true;
             }
-            
-            return collisionResult.HasInteraction;
+
+            return result.HasInteraction;
         }
     }
 }
