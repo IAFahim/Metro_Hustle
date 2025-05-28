@@ -16,9 +16,6 @@ GameObject:
   - component: {fileID: 8090602221781120662}
   - component: {fileID: 2493078973159338449}
   - component: {fileID: 4920821480623403197}
-  - component: {fileID: 4521860893118819670}
-  - component: {fileID: 6081903221380611688}
-  - component: {fileID: 1534882671269300490}
   m_Layer: 0
   m_Name: ECS Player Character
   m_TagString: Untagged
@@ -119,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce5be625b13416781e3426ee2109abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransformUsageFlags: 2
+  TransformUsageFlags: 4
 --- !u!114 &4920821480623403197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +134,9 @@ MonoBehaviour:
   - Stat: {fileID: 11400000, guid: f2a5bb79645d8574b93210ebb308facd, type: 2}
     ModifyType: 0
     Value: 0
+  - Stat: {fileID: 11400000, guid: 594b6d0f6224dd0419b6b6924d2961f4, type: 2}
+    ModifyType: 0
+    Value: 1
   StatDefaultGroups: []
   StatsCanBeModified: 1
   AddIntrinsics: 1
@@ -146,40 +146,3 @@ MonoBehaviour:
   IntrinsicDefaultGroups: []
   Initialize:
     CopyFrom: 3
---- !u!114 &4521860893118819670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485755097329585741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c16549610bfe4458aa9389201d072bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6081903221380611688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485755097329585741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d1839be73e81ae4c97132df4493e93f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1534882671269300490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485755097329585741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9741827b9d1c4e3da5cd60880e31ec59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  subscriptionOnly: 0

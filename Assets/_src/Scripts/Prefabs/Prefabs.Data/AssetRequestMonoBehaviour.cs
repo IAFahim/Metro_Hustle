@@ -12,7 +12,7 @@ namespace _src.Scripts.Prefabs.Prefabs.Data
     {
         public static AssetRequestMonoBehaviour Instance;
 
-        [SerializeField] private sbyte mainCharacterIndex = 0;
+        [SerializeField] private sbyte mainCharacterIndex;
         [SerializeField] private AssetReferenceGameObjectSoGroup bodies;
         [SerializeField] private List<IndexGameObjectMap> caches;
         private bool _pending;

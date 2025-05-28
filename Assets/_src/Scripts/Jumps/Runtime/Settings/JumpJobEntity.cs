@@ -17,8 +17,22 @@ namespace _src.Scripts.Jumps.Runtime.Settings
             {
                 jump.ElapsedTime += DeltaTime;
                 if (IsProcessingRiseStage(ref jump, out float riseEndDuration)) return;
-                if (IsProcessingAirStage(ref jump, riseEndDuration, out float endAirEndDuration)) return;
-                if (IsProcessingFallStage(ref jump, endAirEndDuration)) return;
+                if (IsProcessingAirStage(ref jump, riseEndDuration, out float endAirEndDuration))
+                {
+                    transform.Position.y = jump.CurrentHeight;
+                    return;
+                }
+                if (IsProcessingFallStage(ref jump, endAirEndDuration))
+                {
+                    transform.Position.y = jump.CurrentHeight;
+                    return;
+                }
+                // If jump is finished, reset ElapsedTime or handle completion
+                if (jump.ElapsedTime > endAirEndDuration)
+                {
+                     jump.ElapsedTime = 0f; // Or some other completion logic
+                     jump.IsActive = false; // Assuming there's an IsActive flag to control the jump
+                }
             }
 
             [BurstCompile]

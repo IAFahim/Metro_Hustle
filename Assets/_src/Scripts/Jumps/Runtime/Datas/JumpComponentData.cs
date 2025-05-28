@@ -15,5 +15,6 @@ namespace _src.Scripts.Jumps.Runtime.Datas
         public Ease FallEase;
         public float FallDuration;
         public float FallDurationMultiplier;
+        public bool IsActive;
     }
 }
