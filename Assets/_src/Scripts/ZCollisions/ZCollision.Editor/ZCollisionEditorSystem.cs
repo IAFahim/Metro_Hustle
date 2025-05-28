@@ -1,29 +1,28 @@
 ﻿using Unity.Burst;
-using Unity.Collections;
 using Unity.Entities;
 
-namespace _src.Scripts.ZBuildings.ZBuildings.Editor
+namespace _src.Scripts.ZCollisions.ZCollision.Editor
 {
+    [BurstCompile]
     [WorldSystemFilter(WorldSystemFilterFlags.Editor | WorldSystemFilterFlags.Default)]
-    public partial struct ZBuildingEditorSystem : ISystem
+    public partial struct ZCollisionEditorSystem : ISystem
     {
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
+            
         }
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            
-            
 #if ALINE
             var builder = Drawing.DrawingManager.GetBuilder();
-            var zBuildingEditorJobEntity = new ZBuildingEditorJobEntity()
+            var zCollisionEditorJobEntity = new ZCollisionEditorJobEntity()
             {
                 Drawing = builder
             };
-            zBuildingEditorJobEntity.ScheduleParallel();
+            zCollisionEditorJobEntity.ScheduleParallel();
             builder.DisposeAfter(state.Dependency);
 #endif
         }
@@ -31,6 +30,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Editor
         [BurstCompile]
         public void OnDestroy(ref SystemState state)
         {
+
         }
     }
 }

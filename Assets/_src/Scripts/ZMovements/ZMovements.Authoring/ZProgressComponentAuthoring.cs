@@ -13,7 +13,7 @@ namespace _src.Scripts.ZMovements.ZMovements.Authoring
         {
             public override void Bake(ZProgressComponentAuthoring authoring)
             {
-                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, new ZProgressComponent { Progress = authoring.Progress });
             }
         }
