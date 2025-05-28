@@ -1,5 +1,4 @@
 ﻿using Unity.Burst;
-using Unity.Collections;
 using Unity.Entities;
 
 namespace _src.Scripts.ZBuildings.ZBuildings.Editor
@@ -15,8 +14,6 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Editor
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            
-            
 #if ALINE
             var builder = Drawing.DrawingManager.GetBuilder();
             var zBuildingEditorJobEntity = new ZBuildingEditorJobEntity()

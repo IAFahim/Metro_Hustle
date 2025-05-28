@@ -19,9 +19,9 @@
         "ZCollision",
         "ZCollision.Authoring",
         "ZCollision.Data",
-        "ALINE"
+        "ALINE",
+        "BovineLabs.Stats.Data"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [
         "Editor"
     ],

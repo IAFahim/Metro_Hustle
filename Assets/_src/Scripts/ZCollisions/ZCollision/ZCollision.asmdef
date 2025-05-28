@@ -18,7 +18,8 @@
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
         "Unity.Transforms",
-        "ZCollision.Data"
+        "ZCollision.Data",
+        "ZCollision.Authoring"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

@@ -133,12 +133,12 @@ MonoBehaviour:
   StatDefaults:
   - Stat: {fileID: 11400000, guid: f2a5bb79645d8574b93210ebb308facd, type: 2}
     ModifyType: 0
-    Value: 0
+    Value: 1
   - Stat: {fileID: 11400000, guid: 594b6d0f6224dd0419b6b6924d2961f4, type: 2}
     ModifyType: 0
     Value: 1
   StatDefaultGroups: []
-  StatsCanBeModified: 1
+  StatsCanBeModified: 0
   AddIntrinsics: 1
   IntrinsicDefaults:
   - Intrinsic: {fileID: 11400000, guid: ff388874515eda04f8103cb02d8836ba, type: 2}
