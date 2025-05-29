@@ -7,7 +7,8 @@ namespace _src.Scripts.Colliders.Colliders
 {
     [WorldSystemFilter(WorldSystemFilterFlags.Editor | WorldSystemFilterFlags.Default)]
     [BurstCompile]
-    public partial struct CollisionEnterEntitySystem : ISystem
+    [UpdateInGroup(typeof(SimulationSystemGroup), OrderFirst = true)]
+    public partial struct CollisionTrackCollectSystem : ISystem
     {
         [BurstCompile]
         public void OnUpdate(ref SystemState state)

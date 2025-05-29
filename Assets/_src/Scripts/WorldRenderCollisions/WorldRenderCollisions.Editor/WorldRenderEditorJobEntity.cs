@@ -40,7 +40,7 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
                 collisionCount++;
                 var fraction = collisionCount / (float)targetCount;
                 Drawing.Label3D(
-                    collisionCount * LabelLineHeight, EditorCameraRotation,
+                    center - collisionCount * LabelLineHeight, EditorCameraRotation,
                     $"{target.ToFixedString()}",
                     LabelSize, CollisionColor
                 );
