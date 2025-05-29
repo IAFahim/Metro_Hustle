@@ -18,7 +18,9 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms"
+        "Unity.Transforms",
+        "ALINE",
+        "Colliders.Data"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [
@@ -30,6 +32,12 @@
     "precompiledReferences": [],
     "autoReferenced": false,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.arongranberg.aline",
+            "expression": "1.0.0",
+            "define": "ALINE"
+        }
+    ],
     "noEngineReferences": false
 }

@@ -1,4 +1,5 @@
-﻿using _src.Scripts.Colliders.Colliders.Data;
+﻿#if ALINE
+using _src.Scripts.Colliders.Colliders.Data;
 using Drawing;
 using Unity.Burst;
 using Unity.Collections;
@@ -21,7 +22,7 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
         private static readonly Color CollisionColor = Color.red;
         private const float LabelSize = 0.1f;
         private const float LabelLineHeight = LabelSize + 0.03f;
-        [ReadOnly] public NativeArray<CollisionTrackBuffer>.ReadOnly Targets;
+        [ReadOnly] public NativeArray<CollisionTrackBuffer>.ReadOnly CollisionTrackBuffer;
         [ReadOnly] public ComponentLookup<LocalToWorld> LookupLocalToWorld;
 
 
@@ -30,10 +31,10 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
         {
             var center = worldRender.Value.Center;
             int collisionCount = 0;
-            var targetCount = Targets.Length;
+            var targetCount = CollisionTrackBuffer.Length;
             for (var i = 0; i < targetCount; i++)
             {
-                var target = Targets[i].Entity;
+                var target = CollisionTrackBuffer[i].Entity;
                 var position = LookupLocalToWorld[target].Position;
                 if (!worldRender.Value.Contains(position)) continue;
                 Drawing.Line(center, position, CollisionColor);
@@ -55,3 +56,4 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
         }
     }
 }
+#endif

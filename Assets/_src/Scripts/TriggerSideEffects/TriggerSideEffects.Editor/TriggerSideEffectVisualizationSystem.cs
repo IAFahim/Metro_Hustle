@@ -4,17 +4,19 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
+namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Editor
 {
     [BurstCompile]
     [WorldSystemFilter(WorldSystemFilterFlags.Editor | WorldSystemFilterFlags.Default)]
-    public partial struct WorldRenderCollisionEditorSystem : ISystem
+    public partial struct TriggerSideEffectVisualizationSystem : ISystem
     {
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
+            
         }
 
+        [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
 #if ALINE
@@ -23,17 +25,13 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
             {
                 editorCamRot = UnityEditor.SceneView.lastActiveSceneView.camera.transform.rotation;
             }
-
             var builder = Drawing.DrawingManager.GetBuilder();
-            var zCollisionEditorJobEntity = new WorldRenderEditorJobEntity()
+            var triggerSideEffectVisualizationJobEntity = new TriggerSideEffectVisualizationJobEntity()
             {
                 Drawing = builder,
                 EditorCameraRotation = editorCamRot,
-                CollisionTrackBuffer =
-                    SystemAPI.GetSingletonBuffer<CollisionTrackBuffer>().AsNativeArray().AsReadOnly(),
-                LookupLocalToWorld = SystemAPI.GetComponentLookup<LocalToWorld>(true)
             };
-            zCollisionEditorJobEntity.Schedule();
+            triggerSideEffectVisualizationJobEntity.ScheduleParallel();
             builder.DisposeAfter(state.Dependency);
 #endif
         }
@@ -41,6 +39,7 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
         [BurstCompile]
         public void OnDestroy(ref SystemState state)
         {
+
         }
     }
 }

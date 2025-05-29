@@ -18,7 +18,9 @@
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
         "Unity.Transforms",
-        "WorldRenderCollisions.Data"
+        "WorldRenderCollisions.Data",
+        "TriggerSideEffects.Data",
+        "Colliders.Data"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

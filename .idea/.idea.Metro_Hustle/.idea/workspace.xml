@@ -6,6 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/ObjectManagementSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/ObjectManagementSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Authoring/TriggerSideEffectSpawnComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Authoring/TriggerSideEffectSpawnComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Data/TriggerSideEffectSpawnComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Data/TriggerSideEffectSpawnComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Editor/TriggerSideEffects.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Editor/TriggerSideEffects.Editor.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/TriggerSideEffects.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/TriggerSideEffects.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions.Editor/WorldRenderBoundOutlineEditorSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions.Editor/WorldRenderBoundOutlineEditorSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions.Editor/WorldRenderCollisionEditorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions.Editor/WorldRenderCollisionEditorSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions.Editor/WorldRenderEditorJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions.Editor/WorldRenderEditorJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions/WorldRenderCollisions.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions/WorldRenderCollisions.asmdef" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +44,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/36CC98ABD1355D18D27F5F10/BovineLabs.DynamicGenerator/BovineLabs.DynamicGenerator.DynamicGenerator/BovineLabs.Core.ObjectManagement.ObjectGroupMatcherExtensions.g.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/4BD2B02702DEBFACAEB7CB5F/BovineLabs.DynamicGenerator/BovineLabs.DynamicGenerator.DynamicGenerator/BovineLabs.Stats.Data.StatExtensions.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/51/20af1570/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/6b/2f36f88e/NativeArray`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/b5/556e75ec/Matrix4x4.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/bc/346e33f4/Color.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,7 +65,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/SpritesServiceBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Data/TriggerSideEffectComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Data/Actions/ActionIntrinsic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Data/Builders/ActionIntrinsicBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections.PerformanceTests/QueueParallelPerformanceTests.cs" root0="SKIP_HIGHLIGHTING" />
@@ -227,6 +238,7 @@
       <workItem from="1748474869918" duration="2554000" />
       <workItem from="1748514518987" duration="2666000" />
       <workItem from="1748518464530" duration="4268000" />
+      <workItem from="1748534203875" duration="7442000" />
     </task>
     <servers />
   </component>
@@ -343,13 +355,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions.Editor/WorldRenderEditorJobEntity.cs</url>
-          <line>38</line>
+          <line>39</line>
           <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\ZCollisions\ZCollision.Editor\ZCollisionEditorJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="1219" />
+              <option value="1453" />
             </startOffsets>
             <endOffsets>
-              <option value="1250" />
+              <option value="1500" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="40" />
