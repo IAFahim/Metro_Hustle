@@ -20,7 +20,8 @@
         "ZCollision.Authoring",
         "ZCollision.Data",
         "ALINE",
-        "BovineLabs.Stats.Data"
+        "BovineLabs.Stats.Data",
+        "BovineLabs.Reaction.Data"
     ],
     "includePlatforms": [
         "Editor"

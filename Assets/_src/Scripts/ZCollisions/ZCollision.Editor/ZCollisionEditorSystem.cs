@@ -34,6 +34,7 @@ namespace _src.Scripts.ZCollisions.ZCollision.Editor
         public void OnUpdate(ref SystemState state)
         {
             var collisionEnterEntities = SystemAPI.GetSingletonBuffer<CollisionEnterEntityBuffer>();
+            var prefab = SystemAPI.GetSingleton<PrefabComponent>();
             var target = new NativeList<(Entity entity, float3 position)>(Allocator.TempJob);
             _statsBufferLookup.Update(ref state);
             var array = StatAddRequest.ToArray(Allocator.Temp);
@@ -41,18 +42,21 @@ namespace _src.Scripts.ZCollisions.ZCollision.Editor
             foreach (var collisionEnterEntity in collisionEnterEntities)
             {
                 var entity = collisionEnterEntity.Entity;
-                var map = _statsBufferLookup[entity].AsMap();
-                foreach (var entityStatKeyValue in array)
-                {
-                    if (entity != entityStatKeyValue.Entity) continue;
-                    ref var getOrAdd = ref map.GetOrAddRef(entityStatKeyValue.StatKey, entityStatKeyValue.StatValue);
-                    getOrAdd.Added += entityStatKeyValue.StatValue.Added;
-                }
                 target.Add((entity, SystemAPI.GetComponent<LocalToWorld>(entity).Position));
+                // var map = _statsBufferLookup[entity].AsMap();
+                // foreach (var entityStatKeyValue in array)
+                // {
+                //     if (entity != entityStatKeyValue.Entity) continue;
+                //     ref var getOrAdd = ref map.GetOrAddRef(entityStatKeyValue.StatKey, entityStatKeyValue.StatValue);
+                //     getOrAdd.Added += entityStatKeyValue.StatValue.Added;
+                // }
             }
-
+            
             StatAddRequest.Clear();
 
+            EntityCommandBuffer ecb = SystemAPI.GetSingleton<EndInitializationEntityCommandBufferSystem.Singleton>()
+                .CreateCommandBuffer(state.WorldUnmanaged);
+            
 #if ALINE
             var builder = Drawing.DrawingManager.GetBuilder();
             var zCollisionEditorJobEntity = new ZCollisionEditorJobEntity()
@@ -60,7 +64,9 @@ namespace _src.Scripts.ZCollisions.ZCollision.Editor
                 Drawing = builder,
                 Target = target.AsParallelReader(),
                 StatsLookup = _statsBufferLookup,
-                StatAddRequest = StatAddRequest.AsParallelWriter()
+                StatAddRequest = StatAddRequest.AsParallelWriter(),
+                Prefab = prefab.Prefab,
+                ECB = ecb.AsParallelWriter()
             };
             zCollisionEditorJobEntity.Schedule();
             builder.DisposeAfter(state.Dependency);

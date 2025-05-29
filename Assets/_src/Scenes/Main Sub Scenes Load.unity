@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 992090946}
   - component: {fileID: 992090945}
   - component: {fileID: 992090947}
+  - component: {fileID: 992090948}
   m_Layer: 0
   m_Name: Custom Settings
   m_TagString: Untagged
@@ -176,6 +177,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c946db0c724760916f98cc01ac99bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &992090948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992090944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8247423cc246458484b3a76b3336d73d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7797856946167086878, guid: 22479cc214aa3364fb1e5ba374e91676, type: 3}
 --- !u!1 &1738861687
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +288,7 @@ Transform:
   m_GameObject: {fileID: 1738861687}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.73, y: 0, z: 4.767}
+  m_LocalPosition: {x: 0.573, y: 0, z: 2.692}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -294,11 +308,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AddStats: 1
   StatDefaults:
-  - Stat: {fileID: 11400000, guid: f2a5bb79645d8574b93210ebb308facd, type: 2}
+  - Stat: {fileID: 11400000, guid: 594b6d0f6224dd0419b6b6924d2961f4, type: 2}
     ModifyType: 0
     Value: 0
   StatDefaultGroups: []
-  StatsCanBeModified: 0
+  StatsCanBeModified: 1
   AddIntrinsics: 0
   IntrinsicDefaults: []
   IntrinsicDefaultGroups: []
@@ -361,9 +375,8 @@ GameObject:
   - component: {fileID: 2139941434}
   - component: {fileID: 2139941433}
   - component: {fileID: 2139941432}
-  - component: {fileID: 2139941436}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: PowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -447,36 +460,12 @@ Transform:
   m_GameObject: {fileID: 2139941431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.337, y: 0, z: 6.071}
+  m_LocalPosition: {x: 0.337, y: 0, z: 4.729}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2139941436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139941431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7305cdf55c354c0eb811d408fe38ad23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AddStats: 1
-  StatDefaults:
-  - Stat: {fileID: 11400000, guid: f2a5bb79645d8574b93210ebb308facd, type: 2}
-    ModifyType: 0
-    Value: 1
-  StatDefaultGroups: []
-  StatsCanBeModified: 1
-  AddIntrinsics: 0
-  IntrinsicDefaults: []
-  IntrinsicDefaultGroups: []
-  Initialize:
-    CopyFrom: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
