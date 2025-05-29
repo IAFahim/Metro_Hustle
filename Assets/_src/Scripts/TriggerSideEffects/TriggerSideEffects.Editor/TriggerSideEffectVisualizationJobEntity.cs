@@ -19,7 +19,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Editor
         // Colors for different trigger types
         private static readonly Color TriggerBoundsColor = Color.cyan;
         private static readonly Color InfoTextColor = Color.white;
-        
+
         private const float LabelSize = 0.08f;
 
         [BurstCompile]
@@ -30,22 +30,15 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Editor
         {
             var center = worldRender.Value.Center;
             var extents = worldRender.Value.Extents;
-            
-            // Draw main trigger bounds
-            Drawing.WireBox(center, extents * 2, TriggerBoundsColor);
-            
-            // Draw trigger type information
             DrawTriggerInfo(center, extents, triggerSideEffectSpawn);
         }
 
         private void DrawTriggerInfo(float3 center, float3 extents, in TriggerSideEffectSpawnComponent trigger)
         {
             var labelPos = center + new float3(0, extents.y + 0.3f, 0);
-            
-            // Trigger flags
-            Drawing.Label3D(labelPos , EditorCameraRotation, 
+
+            Drawing.Label3D(labelPos, EditorCameraRotation,
                 $"Flags: {trigger.TriggerType}", LabelSize * 0.7f, InfoTextColor);
-            
         }
     }
 }
