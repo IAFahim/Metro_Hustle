@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327bba6013a7453fbd2d3cc9f0e0a43e, type: 3}
-  m_Name: ObjectCategories
+  m_Script: {fileID: 11500000, guid: 6030fde919e1488ea7e5855f39cf1cd3, type: 3}
+  m_Name: Damage Stat Definition
   m_EditorClassIdentifier: 
+  id: 0
+  friendlyName: Damage
   description: 
-  keys:
-  - name: Stats
-    value: 0
-    component: 0
+  categories: 1
+  prefab: {fileID: 7797856946167086878, guid: 22479cc214aa3364fb1e5ba374e91676, type: 3}

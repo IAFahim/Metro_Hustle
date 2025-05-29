@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327bba6013a7453fbd2d3cc9f0e0a43e, type: 3}
-  m_Name: ObjectCategories
+  m_Script: {fileID: 11500000, guid: b897169a0e9f44aca19368969755e6d9, type: 3}
+  m_Name: Group
   m_EditorClassIdentifier: 
-  description: 
-  keys:
-  - name: Stats
-    value: 0
-    component: 0
+  id:
+    ID: 0
+  autoGroups: 0
+  groups: []
+  definitions: []
+  excludeGroups: []
+  excludeDefinitions: []
