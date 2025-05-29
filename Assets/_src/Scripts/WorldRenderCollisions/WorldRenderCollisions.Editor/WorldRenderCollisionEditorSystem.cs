@@ -28,7 +28,7 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
             var zCollisionEditorJobEntity = new WorldRenderEditorJobEntity()
             {
                 Drawing = builder,
-                Targets = SystemAPI.GetSingletonBuffer<CollisionEnterEntityBuffer>().AsNativeArray().AsReadOnly(),
+                Targets = SystemAPI.GetSingletonBuffer<CollisionTrackBuffer>().AsNativeArray().AsReadOnly(),
                 EditorCameraRotation = editorCamRot,
                 LookupLocalToWorld = SystemAPI.GetComponentLookup<LocalToWorld>(true)
             };
