@@ -8,12 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZCollisions/ZCollision.Editor/ZCollision.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZCollisions/ZCollision.Editor/ZCollision.Editor.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZCollisions/ZCollision.Authoring/CollisionEnterComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZCollisions/ZCollision.Authoring/CollisionEnterComponentAuthoring.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZCollisions/ZCollision.Editor/ZCollisionEditorJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZCollisions/ZCollision.Editor/ZCollisionEditorJobEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZCollisions/ZCollision.Editor/ZCollisionEditorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZCollisions/ZCollision.Editor/ZCollisionEditorSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +39,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/36CC98ABD1355D18D27F5F10/BovineLabs.DynamicGenerator/BovineLabs.DynamicGenerator.DynamicGenerator/BovineLabs.Core.ObjectManagement.ObjectGroupMatcherExtensions.g.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/4BD2B02702DEBFACAEB7CB5F/BovineLabs.DynamicGenerator/BovineLabs.DynamicGenerator.DynamicGenerator/BovineLabs.Stats.Data.StatExtensions.g.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/5D16C552D226F4306BE86B1D/JobEntityGenerator/Unity.Entities.SourceGen.JobEntityGenerator.JobEntityGenerator/ZCollisionEditorJobEntity__JobEntity_1313338111.g.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/DE5C47F87CDAB1A70B421CE1/SystemGenerator/Unity.Entities.SourceGen.SystemGenerator.SystemGenerator/CollisionEnterCollectionSystem__System_7364488680.g.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/6b/2f36f88e/NativeArray`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/b5/556e75ec/Matrix4x4.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/bc/346e33f4/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/ce/17fa03ae/Shader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2ce8bd53d6c34e8aa27451ac5b09a98146ae00/1d/a8edf7ef/Enum.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/3b/c9f26450/Array.cs" root0="FORCE_HIGHLIGHTING" />
@@ -138,10 +135,10 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28708">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29044">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="28708" />
+      <option name="pid" value="29044" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -235,6 +232,7 @@
       <workItem from="1748448661618" duration="9732000" />
       <workItem from="1748459631020" duration="1539000" />
       <workItem from="1748474869918" duration="2554000" />
+      <workItem from="1748514518987" duration="2666000" />
     </task>
     <servers />
   </component>
@@ -351,16 +349,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_src/Scripts/ZCollisions/ZCollision.Editor/ZCollisionEditorJobEntity.cs</url>
-          <line>37</line>
+          <line>35</line>
           <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\ZCollisions\ZCollision.Editor\ZCollisionEditorJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="1280" />
+              <option value="1229" />
             </startOffsets>
             <endOffsets>
-              <option value="1311" />
+              <option value="1270" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="39" />
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />

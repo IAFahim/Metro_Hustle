@@ -1,4 +1,5 @@
-﻿using _src.Scripts.ZCollisions.ZCollision.Data;
+﻿using System.Runtime.CompilerServices;
+using _src.Scripts.ZCollisions.ZCollision.Data;
 using BovineLabs.Reaction.Data.Core;
 using BovineLabs.Stats.Data;
 using Drawing;
@@ -16,48 +17,40 @@ namespace _src.Scripts.ZCollisions.ZCollision.Editor
     public partial struct ZCollisionEditorJobEntity : IJobEntity
     {
         public CommandBuilder Drawing;
+        public quaternion EditorCameraRotation;
         [ReadOnly] public NativeArray<(Entity entity, float3 position)>.ReadOnly Target;
+
         private static readonly Color BoxColor = Color.darkSeaGreen;
-        [ReadOnly] public BufferLookup<Stat> StatsLookup;
-        public Entity Prefab;
-
-        [WriteOnly] public NativeQueue<EntityStatKeyValue>.ParallelWriter StatAddRequest;
-
-        public EntityCommandBuffer.ParallelWriter ECB;
-
+        private static readonly Color CollisionColor = Color.red;
+        private const float LabelSize = 0.1f;
+        private const float LabelLineHeight = LabelSize + 0.03f;
 
         [BurstCompile]
-        private void Execute([EntityIndexInQuery] int entityInQueryIndex, Entity entity,
-            in WorldRenderBounds worldRender)
+        private void Execute(in WorldRenderBounds worldRender)
         {
             var center = worldRender.Value.Center;
-            foreach (var (targetEntity, position) in Target)
+            int collisionCount = 0;
+            var targetLength = Target.Length;
+            for (var i = 0; i < targetLength; i++)
             {
-                if (worldRender.Value.Contains(position))
-                {
-                    Drawing.Line(center, position);
-                    var buffEntity = ECB.Instantiate(entityInQueryIndex, Prefab);
-                    ECB.SetComponent(entityInQueryIndex, buffEntity, new Targets
-                    {
-                        Owner = entity, // this will be the healthpack entity
-                        Source = entity, // this will be the healthpack entity
-                        Target = targetEntity, // this will be the player
-                    });
-
-
-                    // foreach (var kvPair in kvPairs)
-                    // {
-                    //     StatAddRequest.Enqueue(new EntityStatKeyValue()
-                    //     {
-                    //         Entity = targetEntity,
-                    //         StatKey = kvPair.Key,
-                    //         StatValue = kvPair.Value
-                    //     });
-                    // }
-                }
+                var (targetEntity, position) = Target[i];
+                if (!worldRender.Value.Contains(position)) continue;
+                Drawing.Line(center, position, CollisionColor);
+                collisionCount++;
+                var fraction = collisionCount / (float)targetLength;
+                Drawing.Label3D(
+                    collisionCount * LabelLineHeight, EditorCameraRotation,
+                    $"{targetEntity.ToFixedString()}",
+                    LabelSize, CollisionColor
+                );
+                Drawing.WireBox(
+                    center, worldRender.Value.Extents * (2 - fraction), BoxColor
+                );
             }
 
-            Drawing.WireBox(center, worldRender.Value.Extents * 2, BoxColor);
+            Drawing.WireBox(
+                center, worldRender.Value.Extents * 2, BoxColor
+            );
         }
     }
 }

@@ -14,8 +14,7 @@ namespace _src.Scripts.ZCollisions.ZCollision.Editor
         public StatKey StatKey;
         public StatValue StatValue;
     }
-
-
+    
     [BurstCompile]
     [WorldSystemFilter(WorldSystemFilterFlags.Editor | WorldSystemFilterFlags.Default)]
     public partial struct ZCollisionEditorSystem : ISystem
@@ -43,13 +42,7 @@ namespace _src.Scripts.ZCollisions.ZCollision.Editor
             {
                 var entity = collisionEnterEntity.Entity;
                 target.Add((entity, SystemAPI.GetComponent<LocalToWorld>(entity).Position));
-                // var map = _statsBufferLookup[entity].AsMap();
-                // foreach (var entityStatKeyValue in array)
-                // {
-                //     if (entity != entityStatKeyValue.Entity) continue;
-                //     ref var getOrAdd = ref map.GetOrAddRef(entityStatKeyValue.StatKey, entityStatKeyValue.StatValue);
-                //     getOrAdd.Added += entityStatKeyValue.StatValue.Added;
-                // }
+                
             }
             
             StatAddRequest.Clear();
@@ -57,16 +50,23 @@ namespace _src.Scripts.ZCollisions.ZCollision.Editor
             EntityCommandBuffer ecb = SystemAPI.GetSingleton<EndInitializationEntityCommandBufferSystem.Singleton>()
                 .CreateCommandBuffer(state.WorldUnmanaged);
             
+            quaternion editorCamRot = quaternion.identity;
+            if (UnityEditor.SceneView.lastActiveSceneView != null)
+            {
+                editorCamRot = UnityEditor.SceneView.lastActiveSceneView.camera.transform.rotation;
+            }
+            
 #if ALINE
             var builder = Drawing.DrawingManager.GetBuilder();
             var zCollisionEditorJobEntity = new ZCollisionEditorJobEntity()
             {
                 Drawing = builder,
                 Target = target.AsParallelReader(),
-                StatsLookup = _statsBufferLookup,
-                StatAddRequest = StatAddRequest.AsParallelWriter(),
-                Prefab = prefab.Prefab,
-                ECB = ecb.AsParallelWriter()
+                EditorCameraRotation = editorCamRot,
+                // StatsLookup = _statsBufferLookup,
+                // StatAddRequest = StatAddRequest.AsParallelWriter(),
+                // Prefab = prefab.Prefab,
+                // ECB = ecb.AsParallelWriter()
             };
             zCollisionEditorJobEntity.Schedule();
             builder.DisposeAfter(state.Dependency);

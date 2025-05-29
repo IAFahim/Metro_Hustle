@@ -17,7 +17,8 @@ namespace _src.Scripts.ZCollisions.ZCollision.Authoring
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
                 AddComponent(entity, new CollisionEnterComponent
                 {
-                    ForwardPre = authoring.forwardPre, UpOffset = authoring.upOffset
+                    ForwardPre = authoring.forwardPre, 
+                    UpOffset = authoring.upOffset
                 });
             }
         }
