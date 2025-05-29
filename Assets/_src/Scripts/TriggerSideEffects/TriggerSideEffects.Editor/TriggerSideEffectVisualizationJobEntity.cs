@@ -21,7 +21,6 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Editor
         private static readonly Color InfoTextColor = Color.white;
         
         private const float LabelSize = 0.08f;
-        private const float LabelLineHeight = LabelSize + 0.02f;
 
         [BurstCompile]
         private void Execute(
@@ -42,18 +41,11 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Editor
         private void DrawTriggerInfo(float3 center, float3 extents, in TriggerSideEffectSpawnComponent trigger)
         {
             var labelPos = center + new float3(0, extents.y + 0.3f, 0);
-            var lineOffset = 0;
-            
             
             // Trigger flags
-            Drawing.Label3D(labelPos - lineOffset * LabelLineHeight, EditorCameraRotation, 
+            Drawing.Label3D(labelPos , EditorCameraRotation, 
                 $"Flags: {trigger.TriggerType}", LabelSize * 0.7f, InfoTextColor);
-            lineOffset++;
             
-            
-            // Show bounds info
-            Drawing.Label3D(labelPos - lineOffset * LabelLineHeight, EditorCameraRotation, 
-                $"Size: {extents * 2}", LabelSize * 0.6f, TriggerBoundsColor);
         }
     }
 }
