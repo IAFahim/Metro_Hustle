@@ -1,10 +1,10 @@
 ﻿using Unity.Burst;
 using Unity.Entities;
 
-namespace _src.Scripts.ZBuildings.ZBuildings.Editor
+namespace _src.Scripts.Gaps.Gaps.Editor
 {
     [WorldSystemFilter(WorldSystemFilterFlags.Editor | WorldSystemFilterFlags.Default)]
-    public partial struct ZBuildingEditorSystem : ISystem
+    public partial struct GapZEditorSystem : ISystem
     {
         [BurstCompile]
         public void OnCreate(ref SystemState state)
@@ -16,7 +16,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Editor
         {
 #if ALINE
             var builder = Drawing.DrawingManager.GetBuilder();
-            var zBuildingEditorJobEntity = new ZBuildingEditorJobEntity()
+            var zBuildingEditorJobEntity = new GapZEditorJobEntity()
             {
                 Drawing = builder
             };

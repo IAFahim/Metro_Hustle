@@ -1,9 +1,9 @@
 using Unity.Entities;
 using Unity.Mathematics;
 
-namespace _src.Scripts.ZBuildings.ZBuildings.Data
+namespace _src.Scripts.Gaps.Gaps.Data
 {
-    public struct BuildingGapComponent : IComponentData
+    public struct GapZComponent : IComponentData
     {
         public half Forward;
         public half Backward;
