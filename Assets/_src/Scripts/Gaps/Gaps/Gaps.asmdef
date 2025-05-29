@@ -1,11 +1,14 @@
 {
-    "name": "WorldRenderCollisions.Editor",
+    "name": "Gaps",
     "rootNamespace": "",
     "references": [
+        "BovineLabs.Anchor",
         "BovineLabs.Core",
-        "BovineLabs.Core.Editor",
         "BovineLabs.Core.Extensions",
-        "BovineLabs.Core.Extensions.Editor",
+        "Gaps.Data",
+        "Unity.AppUI",
+        "Unity.AppUI.MVVM",
+        "Unity.AppUI.Navigation",
         "Unity.Burst",
         "Unity.Collections",
         "Unity.Entities",
@@ -15,29 +18,16 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms",
-        "WorldRenderCollisions",
-        "WorldRenderCollisions.Authoring",
-        "WorldRenderCollisions.Data",
-        "ALINE",
-        "Colliders.Data"
+        "Unity.Transforms"
     ],
     "optionalUnityReferences": [],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": false,
     "defineConstraints": [],
-    "versionDefines": [
-        {
-            "name": "com.arongranberg.aline",
-            "expression": "1.0.0",
-            "define": "ALINE"
-        }
-    ],
+    "versionDefines": [],
     "noEngineReferences": false
 }

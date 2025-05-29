@@ -1,11 +1,12 @@
 {
-    "name": "WorldRenderCollisions.Editor",
+    "name": "Colliders.Authoring",
     "rootNamespace": "",
     "references": [
         "BovineLabs.Core",
-        "BovineLabs.Core.Editor",
+        "BovineLabs.Core.Authoring",
         "BovineLabs.Core.Extensions",
-        "BovineLabs.Core.Extensions.Editor",
+        "BovineLabs.Core.Extensions.Authoring",
+        "Colliders.Data",
         "Unity.Burst",
         "Unity.Collections",
         "Unity.Entities",
@@ -15,29 +16,18 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms",
-        "WorldRenderCollisions",
-        "WorldRenderCollisions.Authoring",
-        "WorldRenderCollisions.Data",
-        "ALINE",
-        "Colliders.Data"
+        "Unity.Transforms"
     ],
     "optionalUnityReferences": [],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": false,
-    "defineConstraints": [],
-    "versionDefines": [
-        {
-            "name": "com.arongranberg.aline",
-            "expression": "1.0.0",
-            "define": "ALINE"
-        }
+    "defineConstraints": [
+        "UNITY_EDITOR"
     ],
+    "versionDefines": [],
     "noEngineReferences": false
 }
