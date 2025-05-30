@@ -20,7 +20,8 @@
         "Unity.Transforms",
         "ZMovements.Data",
         "StatsHelpers.Data",
-        "BovineLabs.Stats.Data"
+        "BovineLabs.Stats.Data",
+        "ZBuildings.Data"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

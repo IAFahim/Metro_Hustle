@@ -6,10 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UI/Panel Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UI/Panel Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Editor/TriggerSideEffectVisualizationJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Editor/TriggerSideEffectVisualizationJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/ZBuildings.Authoring.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/ZBuildings.Authoring.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/ZRoadComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/ZRoadComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/ZRoadComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/ZRoadComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovementComponentAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovementComponentAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovements.Authoring.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovements.Authoring.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Data/ZMovementComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Data/ZMovementComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMoveJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMoveJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMovements.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMovements.asmdef" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,13 +143,15 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="15968">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="15968" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -234,6 +244,7 @@
       <workItem from="1748518464530" duration="4268000" />
       <workItem from="1748534203875" duration="7442000" />
       <workItem from="1748548394144" duration="10815000" />
+      <workItem from="1748592257025" duration="6426000" />
     </task>
     <servers />
   </component>

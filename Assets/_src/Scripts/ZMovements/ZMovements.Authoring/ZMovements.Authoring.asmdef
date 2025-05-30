@@ -16,7 +16,8 @@
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
         "Unity.Transforms",
-        "ZMovements.Data"
+        "ZMovements.Data",
+        "ZMovements"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

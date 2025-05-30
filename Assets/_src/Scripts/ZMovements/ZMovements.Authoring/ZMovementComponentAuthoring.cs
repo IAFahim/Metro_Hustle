@@ -1,19 +1,24 @@
-﻿using _src.Scripts.ZMovements.ZMovements.Data;
-using Unity.Entities;
+﻿using Unity.Entities;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace _src.Scripts.ZMovements.ZMovements.Authoring
 {
     public class ZMovementComponentAuthoring : MonoBehaviour
     {
-        public bool enable;
+        public bool isBackWard;
+        public half LeftRight;
+
         private class ZMovementComponentBaker : Baker<ZMovementComponentAuthoring>
         {
             public override void Bake(ZMovementComponentAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.None);
-                AddComponent<ZMovementComponent>(entity);
-                SetComponentEnabled<ZMovementComponent>(entity, authoring.enable);
+                AddComponent(entity, new ZMovementComponent
+                {
+                    IsBackWard = authoring.isBackWard,
+                    LeftRightOffset = authoring.LeftRight,
+                });
             }
         }
     }

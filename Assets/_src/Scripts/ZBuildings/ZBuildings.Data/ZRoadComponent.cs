@@ -19,7 +19,6 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
         public readonly bool HasFlagFast(RoadFlag flag) => (RoadFlag & flag) == flag;
 
         [BurstCompile]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public readonly int GetRoadCount()
         {
             byte value = (byte)RoadFlag;
@@ -34,7 +33,6 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
         }
 
         [BurstCompile]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public readonly bool TryGetAdjacentPosition(RoadFlag singleActiveBitCurrent, bool goRight, out float position)
         {
             position = 0f;
@@ -58,23 +56,41 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
             if ((existingRoadFlags & nextPotentialLineFlagValue) != nextPotentialLineFlagValue) return false;
             position = nextLineSpatialIndex * PerLineWidth;
             return true;
-
         }
 
         [BurstCompile]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public readonly float GetTotalWidth()
+        public readonly float GetTotalWidth(bool withGap)
         {
             int roadCount = GetRoadCount();
             if (roadCount == 0) return 0f;
 
             float totalLineWidth = roadCount * (float)PerLineWidth;
-            float totalGaps = SideGap * 2f; // Side gaps
-            return totalLineWidth + totalGaps;
+            if (!withGap) return totalLineWidth;
+            float sideGaps = SideGap * 2f;
+            return totalLineWidth + sideGaps;
         }
 
         [BurstCompile]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public readonly float3 GetExtern(float roadTriggerHeight, bool withGap)
+        {
+            var totalWidth = GetTotalWidth(withGap);
+            return new float3(totalWidth / 2, roadTriggerHeight, SizeZ / 2);
+        }
+
+        [BurstCompile]
+        public readonly AABB GetAABB(float3 position, float roadTriggerHeight, bool withGap)
+        {
+            var ext = GetExtern(roadTriggerHeight, withGap);
+            var center =  position;
+            return new AABB
+            {
+                Center = center,
+                Extents = ext
+            };
+        }
+
+
+        [BurstCompile]
         public readonly bool HasAnyLeftRoad()
         {
             return HasFlagFast(RoadFlag.Left1) || HasFlagFast(RoadFlag.Left2) || HasFlagFast(RoadFlag.Left3);
@@ -88,7 +104,6 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
         }
 
         [BurstCompile]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public readonly RoadFlag GetLeftmostRoad()
         {
             if (HasFlagFast(RoadFlag.Left3)) return RoadFlag.Left3;
@@ -102,7 +117,6 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
         }
 
         [BurstCompile]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public readonly RoadFlag GetRightmostRoad()
         {
             if (HasFlagFast(RoadFlag.Right3)) return RoadFlag.Right3;
@@ -117,7 +131,6 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
 
 
         [BurstCompile]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public readonly int GetFlagPosition(RoadFlag flag)
         {
             // Returns spatial position from center (negative = left, positive = right)
@@ -137,7 +150,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
 
     // Zero means disable
     [Flags]
-    public enum RoadFlag : byte
+    public enum RoadFlag : sbyte
     {
         None = 0,
         Left3 = 0b0100_0000, // 64
