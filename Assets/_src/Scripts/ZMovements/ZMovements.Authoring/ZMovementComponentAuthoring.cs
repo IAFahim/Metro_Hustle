@@ -17,7 +17,7 @@ namespace _src.Scripts.ZMovements.ZMovements.Authoring
                 AddComponent(entity, new ZMovementComponent
                 {
                     IsBackWard = authoring.isBackWard,
-                    LeftRightOffset = authoring.LeftRight,
+                    LeftRightRequest = authoring.LeftRight,
                 });
             }
         }

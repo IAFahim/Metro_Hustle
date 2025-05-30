@@ -28,6 +28,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Authoring
         {
             TriggerType newTriggerType = TriggerType.Nothing;
 
+            
             if (onForwardPre != null) newTriggerType |= TriggerType.HasForward;
             if (onTop != null) newTriggerType |= TriggerType.HasTop;
             if (onInside != null) newTriggerType |= TriggerType.HasInside;

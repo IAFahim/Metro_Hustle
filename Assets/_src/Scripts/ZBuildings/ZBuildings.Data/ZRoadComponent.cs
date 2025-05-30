@@ -9,9 +9,9 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
     [BurstCompile]
     public struct ZRoadComponent : IComponentData
     {
-        public half SizeZ;
         public half SideGap;
         public half PerLineWidth;
+        public float3 Extents;
         public RoadFlag RoadFlag;
 
         [BurstCompile]
@@ -71,22 +71,10 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
         }
 
         [BurstCompile]
-        public readonly float3 GetExtern(float roadTriggerHeight, bool withGap)
+        public readonly float3 CalculateExtern(float roadTriggerHeight, float sizeZ,bool withGap)
         {
             var totalWidth = GetTotalWidth(withGap);
-            return new float3(totalWidth / 2, roadTriggerHeight, SizeZ / 2);
-        }
-
-        [BurstCompile]
-        public readonly AABB GetAABB(float3 position, float roadTriggerHeight, bool withGap)
-        {
-            var ext = GetExtern(roadTriggerHeight, withGap);
-            var center =  position;
-            return new AABB
-            {
-                Center = center,
-                Extents = ext
-            };
+            return new float3(totalWidth / 2, roadTriggerHeight, sizeZ / 2);
         }
 
 

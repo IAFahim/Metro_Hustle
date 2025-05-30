@@ -1,7 +1,6 @@
 ﻿using _src.Scripts.ZBuildings.ZBuildings.Data;
 using Unity.Entities;
 using Unity.Mathematics;
-using Unity.Rendering;
 using UnityEngine;
 
 namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
@@ -21,18 +20,13 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
                 var entity = GetEntity(TransformUsageFlags.None);
                 var zRoadComponent = new ZRoadComponent
                 {
-                    SizeZ = authoring.sizeZ,
                     SideGap = authoring.sideGap,
                     RoadFlag = authoring.roadFlag,
-                    PerLineWidth = authoring.perLineWidth
+                    PerLineWidth = authoring.perLineWidth,
                 };
+                zRoadComponent.Extents =
+                    zRoadComponent.CalculateExtern(authoring.roadTriggerHeight, authoring.sizeZ, false);
                 AddComponent(entity, zRoadComponent);
-
-
-                var worldRenderBounds = new WorldRenderBounds();
-                worldRenderBounds.Value =
-                    zRoadComponent.GetAABB(authoring.transform.position, authoring.roadTriggerHeight, false);
-                AddComponent(entity, worldRenderBounds);
             }
         }
     }

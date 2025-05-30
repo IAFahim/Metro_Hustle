@@ -6,6 +6,6 @@ namespace _src.Scripts.ZMovements.ZMovements
     public struct ZMovementComponent : IComponentData
     {
         public bool IsBackWard;
-        public half LeftRightOffset;
+        public half LeftRightRequest;
     }
 }

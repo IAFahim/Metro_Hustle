@@ -76,9 +76,9 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Editor // Or your preferred editor 
         {
             using (Drawing.WithMatrix(ltw.Value))
             {
-                float sizeZ = (float)road.SizeZ;
-                float sideGap = (float)road.SideGap;
-                float perLineWidth = (float)road.PerLineWidth;
+                float sizeZ = road.Extents.z;
+                float sideGap = road.SideGap;
+                float perLineWidth = road.PerLineWidth;
 
                 int activeLaneCount = 0;
                 float leftmostLaneEdgeX = float.MaxValue;

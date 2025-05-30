@@ -14,20 +14,22 @@ namespace _src.Scripts.ZMovements.ZMovements
         public float DeltaTime;
 
         [BurstCompile]
-        private void Execute(Entity entity, ref LocalToWorld localToWorld, ZMovementComponent zMovementComponent)
+        private void Execute(Entity entity, ref LocalToWorld localToWorld, ref ZMovementComponent zMovementComponent)
         {
             if (!StatsBufferLookup.TryGetBuffer(entity, out var statsBuffer)) return;
             var statsMap = statsBuffer.AsMap();
-            var key = (byte)EStat.MoveSpeed;
-            var forward = 0f;
-            if (statsMap.TryGetValue(key, out StatValue statValue))
+            if (statsMap.TryGetValue((byte)EStat.ForwardSpeed, out StatValue forwardSpeed))
             {
-                forward = statValue.Value * DeltaTime;
+                var forward = forwardSpeed.Value * DeltaTime;
+                if (zMovementComponent.IsBackWard) forward *= -1;
+                localToWorld.Value.c3.z += forward;
             }
 
-            if (zMovementComponent.IsBackWard) forward *= -1;
-            localToWorld.Value.c3.z += forward;
-            localToWorld.Value.c3.x += zMovementComponent.LeftRightOffset;
+            if (statsMap.TryGetValue((byte)EStat.SideWiseSpeed, out StatValue sideSpeed))
+            {
+                var side = sideSpeed.Value * DeltaTime;
+                localToWorld.Value.c3.x += zMovementComponent.LeftRightRequest * side;
+            }
         }
     }
 }
