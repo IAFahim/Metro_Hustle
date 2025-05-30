@@ -14,8 +14,8 @@ namespace _src.Scripts.CinemachineLink.CinemachineLink
 
         public void OnUpdate(ref SystemState state)
         {
-            var focusManagerEntity = SystemAPI.GetSingletonEntity<FocusManagerCurrentInfoComponent>();
-            var currentInfoComponent = SystemAPI.GetComponent<FocusManagerCurrentInfoComponent>(focusManagerEntity);
+            var entity = SystemAPI.GetSingletonEntity<FocusManagerCurrentInfoComponent>();
+            var currentInfoComponent = SystemAPI.GetComponent<FocusManagerCurrentInfoComponent>(entity);
             CinemachineLinkerSingleton.Target.SetLocalPositionAndRotation(
                 currentInfoComponent.Position,
                 currentInfoComponent.Rotation

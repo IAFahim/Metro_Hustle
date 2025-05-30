@@ -7,5 +7,6 @@ namespace _src.Scripts.ZMovements.ZMovements
     {
         public bool IsBackWard;
         public half LeftRightRequest;
+        public half Height;
     }
 }

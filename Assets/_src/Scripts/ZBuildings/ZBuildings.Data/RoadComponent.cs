@@ -7,7 +7,7 @@ using Unity.Mathematics;
 namespace _src.Scripts.ZBuildings.ZBuildings.Data
 {
     [BurstCompile]
-    public struct ZRoadComponent : IComponentData
+    public struct RoadComponent : IComponentData
     {
         public half SizeZ;
         public half SideGap;

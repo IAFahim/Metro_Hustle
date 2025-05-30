@@ -6,16 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/DirectionInputAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/DirectionInputAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink/CinemachineLinkerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink/CinemachineLinkerSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/DirectionEnableActiveFlag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/DirectionEnableActiveFlag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMoveComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMoveComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMoveComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMovementComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMoveComponentAuthoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMovementComponentAuthoring.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMoveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMovementComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMoveComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMovementComponent.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovements.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovements.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/ZRoadComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/ZRoadComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/ZRoadComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/ZRoadComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/ZRoadComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/RoadComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/ZRoadComponentAuthoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/RoadComponentAuthoring.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/ZRoadComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/RoadComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/ZRoadComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/RoadComponent.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Editor/ZRoadEditorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Editor/ZRoadEditorSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovementComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovementComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMovementComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMovementComponent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +49,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/36CC98ABD1355D18D27F5F10/BovineLabs.DynamicGenerator/BovineLabs.DynamicGenerator.DynamicGenerator/BovineLabs.Core.ObjectManagement.ObjectGroupMatcherExtensions.g.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/4BD2B02702DEBFACAEB7CB5F/BovineLabs.DynamicGenerator/BovineLabs.DynamicGenerator.DynamicGenerator/BovineLabs.Stats.Data.StatExtensions.g.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/51/20af1570/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/6b/2f36f88e/NativeArray`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/7c/d1b0f644/JobsUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/b5/556e75ec/Matrix4x4.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/bc/346e33f4/Color.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/ce/17fa03ae/Shader.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,10 +70,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/InputEnableTagAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/GravityEnableComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/LeftRightComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/Positioning.Data.asmdef" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/SpritesServiceBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/ZRoadComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Data/Actions/ActionIntrinsic.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Data/Builders/ActionIntrinsicBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections.PerformanceTests/QueueParallelPerformanceTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections/FixedString.gen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@1d12ba0090ff/Unity.Entities/SourceGenerators/Source~/Mock/Unity.Entities.Mock/EntitiesInternalMock.cs" root0="SKIP_HIGHLIGHTING" />
@@ -141,10 +149,10 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12784">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33376">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="12784" />
+      <option name="pid" value="33376" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -244,6 +252,8 @@
       <workItem from="1748548394144" duration="10815000" />
       <workItem from="1748592257025" duration="6426000" />
       <workItem from="1748600934377" duration="7891000" />
+      <workItem from="1748613790672" duration="1545000" />
+      <workItem from="1748618069557" duration="3988000" />
     </task>
     <servers />
   </component>
@@ -296,40 +306,19 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Authoring/Actions/ActionIntrinsicAuthoring.cs</url>
           <line>36</line>
-          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.stats@e17c4b00c208\BovineLabs.Stats.Authoring\Actions\ActionIntrinsicAuthoring.cs" containingFunctionPresentation="Method 'Bake'">
-            <startOffsets>
-              <option value="1156" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1213" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.stats@e17c4b00c208\BovineLabs.Stats.Authoring\Actions\ActionIntrinsicAuthoring.cs" containingFunctionPresentation="Method 'Bake'" />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Authoring/IntrinsicSchemaObject.cs</url>
           <line>37</line>
-          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.stats@e17c4b00c208\BovineLabs.Stats.Authoring\IntrinsicSchemaObject.cs" containingFunctionPresentation="Property 'ConditionType'">
-            <startOffsets>
-              <option value="1066" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1103" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.stats@e17c4b00c208\BovineLabs.Stats.Authoring\IntrinsicSchemaObject.cs" containingFunctionPresentation="Property 'ConditionType'" />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.reaction@467d7ac84fb9/BovineLabs.Reaction.Authoring/Conditions/ConditionAuthoring.cs</url>
           <line>82</line>
-          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.reaction@467d7ac84fb9\BovineLabs.Reaction.Authoring\Conditions\ConditionAuthoring.cs" containingFunctionPresentation="Method 'Bake'">
-            <startOffsets>
-              <option value="2705" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3516" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.reaction@467d7ac84fb9\BovineLabs.Reaction.Authoring\Conditions\ConditionAuthoring.cs" containingFunctionPresentation="Method 'Bake'" />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
@@ -370,6 +359,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobComponent.cs</url>
+          <line>19</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Positioning\Positioning\PositioningJobComponent.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="548" />
+            </startOffsets>
+            <endOffsets>
+              <option value="595" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />

@@ -1,14 +1,12 @@
 {
-    "name": "RoadMovements",
+    "name": "Positioning.Authoring",
     "rootNamespace": "",
     "references": [
-        "BovineLabs.Anchor",
         "BovineLabs.Core",
+        "BovineLabs.Core.Authoring",
         "BovineLabs.Core.Extensions",
-        "RoadMovements.Data",
-        "Unity.AppUI",
-        "Unity.AppUI.MVVM",
-        "Unity.AppUI.Navigation",
+        "BovineLabs.Core.Extensions.Authoring",
+        "Positioning.Data",
         "Unity.Burst",
         "Unity.Collections",
         "Unity.Entities",
@@ -18,11 +16,7 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms",
-        "ZMovements",
-        "InputControls.Data",
-        "Colliders.Data",
-        "ZBuildings.Data"
+        "Unity.Transforms"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
@@ -31,7 +25,9 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": false,
-    "defineConstraints": [],
+    "defineConstraints": [
+        "UNITY_EDITOR"
+    ],
     "versionDefines": [],
     "noEngineReferences": false
 }

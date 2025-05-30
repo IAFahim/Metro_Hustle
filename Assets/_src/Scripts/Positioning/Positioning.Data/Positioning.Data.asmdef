@@ -1,14 +1,9 @@
 {
-    "name": "RoadMovements",
+    "name": "Positioning.Data",
     "rootNamespace": "",
     "references": [
-        "BovineLabs.Anchor",
         "BovineLabs.Core",
         "BovineLabs.Core.Extensions",
-        "RoadMovements.Data",
-        "Unity.AppUI",
-        "Unity.AppUI.MVVM",
-        "Unity.AppUI.Navigation",
         "Unity.Burst",
         "Unity.Collections",
         "Unity.Entities",
@@ -18,11 +13,7 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms",
-        "ZMovements",
-        "InputControls.Data",
-        "Colliders.Data",
-        "ZBuildings.Data"
+        "Unity.Transforms"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

@@ -1,4 +1,4 @@
-﻿using _src.Scripts.ZBuildings.ZBuildings.Data; // Assuming ZRoadComponent is here
+﻿using _src.Scripts.ZBuildings.ZBuildings.Data; // Assuming RoadComponent is here
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -24,9 +24,9 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Editor // Or your preferred editor 
         public void OnUpdate(ref SystemState state)
         {
 #if ALINE
-            // Ensure there's at least one ZRoadComponent to avoid unnecessary builder creation
+            // Ensure there's at least one RoadComponent to avoid unnecessary builder creation
             // This is a micro-optimization, can be skipped if preferred.
-            var query = SystemAPI.QueryBuilder().WithAll<ZRoadComponent, LocalToWorld>().Build();
+            var query = SystemAPI.QueryBuilder().WithAll<RoadComponent, LocalToWorld>().Build();
             if (query.IsEmpty)
             {
                 return;
@@ -72,7 +72,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Editor // Or your preferred editor 
             RoadFlag.Right1, RoadFlag.Right2, RoadFlag.Right3
         };
 
-        void Execute(in ZRoadComponent road, in LocalToWorld ltw)
+        void Execute(in RoadComponent road, in LocalToWorld ltw)
         {
             using (Drawing.WithMatrix(ltw.Value))
             {

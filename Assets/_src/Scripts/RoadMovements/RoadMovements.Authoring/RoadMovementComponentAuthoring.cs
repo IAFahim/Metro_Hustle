@@ -5,16 +5,16 @@ using UnityEngine;
 
 namespace _src.Scripts.RoadMovements.RoadMovements.Authoring
 {
-    internal class RoadMoveComponentAuthoring : MonoBehaviour
+    internal class RoadMovementComponentAuthoring : MonoBehaviour
     {
         public RoadFlag roadFlagCurrentBit= RoadFlag.Center;
 
-        private class RoadMoveComponentBaker : Baker<RoadMoveComponentAuthoring>
+        private class RoadMoveComponentBaker : Baker<RoadMovementComponentAuthoring>
         {
-            public override void Bake(RoadMoveComponentAuthoring authoring)
+            public override void Bake(RoadMovementComponentAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.None);
-                AddComponent(entity, new RoadMoveComponent
+                AddComponent(entity, new RoadMovementComponent
                 {
                     RoadFlagCurrentBit = authoring.roadFlagCurrentBit
                 });

@@ -1,14 +1,14 @@
 {
-    "name": "RoadMovements",
+    "name": "Positioning.Editor",
     "rootNamespace": "",
     "references": [
-        "BovineLabs.Anchor",
         "BovineLabs.Core",
+        "BovineLabs.Core.Editor",
         "BovineLabs.Core.Extensions",
-        "RoadMovements.Data",
-        "Unity.AppUI",
-        "Unity.AppUI.MVVM",
-        "Unity.AppUI.Navigation",
+        "BovineLabs.Core.Extensions.Editor",
+        "Positioning",
+        "Positioning.Authoring",
+        "Positioning.Data",
         "Unity.Burst",
         "Unity.Collections",
         "Unity.Entities",
@@ -18,14 +18,12 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms",
-        "ZMovements",
-        "InputControls.Data",
-        "Colliders.Data",
-        "ZBuildings.Data"
+        "Unity.Transforms"
     ],
     "optionalUnityReferences": [],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": false,

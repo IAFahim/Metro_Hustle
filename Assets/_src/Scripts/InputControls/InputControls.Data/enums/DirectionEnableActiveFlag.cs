@@ -29,10 +29,4 @@ namespace _src.Scripts.InputControls.InputControls.Data.enums
         ActiveStateFlagsMask = IsRight | IsUp | IsDown | IsLeft,
         EnableFlagsMask = UpEnable | DownEnable | LeftEnable | RightEnable,
     }
-
-    [BurstCompile]
-    public static class DirectionFlagEx
-    {
-        
-    }
 }

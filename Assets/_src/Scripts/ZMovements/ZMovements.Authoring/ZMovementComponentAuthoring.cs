@@ -7,7 +7,8 @@ namespace _src.Scripts.ZMovements.ZMovements.Authoring
     public class ZMovementComponentAuthoring : MonoBehaviour
     {
         public bool isBackWard;
-        public half LeftRight;
+        public half leftRightRequest;
+        public half height;
 
         private class ZMovementComponentBaker : Baker<ZMovementComponentAuthoring>
         {
@@ -17,7 +18,8 @@ namespace _src.Scripts.ZMovements.ZMovements.Authoring
                 AddComponent(entity, new ZMovementComponent
                 {
                     IsBackWard = authoring.isBackWard,
-                    LeftRightRequest = authoring.LeftRight,
+                    LeftRightRequest = authoring.leftRightRequest,
+                    Height = authoring.height,
                 });
             }
         }

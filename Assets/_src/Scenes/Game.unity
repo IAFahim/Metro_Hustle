@@ -2645,7 +2645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 485755097329585741, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4920821480623403197, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: AddIntrinsics

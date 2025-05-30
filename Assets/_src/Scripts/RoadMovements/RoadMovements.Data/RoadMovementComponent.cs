@@ -3,7 +3,7 @@ using Unity.Entities;
 
 namespace _src.Scripts.RoadMovements.RoadMovements.Data
 {
-    public struct RoadMoveComponent : IComponentData
+    public struct RoadMovementComponent : IComponentData
     {
         public RoadFlag RoadFlagCurrentBit;
     }
