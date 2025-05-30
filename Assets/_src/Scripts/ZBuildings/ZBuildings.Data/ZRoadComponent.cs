@@ -9,9 +9,9 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
     [BurstCompile]
     public struct ZRoadComponent : IComponentData
     {
+        public half SizeZ;
         public half SideGap;
         public half PerLineWidth;
-        public float3 Extents;
         public RoadFlag RoadFlag;
 
         [BurstCompile]

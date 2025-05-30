@@ -76,7 +76,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Editor // Or your preferred editor 
         {
             using (Drawing.WithMatrix(ltw.Value))
             {
-                float sizeZ = road.Extents.z;
+                float sizeZ = road.SizeZ;
                 float sideGap = road.SideGap;
                 float perLineWidth = road.PerLineWidth;
 

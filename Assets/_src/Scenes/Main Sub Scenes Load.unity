@@ -226,7 +226,6 @@ MonoBehaviour:
   perLineWidth:
     value: 16640
   roadFlag: 28
-  roadTriggerHeight: 0.1
 --- !u!4 &1487358446
 Transform:
   m_ObjectHideFlags: 0
@@ -257,6 +256,9 @@ GameObject:
   - component: {fileID: 1738861692}
   - component: {fileID: 1738861693}
   - component: {fileID: 1738861694}
+  - component: {fileID: 1738861696}
+  - component: {fileID: 1738861695}
+  - component: {fileID: 1738861697}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -365,7 +367,7 @@ MonoBehaviour:
   - Stat: {fileID: 11400000, guid: 594b6d0f6224dd0419b6b6924d2961f4, type: 2}
     ModifyType: 0
     Value: 0
-  - Stat: {fileID: 11400000, guid: f630aa0b4622f054a82f6ad357a4e085, type: 2}
+  - Stat: {fileID: 0}
     ModifyType: 0
     Value: 0
   StatDefaultGroups: []
@@ -401,7 +403,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBackWard: 0
   LeftRight:
-    value: 8479
+    value: 0
+--- !u!114 &1738861695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738861687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e4bffb60ad4098abc1d09a76539b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enable: 1
+  playerInputEnable: 1
+--- !u!114 &1738861696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738861687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24893b0736984dbca1d8307d12e9d52b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadFlagCurrentBit: 8
+--- !u!114 &1738861697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738861687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c865c9e7a545628da622e6999eaed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionEnableActiveFlag: 240
 --- !u!1 &1902738499
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ namespace _src.Scripts.RoadMovements.RoadMovements.Authoring
 {
     internal class RoadMoveComponentAuthoring : MonoBehaviour
     {
-        public RoadFlag roadFlagCurrentBit;
+        public RoadFlag roadFlagCurrentBit= RoadFlag.Center;
 
         private class RoadMoveComponentBaker : Baker<RoadMoveComponentAuthoring>
         {
