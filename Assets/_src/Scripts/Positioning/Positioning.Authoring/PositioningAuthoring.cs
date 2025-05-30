@@ -19,7 +19,7 @@ namespace _src.Scripts.Positioning.Positioning.Authoring
             public override void Bake(PositioningAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.None);
-                AddComponent(entity, new LeftRightComponent { Offset = authoring.leftRightOffset });
+                AddComponent(entity, new LeftRightComponent { Step = authoring.leftRightOffset });
                 AddComponent(entity, new ForwardBackComponent { Offset = authoring.forwardBackOffset });
                 AddComponent(entity, new GravityEnableComponent()
                 {

@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 8090602221781120662}
   - component: {fileID: 2493078973159338449}
   - component: {fileID: 4920821480623403197}
+  - component: {fileID: 8194598639623020778}
+  - component: {fileID: 5074436855783038245}
   m_Layer: 0
   m_Name: ECS Player Character
   m_TagString: Untagged
@@ -103,7 +105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionEnableActiveFlag: 240
-  directionLockFlag: 0
 --- !u!114 &2493078973159338449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,11 +139,47 @@ MonoBehaviour:
     ModifyType: 0
     Value: 1
   StatDefaultGroups: []
-  StatsCanBeModified: 0
-  AddIntrinsics: 1
+  StatsCanBeModified: 1
+  AddIntrinsics: 0
   IntrinsicDefaults:
   - Intrinsic: {fileID: 11400000, guid: ff388874515eda04f8103cb02d8836ba, type: 2}
     Value: 1
   IntrinsicDefaultGroups: []
   Initialize:
     CopyFrom: 3
+--- !u!114 &8194598639623020778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485755097329585741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5843df0182f41198fa3341f61770d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityEnable: 0
+  gravity:
+    value: 20352
+  velocity:
+    value: 0
+  heightIncrease:
+    value: 0
+  leftRightOffset:
+    value: 0
+  forwardBackOffset:
+    value: 0
+--- !u!114 &5074436855783038245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485755097329585741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24893b0736984dbca1d8307d12e9d52b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadFlagCurrentBit: 8

@@ -5,6 +5,9 @@ namespace _src.Scripts.Positioning.Positioning.Data
 {
     public struct LeftRightComponent : IComponentData
     {
-        public half Offset;
+        public half Step;
+        public half Direction;
+        public half Current;
+        public half Target;
     }
 }

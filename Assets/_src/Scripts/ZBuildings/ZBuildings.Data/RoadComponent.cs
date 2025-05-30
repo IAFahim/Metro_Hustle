@@ -33,29 +33,29 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
         }
 
         [BurstCompile]
-        public readonly bool TryGetAdjacentPosition(RoadFlag singleActiveBitCurrent, bool goRight, out float position)
+        public readonly RoadFlag GetAdjacentPosition(RoadFlag current, bool goRight, out float position)
         {
             position = 0f;
-            int currentFlagValue = (int)singleActiveBitCurrent;
+            int currentFlagValue = (int)current;
             int existingRoadFlags = (int)RoadFlag;
 
             int nextPotentialLineFlagValue;
-
             if (goRight)
             {
-                if (singleActiveBitCurrent is RoadFlag.Right3 or RoadFlag.None) return false;
+                if (current is RoadFlag.Right3 or RoadFlag.None) return current;
                 nextPotentialLineFlagValue = currentFlagValue >> 1;
             }
             else
             {
-                if (singleActiveBitCurrent is RoadFlag.Left3 or RoadFlag.None) return false;
+                if (current is RoadFlag.Left3 or RoadFlag.None) return current;
                 nextPotentialLineFlagValue = currentFlagValue << 1;
+                
             }
 
             int nextLineSpatialIndex = GetFlagPosition((RoadFlag)nextPotentialLineFlagValue);
-            if ((existingRoadFlags & nextPotentialLineFlagValue) != nextPotentialLineFlagValue) return false;
+            if ((existingRoadFlags & nextPotentialLineFlagValue) != nextPotentialLineFlagValue) return current;
             position = nextLineSpatialIndex * PerLineWidth;
-            return true;
+            return (RoadFlag)nextPotentialLineFlagValue;
         }
 
         [BurstCompile]
@@ -71,7 +71,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
         }
 
         [BurstCompile]
-        public readonly float3 CalculateExtern(float roadTriggerHeight, float sizeZ,bool withGap)
+        public readonly float3 CalculateExtern(float roadTriggerHeight, float sizeZ, bool withGap)
         {
             var totalWidth = GetTotalWidth(withGap);
             return new float3(totalWidth / 2, roadTriggerHeight, sizeZ / 2);

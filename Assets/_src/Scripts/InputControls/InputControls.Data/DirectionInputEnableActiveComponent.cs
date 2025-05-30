@@ -13,7 +13,7 @@ namespace _src.Scripts.InputControls.InputControls.Data
         public DirectionEnableActiveFlag Flag;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public readonly bool HasFlagFast(DirectionEnableActiveFlag enableActiveFlag) => (Flag & enableActiveFlag) != 0;
+        public readonly bool HasFlagFast(DirectionEnableActiveFlag enableActiveFlag) => (Flag & enableActiveFlag) == enableActiveFlag;
 
         public readonly string ToStringFormatted()
         {

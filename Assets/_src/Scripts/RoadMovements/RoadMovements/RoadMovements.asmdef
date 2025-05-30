@@ -22,7 +22,8 @@
         "ZMovements",
         "InputControls.Data",
         "Colliders.Data",
-        "ZBuildings.Data"
+        "ZBuildings.Data",
+        "Positioning.Data"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

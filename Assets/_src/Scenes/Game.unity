@@ -221,25 +221,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7297034926185220290, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 1217125553}
     - target: {fileID: 8585106485500926562, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8585106485500926562, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.92
+      value: 2.03
       objectReference: {fileID: 0}
     - target: {fileID: 8585106485500926562, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.62
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 8585106485500926562, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99148715
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8585106485500926562, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1302046
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8585106485500926562, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_LocalRotation.y
@@ -541,7 +545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &493207963
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1044,9 +1048,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal:
-    value: 12902
+    value: 11878
   vertical:
-    value: 12902
+    value: 11878
 --- !u!1 &691233598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,19 +1151,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1912585927215344441, guid: 1279a3cc2baa98f498102f74e29a0a2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.92
+      value: 2.03
       objectReference: {fileID: 0}
     - target: {fileID: 1912585927215344441, guid: 1279a3cc2baa98f498102f74e29a0a2e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.62
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 1912585927215344441, guid: 1279a3cc2baa98f498102f74e29a0a2e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99148715
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1912585927215344441, guid: 1279a3cc2baa98f498102f74e29a0a2e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1302046
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1912585927215344441, guid: 1279a3cc2baa98f498102f74e29a0a2e, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1295,7 +1299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1032920552
 Transform:
   m_ObjectHideFlags: 0
@@ -1409,6 +1413,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093316251}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1217125553 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8421916860254639719, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+  m_PrefabInstance: {fileID: 5781390144955228746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1291639912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,17 +2652,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ECS Player Character
       objectReference: {fileID: 0}
-    - target: {fileID: 485755097329585741, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4920821480623403197, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
-      propertyPath: AddIntrinsics
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4920821480623403197, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
-      propertyPath: StatsCanBeModified
-      value: 1
+    - target: {fileID: 8194598639623020778, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
+      propertyPath: forwardBackOffset.value
+      value: 18688
       objectReference: {fileID: 0}
     - target: {fileID: 8421916860254639719, guid: fb05880c4430c43458c234c3e8a801c9, type: 3}
       propertyPath: m_LocalPosition.x

@@ -15,7 +15,7 @@ namespace _src.Scripts.Positioning.Positioning
         public void OnUpdate(ref SystemState state)
         {
             var timeDeltaTime = SystemAPI.Time.DeltaTime;
-            new PositioningJobComponent
+            new PositioningJobEntity
             {
                 DeltaTime = timeDeltaTime
             }.ScheduleParallel();

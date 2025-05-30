@@ -5,25 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Character/ECS Player Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Prefabs/Character/ECS Player Character.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink/CinemachineLinkerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink/CinemachineLinkerSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/DirectionEnableActiveFlag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/DirectionEnableActiveFlag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMoveComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMovementComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMoveComponentAuthoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMovementComponentAuthoring.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMoveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMovementComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMoveComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMovementComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionIJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionIJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/LeftRightComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/LeftRightComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMovementComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Authoring/RoadMovementComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMovementComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMovementComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovements.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovements.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/ZRoadComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/RoadComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/ZRoadComponentAuthoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/RoadComponentAuthoring.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/ZRoadComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/RoadComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/ZRoadComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/RoadComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Editor/ZRoadEditorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Editor/ZRoadEditorSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovementComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovementComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMovementComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMovementComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/RoadComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/RoadComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovementComponentAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovementComponentAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovements.Authoring.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZMovements.Authoring.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZProgressComponentAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Authoring/ZProgressComponentAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Data/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Data/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Data/ZMovements.Data.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Data/ZMovements.Data.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Data/ZProgressComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.Data/ZProgressComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMoveJobEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMoveJobEntity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMoveSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMoveSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMovementComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMovementComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMovements.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZMovements/ZMovements/ZMovements.asmdef.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,10 +177,10 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33376">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="24532">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="33376" />
+      <option name="pid" value="24532" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -254,6 +282,7 @@
       <workItem from="1748600934377" duration="7891000" />
       <workItem from="1748613790672" duration="1545000" />
       <workItem from="1748618069557" duration="3988000" />
+      <workItem from="1748627362530" duration="10578000" />
     </task>
     <servers />
   </component>
@@ -322,19 +351,6 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Animations/Animations/InstantiateAnimatorSystem.cs</url>
-          <line>21</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Animations\Animations\InstantiateAnimatorSystem.cs" containingFunctionPresentation="Method 'OnUpdate'">
-            <startOffsets>
-              <option value="855" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1030" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions.Editor/WorldRenderEditorJobEntity.cs</url>
           <line>39</line>
           <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\ZCollisions\ZCollision.Editor\ZCollisionEditorJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
@@ -361,17 +377,30 @@
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobComponent.cs</url>
-          <line>19</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Positioning\Positioning\PositioningJobComponent.cs" containingFunctionPresentation="Method 'Execute'">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs</url>
+          <line>48</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\RoadMovements\RoadMovements\RoadLeftRightJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="548" />
+              <option value="1817" />
             </startOffsets>
             <endOffsets>
-              <option value="595" />
+              <option value="1913" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="46" />
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs</url>
+          <line>38</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\RoadMovements\RoadMovements\RoadLeftRightJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="1395" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1490" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />

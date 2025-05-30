@@ -16,7 +16,7 @@ namespace _src.Scripts.RoadMovements.RoadMovements.Authoring
                 var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, new RoadMovementComponent
                 {
-                    RoadFlagCurrentBit = authoring.roadFlagCurrentBit
+                    CurrentRoadFlag = authoring.roadFlagCurrentBit
                 });
             }
         }

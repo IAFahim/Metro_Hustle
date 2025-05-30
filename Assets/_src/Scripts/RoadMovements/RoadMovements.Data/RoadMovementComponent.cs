@@ -5,6 +5,6 @@ namespace _src.Scripts.RoadMovements.RoadMovements.Data
 {
     public struct RoadMovementComponent : IComponentData
     {
-        public RoadFlag RoadFlagCurrentBit;
+        public RoadFlag CurrentRoadFlag;
     }
 }
