@@ -1,10 +1,11 @@
-﻿using _src.Scripts.InputControls.InputControls.Data;
+﻿using _src.Scripts.Animations.Animations.Data;
+using _src.Scripts.Animations.Animations.Data.enums;
+using _src.Scripts.InputControls.InputControls.Data;
 using _src.Scripts.InputControls.InputControls.Data.enums;
 using _src.Scripts.Positioning.Positioning.Data; // Assuming this is for LeftRightComponent
 using _src.Scripts.RoadMovements.RoadMovements.Data;
 using _src.Scripts.ZBuildings.ZBuildings.Data;
 // using _src.Scripts.ZBuildings.ZBuildings.Data; // Not used in this specific job
-using BovineLabs.Core;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -16,13 +17,14 @@ namespace _src.Scripts.RoadMovements.RoadMovements
     public partial struct RoadLeftRightJobEntity : IJobEntity
     {
         public RoadComponent Road;
-        public BLLogger Log; // Logger is present but not used in the provided logic
 
         private void Execute(
+            Entity entity,
             ref LeftRightComponent leftRight,
             ref GravityEnableComponent gravity,
             ref RoadMovementComponent movement,
             in DirectionInputEnableActiveComponent directionInput,
+            ref AnimatorComponent animatorComponent,
             ref LocalToWorld localToWorld)
         {
             bool jumpInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsUpEnabledAndActive);
@@ -31,6 +33,8 @@ namespace _src.Scripts.RoadMovements.RoadMovements
                 gravity.Enable = true;
                 gravity.Velocity = (half)10;
                 gravity.GravityMul = 1;
+                animatorComponent.CurrentState = (sbyte)EAnimation.Jumping;
+                animatorComponent.OldState = 0;
             }
 
             if (localToWorld.Value.c3.y < 0)
@@ -38,14 +42,16 @@ namespace _src.Scripts.RoadMovements.RoadMovements
                 localToWorld.Value.c3.y = 0;
                 gravity.Enable = false;
                 gravity.Velocity = (half)0;
+
+                animatorComponent.CurrentState = (sbyte)EAnimation.Running;
             }
-            
+
             bool downInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsDownEnabledAndActive);
             if (downInputActive)
             {
                 gravity.GravityMul = 2;
             }
-            
+
 
             bool rightInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsRightEnabledAndActive);
             bool leftInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsLeftEnabledAndActive);

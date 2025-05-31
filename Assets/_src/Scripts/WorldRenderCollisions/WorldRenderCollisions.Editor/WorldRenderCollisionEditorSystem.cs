@@ -13,6 +13,7 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
+            state.RequireForUpdate<CollisionTrackBuffer>();
         }
 
         public void OnUpdate(ref SystemState state)

@@ -11,6 +11,12 @@ namespace _src.Scripts.Colliders.Colliders
     public partial struct CollisionTrackCollectSystem : ISystem
     {
         [BurstCompile]
+        public void OnCreate(ref SystemState state)
+        {
+            state.RequireForUpdate<CollisionTrackBuffer>();
+        }
+        
+        [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             var collisionTrackBuffers = SystemAPI.GetSingletonBuffer<CollisionTrackBuffer>();

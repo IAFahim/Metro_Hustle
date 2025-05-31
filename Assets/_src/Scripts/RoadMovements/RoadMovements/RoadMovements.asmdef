@@ -23,7 +23,8 @@
         "InputControls.Data",
         "Colliders.Data",
         "ZBuildings.Data",
-        "Positioning.Data"
+        "Positioning.Data",
+        "Animations.Data"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

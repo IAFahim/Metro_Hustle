@@ -26,7 +26,8 @@ namespace _src.Scripts.Animations.Animations
                 var currentState = animatorComponent.ValueRO.CurrentState;
                 var oldState = animatorComponent.ValueRO.OldState;
                 if (currentState == oldState) return;
-                animatorComponent.ValueRW.OldState = animatorComponent.ValueRO.CurrentState;
+                
+                animatorComponent.ValueRW.OldState = currentState;
                 if (currentState < 0 && oldState > 0) animatorComponent.ValueRO.Ref.Value.SetBool(Mirror, true);
                 else if (currentState > 0 && oldState < 0) animatorComponent.ValueRO.Ref.Value.SetBool(Mirror, false);
                 animatorComponent.ValueRO.Ref.Value.SetInteger(StateHash, math.abs(currentState));

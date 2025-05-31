@@ -11,11 +11,13 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
+            state.RequireForUpdate<CollisionTrackBuffer>();
         }
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
+            SystemAPI.GetSingletonBuffer<CollisionTrackBuffer>();
             var worldRenderTriggerSideEffectJobEntity = new WorldRenderTriggerSideEffectJobEntity()
             {
                 CollisionTrackBuffer =

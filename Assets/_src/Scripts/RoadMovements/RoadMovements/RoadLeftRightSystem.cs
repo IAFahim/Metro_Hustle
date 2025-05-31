@@ -1,9 +1,6 @@
-﻿using _src.Scripts.Colliders.Colliders.Data;
-using _src.Scripts.ZBuildings.ZBuildings.Data;
-using BovineLabs.Core;
+﻿using _src.Scripts.ZBuildings.ZBuildings.Data;
 using Unity.Burst;
 using Unity.Entities;
-using Unity.Transforms;
 
 namespace _src.Scripts.RoadMovements.RoadMovements
 {
@@ -22,7 +19,6 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             new RoadLeftRightJobEntity()
             {
                 Road = roadComponent,
-                Log = SystemAPI.GetSingleton<BLLogger>()
             }.ScheduleParallel();
         }
 

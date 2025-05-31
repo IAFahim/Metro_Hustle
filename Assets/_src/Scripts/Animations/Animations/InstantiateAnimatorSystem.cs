@@ -1,4 +1,5 @@
 ﻿using _src.Scripts.Animations.Animations.Data;
+using _src.Scripts.Animations.Animations.Data.enums;
 using _src.Scripts.Prefabs.Prefabs.Data;
 using Unity.Entities;
 using Unity.Transforms;
@@ -25,7 +26,7 @@ namespace _src.Scripts.Animations.Animations
                 ecb.AddComponent(entity, new AnimatorComponent
                 {
                     Ref = gameObject.GetComponent<Animator>(),
-                    CurrentState = 0,
+                    CurrentState = (sbyte)EAnimation.Running,
                     OldState = 0
                 });
                 ecb.RemoveComponent<AnimatorAssetIndexComponent>(entity);
