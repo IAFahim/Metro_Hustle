@@ -12,6 +12,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
         public half sizeOffset = new(10);
         public GameObject[] leftPrefabs;
         public GameObject road;
+        public GameObject[] obsticals;
 
         private class BlockInfoComponentBaker : Baker<BlockBufferAuthoring>
         {
@@ -23,7 +24,6 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
                     PerBlockSize = authoring.perBlockSize,
                     AHeadCreate = authoring.ahead,
                     SideOffset = authoring.sizeOffset
-                    
                 });
                 var blockLeftBuffers = AddBuffer<BlockBuffer>(entity);
                 for (var i = 0; i < authoring.leftPrefabs.Length; i++)
@@ -34,6 +34,16 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
                         Left = GetEntity(obj, TransformUsageFlags.None),
                         Road = GetEntity(authoring.road, TransformUsageFlags.None),
                         Right = GetEntity(obj, TransformUsageFlags.None)
+                    });
+                }
+
+
+                var obsticalBuffers = AddBuffer<ObsticalBuffer>(entity);
+                foreach (var obstical in authoring.obsticals)
+                {
+                    obsticalBuffers.Add(new ObsticalBuffer()
+                    {
+                        Entity = GetEntity(obstical, TransformUsageFlags.None)
                     });
                 }
             }

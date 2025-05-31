@@ -991,6 +991,8 @@ MonoBehaviour:
   - {fileID: 9010530340446442158, guid: 6851b57b3b83b5f4580629925841c546, type: 3}
   - {fileID: 8393215825451264840, guid: 03b1a5edfeaff3147a5f6c3c1154e8a5, type: 3}
   road: {fileID: 3864285107160656504, guid: b46c82ac244f56a45a33022ca53ded4c, type: 3}
+  obsticals:
+  - {fileID: 1625318500984090841, guid: 3a3cb5aa2a07ded4196fa4467cbca9df, type: 3}
 --- !u!1 &691233598
 GameObject:
   m_ObjectHideFlags: 0
