@@ -512,6 +512,7 @@ GameObject:
   - component: {fileID: 2139941436}
   - component: {fileID: 2139941437}
   - component: {fileID: 2139941438}
+  - component: {fileID: 2139941439}
   m_Layer: 0
   m_Name: PowerUp
   m_TagString: Untagged
@@ -643,6 +644,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1839be73e81ae4c97132df4493e93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2139941439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139941431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5843df0182f41198fa3341f61770d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityEnable: 0
+  gravity:
+    value: 20352
+  velocity:
+    value: 0
+  heightIncrease:
+    value: 0
+  leftRightOffset:
+    value: 0
+  forwardBackOffset:
+    value: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
