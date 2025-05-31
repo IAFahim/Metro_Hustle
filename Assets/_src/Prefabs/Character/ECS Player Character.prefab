@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 4920821480623403197}
   - component: {fileID: 8194598639623020778}
   - component: {fileID: 5074436855783038245}
+  - component: {fileID: 7898423985893218698}
+  - component: {fileID: 8465261681957900469}
   m_Layer: 0
   m_Name: ECS Player Character
   m_TagString: Untagged
@@ -134,7 +136,7 @@ MonoBehaviour:
   StatDefaults:
   - Stat: {fileID: 11400000, guid: f2a5bb79645d8574b93210ebb308facd, type: 2}
     ModifyType: 0
-    Value: 1
+    Value: 0
   - Stat: {fileID: 11400000, guid: 594b6d0f6224dd0419b6b6924d2961f4, type: 2}
     ModifyType: 0
     Value: 1
@@ -169,7 +171,7 @@ MonoBehaviour:
   leftRightOffset:
     value: 0
   forwardBackOffset:
-    value: 0
+    value: 18688
 --- !u!114 &5074436855783038245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,3 +185,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roadFlagCurrentBit: 8
+--- !u!114 &7898423985893218698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485755097329585741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611623e5b3e248e8956870217dd79883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8465261681957900469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485755097329585741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcaf77325ebc4d02b6f5aaa8fc5909d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forwardPre:
+    value: 15360
+  upOffset:
+    value: 12902

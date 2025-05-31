@@ -27,7 +27,6 @@ namespace _src.Scripts.Healths.Healths.Data
             var healthBar = new ProgressBar
             {
                 name = "health-bar", lowValue = 0, highValue = 1,
-                title = "123434w5546",
                 style =
                 {
                     minWidth = 100,
@@ -35,15 +34,8 @@ namespace _src.Scripts.Healths.Healths.Data
                 },
                 dataSource = ViewModel
             };
+            healthLabel.SetBindingToUI(nameof(ProgressBar.title), nameof(HealthViewModel.CurrentHealth));
             healthBar.SetBindingToUI(nameof(ProgressBar.value), nameof(HealthViewModel.HealthNormalized));
-            
-            var healthTextValue = new Text
-            {
-                name = "health-text-value",
-                dataSource = ViewModel
-            };
-            healthTextValue.SetBindingToUI(nameof(healthTextValue.text), nameof(HealthViewModel.CurrentHealth));
-            healthBar.Add(healthTextValue);
             Add(healthBar);
         }
     }

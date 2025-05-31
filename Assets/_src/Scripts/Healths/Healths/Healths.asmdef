@@ -20,7 +20,8 @@
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
         "Unity.Transforms",
-        "BovineLabs.Stats.Data"
+        "BovineLabs.Stats.Data",
+        "StatsHelpers.Data"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

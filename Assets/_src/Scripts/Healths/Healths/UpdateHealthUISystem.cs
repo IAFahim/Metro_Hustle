@@ -1,4 +1,5 @@
 ﻿// using _src.Scripts.Healths.Healths.Data;
+// using _src.Scripts.StatsHelpers.StatsHelpers.Data;
 // using BovineLabs.Anchor;
 // using BovineLabs.Anchor.Binding;
 // using BovineLabs.Stats.Data;
@@ -36,20 +37,16 @@
 //         {
 //             ref var binding = ref _uiHelper.Binding;
 //
-//             foreach (var (intrinsicsBuffer, statsBuffer) in SystemAPI.Query<DynamicBuffer<Intrinsic>, DynamicBuffer<Stat>>()
-//                          .WithAny<IntrinsicConditionDirty>())
+//             foreach (var statsBuffer in SystemAPI.Query<DynamicBuffer<Stat>>())
 //             {
-//                 var intrinsicMap = intrinsicsBuffer.AsMap();
 //                 var statsMap = statsBuffer.AsMap();
-//                 var healthKey = new IntrinsicKey { Value = 0 };
-//                 var health = intrinsicMap.GetValue(healthKey);
-//                 binding.CurrentHealth = health;
 //                 var statsKey = new StatKey()
 //                 {
-//                     Value = 2
+//                     Value = (ushort)EStat.MaxHealth
 //                 };
-//                 var stats = statsMap.GetValue(statsKey);
-//                 binding.HealthNormalized = health / stats;
+//                 var currentHealth = statsMap.GetValue(statsKey);
+//                 binding.CurrentHealth = (int)currentHealth;
+//                 binding.HealthNormalized = currentHealth/2f;
 //             }
 //         }
 //     }
