@@ -32,7 +32,7 @@
       "dependencies": {
         "com.unity.entities": "1.4.0-exp.2"
       },
-      "hash": "e059a882a11c0ead1e5186b6fb3529642d95a9ad"
+      "hash": "16a34032d1840f7afc66d7ae6c49af0c4c18c3ef"
     },
     "com.bovinelabs.reaction": {
       "version": "https://gitlab.com/tertle/com.bovinelabs.reaction.git",
@@ -41,7 +41,7 @@
       "dependencies": {
         "com.bovinelabs.core": "1.4.3"
       },
-      "hash": "467d7ac84fb9d59d78d611a8a1bb6e6f44a8b2e5"
+      "hash": "00c2373330824d0f6d0c4db548544818c91b6bc0"
     },
     "com.bovinelabs.stats": {
       "version": "https://gitlab.com/tertle/com.bovinelabs.stats.git",
@@ -51,7 +51,7 @@
         "com.bovinelabs.core": "1.4.3",
         "com.bovinelabs.reaction": "0.5.0"
       },
-      "hash": "e17c4b00c208742c459e7e4174eddeb257fe5367"
+      "hash": "4860b820a51f31e7ae13a73751d9272d8579619c"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
@@ -94,6 +94,15 @@
         "com.unity.settings-manager": "2.0.1",
         "com.unity.nuget.newtonsoft-json": "3.2.1",
         "com.unity.modules.unitywebrequest": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.bindings.openimageio": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.collections": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -249,6 +258,17 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.recorder": {
+      "version": "5.1.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.timeline": "1.8.7",
+        "com.unity.collections": "1.2.4",
+        "com.unity.bindings.openimageio": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.render-pipelines.core": {
       "version": "17.1.0",
       "depth": 1,
@@ -366,6 +386,18 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.timeline": {
+      "version": "1.8.7",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.director": "1.0.0",
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.particlesystem": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ugui": {
       "version": "2.0.0",
       "depth": 1,
@@ -404,6 +436,15 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {}
+    },
+    "com.unity.modules.director": {
+      "version": "1.0.0",
+      "depth": 2,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.animation": "1.0.0"
+      }
     },
     "com.unity.modules.hierarchycore": {
       "version": "1.0.0",

@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: ObjectCategories
   m_EditorClassIdentifier: 
   description: 
-  keys: []
+  keys:
+  - name: Stats
+    value: 0
+    component: 0

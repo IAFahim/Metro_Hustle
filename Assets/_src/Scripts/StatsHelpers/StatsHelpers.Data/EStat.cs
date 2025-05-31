@@ -5,20 +5,21 @@ namespace _src.Scripts.StatsHelpers.StatsHelpers.Data
     public enum EStat : byte
     {
         MaxHealth = 0,
-        MoveSpeed = 1,
-        Strength = 2,
-        Money = 3,
-        MetroCoin = 4,
-        TrainFront = 5,
-        Fall = 6,
-        Slide = 7,
-        Jump = 8,
+        ForwardSpeed = 1,
+        SideWiseSpeed = 2,
+        Strength = 3,
+        Money = 4,
+        MetroCoin = 5,
+        TrainFront = 6,
+        Fall = 7,
+        Slide = 8,
+        Jump = 9,
     }
     
     public enum EIntrinsic : byte
     {
         MaxHealth = 0,
-        MoveSpeed = 1,
+        ForwardSpeed = 1,
         Strength = 2,
         Money = 3,
         MetroCoin = 4,
@@ -26,6 +27,7 @@ namespace _src.Scripts.StatsHelpers.StatsHelpers.Data
         Fall = 6,
         Slide = 7,
         Jump = 8,
+        SideWiseSpeed = 9,
     }
 
     public static class EStatExt
@@ -35,7 +37,8 @@ namespace _src.Scripts.StatsHelpers.StatsHelpers.Data
             return stat switch
             {
                 EStat.MaxHealth => "f2a5bb79645d8574b93210ebb308facd",
-                EStat.MoveSpeed => "594b6d0f6224dd0419b6b6924d2961f4",
+                EStat.ForwardSpeed => "594b6d0f6224dd0419b6b6924d2961f4",
+                EStat.SideWiseSpeed => "4fe3fd091f2416d499395dc2ad8bf0f2",
                 EStat.Strength => "52f42f8ea006b604eb7a14cb260e86e1",
                 EStat.Money => "1c491e6e7e1566e47b937a7392c8ec0e",
                 EStat.MetroCoin => "e2b2dd5551bc4b7459f9fa48b92202f5",
@@ -52,7 +55,7 @@ namespace _src.Scripts.StatsHelpers.StatsHelpers.Data
             return stat switch
             {
                 EStat.MaxHealth => "Max health",
-                EStat.MoveSpeed => "Move Speed",
+                EStat.ForwardSpeed => "Move Speed",
                 EStat.Strength => "Strength",
                 EStat.Money => "Money",
                 EStat.MetroCoin => "Metro Coin",

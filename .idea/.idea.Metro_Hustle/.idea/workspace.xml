@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +19,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;IAFahim&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/IAFahim/Metro_Hustle.git&quot;,
+    &quot;accountId&quot;: &quot;43cc6f27-7f4a-4767-ba33-05c3a8a8b972&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/36CC98ABD1355D18D27F5F10/BovineLabs.DynamicGenerator/BovineLabs.DynamicGenerator.DynamicGenerator/BovineLabs.Core.ObjectManagement.ObjectGroupMatcherExtensions.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/51/20af1570/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/6b/2f36f88e/NativeArray`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/7c/d1b0f644/JobsUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/b5/556e75ec/Matrix4x4.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/bc/346e33f4/Color.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/ce/17fa03ae/Shader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2ce8bd53d6c34e8aa27451ac5b09a98146ae00/1d/a8edf7ef/Enum.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/3b/c9f26450/Array.cs" root0="FORCE_HIGHLIGHTING" />
@@ -39,12 +53,16 @@
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/InputEnableTagAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/GravityEnableComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/LeftRightComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/Positioning.Data.asmdef" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/SpritesServiceBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Data/Actions/ActionIntrinsic.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Data/Builders/ActionIntrinsicBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections.PerformanceTests/QueueParallelPerformanceTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections/FixedString.gen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@1d12ba0090ff/Unity.Entities/SourceGenerators/Source~/Mock/Unity.Entities.Mock/EntitiesInternalMock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@1d12ba0090ff/Unity.Entities/SourceGenerators/Source~/Mock/Unity.Entities.Mock/EntitiesMock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@1d12ba0090ff/Unity.Entities/SourceGenerators/Source~/SystemGenerator.SystemAPI.QueryBuilder/SystemApiQueryBuilderSyntaxWalker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@8017b507cc74/Unity.Mathematics/math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@5c9fd4989cdd/Editor/TMP/PropertyDrawers/TMP_MarkToBaseAdjustmentRecordPropertyDrawer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@5c9fd4989cdd/Runtime/TMP/TMP_TextParsingUtilities.cs" root0="SKIP_HIGHLIGHTING" />
@@ -68,7 +86,7 @@
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;building&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -114,13 +132,15 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="24532">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="24532" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -204,6 +224,20 @@
       <workItem from="1748335710922" duration="6552000" />
       <workItem from="1748353528448" duration="2112000" />
       <workItem from="1748360088261" duration="4426000" />
+      <workItem from="1748409865407" duration="7112000" />
+      <workItem from="1748437698033" duration="4733000" />
+      <workItem from="1748448661618" duration="9732000" />
+      <workItem from="1748459631020" duration="1539000" />
+      <workItem from="1748474869918" duration="2554000" />
+      <workItem from="1748514518987" duration="2666000" />
+      <workItem from="1748518464530" duration="4268000" />
+      <workItem from="1748534203875" duration="7442000" />
+      <workItem from="1748548394144" duration="10815000" />
+      <workItem from="1748592257025" duration="6426000" />
+      <workItem from="1748600934377" duration="7891000" />
+      <workItem from="1748613790672" duration="1545000" />
+      <workItem from="1748618069557" duration="3988000" />
+      <workItem from="1748627362530" duration="11340000" />
     </task>
     <servers />
   </component>
@@ -254,69 +288,48 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionControlSystem.cs</url>
-          <line>75</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\InputControls\InputControls\MoveDirectionControlSystem.cs" containingFunctionPresentation="Method 'OnUpdate'">
-            <startOffsets>
-              <option value="2919" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3053" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Authoring/Actions/ActionIntrinsicAuthoring.cs</url>
           <line>36</line>
-          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.stats@e17c4b00c208\BovineLabs.Stats.Authoring\Actions\ActionIntrinsicAuthoring.cs" containingFunctionPresentation="Method 'Bake'">
-            <startOffsets>
-              <option value="1156" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1213" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.stats@e17c4b00c208\BovineLabs.Stats.Authoring\Actions\ActionIntrinsicAuthoring.cs" containingFunctionPresentation="Method 'Bake'" />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.stats@e17c4b00c208/BovineLabs.Stats.Authoring/IntrinsicSchemaObject.cs</url>
           <line>37</line>
-          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.stats@e17c4b00c208\BovineLabs.Stats.Authoring\IntrinsicSchemaObject.cs" containingFunctionPresentation="Property 'ConditionType'">
-            <startOffsets>
-              <option value="1066" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1103" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.stats@e17c4b00c208\BovineLabs.Stats.Authoring\IntrinsicSchemaObject.cs" containingFunctionPresentation="Property 'ConditionType'" />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Library/PackageCache/com.bovinelabs.reaction@467d7ac84fb9/BovineLabs.Reaction.Authoring/Conditions/ConditionAuthoring.cs</url>
           <line>82</line>
-          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.reaction@467d7ac84fb9\BovineLabs.Reaction.Authoring\Conditions\ConditionAuthoring.cs" containingFunctionPresentation="Method 'Bake'">
-            <startOffsets>
-              <option value="2705" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3516" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="G:\Metro_Hustle\Library\PackageCache\com.bovinelabs.reaction@467d7ac84fb9\BovineLabs.Reaction.Authoring\Conditions\ConditionAuthoring.cs" containingFunctionPresentation="Method 'Bake'" />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Animations/Animations/InstantiateAnimatorSystem.cs</url>
-          <line>21</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Animations\Animations\InstantiateAnimatorSystem.cs" containingFunctionPresentation="Method 'OnUpdate'">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions.Editor/WorldRenderEditorJobEntity.cs</url>
+          <line>39</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\ZCollisions\ZCollision.Editor\ZCollisionEditorJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="855" />
+              <option value="1453" />
             </startOffsets>
             <endOffsets>
-              <option value="1030" />
+              <option value="1500" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="31" />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs</url>
+          <line>31</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\TriggerSideEffects\TriggerSideEffects\WorldRenderTriggerSideEffectJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="1263" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1304" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
