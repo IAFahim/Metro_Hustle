@@ -31,16 +31,31 @@ namespace _src.Scripts.ZBuildings.ZBuildings
             {
                 var ecb = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>()
                     .CreateCommandBuffer(state.WorldUnmanaged);
-                var blockLeftBuffer = SystemAPI.GetSingletonBuffer<BlockLeftBuffer>();
-                var leftLength = blockLeftBuffer.Length;
-                
-                var nextInt = GlobalRandom.NextInt(leftLength);
-                var position = new float3(-sideOffset, 0, perBlockSize * createLogic.ValueRO.CreateCount);
-                var instantiate = ecb.Instantiate(blockLeftBuffer[nextInt].Entity);
-                ecb.SetComponent(instantiate, new LocalTransform()
+                var blockBuffers = SystemAPI.GetSingletonBuffer<BlockBuffer>();
+                var length = blockBuffers.Length;
+            
+                var nextInt = GlobalRandom.NextInt(length);
+                var zOffset = perBlockSize * createLogic.ValueRO.CreateCount;
+                var position = new float3(-sideOffset, 0, zOffset);
+                var blockBuffer = blockBuffers[nextInt];
+                ecb.SetComponent(ecb.Instantiate(blockBuffer.Left), new LocalTransform()
                 {
                     Position = position,
                     Rotation = quaternion.Euler(0, 180, 0),
+                    Scale = 1
+                });
+            
+                position = new float3(0, 0, zOffset);
+                ecb.SetComponent(ecb.Instantiate(blockBuffer.Road), new LocalToWorld()
+                {
+                    Value = float4x4.TRS(position, quaternion.identity, 1)
+                });
+                
+                position = new float3(sideOffset, 0, zOffset);
+                ecb.SetComponent(ecb.Instantiate(blockBuffer.Right), new LocalTransform()
+                {
+                    Position = position,
+                    Rotation = quaternion.identity,
                     Scale = 1
                 });
                 createLogic.ValueRW.Progress = (half)0;
@@ -49,27 +64,44 @@ namespace _src.Scripts.ZBuildings.ZBuildings
             else createLogic.ValueRW.Progress += (half)delta;
 
             if (createLogic.ValueRO.PreWarmed) return;
+            var leftBuffer = SystemAPI.GetSingletonBuffer<BlockBuffer>();
+            var ECB = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>()
+                .CreateCommandBuffer(state.WorldUnmanaged);
+
 
             for (float offset = cameraZ;
                  offset < createLogic.ValueRO.AHeadCreate;
                  offset += perBlockSize)
             {
-                var ecb = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>()
-                    .CreateCommandBuffer(state.WorldUnmanaged);
-                var blockLeftBuffer = SystemAPI.GetSingletonBuffer<BlockLeftBuffer>().AsNativeArray();
-                var leftLength = blockLeftBuffer.Length;
-                var nextInt = GlobalRandom.NextInt(leftLength);
-                var position = new float3(-sideOffset, 0, cameraZ + createLogic.ValueRO.CreateCount * perBlockSize);
-                var instantiate = ecb.Instantiate(blockLeftBuffer[nextInt].Entity);
-                ecb.SetComponent(instantiate, new LocalTransform()
+                var length = leftBuffer.Length;
+                var random = GlobalRandom.NextInt(length);
+                var z = cameraZ + createLogic.ValueRO.CreateCount * perBlockSize;
+                var position = new float3(-sideOffset, 0, z);
+                var blockBuffer = leftBuffer[random];
+                ECB.SetComponent(ECB.Instantiate(blockBuffer.Left), new LocalTransform()
                 {
                     Position = position,
                     Rotation = quaternion.Euler(0, 180, 0),
                     Scale = 1
                 });
-                createLogic.ValueRW.PreWarmed = true;
+
+                position = new float3(0, 0, perBlockSize * createLogic.ValueRO.CreateCount);
+                ECB.SetComponent(ECB.Instantiate(blockBuffer.Road), new LocalToWorld()
+                {
+                    Value = float4x4.TRS(position, quaternion.identity, 1)
+                });
+
+                position = new float3(sideOffset, 0, z);
+                ECB.SetComponent(ECB.Instantiate(blockBuffer.Right), new LocalTransform()
+                {
+                    Position = position,
+                    Rotation = quaternion.identity,
+                    Scale = 1
+                });
                 createLogic.ValueRW.CreateCount++;
             }
+
+            createLogic.ValueRW.PreWarmed = true;
         }
 
         [BurstCompile]

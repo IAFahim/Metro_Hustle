@@ -152,6 +152,7 @@ MonoBehaviour:
   x: -0.0015
   y: -0.0015
   z: -0.0015
+  range: 200
 --- !u!4 &144375162
 Transform:
   m_ObjectHideFlags: 0

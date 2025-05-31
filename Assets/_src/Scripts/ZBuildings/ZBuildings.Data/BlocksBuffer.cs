@@ -2,13 +2,10 @@
 
 namespace _src.Scripts.ZBuildings.ZBuildings.Data
 {
-    public struct BlockLeftBuffer : IBufferElementData
+    public struct BlockBuffer : IBufferElementData
     {
-        public Entity Entity;
-    }
-    
-    public struct BlockRightBuffer : IBufferElementData
-    {
-        public Entity Entity;
+        public Entity Left;
+        public Entity Road;
+        public Entity Right;
     }
 }

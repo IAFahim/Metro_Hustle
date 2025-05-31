@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/CurveWorlds/CurveWorlds.Data/CurveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/CurveWorlds/CurveWorlds.Data/CurveManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/BlockSizeComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/BlockSizeComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/BlockCreateLogicComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/BlockCreateLogicComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/BlocksBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/BlocksBuffer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings/BuildingPlaceSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings/BuildingPlaceSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -251,6 +253,7 @@
       <workItem from="1748683636193" duration="6428000" />
       <workItem from="1748691907794" duration="3358000" />
       <workItem from="1748699992099" duration="1447000" />
+      <workItem from="1748703893446" duration="1917000" />
     </task>
     <servers />
   </component>

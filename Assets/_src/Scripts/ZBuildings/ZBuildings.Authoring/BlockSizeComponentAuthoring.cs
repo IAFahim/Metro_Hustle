@@ -11,7 +11,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
         public half ahead = new(200);
         public half sizeOffset = new(10);
         public GameObject[] leftPrefabs;
-        public GameObject[] rightPrefab;
+        public GameObject road;
 
         private class BlockInfoComponentBaker : Baker<BlockBufferAuthoring>
         {
@@ -25,21 +25,15 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
                     SideOffset = authoring.sizeOffset
                     
                 });
-                var blockLeftBuffers = AddBuffer<BlockLeftBuffer>(entity);
-                foreach (var obj in authoring.leftPrefabs)
+                var blockLeftBuffers = AddBuffer<BlockBuffer>(entity);
+                for (var i = 0; i < authoring.leftPrefabs.Length; i++)
                 {
-                    blockLeftBuffers.Add(new BlockLeftBuffer
+                    var obj = authoring.leftPrefabs[i];
+                    blockLeftBuffers.Add(new BlockBuffer
                     {
-                        Entity = GetEntity(obj, TransformUsageFlags.None)
-                    });
-                }
-
-                var blockRightBuffers = AddBuffer<BlockRightBuffer>(entity);
-                foreach (var obj in authoring.rightPrefab)
-                {
-                    blockRightBuffers.Add(new BlockRightBuffer
-                    {
-                        Entity = GetEntity(obj, TransformUsageFlags.None)
+                        Left = GetEntity(obj, TransformUsageFlags.None),
+                        Road = GetEntity(authoring.road, TransformUsageFlags.None),
+                        Right = GetEntity(obj, TransformUsageFlags.None)
                     });
                 }
             }
