@@ -9,21 +9,22 @@ namespace _src.Scripts.CurveWorlds.CurveWorlds.Data
     {
         private static readonly int CurveVector = Shader.PropertyToID("_CurveVector");
 
-
-        [SerializeField] private Vector3 curveVector;
+        [Range(-.0015f, .0015f)] [SerializeField] private float x;
+        [Range(-.0015f, .0015f)] [SerializeField] private float y;
+        [Range(-.0015f, .0015f)] [SerializeField] private float z;
 
         public static void UpdateBendingAmount(Vector3 curve) => Shader.SetGlobalVector(CurveVector, curve);
 
         private void OnValidate()
         {
-            UpdateBendingAmount(curveVector);
+            UpdateBendingAmount(new Vector3(x,z,y));
         }
 
         private void OnEnable()
         {
             RenderPipelineManager.beginCameraRendering += OnBeginCameraRendering;
             RenderPipelineManager.endCameraRendering += OnEndCameraRendering;
-            UpdateBendingAmount(curveVector);
+            UpdateBendingAmount(new Vector3(x,z,y));
         }
 
 
@@ -37,8 +38,8 @@ namespace _src.Scripts.CurveWorlds.CurveWorlds.Data
         private static void OnBeginCameraRendering(ScriptableRenderContext ctx, Camera cam)
         {
             if (!Application.isPlaying) return;
-            cam.cullingMatrix = Matrix4x4.Ortho(-99, 99, -99, 99, 0.001f, 99) *
-                                cam.worldToCameraMatrix;
+            // cam.cullingMatrix = Matrix4x4.Ortho(-99, 99, -99, 99, 0.001f, 99) *
+            //                     cam.worldToCameraMatrix;
         }
 
         private static void OnEndCameraRendering(ScriptableRenderContext ctx, Camera cam) => cam.ResetCullingMatrix();

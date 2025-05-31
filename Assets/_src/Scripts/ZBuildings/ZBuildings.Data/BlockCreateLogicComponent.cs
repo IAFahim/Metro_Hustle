@@ -9,6 +9,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Data
         public half PerBlockSize;
         public half Progress;
         public half AHeadCreate;
+        public half SideOffset;
         public ushort CreateCount;
         public float PassedCameraZ;
     }

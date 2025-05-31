@@ -25,7 +25,9 @@ namespace _src.Scripts.ZBuildings.ZBuildings
             var delta = (cameraZ - createLogic.ValueRO.PassedCameraZ);
             createLogic.ValueRW.PassedCameraZ = cameraZ;
 
-            if (createLogic.ValueRO.Progress >= createLogic.ValueRO.PerBlockSize)
+            var perBlockSize = createLogic.ValueRO.PerBlockSize;
+            var sideOffset = createLogic.ValueRO.SideOffset;
+            if (createLogic.ValueRO.Progress >= perBlockSize)
             {
                 var ecb = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>()
                     .CreateCommandBuffer(state.WorldUnmanaged);
@@ -33,12 +35,13 @@ namespace _src.Scripts.ZBuildings.ZBuildings
                 var leftLength = blockLeftBuffer.Length;
                 
                 var nextInt = GlobalRandom.NextInt(leftLength);
-                var position = new float3(-4.5f, 0, createLogic.ValueRO.PerBlockSize * createLogic.ValueRO.CreateCount);
+                var position = new float3(-sideOffset, 0, perBlockSize * createLogic.ValueRO.CreateCount);
                 var instantiate = ecb.Instantiate(blockLeftBuffer[nextInt].Entity);
-                var float4X4 = float4x4.TRS(position, quaternion.identity, 1);
-                ecb.SetComponent(instantiate, new LocalToWorld()
+                ecb.SetComponent(instantiate, new LocalTransform()
                 {
-                    Value = float4X4
+                    Position = position,
+                    Rotation = quaternion.Euler(0, 180, 0),
+                    Scale = 1
                 });
                 createLogic.ValueRW.Progress = (half)0;
                 createLogic.ValueRW.CreateCount++;
@@ -49,19 +52,20 @@ namespace _src.Scripts.ZBuildings.ZBuildings
 
             for (float offset = cameraZ;
                  offset < createLogic.ValueRO.AHeadCreate;
-                 offset += createLogic.ValueRO.PerBlockSize)
+                 offset += perBlockSize)
             {
                 var ecb = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>()
                     .CreateCommandBuffer(state.WorldUnmanaged);
                 var blockLeftBuffer = SystemAPI.GetSingletonBuffer<BlockLeftBuffer>().AsNativeArray();
                 var leftLength = blockLeftBuffer.Length;
                 var nextInt = GlobalRandom.NextInt(leftLength);
-                var position = new float3(-4.5f, 0, cameraZ + offset);
+                var position = new float3(-sideOffset, 0, cameraZ + createLogic.ValueRO.CreateCount * perBlockSize);
                 var instantiate = ecb.Instantiate(blockLeftBuffer[nextInt].Entity);
-                var float4X4 = float4x4.TRS(position, quaternion.identity, 1);
-                ecb.SetComponent(instantiate, new LocalToWorld()
+                ecb.SetComponent(instantiate, new LocalTransform()
                 {
-                    Value = float4X4
+                    Position = position,
+                    Rotation = quaternion.Euler(0, 180, 0),
+                    Scale = 1
                 });
                 createLogic.ValueRW.PreWarmed = true;
                 createLogic.ValueRW.CreateCount++;

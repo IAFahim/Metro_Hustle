@@ -7,8 +7,9 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
 {
     public class BlockBufferAuthoring : MonoBehaviour
     {
-        public half sizeZ = new(10);
+        public half perBlockSize = new(10);
         public half ahead = new(200);
+        public half sizeOffset = new(10);
         public GameObject[] leftPrefabs;
         public GameObject[] rightPrefab;
 
@@ -19,8 +20,10 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
                 var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, new BlockCreateLogicComponent
                 {
-                    PerBlockSize = authoring.sizeZ,
+                    PerBlockSize = authoring.perBlockSize,
                     AHeadCreate = authoring.ahead,
+                    SideOffset = authoring.sizeOffset
+                    
                 });
                 var blockLeftBuffers = AddBuffer<BlockLeftBuffer>(entity);
                 foreach (var obj in authoring.leftPrefabs)

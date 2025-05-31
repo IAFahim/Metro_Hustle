@@ -219,7 +219,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254359163543494736, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297034926185220290, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
+      propertyPath: Lens.FarClipPlane
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7297034926185220290, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: Target.TrackingTarget
@@ -239,11 +243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8585106485500926562, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9952901
+      value: 0.9952903
       objectReference: {fileID: 0}
     - target: {fileID: 8585106485500926562, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.09694175
+      value: 0.09694015
       objectReference: {fileID: 0}
     - target: {fileID: 8585106485500926562, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_LocalRotation.y
@@ -255,7 +259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8585106485500926562, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 16.699
+      value: 11.126
       objectReference: {fileID: 0}
     - target: {fileID: 8585106485500926562, guid: 7c355cceabc325a4586161895ffe9fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -609,7 +613,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1064,9 +1068,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455783dbff3d49318828c3c693acbacc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeZ: 10
+  perBlockSize:
+    value: 18688
+  ahead:
+    value: 23728
+  sizeOffset:
+    value: 18688
   leftPrefabs:
-  - {fileID: 5064920490292341360, guid: 7e3c5b657262cb144b46940574c6d40f, type: 3}
+  - {fileID: 5669421507308461431, guid: 8004b0eec1a82e3498188d6dc0c8860a, type: 3}
+  - {fileID: 1951927346711952549, guid: 775dec7037a419844aa45c3828cf2541, type: 3}
+  - {fileID: 6510705297105038620, guid: 076890f1ac705b14583f4096c6950452, type: 3}
+  - {fileID: 9010530340446442158, guid: 6851b57b3b83b5f4580629925841c546, type: 3}
+  - {fileID: 8393215825451264840, guid: 03b1a5edfeaff3147a5f6c3c1154e8a5, type: 3}
   rightPrefab: []
 --- !u!1 &691233598
 GameObject:
