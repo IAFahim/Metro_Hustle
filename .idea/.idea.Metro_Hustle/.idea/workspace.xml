@@ -6,20 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength stat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength stat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/0 MaxHealth.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/0 MaxHealth.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Stats/Damage Stat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Prefabs/Stats/Damage Stat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/CinemachineCamera.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/GravityEnableComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/GravityEnableComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Data/TriggerSideEffectSpawnComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Data/TriggerSideEffectSpawnComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/BlockSizeComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/BlockSizeComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/BlockInfoComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/BlockCreateLogicComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/BlockInfoComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/BlockCreateLogicComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings/BuildingPlaceSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings/BuildingPlaceSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,10 +143,10 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="16352">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9540">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="16352" />
+      <option name="pid" value="9540" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -259,6 +252,7 @@
       <workItem from="1748673038906" duration="3196000" />
       <workItem from="1748680593869" duration="2669000" />
       <workItem from="1748683636193" duration="6428000" />
+      <workItem from="1748691907794" duration="3358000" />
     </task>
     <servers />
   </component>
@@ -338,32 +332,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs</url>
-          <line>62</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\TriggerSideEffects\TriggerSideEffects\WorldRenderTriggerSideEffectJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
-            <startOffsets>
-              <option value="2635" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2654" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs</url>
-          <line>55</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\TriggerSideEffects\TriggerSideEffects\WorldRenderTriggerSideEffectJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
-            <startOffsets>
-              <option value="2322" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2387" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="65" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />

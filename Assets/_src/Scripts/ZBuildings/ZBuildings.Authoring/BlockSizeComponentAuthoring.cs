@@ -1,12 +1,14 @@
 ﻿using _src.Scripts.ZBuildings.ZBuildings.Data;
 using Unity.Entities;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
 {
     public class BlockBufferAuthoring : MonoBehaviour
     {
-        public float sizeZ = 10;
+        public half sizeZ = new(10);
+        public half ahead = new(200);
         public GameObject[] leftPrefabs;
         public GameObject[] rightPrefab;
 
@@ -15,7 +17,11 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
             public override void Bake(BlockBufferAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.None);
-                AddComponent(entity, new BlockInfoComponent { PerBlockSize = authoring.sizeZ });
+                AddComponent(entity, new BlockCreateLogicComponent
+                {
+                    PerBlockSize = authoring.sizeZ,
+                    AHeadCreate = authoring.ahead,
+                });
                 var blockLeftBuffers = AddBuffer<BlockLeftBuffer>(entity);
                 foreach (var obj in authoring.leftPrefabs)
                 {
