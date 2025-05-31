@@ -9,11 +9,11 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Rendering;
 using Unity.Transforms;
-using UnityEngine;
 
 namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
 {
     [WithPresent(typeof(DestroyEntity))]
+    [BurstCompile]
     public partial struct WorldRenderTriggerSideEffectJobEntity : IJobEntity
     {
         [ReadOnly] public NativeArray<CollisionTrackBuffer>.ReadOnly CollisionTrackBuffer;
@@ -58,7 +58,6 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                     triggerSideEffectSpawn, TriggerType.EnableTop,
                     worldRender, targetLtw.Position, upOffset
                 );
-                Debug.Log("Hi");
 
                 if (isLegInTrigger)
                 {

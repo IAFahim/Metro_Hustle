@@ -2,7 +2,6 @@
 using _src.Scripts.InputControls.InputControls.Data.enums;
 using Unity.Burst;
 using Unity.Entities;
-using UnityEngine;
 
 namespace _src.Scripts.InputControls.InputControls
 {
@@ -17,7 +16,6 @@ namespace _src.Scripts.InputControls.InputControls
         {
             var directionFlag = directionInputEnableActiveComponent.Flag & DirectionEnableActiveFlag.EnableFlagsMask;
             directionInputEnableActiveComponent.Flag = RawInputCommand | directionFlag;
-            Debug.Log(directionInputEnableActiveComponent.Flag);
         }
     }
 }
