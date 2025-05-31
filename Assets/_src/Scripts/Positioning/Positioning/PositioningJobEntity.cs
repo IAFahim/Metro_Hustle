@@ -22,12 +22,13 @@ namespace _src.Scripts.Positioning.Positioning
 
             if (gravity.Enable)
             {
-                gravity.Velocity -= (half)(gravity.Gravity * DeltaTime);
+                gravity.Velocity -= (half)(gravity.Gravity * DeltaTime * gravity.GravityMul);
                 ltw.Value.c3.y += gravity.Velocity * DeltaTime;
             }
             else
             {
                 gravity.Velocity = new half(0);
+                gravity.GravityMul = 0;
             }
             
             if (leftRight.Direction == 0) return;

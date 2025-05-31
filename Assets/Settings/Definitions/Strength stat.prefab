@@ -111,7 +111,7 @@ MonoBehaviour:
   Active:
     trigger: 0
     cooldown: 0
-    duration: 1
+    duration: 0
     cancellable: 0
   Conditions:
     conditions: []
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats:
-  - StatSchema: {fileID: 11400000, guid: 52f42f8ea006b604eb7a14cb260e86e1, type: 2}
+  - StatSchema: {fileID: 11400000, guid: 594b6d0f6224dd0419b6b6924d2961f4, type: 2}
     ModifyType: 0
     ValueType: 0
     Fixed:

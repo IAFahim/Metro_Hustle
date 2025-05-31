@@ -6,15 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Definitions/Damage Stat Definition.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Definitions/Damage Stat Definition.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/ObjectManagementSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/ObjectManagementSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Character/ECS Player Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Prefabs/Character/ECS Player Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength stat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength stat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/0 MaxHealth.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/0 MaxHealth.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Stats/Damage Stat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Prefabs/Stats/Damage Stat.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths.Data/HealthView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths.Data/HealthView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/Healths.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/Healths.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/GravityEnableComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/GravityEnableComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadLeftRightJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Data/TriggerSideEffectSpawnComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Data/TriggerSideEffectSpawnComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +52,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/b5/556e75ec/Matrix4x4.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/bc/346e33f4/Color.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/ce/17fa03ae/Shader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0838100785954513a52e11f58a4195969e2c00/0f/f30cffb9/InitializeOnLoadMethodAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2ce8bd53d6c34e8aa27451ac5b09a98146ae00/1d/a8edf7ef/Enum.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/3b/c9f26450/Array.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/7f/81e807a1/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
@@ -66,7 +72,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/GravityEnableComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/LeftRightComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/Positioning.Data.asmdef" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/SpritesServiceBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/BlockSizeComponentAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Data/BlocksBuffer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections.PerformanceTests/QueueParallelPerformanceTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collections@7d10c7601ce0/Unity.Collections/FixedString.gen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@1d12ba0090ff/Unity.Entities/SourceGenerators/Source~/Mock/Unity.Entities.Mock/EntitiesInternalMock.cs" root0="SKIP_HIGHLIGHTING" />
@@ -141,13 +150,15 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="16352">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="16352" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -246,6 +257,8 @@
       <workItem from="1748618069557" duration="3988000" />
       <workItem from="1748627362530" duration="11430000" />
       <workItem from="1748673038906" duration="3196000" />
+      <workItem from="1748680593869" duration="2669000" />
+      <workItem from="1748683636193" duration="6428000" />
     </task>
     <servers />
   </component>
@@ -328,16 +341,29 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs</url>
-          <line>31</line>
+          <line>62</line>
           <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\TriggerSideEffects\TriggerSideEffects\WorldRenderTriggerSideEffectJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="1263" />
+              <option value="2635" />
             </startOffsets>
             <endOffsets>
-              <option value="1304" />
+              <option value="2654" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="44" />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs</url>
+          <line>55</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\TriggerSideEffects\TriggerSideEffects\WorldRenderTriggerSideEffectJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="2322" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2387" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />

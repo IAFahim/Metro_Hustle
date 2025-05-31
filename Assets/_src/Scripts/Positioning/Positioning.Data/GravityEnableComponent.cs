@@ -7,6 +7,7 @@ namespace _src.Scripts.Positioning.Positioning.Data
     {
         public bool Enable;
         public half Gravity;
+        public float GravityMul;
         public half Velocity;
     }
 }

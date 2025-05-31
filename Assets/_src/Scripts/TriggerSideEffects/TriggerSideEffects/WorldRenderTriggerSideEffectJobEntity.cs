@@ -9,10 +9,11 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Rendering;
 using Unity.Transforms;
+using UnityEngine;
 
 namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
 {
-    [BurstCompile]
+    [WithPresent(typeof(DestroyEntity))]
     public partial struct WorldRenderTriggerSideEffectJobEntity : IJobEntity
     {
         [ReadOnly] public NativeArray<CollisionTrackBuffer>.ReadOnly CollisionTrackBuffer;
@@ -24,7 +25,8 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
         private void Execute(
             [EntityIndexInQuery] int entityInQueryIndex, in Entity entity,
             in WorldRenderBounds worldRender,
-            in TriggerSideEffectSpawnComponent triggerSideEffectSpawn
+            in TriggerSideEffectSpawnComponent triggerSideEffectSpawn,
+            EnabledRefRW<DestroyEntity> destroyEntity
         )
         {
             foreach (var collisionTrackBuffer in CollisionTrackBuffer)
@@ -45,23 +47,32 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                 }
 
                 var isInsideTrigger = IsTrigger(
-                    triggerSideEffectSpawn, TriggerType.HasInsideAndEnable,
+                    triggerSideEffectSpawn, TriggerType.HasInside,
                     worldRender, targetLtw.Position, new float3(0, 0, 0)
                 );
+
                 if (!isInsideTrigger) return;
 
                 var upOffset = new float3(0, pointColliderComponent.UpOffset, 0);
                 bool isLegInTrigger = IsTrigger(
-                    triggerSideEffectSpawn, TriggerType.HasTopAndEnable,
+                    triggerSideEffectSpawn, TriggerType.EnableTop,
                     worldRender, targetLtw.Position, upOffset
                 );
+                Debug.Log("Hi");
+
                 if (isLegInTrigger)
                 {
-                    Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffectSpawn.OnTop);
-                    return;
+                    if (!triggerSideEffectSpawn.HasFlagFast(TriggerType.HasTop))
+                    {
+                        if (triggerSideEffectSpawn.HasFlagFast(TriggerType.DestroySelf)) destroyEntity.ValueRW = true;
+                        Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffectSpawn.OnInside);
+                        return;
+                    }
                 }
 
-                Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffectSpawn.OnInside);
+                if (!triggerSideEffectSpawn.HasFlagFast(TriggerType.HasInside)) return;
+                if (triggerSideEffectSpawn.HasFlagFast(TriggerType.DestroySelf)) destroyEntity.ValueRW = true;
+                Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffectSpawn.OnTop);
             }
         }
 
@@ -71,7 +82,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
             in WorldRenderBounds worldRender, float3 position, float3 offset
         )
         {
-            if ((triggerSideEffectSpawn.TriggerType & triggerType) != triggerType) return false;
+            if (!triggerSideEffectSpawn.HasFlagFast(triggerType)) return false;
             return worldRender.Value.Contains(position + offset);
         }
 

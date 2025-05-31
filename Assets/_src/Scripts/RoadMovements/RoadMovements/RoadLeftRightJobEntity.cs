@@ -30,6 +30,7 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             {
                 gravity.Enable = true;
                 gravity.Velocity = (half)10;
+                gravity.GravityMul = 1;
             }
 
             if (localToWorld.Value.c3.y < 0)
@@ -38,6 +39,13 @@ namespace _src.Scripts.RoadMovements.RoadMovements
                 gravity.Enable = false;
                 gravity.Velocity = (half)0;
             }
+            
+            bool downInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsDownEnabledAndActive);
+            if (downInputActive)
+            {
+                gravity.GravityMul = 2;
+            }
+            
 
             bool rightInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsRightEnabledAndActive);
             bool leftInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsLeftEnabledAndActive);
