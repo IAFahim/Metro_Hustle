@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 534332117877519578}
   - component: {fileID: 3970968626038640438}
   m_Layer: 0
-  m_Name: PowerUp
+  m_Name: PowerUp Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a47f8c3ffd341ed40ad24457ebc908ef, type: 2}
+  - {fileID: 2100000, guid: bbeff65d43cf8b14fbfccdd0067a34f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   triggerType: 228
   onForwardPre: {fileID: 0}
   onTop: {fileID: 0}
-  onInside: {fileID: 11400000, guid: 81ac34423d229ee4b8ed7c4b16db8e59, type: 2}
+  onInside: {fileID: 11400000, guid: 6e69083b22f9c704880b271bc0c99538, type: 2}
 --- !u!114 &3970968626038640438
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,9 +10,10 @@ using UnityEngine;
 
 namespace _src.Scripts.Healths.Healths.Data
 {
-    public partial class HealthViewModel : SystemObservableObject<HealthViewModel.Data>
+    public partial class GameModel : SystemObservableObject<GameModel.Data>
     {
         [CreateProperty(ReadOnly = true)] public int CurrentHealth => this.Value.CurrentHealth;
+        [CreateProperty(ReadOnly = true)] public int TotalDistance => this.Value.TotalDistance;
 
         [CreateProperty(ReadOnly = true)] public int MaxHealth => this.Value.MaxHealth;
 
@@ -24,6 +25,7 @@ namespace _src.Scripts.Healths.Healths.Data
         [Serializable]
         public partial struct Data: IComponentData
         {
+            [SystemProperty] [SerializeField] private int totalDistance;
             [SystemProperty] [SerializeField] private int currentHealth;
             [SystemProperty] [SerializeField] private int maxHealth;
             [SystemProperty] [SerializeField] private float healthNormalized;

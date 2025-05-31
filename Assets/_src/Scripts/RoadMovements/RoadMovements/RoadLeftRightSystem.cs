@@ -1,4 +1,5 @@
 ﻿using _src.Scripts.ZBuildings.ZBuildings.Data;
+using BovineLabs.Stats.Data;
 using Unity.Burst;
 using Unity.Entities;
 
@@ -19,6 +20,7 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             new RoadLeftRightJobEntity()
             {
                 Road = roadComponent,
+                StatsLookup = SystemAPI.GetBufferLookup<Stat>(true),
             }.ScheduleParallel();
         }
 

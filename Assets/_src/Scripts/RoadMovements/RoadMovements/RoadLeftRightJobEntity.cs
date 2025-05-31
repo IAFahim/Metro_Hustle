@@ -4,9 +4,12 @@ using _src.Scripts.InputControls.InputControls.Data;
 using _src.Scripts.InputControls.InputControls.Data.enums;
 using _src.Scripts.Positioning.Positioning.Data; // Assuming this is for LeftRightComponent
 using _src.Scripts.RoadMovements.RoadMovements.Data;
+using _src.Scripts.StatsHelpers.StatsHelpers.Data;
 using _src.Scripts.ZBuildings.ZBuildings.Data;
+using BovineLabs.Stats.Data;
 // using _src.Scripts.ZBuildings.ZBuildings.Data; // Not used in this specific job
 using Unity.Burst;
+using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
@@ -17,6 +20,7 @@ namespace _src.Scripts.RoadMovements.RoadMovements
     public partial struct RoadLeftRightJobEntity : IJobEntity
     {
         public RoadComponent Road;
+        [ReadOnly] public BufferLookup<Stat> StatsLookup;
 
         private void Execute(
             Entity entity,
@@ -25,8 +29,15 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             ref RoadMovementComponent movement,
             in DirectionInputEnableActiveComponent directionInput,
             ref AnimatorComponent animatorComponent,
-            ref LocalToWorld localToWorld)
+            ref LocalToWorld localToWorld,
+            ref ForwardBackComponent forwardBackComponent
+            )
         {
+            var statKey = new StatKey()
+            {
+                Value = (ushort)EStat.ForwardSpeed
+            };
+            forwardBackComponent.Offset = (half)StatsLookup[entity].AsMap().Get(statKey).Value;
             bool jumpInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsUpEnabledAndActive);
             if (jumpInputActive)
             {

@@ -8,10 +8,10 @@ using UnityEngine.UIElements;
 
 namespace BovineLabs.Sample.UI.Views.Game
 {
-    public class GameView : GameBaseView<HealthViewModel>
+    public class GameView : GameBaseView<GameModel>
     {
         public GameView(HealthView healthView, IUxmlService service)
-            : base(new HealthViewModel())
+            : base(new GameModel())
         {
             Add(healthView);
             // var templateContainer = service.GetAsset("Mobile").Instantiate();

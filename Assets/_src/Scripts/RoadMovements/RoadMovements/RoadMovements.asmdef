@@ -24,9 +24,10 @@
         "Colliders.Data",
         "ZBuildings.Data",
         "Positioning.Data",
-        "Animations.Data"
+        "Animations.Data",
+        "StatsHelpers.Data",
+        "BovineLabs.Stats.Data"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,

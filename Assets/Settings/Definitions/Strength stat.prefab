@@ -135,7 +135,7 @@ MonoBehaviour:
     ModifyType: 0
     ValueType: 0
     Fixed:
-      Value: 10
+      Value: 2
     Linear:
       ConditionSchemaObject: {fileID: 0}
       FromMin: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
       Min: 0
       Max: 0
     Target: 1
-  - StatSchema: {fileID: 11400000, guid: f2a5bb79645d8574b93210ebb308facd, type: 2}
+  - StatSchema: {fileID: 11400000, guid: be91739b0474f9e439524a6865182d30, type: 2}
     ModifyType: 0
     ValueType: 0
     Fixed:

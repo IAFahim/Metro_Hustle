@@ -60,7 +60,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings
                 position = new float3(0, 0, zOffset);
                 ecb.SetComponent(ecb.Instantiate(blockBuffer.Road), new LocalToWorld()
                 {
-                    Value = float4x4.TRS(position, quaternion.identity, 1)
+                    Value = float4x4.TRS(position, quaternion.identity, 2)
                 });
 
                 position = new float3(sideOffset, 0, zOffset);
@@ -110,7 +110,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings
                 position = new float3(0, 0, z);
                 ECB.SetComponent(ECB.Instantiate(blockBuffer.Road), new LocalToWorld()
                 {
-                    Value = float4x4.TRS(position, quaternion.identity, 1)
+                    Value = float4x4.TRS(position, quaternion.identity, 2)
                 });
 
                 position = new float3(sideOffset, 0, z);
