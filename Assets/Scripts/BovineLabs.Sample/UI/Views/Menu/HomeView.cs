@@ -2,6 +2,7 @@
 //     Copyright (c) BovineLabs. All rights reserved.
 // </copyright>
 
+using _src.Scripts.UXMLs.UXMLs.Data;
 using BovineLabs.Core;
 
 namespace BovineLabs.Sample.UI.Views.Menu
@@ -31,7 +32,7 @@ namespace BovineLabs.Sample.UI.Views.Menu
         private readonly ActionButton continueButton;
         private readonly ActionButton loadButton;
 
-        public HomeView(HomeViewModel viewModel)
+        public HomeView(HomeViewModel viewModel, IUxmlService uxmlService)
             : base(viewModel)
         {
             this.AddToClassList(UssHomeClassName);
@@ -47,14 +48,21 @@ namespace BovineLabs.Sample.UI.Views.Menu
             this.continueButton = new ActionButton(this.Continue) { label = ContinueText };
             this.continueButton.AddToClassList(ButtonClassName);
             left.Add(this.continueButton);
+            
+            var templateContainer = uxmlService.GetAsset("Mobile").Instantiate();
+            var visualElement = templateContainer.ElementAt(0);
+            Add(visualElement);
+            AddToClassList(".mobile__full");
+            var button = visualElement.Q<ActionButton>("PlayButton");
+            button.RegisterCallback<ClickEvent>((evt => Play()));
 
-            var playButton = new ActionButton(this.Play)
-            {
-                label = PlayText,
-            };
+            // var playButton = new ActionButton(this.Play)
+            // {
+            //     label = PlayText,
+            // };
 
-            playButton.AddToClassList(ButtonClassName);
-            left.Add(playButton);
+            // playButton.AddToClassList(ButtonClassName);
+            // left.Add(playButton);
 
             var optionButton = new ActionButton(this.Options) { label = OptionsText };
             optionButton.AddToClassList(ButtonClassName);

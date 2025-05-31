@@ -7,3 +7,19 @@
     justify-content: space-between;
     align-content: stretch;
 }
+
+.app_icon {
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    -unity-text-align: lower-center;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    border-top-left-radius: 64px;
+    border-top-right-radius: 64px;
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+}

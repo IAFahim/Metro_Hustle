@@ -1,5 +1,5 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="Misson" src="project://database/Assets/_src/UI%20Documents/Misson.uxml?fileID=9197481963319205126&amp;guid=79922edb93c146f498c12f613fab28ed&amp;type=3#Misson" />
+    <ui:Template name="Misson" src="project://database/Assets/_src/UI%20Documents/Mission.uxml?fileID=9197481963319205126&amp;guid=79922edb93c146f498c12f613fab28ed&amp;type=3#Mission" />
     <Style src="project://database/Assets/Settings/UI/Style/Game.uss?fileID=7433441132597879392&amp;guid=2daed4bc986bb33449b0723042d83055&amp;type=3#Game" />
     <ui:VisualElement class="mobile__full">
         <ui:VisualElement style="flex-grow: 1; flex-shrink: 1;" />
@@ -36,7 +36,7 @@
                         <ui:Instance template="Misson" name="Misson" />
                     </ui:VisualElement>
                     <ui:VisualElement name="App" style="flex-grow: 1; height: 220px; min-height: 220px; max-height: 220px; flex-direction: row; align-items: flex-end; justify-content: space-around; margin-bottom: 8px;">
-                        <ui:Button text="Delevery" name="PlayButton" style="width: 200px; height: 200px; min-width: 200px; min-height: 200px; max-width: 200px; max-height: 200px; -unity-text-align: lower-center; font-size: 28px; color: rgb(255, 255, 255); border-top-left-radius: 64px; border-top-right-radius: 64px; border-bottom-left-radius: 64px; border-bottom-right-radius: 64px;" />
+                        <Unity.AppUI.UI.ActionButton name="PlayButton" label="Play" class="app_icon" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>

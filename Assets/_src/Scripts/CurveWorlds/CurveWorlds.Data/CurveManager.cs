@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Rendering;
 
 namespace _src.Scripts.CurveWorlds.CurveWorlds.Data
@@ -17,7 +18,6 @@ namespace _src.Scripts.CurveWorlds.CurveWorlds.Data
         {
             UpdateBendingAmount(curveVector);
         }
-
 
         private void OnEnable()
         {
