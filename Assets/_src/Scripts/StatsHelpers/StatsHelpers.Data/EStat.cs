@@ -6,7 +6,7 @@ using System;
 
 namespace _src.Scripts.StatsHelpers.StatsHelpers.Data
 {
-    public enum EStat : ushort
+    public enum EStat : byte
     {
         None = 0, // From: 0 None, GUID Prefix: f2a5
         ForwardSpeed = 1, // From: 1 Forward Speed, GUID Prefix: 594b

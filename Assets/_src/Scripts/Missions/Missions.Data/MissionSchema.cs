@@ -1,14 +1,16 @@
 using System;
 using _src.Scripts.StatsHelpers.StatsHelpers.Data;
+using BovineLabs.Core.ObjectManagement;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
 namespace _src.Scripts.Missions.Missions.Data
 {
     [CreateAssetMenu(fileName = "MissionSchema", menuName = "Scriptable Objects/Mission/Schema")]
-    public class MissionSchema : ScriptableObject
+    public class MissionSchema : ScriptableObject, IUID
     {
-        [Header("Identification & Display")] public string guid4;
+        [Header("Identification & Display")] public int id;
         public string title = "New Mission";
         [TextArea(3, 5)] public string description;
         public AssetReferenceSprite spriteAsset;
@@ -18,35 +20,41 @@ namespace _src.Scripts.Missions.Missions.Data
         public DayTime dayTime;
 
         [Header("Objectives")] public Objective[] objectives;
-        [Header("Rewards")] public Item[] reward;
+
+        public int ID
+        {
+            get => id;
+            set => id = value;
+        }
     }
 
 
     [Serializable]
-    public class Objective
+    public struct Objective
     {
+        public bool optional;
         public string name;
         public AssetReferenceSprite spriteAsset;
-        public bool optional;
-        public Goal goal;
         public Item[] reward;
+        public Goal goal;
     }
 
     [Serializable]
-    public class Item
+    public struct Item
     {
-        public string name;
         public EIntrinsic intrinsic;
         public ushort count;
     }
 
     [Serializable]
-    public class Goal
+    public struct Goal
     {
         public EIntrinsic intrinsic;
+        public ObjectiveComparison comparison;
         public ushort defaultValue;
         public ushort min;
         public ushort max;
+        public half timeLimit; 
     }
 
     public enum DayTime : byte
@@ -57,7 +65,7 @@ namespace _src.Scripts.Missions.Missions.Data
         Night = 3,
         LateNight = 4,
     }
-    
+
     public enum ParcelType : byte
     {
         Standard,
@@ -65,8 +73,8 @@ namespace _src.Scripts.Missions.Missions.Data
         Heavy, // Might inflict a temporary EStat.BaseMoveSpeed reduction
         Fragile // Mission fails on any collision
     }
-    
-    public enum ObjectiveType: byte
+
+    public enum ObjectiveType : byte
     {
         DeliverPackage, // Implicitly the main goal: reach end station
         CollectRunIntrinsic, // e.g., EIntrinsic.TrackCashCollectedThisRun >= X
@@ -79,7 +87,7 @@ namespace _src.Scripts.Missions.Missions.Data
         // Rival related objectives might need more specific handling or sub-types
     }
 
-    public enum ObjectiveComparison: byte
+    public enum ObjectiveComparison : byte
     {
         GreaterThanOrEqual,
         LessThanOrEqual,

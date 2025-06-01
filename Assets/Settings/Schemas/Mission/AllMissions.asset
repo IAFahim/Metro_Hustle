@@ -12,5 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ebe9fb3ecc4ae583dd1760107c573f, type: 3}
   m_Name: AllMissions
   m_EditorClassIdentifier: 
-  Missions:
-  - {fileID: 11400000, guid: 992b00a9730aa6848ab6c7ffde5c14c6, type: 2}
+  missionSchema:
+  - m_AssetGUID: 7dd1ab4a22aa105499422475ff026828
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: ba671b2949b9caa408edc141dd13fdbd
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0

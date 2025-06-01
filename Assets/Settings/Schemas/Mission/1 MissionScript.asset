@@ -12,27 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3a0a78899fb79443a88f48e69e706b9, type: 3}
   m_Name: 1 MissionScript
   m_EditorClassIdentifier: 
-  number: 0
+  id: 1
   title: First Track Run
+  description: 
+  spriteAsset:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  startStation: 
+  endStation: 
+  dayTime: 0
   objectives:
   - name: 
-    intrinsicKey:
-      Value: 0
-  startingStation:
-    name: 
-    shortName: 
-    splineIndex: 0
-    curveIndex: 0
-    curveDistance:
-      value: 0
-  endEndStation:
-    name: 
-    shortName: 
-    splineIndex: 0
-    curveIndex: 0
-    curveDistance:
-      value: 0
-  dayTime: 0
-  distance: 0
-  items: []
+    spriteAsset:
+      m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    optional: 0
+    goal:
+      intrinsic: 0
+      defaultValue: 0
+      min: 0
+      max: 0
+    reward: []
   reward: []

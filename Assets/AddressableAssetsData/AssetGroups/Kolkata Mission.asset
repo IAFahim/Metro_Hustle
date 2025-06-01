@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Kolkata Mission
+  m_EditorClassIdentifier: 
+  m_GroupName: Kolkata Mission
+  m_GUID: 21b96ff53c4f5184cb34f956f7e9f6d2
+  m_SerializeEntries:
+  - m_GUID: 7dd1ab4a22aa105499422475ff026828
+    m_Address: Assets/Settings/Schemas/Mission/0 MissionScript.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba671b2949b9caa408edc141dd13fdbd
+    m_Address: Assets/Settings/Schemas/Mission/1 MissionScript.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a27b57eea9180c048b50a2f8830b7de7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4500a1ccb7339e442a9fe64ec6a7ab19, type: 2}
+    - {fileID: 11400000, guid: 00a2c26e35bcb1741b4c638b3494f211, type: 2}

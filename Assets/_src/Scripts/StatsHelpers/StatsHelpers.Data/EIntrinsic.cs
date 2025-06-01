@@ -6,7 +6,7 @@ using System;
 
 namespace _src.Scripts.StatsHelpers.StatsHelpers.Data
 {
-    public enum EIntrinsic : int
+    public enum EIntrinsic : byte
     {
         NullIntrinsic = 0, // From: Null Intrinsic, GUID Prefix: 5852
         MetroCoin = 1, // From: 1 Metro Coin, GUID Prefix: 4da0

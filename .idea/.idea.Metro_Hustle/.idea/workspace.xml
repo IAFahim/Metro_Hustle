@@ -5,38 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/EnumBuilderForStatsIntrinsic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Definitions/Damage Stat Definition.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Definitions/Damage Stat Definition.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength Stat Definition.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength Stat Definition.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength stat.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength stat.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Control/MouseAndKeyboard.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Control/MouseAndKeyboard.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/0 None.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/0 None.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/1 ForwardSpeed.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/1 ForwardSpeed.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/10 Health.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/10 Health.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/11 Max Health.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/11 Max Health.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/2 SideWiseSpeed.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/2 SideWiseSpeed.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/3 Strength.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/3 Strength.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/4 Money.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/4 Money.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/5 MetroCoin.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/5 MetroCoin.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/6 Train Front.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/6 Train Front.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/7 Fall.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/7 Fall.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/8 Slide.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/8 Slide.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/9 Jump.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/9 Jump.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetGroupSortSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetGroupSortSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/AllMissions.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/AllMissions.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission_.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission_.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/Missions.Data.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/Missions.Data.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/FkingAI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/FkingAI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/EnumBuilderForStatsIntrinsic.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/StatsHelpers.Authoring.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/StatsHelpers.Authoring.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionsSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionsSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EIntrinsic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EIntrinsic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/1 MissionScript.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/1 MissionScript.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +46,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/6AF4001D6E12818327907998/BovineLabs.SystemPropertyGenerator/BovineLabs.SystemPropertyGenerator.SystemPropertyGenerator/_src.Scripts.Healths.Healths.Data.Data.CurrentHealth.g.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/6AF4001D6E12818327907998/BovineLabs.SystemPropertyGenerator/BovineLabs.SystemPropertyGenerator.SystemPropertyGenerator/_src.Scripts.Healths.Healths.Data.Data.TotalDistance.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/40/24006afe/Texture3D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/51/20af1570/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/6b/2f36f88e/NativeArray`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0022d4fb3cd44d45a62e51c39f257e7c1ea600/7c/d1b0f644/JobsUtility.cs" root0="FORCE_HIGHLIGHTING" />
@@ -279,7 +262,7 @@
       <workItem from="1748713714321" duration="1000" />
       <workItem from="1748714003154" duration="938000" />
       <workItem from="1748786482709" duration="1647000" />
-      <workItem from="1748790099705" duration="14499000" />
+      <workItem from="1748790099705" duration="18415000" />
     </task>
     <servers />
   </component>

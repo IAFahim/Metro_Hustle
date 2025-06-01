@@ -16,7 +16,8 @@
         "Unity.Physics",
         "Unity.Transforms",
         "BovineLabs.Stats.Data",
-        "StatsHelpers.Data"
+        "StatsHelpers.Data",
+        "Unity.Addressables"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
