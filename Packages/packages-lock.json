@@ -26,13 +26,13 @@
       "hash": "42f7174d6b80312cc85db321ffe1ca1fe7faba18"
     },
     "com.bovinelabs.core": {
-      "version": "https://github.com/IAFahim/com.bovinelabs.core.git",
+      "version": "https://gitlab.com/tertle/com.bovinelabs.core.git#1.4.3",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.entities": "1.4.0-exp.2"
       },
-      "hash": "6ad266fc63bf9fdf913297eeacb3871bf4a58325"
+      "hash": "a940c334341b71ea442fc045c8279338802fe182"
     },
     "com.bovinelabs.reaction": {
       "version": "https://gitlab.com/tertle/com.bovinelabs.reaction.git",

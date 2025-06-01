@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.bovinelabs.anchor": "https://gitlab.com/tertle/com.bovinelabs.anchor.git",
-    "com.bovinelabs.core": "https://github.com/IAFahim/com.bovinelabs.core.git",
+    "com.bovinelabs.core": "https://gitlab.com/tertle/com.bovinelabs.core.git#1.4.3",
     "com.bovinelabs.reaction": "https://gitlab.com/tertle/com.bovinelabs.reaction.git",
     "com.bovinelabs.stats": "https://gitlab.com/tertle/com.bovinelabs.stats.git",
     "com.unity.2d.sprite": "1.0.0",
