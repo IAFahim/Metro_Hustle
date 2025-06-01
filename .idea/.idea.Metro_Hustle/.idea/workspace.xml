@@ -5,25 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/EnumBuilderForStatsIntrinsic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/0 None.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/0 None.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/1 ForwardSpeed.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/1 ForwardSpeed.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Definitions/Damage Stat Definition.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Definitions/Damage Stat Definition.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength Stat Definition.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength Stat Definition.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength stat.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Definitions/Strength stat.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Control/MouseAndKeyboard.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Control/MouseAndKeyboard.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/0 None.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/0 None.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/1 ForwardSpeed.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/1 ForwardSpeed.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/10 Health.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/10 Health.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/11 Max Health.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/11 Max Health.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/2 SideWiseSpeed.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/2 SideWiseSpeed.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/2 SideWiseSpeed.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/2 SideWiseSpeed.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/3 Strength.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/3 Strength.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/4 Money.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/4 Money.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/5 MetroCoin.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/5 MetroCoin.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/5 MetroCoin.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/5 MetroCoin.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/6 Train Front.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/6 Train Front.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/7 Fall.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/7 Fall.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/8 Slide.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/8 Slide.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/9 Jump.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/9 Jump.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/ObjectManagementSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/ObjectManagementSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/Missions.Data.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/Missions.Data.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/FkingAI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/FkingAI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/EnumBuilderForStatsIntrinsic.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/StatsHelpers.Authoring.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/StatsHelpers.Authoring.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +85,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/InputEnableTagAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/GravityEnableComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/LeftRightComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -153,15 +166,13 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="16152">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="16152" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -268,6 +279,7 @@
       <workItem from="1748713714321" duration="1000" />
       <workItem from="1748714003154" duration="938000" />
       <workItem from="1748786482709" duration="1647000" />
+      <workItem from="1748790099705" duration="14499000" />
     </task>
     <servers />
   </component>
