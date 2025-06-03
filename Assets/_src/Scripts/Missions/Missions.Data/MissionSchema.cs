@@ -1,6 +1,7 @@
 using System;
 using _src.Scripts.StatsHelpers.StatsHelpers.Data;
 using BovineLabs.Core.ObjectManagement;
+using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -40,20 +41,20 @@ namespace _src.Scripts.Missions.Missions.Data
     }
 
     [Serializable]
-    public struct Item
+    public struct Item : IBufferElementData
     {
         public EIntrinsic intrinsic;
         public ushort count;
     }
 
     [Serializable]
-    public struct Goal
+    public struct Goal : IBufferElementData
     {
         public EIntrinsic intrinsic;
         public ObjectiveComparison comparison;
-        public ushort defaultValue;
-        public ushort min;
-        public ushort max;
+        public half defaultValue;
+        public half min;
+        public half max;
         public half timeLimit; 
     }
 
@@ -64,27 +65,6 @@ namespace _src.Scripts.Missions.Missions.Data
         Evening = 2,
         Night = 3,
         LateNight = 4,
-    }
-
-    public enum ParcelType : byte
-    {
-        Standard,
-        Lightweight, // Might grant a temporary EStat.BaseMoveSpeed boost
-        Heavy, // Might inflict a temporary EStat.BaseMoveSpeed reduction
-        Fragile // Mission fails on any collision
-    }
-
-    public enum ObjectiveType : byte
-    {
-        DeliverPackage, // Implicitly the main goal: reach end station
-        CollectRunIntrinsic, // e.g., EIntrinsic.TrackCashCollectedThisRun >= X
-        ReachRunDistance, // e.g., EIntrinsic.CurrentRunDistance >= X
-        PerformActionCount, // e.g., EIntrinsic.JumpsPerformedThisRun >= X
-        AvoidCollisions, // e.g., EIntrinsic.ObstaclesCollidedThisRun == 0
-        StayBelowCollisionCount, // e.g., EIntrinsic.ObstaclesCollidedThisRun <= X
-        BeatRunTimer, // e.g., EIntrinsic.RunTimer <= X
-        MaintainParkourFlow, // e.g., EIntrinsic.ParkourFlowPointsThisRun >= X
-        // Rival related objectives might need more specific handling or sub-types
     }
 
     public enum ObjectiveComparison : byte

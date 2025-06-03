@@ -10,23 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3a0a78899fb79443a88f48e69e706b9, type: 3}
-  m_Name: 0 MissionScript
+  m_Name: kol_6 Handle_With_Care Mission
   m_EditorClassIdentifier: 
-  id: 0
-  title: First Track Run
-  description: 
+  id: 6
+  title: Handle With Care
+  description: Fragile antique data crystal. One bump, it's dust. Perfect run required,
+    NO collisions.
   spriteAsset:
     m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  startStation: Dakshineswar
-  endStation: Baranagar
+  startStation: Shyambazar
+  endStation: Shobhabazar Sutanuti
   dayTime: 1
   objectives:
   - optional: 0
-    name: Bootleg Music Chip
+    name: Deliver Crystal Undamaged (Fragile)
     spriteAsset:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -35,12 +36,15 @@ MonoBehaviour:
       m_EditorAssetChanged: 0
     reward:
     - intrinsic: 13
-      count: 50
+      count: 150
     goal:
-      intrinsic: 4
-      comparison: 1
-      defaultValue: 0
-      min: 0
-      max: 700
+      intrinsic: 10
+      comparison: 2
+      defaultValue:
+        value: 0
+      min:
+        value: 0
+      max:
+        value: 0
       timeLimit:
-        value: 48128
+        value: 0

@@ -7,9 +7,10 @@ using UnityEngine.AddressableAssets;
 namespace _src.Scripts.Missions.Missions.Data
 {
     [CreateAssetMenu(fileName = "AllMissions", menuName = "Scriptable Objects/Mission/Settings", order = 1)]
-    public class MissionsSettings : ScriptableObject, ISettings
+    public class MissionsSettings : ScriptableObject
     {
         public List<AssetReferenceMissionSchema> missionSchema = new();
+        
     }
     
     [Serializable]

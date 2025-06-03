@@ -10,33 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3a0a78899fb79443a88f48e69e706b9, type: 3}
-  m_Name: 1 MissionScript
+  m_Name: kol_2 Coffee_Kickstart Mission
   m_EditorClassIdentifier: 
-  id: 1
-  title: First Track Run
-  description: 
+  id: 2
+  title: Coffee Kickstart
+  description: Deliver these rare coffee beans fast! Use ramps to jump over low barriers.
   spriteAsset:
     m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  startStation: 
-  endStation: 
-  dayTime: 0
+  startStation: Baranagar
+  endStation: Noapara
+  dayTime: 1
   objectives:
-  - name: 
+  - optional: 0
+    name: Deliver Coffee Beans on Time
     spriteAsset:
       m_AssetGUID: 
       m_SubObjectName: 
       m_SubObjectType: 
       m_SubObjectGUID: 
       m_EditorAssetChanged: 0
-    optional: 0
+    reward:
+    - intrinsic: 13
+      count: 60
     goal:
-      intrinsic: 0
-      defaultValue: 0
-      min: 0
-      max: 0
-    reward: []
-  reward: []
+      intrinsic: 11
+      comparison: 1
+      defaultValue:
+        value: 0
+      min:
+        value: 0
+      max:
+        value: 0
+      timeLimit:
+        value: 21600

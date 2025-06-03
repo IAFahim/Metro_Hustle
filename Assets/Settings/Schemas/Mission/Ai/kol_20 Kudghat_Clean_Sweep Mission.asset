@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a0a78899fb79443a88f48e69e706b9, type: 3}
+  m_Name: kol_20 Kudghat_Clean_Sweep Mission
+  m_EditorClassIdentifier: 
+  id: 20
+  title: Kudghat Clean Sweep
+  description: 'Critical delivery: whistleblower''s drive. Security is on HIGH alert
+    after that last stunt. One hit, you''re busted. ZERO TOLERANCE.'
+  spriteAsset:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  startStation: Mahanayak Uttam Kumar
+  endStation: Netaji
+  dayTime: 1
+  objectives:
+  - optional: 0
+    name: 'Zero Tolerance: Flawless Run'
+    spriteAsset:
+      m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    reward:
+    - intrinsic: 13
+      count: 250
+    goal:
+      intrinsic: 10
+      comparison: 2
+      defaultValue:
+        value: 0
+      min:
+        value: 0
+      max:
+        value: 0
+      timeLimit:
+        value: 0
+  - optional: 0
+    name: Meet Critical Deadline
+    spriteAsset:
+      m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    reward:
+    - intrinsic: 2
+      count: 50
+    goal:
+      intrinsic: 11
+      comparison: 1
+      defaultValue:
+        value: 21760
+      min:
+        value: 0
+      max:
+        value: 0
+      timeLimit:
+        value: 0
