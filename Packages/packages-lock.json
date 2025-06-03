@@ -86,7 +86,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.asset-manager-for-unity": {
-      "version": "1.4.0",
+      "version": "1.5.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -357,7 +357,7 @@
     },
     "com.unity.splines": {
       "version": "2.8.1",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
