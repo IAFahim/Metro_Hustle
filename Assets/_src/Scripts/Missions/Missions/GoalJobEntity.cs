@@ -7,15 +7,13 @@ namespace _src.Scripts.Missions.Missions
 {
     public partial struct GoalJobEntity : IJobEntity
     {
-        public float DeltaTime;
-        [ReadOnly] public BufferLookup<Intrinsic> IntrinsicLookup;
-        [ReadOnly] public BufferLookup<GoalBuffer> GoalLookup;
-
-        private void Execute(Entity entity, ref GoalCompleteComponent complete)
+        private void Execute(
+            ref GoalCompleteComponent complete,
+            in DynamicBuffer<GoalBuffer> goals,
+            in DynamicBuffer<Intrinsic> intrinsicBuffer
+        )
         {
-            if (!IntrinsicLookup.TryGetBuffer(entity, out var dynamicBuffer)) return;
-            if (!GoalLookup.TryGetBuffer(entity, out var goals)) return;
-            var intrinsic = dynamicBuffer.AsMap();
+            var intrinsic = intrinsicBuffer.AsMap();
             for (var i = 0; i < goals.Length; i++)
             {
                 var goal = goals[i];

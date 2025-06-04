@@ -34,17 +34,6 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                 var target = collisionTrackBuffer.Entity;
                 var targetLtw = LocalToWorldLookup[target];
                 var pointColliderComponent = PointColliderLookup[target];
-                var forwardOffset = new float3(0, pointColliderComponent.ForwardPre, 0);
-
-                bool isForwardTrigger = IsTrigger(
-                    triggerSideEffectSpawn, TriggerType.HasForwardAndEnable,
-                    worldRender, targetLtw.Position, forwardOffset
-                );
-                if (isForwardTrigger)
-                {
-                    Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffectSpawn.OnForwardPre);
-                    return;
-                }
 
                 var isInsideTrigger = IsTrigger(
                     triggerSideEffectSpawn, TriggerType.HasInside,
@@ -69,9 +58,21 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                     }
                 }
 
-                if (!triggerSideEffectSpawn.HasFlagFast(TriggerType.HasInside)) return;
-                if (triggerSideEffectSpawn.HasFlagFast(TriggerType.DestroySelf)) destroyEntity.ValueRW = true;
-                Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffectSpawn.OnTop);
+                if (triggerSideEffectSpawn.HasFlagFast(TriggerType.HasInside))
+                {
+                    if (triggerSideEffectSpawn.HasFlagFast(TriggerType.DestroySelf)) destroyEntity.ValueRW = true;
+                    Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffectSpawn.OnTop);
+                }
+
+                var forwardOffset = new float3(0, pointColliderComponent.ForwardPre, 0);
+                bool isForwardTrigger = IsTrigger(
+                    triggerSideEffectSpawn, TriggerType.HasForwardAndEnable,
+                    worldRender, targetLtw.Position, forwardOffset
+                );
+                if (isForwardTrigger)
+                {
+                    Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffectSpawn.OnForwardPre);
+                }
             }
         }
 

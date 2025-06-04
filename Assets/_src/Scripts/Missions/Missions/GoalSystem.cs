@@ -7,27 +7,17 @@ namespace _src.Scripts.Missions.Missions
 {
     public partial struct GoalSystem : ISystem
     {
-        private BufferLookup<Intrinsic> _intrinsicLookup;
-        private BufferLookup<GoalBuffer> _goalLookup;
-        
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
-            _intrinsicLookup = state.GetBufferLookup<Intrinsic>(true);
-            _goalLookup = state.GetBufferLookup<GoalBuffer>(true);
         }
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             var isActive = MissionsSettings.IsActive;
-            _intrinsicLookup.Update(ref state);
-            _goalLookup.Update(ref state);
             new GoalJobEntity()
             {
-                DeltaTime = SystemAPI.Time.DeltaTime,
-                IntrinsicLookup = _intrinsicLookup,
-                GoalLookup = _goalLookup
             }.ScheduleParallel();
         }
 

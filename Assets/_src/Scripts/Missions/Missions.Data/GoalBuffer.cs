@@ -1,7 +1,6 @@
 ﻿using System;
 using _src.Scripts.StatsHelpers.StatsHelpers.Data;
 using Unity.Entities;
-using UnityEngine.Serialization;
 
 namespace _src.Scripts.Missions.Missions.Data
 {
