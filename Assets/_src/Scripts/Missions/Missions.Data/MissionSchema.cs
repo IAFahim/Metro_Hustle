@@ -33,7 +33,7 @@ namespace _src.Scripts.Missions.Missions.Data
 
 
     [Serializable]
-    public class Objective: ScriptableObject
+    public struct Objective
     {
         public bool optional;
         [TextArea(1, 5)] public string description;

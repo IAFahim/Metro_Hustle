@@ -2658,23 +2658,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AddStats: 1
-  StatDefaults:
-  - Stat: {fileID: 11400000, guid: be91739b0474f9e439524a6865182d30, type: 2}
-    ModifyType: 0
-    Value: 1
-  - Stat: {fileID: 11400000, guid: 594b6d0f6224dd0419b6b6924d2961f4, type: 2}
-    ModifyType: 0
-    Value: 10
-  - Stat: {fileID: 11400000, guid: 4fe3fd091f2416d499395dc2ad8bf0f2, type: 2}
-    ModifyType: 0
-    Value: 1
-  StatDefaultGroups: []
+  StatDefaults: []
+  StatDefaultGroups:
+  - {fileID: 11400000, guid: 46ec02360d20385409c0494a695f587f, type: 2}
   StatsCanBeModified: 1
   AddIntrinsics: 1
-  IntrinsicDefaults:
-  - Intrinsic: {fileID: 11400000, guid: 4da0bd7c711d04041ae0dbb6838222c5, type: 2}
-    Value: 1
-  IntrinsicDefaultGroups: []
+  IntrinsicDefaults: []
+  IntrinsicDefaultGroups:
+  - {fileID: 11400000, guid: cc56f09deffb31248b8549335cf22703, type: 2}
   Initialize:
     CopyFrom: 3
 --- !u!114 &1609925661392715631
@@ -2933,6 +2924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goals:
   - intrinsic: 1
+    comparison: 0
     goal: 1
   goalCompleteBit: 0
 --- !u!1660057539 &9223372036854775807

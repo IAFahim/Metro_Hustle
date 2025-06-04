@@ -5,36 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/1 Metro Coin.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/1 Metro Coin.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/10 Current Threat.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/10 Current Threat.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/11 Run Timer.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/11 Run Timer.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/12 Parkour Count.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/12 Parkour Count.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/13 Money.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/13 Money.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/2 XP.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/2 XP.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/3 Level.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/3 Level.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/5 Missions Complete.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/5 Missions Complete.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/World.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/World.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/GoalBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/GoalBuffer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats Group/Train StatsGroup.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats Group/Train StatsGroup.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/10 Health.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/10 Health.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/11 Max Health.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/11 Max Health.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/4 Money.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/4 Money.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/5 Metro Coin.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/5 Metro Coin.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/6 Train Front.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/6 Train Front.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/7 Fall.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/7 Fall.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/8 Slide.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/8 Slide.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/9 Jump.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/9 Jump.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionsSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionsSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions/GoalSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions/GoalSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/EnumBuilderForStatsIntrinsic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/EnumBuilderForStatsIntrinsic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/EnumBuilderForStatsIntrinsic.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/EnumBuilderForStatsIntrinsic.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EIntrinsic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EIntrinsic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/StatsHelpers.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/StatsHelpers.Editor.asmdef" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,6 +273,7 @@
       <workItem from="1748951314321" duration="2478000" />
       <workItem from="1748991248546" duration="6796000" />
       <workItem from="1749031412796" duration="3849000" />
+      <workItem from="1749062514173" duration="695000" />
     </task>
     <servers />
   </component>
