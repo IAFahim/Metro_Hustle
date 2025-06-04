@@ -10,7 +10,14 @@ namespace _src.Scripts.Missions.Missions.Data
     public class MissionsSettings : ScriptableObject
     {
         public List<AssetReferenceMissionSchema> missionSchema = new();
-        
+        private static bool _isActive;
+        public static bool IsActive => _isActive;
+        public static MissionSchema CurrentMission;
+
+        private void OnEnable()
+        {
+            _isActive = true;
+        }
     }
     
     [Serializable]

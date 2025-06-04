@@ -10,8 +10,18 @@ namespace _src.Scripts.Missions.Missions.Data
     public struct GoalBuffer : IBufferElementData
     {
         public EIntrinsic intrinsic;
+        public ObjectiveComparison comparison;
         public ushort goal;
 
-        public bool IsComplete(int amount) => goal <= amount;
+        public bool IsComplete(int amount)
+        {
+            return comparison switch
+            {
+                ObjectiveComparison.GreaterThanOrEqual => goal <= amount,
+                ObjectiveComparison.LessThanOrEqual => amount <= goal,
+                ObjectiveComparison.EqualTo => amount == goal,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+        }
     }
 }

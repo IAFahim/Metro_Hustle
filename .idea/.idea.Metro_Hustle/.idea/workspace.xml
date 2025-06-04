@@ -6,56 +6,35 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_1 First_Track_Run Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_1 First_Track_Run Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_10 Chandni_Chowk_Scuff Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_10 Chandni_Chowk_Scuff Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_11 Esplanade_Express_Run Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_11 Esplanade_Express_Run Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_12 Park_Street_Pressure_Drop Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_12 Park_Street_Pressure_Drop Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_13 Maidan_Masterpiece Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_13 Maidan_Masterpiece Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_14 Maintenance_Mayhem Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_14 Maintenance_Mayhem Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_15 Bonus_Blitz Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_15 Bonus_Blitz Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_16 Jatin_Das_Deadweight Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_16 Jatin_Das_Deadweight Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_17 Kalighat_Transit_Tangle Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_17 Kalighat_Transit_Tangle Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_18 Rabindra_Sarobar_Lockdown Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_18 Rabindra_Sarobar_Lockdown Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_19 Tollygunge_Tight_Watch Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_19 Tollygunge_Tight_Watch Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_2 Coffee_Kickstart Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_2 Coffee_Kickstart Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_20 Kudghat_Clean_Sweep Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_20 Kudghat_Clean_Sweep Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_3 Low_Profile_Delivery Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_3 Low_Profile_Delivery Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_4 Data_Dash Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_4 Data_Dash Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_5 Shyambazar_Shadows Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_5 Shyambazar_Shadows Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_6 Handle_With_Care Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_6 Handle_With_Care Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_7 Parkour_Beats Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_7 Parkour_Beats Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_8 Gandhi_Road_Grab Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_8 Gandhi_Road_Grab Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_9 Central_Crossing Mission.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Mission/Ai/kol_9 Central_Crossing Mission.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/PowerUp/PowerUp Damage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Prefabs/PowerUp/PowerUp Damage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/PowerUp/PowerUp Speed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Prefabs/PowerUp/PowerUp Speed.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/PowerUp/Train.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Prefabs/PowerUp/Train.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/Stats/Damage Stat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Prefabs/Stats/Damage Stat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Authoring/Missions.Authoring.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Authoring/Missions.Authoring.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/1 Metro Coin.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/1 Metro Coin.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/10 Current Threat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/10 Current Threat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/11 Run Timer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/11 Run Timer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/12 Parkour Count.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/12 Parkour Count.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/13 Money.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/13 Money.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/2 XP.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/2 XP.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/3 Level.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/3 Level.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/5 Missions Complete.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/5 Missions Complete.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/World.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/World.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/GoalBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/GoalBuffer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions/Missions.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions/Missions.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionsSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionsSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions/GoalSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions/GoalSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/EnumBuilderForStatsIntrinsic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/EnumBuilderForStatsIntrinsic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Authoring/EnumBuilderForStatsIntrinsic.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/EnumBuilderForStatsIntrinsic.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EIntrinsic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EIntrinsic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/StatsHelpers.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Editor/StatsHelpers.Editor.asmdef" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +82,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/InputEnableTagAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/GoalCompleteComponenet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/GravityEnableComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -133,21 +113,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Missions",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Missions&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.5f1\Editor\Unity.exe" />
@@ -302,6 +282,7 @@
       <workItem from="1748814281391" duration="1470000" />
       <workItem from="1748951314321" duration="2478000" />
       <workItem from="1748991248546" duration="6796000" />
+      <workItem from="1749031412796" duration="3849000" />
     </task>
     <servers />
   </component>

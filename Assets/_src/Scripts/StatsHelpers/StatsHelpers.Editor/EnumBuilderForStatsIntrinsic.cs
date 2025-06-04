@@ -7,7 +7,7 @@ using BovineLabs.Stats.Authoring;
 using UnityEditor;
 using UnityEngine;
 
-namespace _src.Scripts.StatsHelpers.StatsHelpers.Authoring
+namespace _src.Scripts.StatsHelpers.StatsHelpers.Editor
 {
     public abstract class StatAndIntrinsicEnumGenerator
     {
@@ -158,7 +158,7 @@ namespace _src.Scripts.StatsHelpers.StatsHelpers.Authoring
                 Debug.Log("No valid IntrinsicSchemaObject data found in StatSettings. No code generated for EIntrinsic.");
                 return;
             }
-            string generatedCode = GenerateCode("EIntrinsic", "int", collectedData, "IntrinsicSchemaObject").ToString();
+            string generatedCode = GenerateCode("EIntrinsic", "byte", collectedData, "IntrinsicSchemaObject").ToString();
             CopyAndLog(generatedCode, "EIntrinsic");
         }
 

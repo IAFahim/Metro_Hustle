@@ -2,9 +2,9 @@ using System;
 using _src.Scripts.StatsHelpers.StatsHelpers.Data;
 using BovineLabs.Core.ObjectManagement;
 using Unity.Entities;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.Serialization;
 
 namespace _src.Scripts.Missions.Missions.Data
 {
@@ -16,7 +16,9 @@ namespace _src.Scripts.Missions.Missions.Data
         [TextArea(3, 5)] public string description;
         public AssetReferenceSprite spriteAsset;
 
-        [Header("Route & Parcel")] public string startStation;
+        [Header("Route & Parcel")] public half weight;
+        public half time = half.MinValueAsHalf;
+        public string startStation;
         public string endStation;
         public DayTime dayTime;
 
@@ -31,13 +33,13 @@ namespace _src.Scripts.Missions.Missions.Data
 
 
     [Serializable]
-    public struct Objective
+    public class Objective: ScriptableObject
     {
         public bool optional;
-        public string name;
+        [TextArea(1, 5)] public string description;
         public AssetReferenceSprite spriteAsset;
+        public GoalBuffer goalBuffer;
         public Item[] reward;
-        [FormerlySerializedAs("goal")] public GoalBuffer goalBuffer;
     }
 
     [Serializable]
@@ -58,7 +60,8 @@ namespace _src.Scripts.Missions.Missions.Data
 
     public enum ObjectiveComparison : byte
     {
-        InRangeOnly = 0,
-        InRangeOrOverFlow = 1,
+        GreaterThanOrEqual = 0,
+        LessThanOrEqual = 1,
+        EqualTo = 2
     }
 }

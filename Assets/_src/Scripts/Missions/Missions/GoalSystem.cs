@@ -20,6 +20,7 @@ namespace _src.Scripts.Missions.Missions
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
+            var isActive = MissionsSettings.IsActive;
             _intrinsicLookup.Update(ref state);
             _goalLookup.Update(ref state);
             new GoalJobEntity()

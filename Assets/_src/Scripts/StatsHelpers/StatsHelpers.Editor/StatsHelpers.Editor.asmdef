@@ -20,7 +20,11 @@
         "Unity.Physics",
         "Unity.Transforms",
         "ALINE",
-        "BovineLabs.Stats.Data"
+        "BovineLabs.Stats.Data",
+        "BovineLabs.Stats.Authoring",
+        "Unity.Addressables",
+        "BovineLabs.Reaction.Authoring",
+        "BovineLabs.Core.Authoring"
     ],
     "includePlatforms": [
         "Editor"
