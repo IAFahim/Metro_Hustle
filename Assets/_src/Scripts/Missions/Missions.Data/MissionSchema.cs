@@ -2,9 +2,9 @@ using System;
 using _src.Scripts.StatsHelpers.StatsHelpers.Data;
 using BovineLabs.Core.ObjectManagement;
 using Unity.Entities;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Serialization;
 
 namespace _src.Scripts.Missions.Missions.Data
 {
@@ -37,7 +37,7 @@ namespace _src.Scripts.Missions.Missions.Data
         public string name;
         public AssetReferenceSprite spriteAsset;
         public Item[] reward;
-        public Goal goal;
+        [FormerlySerializedAs("goal")] public GoalBuffer goalBuffer;
     }
 
     [Serializable]
@@ -45,17 +45,6 @@ namespace _src.Scripts.Missions.Missions.Data
     {
         public EIntrinsic intrinsic;
         public ushort count;
-    }
-
-    [Serializable]
-    public struct Goal : IBufferElementData
-    {
-        public EIntrinsic intrinsic;
-        public ObjectiveComparison comparison;
-        public half defaultValue;
-        public half min;
-        public half max;
-        public half timeLimit; 
     }
 
     public enum DayTime : byte
@@ -69,9 +58,7 @@ namespace _src.Scripts.Missions.Missions.Data
 
     public enum ObjectiveComparison : byte
     {
-        GreaterThanOrEqual,
-        LessThanOrEqual,
-        EqualTo,
-        NotEqualTo // Less common, but possible
+        InRangeOnly = 0,
+        InRangeOrOverFlow = 1,
     }
 }

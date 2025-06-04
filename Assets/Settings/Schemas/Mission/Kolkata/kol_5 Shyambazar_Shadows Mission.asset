@@ -37,17 +37,10 @@ MonoBehaviour:
     reward:
     - intrinsic: 13
       count: 90
-    goal:
+    goalBuffer:
       intrinsic: 11
-      comparison: 1
-      defaultValue:
-        value: 0
-      min:
-        value: 0
-      max:
-        value: 0
-      timeLimit:
-        value: 21680
+      min: 0
+      max: 0
   - optional: 1
     name: Perform Near Misses
     spriteAsset:
@@ -59,14 +52,7 @@ MonoBehaviour:
     reward:
     - intrinsic: 13
       count: 15
-    goal:
+    goalBuffer:
       intrinsic: 8
-      comparison: 0
-      defaultValue:
-        value: 0
-      min:
-        value: 0
-      max:
-        value: 0
-      timeLimit:
-        value: 16896
+      min: 0
+      max: 0

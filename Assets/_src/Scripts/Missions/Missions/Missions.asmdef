@@ -20,9 +20,10 @@
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
         "Unity.Transforms",
-        "Healths.Data"
+        "Healths.Data",
+        "StatsHelpers.Data",
+        "BovineLabs.Stats.Data"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,

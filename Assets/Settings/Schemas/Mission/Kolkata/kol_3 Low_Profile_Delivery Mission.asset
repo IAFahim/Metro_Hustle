@@ -37,14 +37,7 @@ MonoBehaviour:
     reward:
     - intrinsic: 13
       count: 70
-    goal:
+    goalBuffer:
       intrinsic: 11
-      comparison: 1
-      defaultValue:
-        value: 0
-      min:
-        value: 0
-      max:
-        value: 0
-      timeLimit:
-        value: 21760
+      min: 0
+      max: 0

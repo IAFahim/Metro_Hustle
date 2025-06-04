@@ -2670,9 +2670,9 @@ MonoBehaviour:
     Value: 1
   StatDefaultGroups: []
   StatsCanBeModified: 1
-  AddIntrinsics: 0
+  AddIntrinsics: 1
   IntrinsicDefaults:
-  - Intrinsic: {fileID: 0}
+  - Intrinsic: {fileID: 11400000, guid: 4da0bd7c711d04041ae0dbb6838222c5, type: 2}
     Value: 1
   IntrinsicDefaultGroups: []
   Initialize:
@@ -2873,6 +2873,7 @@ GameObject:
   - component: {fileID: 1609925661392715631}
   - component: {fileID: 4442600306409683904}
   - component: {fileID: 2684489605345161983}
+  - component: {fileID: 8260355615061726108}
   m_Layer: 0
   m_Name: ECS Player Character
   m_TagString: Untagged
@@ -2918,14 +2919,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransformUsageFlags: 4
+--- !u!114 &8260355615061726108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6234706035855748103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e054798b1d4ab09ce7a9638867ab00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - intrinsic: 1
+    goal: 1
+  goalCompleteBit: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1032920552}
   - {fileID: 1622960863}
-  - {fileID: 2655777393621988397}
   - {fileID: 686383864}
+  - {fileID: 2655777393621988397}
   - {fileID: 856964717}
   - {fileID: 1711635739}
   - {fileID: 170062139}

@@ -88,7 +88,7 @@ MonoBehaviour:
     cancellable: 0
   Conditions:
     conditions: []
-    chanceToTrigger: 1
+    chanceToTrigger: 0.428
     doNotReset: 0
     cancelActiveOnFail: 0
 --- !u!114 &6523252909924199901
