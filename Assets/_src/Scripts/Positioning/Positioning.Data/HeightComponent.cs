@@ -5,7 +5,6 @@ namespace _src.Scripts.Positioning.Positioning.Data
 {
     public struct HeightComponent : IComponentData
     {
-        public half Offset;
-
+        public half Value;
     }
 }

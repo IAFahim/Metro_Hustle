@@ -21,15 +21,14 @@ namespace _src.Scripts.Positioning.Positioning.Authoring
                 var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, new LeftRightComponent { Step = authoring.leftRightOffset });
                 AddComponent(entity, new ForwardBackComponent { Offset = authoring.forwardBackOffset });
-                AddComponent(entity, new GravityEnableComponent()
+                AddComponent(entity, new GravityComponent()
                 {
-                    Enable = authoring.gravityEnable,
                     Gravity = authoring.gravity,
                     Velocity = authoring.velocity
                 });
                 AddComponent<HeightComponent>(entity, new()
                 {
-                    Offset = authoring.heightIncrease
+                    Value = authoring.heightIncrease
                 });
             }
         }

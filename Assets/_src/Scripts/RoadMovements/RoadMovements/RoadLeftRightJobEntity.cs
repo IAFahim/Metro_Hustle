@@ -21,13 +21,14 @@ namespace _src.Scripts.RoadMovements.RoadMovements
 
         private void Execute(
             ref LeftRightComponent leftRight,
-            ref GravityEnableComponent gravity,
+            ref GravityComponent gravity,
             ref RoadMovementComponent movement,
             in DirectionInputEnableActiveComponent directionInput,
             ref AnimatorComponent animatorComponent,
             ref LocalToWorld localToWorld,
             ref ForwardBackComponent forwardBackComponent,
-            in DynamicBuffer<Stat> statsBuffer
+            in DynamicBuffer<Stat> statsBuffer,
+            in HeightComponent height
         )
         {
             var statKey = new StatKey()
@@ -38,26 +39,22 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             bool jumpInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsUpEnabledAndActive);
             if (jumpInputActive)
             {
-                gravity.Enable = true;
-                gravity.Velocity = (half)10;
-                gravity.GravityMul = 1;
+                gravity.EnableJump(new half(10));
                 animatorComponent.CurrentState = (sbyte)EAnimation.Jumping;
                 animatorComponent.OldState = 0;
             }
 
-            if (localToWorld.Value.c3.y < 0)
+            if (localToWorld.Value.c3.y < height.Value)
             {
-                localToWorld.Value.c3.y = 0;
-                gravity.Enable = false;
-                gravity.Velocity = (half)0;
-
+                localToWorld.Value.c3.y = height.Value;
+                gravity = gravity.DisableFalling();
                 animatorComponent.CurrentState = (sbyte)EAnimation.Running;
             }
 
             bool downInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsDownEnabledAndActive);
             if (downInputActive)
             {
-                gravity.GravityMul = 2;
+                gravity.GravityMul = new half(2);
             }
 
 
