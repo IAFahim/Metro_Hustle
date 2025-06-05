@@ -16,14 +16,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 594b6d0f6224dd0419b6b6924d2961f4, type: 2}
   - {fileID: 11400000, guid: 4fe3fd091f2416d499395dc2ad8bf0f2, type: 2}
   - {fileID: 11400000, guid: 52f42f8ea006b604eb7a14cb260e86e1, type: 2}
-  - {fileID: 11400000, guid: 1c491e6e7e1566e47b937a7392c8ec0e, type: 2}
-  - {fileID: 11400000, guid: e2b2dd5551bc4b7459f9fa48b92202f5, type: 2}
-  - {fileID: 11400000, guid: 2ac3c31d19138d445a95f0be3099ccd5, type: 2}
-  - {fileID: 11400000, guid: cdaa5be8a103f7e4e9c4eadd5d19aca0, type: 2}
-  - {fileID: 11400000, guid: f1c6f7fd49df05e4eb7388a1d4a730d6, type: 2}
-  - {fileID: 11400000, guid: 75f985a8fc011a6449a78ca4b08bf085, type: 2}
+  - {fileID: 11400000, guid: f15bb5f96a6e80d49ae58f0f35652d14, type: 2}
   - {fileID: 11400000, guid: be91739b0474f9e439524a6865182d30, type: 2}
-  - {fileID: 11400000, guid: a4483954b9b3a66438a3e59111d6bf6a, type: 2}
   - {fileID: 11400000, guid: f2a5bb79645d8574b93210ebb308facd, type: 2}
   intrinsicSchemas:
   - {fileID: 11400000, guid: 4da0bd7c711d04041ae0dbb6838222c5, type: 2}

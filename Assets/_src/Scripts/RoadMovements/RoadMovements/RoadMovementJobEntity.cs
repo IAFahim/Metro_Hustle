@@ -15,7 +15,7 @@ using Unity.Transforms;
 namespace _src.Scripts.RoadMovements.RoadMovements
 {
     [BurstCompile]
-    public partial struct RoadLeftRightJobEntity : IJobEntity
+    public partial struct RoadMovementJobEntity : IJobEntity
     {
         public RoadComponent Road;
 
@@ -30,31 +30,34 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             in DynamicBuffer<Stat> statsBuffer,
             in HeightComponent height
         )
-        {
-            var statKey = new StatKey()
-            {
-                Value = (ushort)EStat.ForwardSpeed
-            };
-            forwardBackComponent.Offset = (half)statsBuffer.AsMap().Get(statKey).Value;
-            bool jumpInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsUpEnabledAndActive);
-            if (jumpInputActive)
-            {
-                gravity.EnableJump(new half(10));
-                animatorComponent.CurrentState = (sbyte)EAnimation.Jumping;
-                animatorComponent.OldState = 0;
-            }
+        { 
 
             if (localToWorld.Value.c3.y < height.Value)
             {
                 localToWorld.Value.c3.y = height.Value;
-                gravity = gravity.DisableFalling();
+                gravity.Velocity = new half(0);
+                gravity.GMultiplier = new half(0);
                 animatorComponent.CurrentState = (sbyte)EAnimation.Running;
             }
+
+
+            var statsMap = statsBuffer.AsMap();
+            forwardBackComponent.Offset = (half)statsMap.Get(new StatKey { Value = (ushort)EStat.ForwardSpeed }).Value;
+            bool jumpInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsUpEnabledAndActive);
+            if (jumpInputActive && height.Value == localToWorld.Position.y)
+            {
+                var jumpSpeed = (half)statsMap.Get(new StatKey { Value = (ushort)EStat.Jump }).Value;
+                gravity.Velocity += new half(jumpSpeed);
+                gravity.GMultiplier += new half(1);
+                animatorComponent.CurrentState = (sbyte)EAnimation.Jumping;
+                animatorComponent.OldState = 0;
+            }
+
 
             bool downInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsDownEnabledAndActive);
             if (downInputActive)
             {
-                gravity.GravityMul = new half(2);
+                gravity.GMultiplier *= new half(2);
             }
 
 

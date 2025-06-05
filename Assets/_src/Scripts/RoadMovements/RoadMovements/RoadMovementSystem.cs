@@ -4,7 +4,7 @@ using Unity.Entities;
 
 namespace _src.Scripts.RoadMovements.RoadMovements
 {
-    public partial struct RoadLeftRightSystem : ISystem
+    public partial struct RoadMovementSystem : ISystem
     {
         [BurstCompile]
         public void OnCreate(ref SystemState state)
@@ -14,7 +14,7 @@ namespace _src.Scripts.RoadMovements.RoadMovements
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            new RoadLeftRightJobEntity()
+            new RoadMovementJobEntity()
             {
                 Road = SystemAPI.GetSingleton<RoadComponent>()
             }.ScheduleParallel();

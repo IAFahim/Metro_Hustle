@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace _src.Scripts.Positioning.Positioning.Authoring
 {
+    [RequireComponent(typeof(HeightComponentAuthoring))]
     public class PositioningAuthoring : MonoBehaviour
     {
         public bool gravityEnable;
         public half gravity = new(30);
         public half velocity;
-        public half heightIncrease;
         public half leftRightOffset;
         public half forwardBackOffset;
 
@@ -25,10 +25,6 @@ namespace _src.Scripts.Positioning.Positioning.Authoring
                 {
                     Gravity = authoring.gravity,
                     Velocity = authoring.velocity
-                });
-                AddComponent<HeightComponent>(entity, new()
-                {
-                    Value = authoring.heightIncrease
                 });
             }
         }

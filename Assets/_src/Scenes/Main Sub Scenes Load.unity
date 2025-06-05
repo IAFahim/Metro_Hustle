@@ -193,7 +193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1487358444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,8 +446,6 @@ MonoBehaviour:
     value: 20352
   velocity:
     value: 18688
-  heightIncrease:
-    value: 0
   leftRightOffset:
     value: 0
   forwardBackOffset:

@@ -13,14 +13,15 @@ namespace _src.Scripts.Positioning.Positioning
             ref LocalToWorld ltw,
             ref LeftRightComponent leftRight,
             in ForwardBackComponent forwardBack,
-            ref GravityComponent gravity
+            ref GravityComponent gravity,
+            in HeightComponent height
         )
         {
             ltw.Value.c3.z += forwardBack.Offset * DeltaTime;
 
-            if (gravity.GravityMul != 0)
+            if (ltw.Value.c3.z > height.Value)
             {
-                gravity.Velocity -= (half)(gravity.Gravity * DeltaTime * gravity.GravityMul);
+                gravity.Velocity -= (half)(gravity.Gravity * DeltaTime * gravity.GMultiplier);
                 ltw.Value.c3.y += gravity.Velocity * DeltaTime;
             }
 
