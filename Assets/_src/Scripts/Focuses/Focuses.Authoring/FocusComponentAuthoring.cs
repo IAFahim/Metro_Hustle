@@ -6,7 +6,7 @@ namespace _src.Scripts.Focuses.Focuses.Authoring
 {
     public class FocusComponentAuthoring : MonoBehaviour
     {
-        public byte priority = 0;
+        public sbyte priority = 0;
 
         public class FocusComponentBaker : Baker<FocusComponentAuthoring>
         {

@@ -8,8 +8,6 @@ using Unity.Transforms;
 
 namespace _src.Scripts.Healths.Healths
 {
-    // [UpdateInGroup(typeof(ConditionWriteEventsGroup))]
-    // [UpdateBefore(typeof(ConditionEventWriteSystem))]
     public partial struct UpdateHealthUISystem : ISystem, ISystemStartStop
     {
         private UIHelper<GameModel, GameModel.Data> _uiHelper;
@@ -41,7 +39,7 @@ namespace _src.Scripts.Healths.Healths
                 var statsMap = statsBuffer.AsMap();
                 var statsKey = new StatKey()
                 {
-                    Value = (ushort)EStat.Health
+                    Value = (ushort)EStat.MaxHealth
                 };
                 var currentHealth = statsMap.GetValue(statsKey);
                 binding.CurrentHealth = (int)currentHealth;

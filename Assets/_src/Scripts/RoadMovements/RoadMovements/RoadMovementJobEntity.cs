@@ -20,37 +20,37 @@ namespace _src.Scripts.RoadMovements.RoadMovements
         public RoadComponent Road;
 
         private void Execute(
-            ref LeftRightComponent leftRight,
             ref GravityComponent gravity,
+            ref LeftRightComponent leftRight,
             ref RoadMovementComponent movement,
+            ref AnimatorComponent animator,
+            ref ForwardBackComponent forwardBack,
+            ref LocalToWorld ltw,
             in DirectionInputEnableActiveComponent directionInput,
-            ref AnimatorComponent animatorComponent,
-            ref LocalToWorld localToWorld,
-            ref ForwardBackComponent forwardBackComponent,
             in DynamicBuffer<Stat> statsBuffer,
             in HeightComponent height
         )
-        { 
+        {
 
-            if (localToWorld.Value.c3.y < height.Value)
+            if (ltw.Value.c3.y < height.Value)
             {
-                localToWorld.Value.c3.y = height.Value;
-                gravity.Velocity = new half(0);
+                ltw.Value.c3.y = height.Value;
                 gravity.GMultiplier = new half(0);
-                animatorComponent.CurrentState = (sbyte)EAnimation.Running;
+                gravity.Velocity = new half(0);
+                animator.CurrentState = (sbyte)EAnimation.Running;
             }
-
+            
 
             var statsMap = statsBuffer.AsMap();
-            forwardBackComponent.Offset = (half)statsMap.Get(new StatKey { Value = (ushort)EStat.ForwardSpeed }).Value;
+            forwardBack.Offset = (half)statsMap.Get(new StatKey { Value = (ushort)EStat.ForwardSpeed }).Value;
             bool jumpInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsUpEnabledAndActive);
-            if (jumpInputActive && height.Value == localToWorld.Position.y)
+            if (jumpInputActive && height.Value == ltw.Position.y)
             {
-                var jumpSpeed = (half)statsMap.Get(new StatKey { Value = (ushort)EStat.Jump }).Value;
-                gravity.Velocity += new half(jumpSpeed);
+                var jumpForce = (half)statsMap.Get(new StatKey { Value = (ushort)EStat.JumpForce }).Value;
+                gravity.Velocity += new half(jumpForce);
                 gravity.GMultiplier += new half(1);
-                animatorComponent.CurrentState = (sbyte)EAnimation.Jumping;
-                animatorComponent.OldState = 0;
+                animator.CurrentState = (sbyte)EAnimation.Jumping;
+                animator.OldState = 0;
             }
 
 
@@ -66,7 +66,7 @@ namespace _src.Scripts.RoadMovements.RoadMovements
 
             if (!(rightInputActive || leftInputActive)) return;
 
-            float currentEntityX = localToWorld.Value.c3.x;
+            float currentEntityX = ltw.Value.c3.x;
             bool movementParamsUpdated = false;
 
             half newCalculatedDirection = leftRight.Direction;

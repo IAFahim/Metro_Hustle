@@ -11,19 +11,18 @@ namespace _src.Scripts.Positioning.Positioning
 
         private void Execute(
             ref LocalToWorld ltw,
-            ref LeftRightComponent leftRight,
-            in ForwardBackComponent forwardBack,
             ref GravityComponent gravity,
-            in HeightComponent height
+            ref LeftRightComponent leftRight,
+            in ForwardBackComponent forwardBack
         )
         {
-            ltw.Value.c3.z += forwardBack.Offset * DeltaTime;
-
-            if (ltw.Value.c3.z > height.Value)
+            if (gravity.GMultiplier != 0)
             {
                 gravity.Velocity -= (half)(gravity.Gravity * DeltaTime * gravity.GMultiplier);
                 ltw.Value.c3.y += gravity.Velocity * DeltaTime;
             }
+
+            ltw.Value.c3.z += forwardBack.Offset * DeltaTime;
 
             if (leftRight.Direction == 0) return;
             {

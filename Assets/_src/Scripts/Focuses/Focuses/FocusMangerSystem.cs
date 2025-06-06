@@ -11,29 +11,15 @@ namespace _src.Scripts.Focuses.Focuses
         public void OnUpdate(ref SystemState state)
         {
             int highestPriority = -1;
-            LocalToWorld highestPriorityLocalTransform = new LocalToWorld();
-            foreach (
-                var (
-                    focusComponent,
-                    localTransform
-                    )
-                in SystemAPI.Query<
-                    RefRO<FocusComponent>,
-                    RefRO<LocalToWorld>
-                >())
+            var currentEntity = new Entity();
+            foreach (var (focusComponent, entity) in SystemAPI.Query<RefRO<FocusComponent>>().WithEntityAccess())
             {
-                if (focusComponent.ValueRO.Priority > highestPriority)
-                {
-                    highestPriority = focusComponent.ValueRO.Priority;
-                    highestPriorityLocalTransform = localTransform.ValueRO;
-                }
+                if (focusComponent.ValueRO.Priority <= highestPriority) continue;
+                highestPriority = focusComponent.ValueRO.Priority;
+                currentEntity = entity;
             }
 
-            SystemAPI.GetSingletonRW<FocusManagerCurrentInfoComponent>().ValueRW = new FocusManagerCurrentInfoComponent
-            {
-                Position = highestPriorityLocalTransform.Position,
-                Rotation = highestPriorityLocalTransform.Rotation
-            };
+            SystemAPI.GetSingletonRW<FocusCurrentComponent>().ValueRW.Entity = currentEntity;
         }
     }
 }

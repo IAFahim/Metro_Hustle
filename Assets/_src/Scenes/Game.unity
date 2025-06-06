@@ -2706,7 +2706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5843df0182f41198fa3341f61770d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityEnable: 0
   gravity:
     value: 20352
   velocity:
@@ -2852,7 +2851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2655777393621988397}
   - component: {fileID: 2575152664787741606}
-  - component: {fileID: 7488962712463394329}
+  - component: {fileID: 8260355615061726110}
   - component: {fileID: 5361059387469944097}
   - component: {fileID: 2340755176782025948}
   - component: {fileID: 8260355615061726107}
@@ -2870,19 +2869,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7488962712463394329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6234706035855748103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63a0001c52ce4ae2834f779ec751940a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 0
 --- !u!114 &8260355615061726107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2927,6 +2913,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height:
     value: 0
+--- !u!114 &8260355615061726110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6234706035855748103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a0001c52ce4ae2834f779ec751940a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

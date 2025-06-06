@@ -11,7 +11,7 @@ namespace _src.Scripts.CinemachineLink.CinemachineLink.Data
         [SerializeField] private CinemachineCamera cinemachineCamera;
         private Transform cinemachineTargetTransform;
 
-        public static Transform Target => _singleton.cinemachineTargetTransform;
+        public static Transform Transform => _singleton.cinemachineTargetTransform;
 
         private void Awake()
         {
