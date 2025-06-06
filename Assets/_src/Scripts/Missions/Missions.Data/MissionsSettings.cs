@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using BovineLabs.Core.Settings;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -9,7 +8,7 @@ namespace _src.Scripts.Missions.Missions.Data
     [CreateAssetMenu(fileName = "AllMissions", menuName = "Scriptable Objects/Mission/Settings", order = 1)]
     public class MissionsSettings : ScriptableObject
     {
-        public List<AssetReferenceMissionSchema> missionSchema = new();
+        public List<MissionSchema> missionSchema = new();
         private static bool _isActive;
         public static bool IsActive => _isActive;
         public static MissionSchema CurrentMission;
@@ -21,9 +20,9 @@ namespace _src.Scripts.Missions.Missions.Data
     }
     
     [Serializable]
-    public class AssetReferenceMissionSchema: AssetReferenceT<MissionSchema>
+    public class AssetReferenceMissions: AssetReferenceT<MissionsSettings>
     {
-        public AssetReferenceMissionSchema(string guid) : base(guid)
+        public AssetReferenceMissions(string guid) : base(guid)
         {
         }
     }

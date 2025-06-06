@@ -1,23 +1,20 @@
 {
-    "name": "Colliders.Authoring",
+    "name": "UXMLs.Service",
     "rootNamespace": "",
     "references": [
         "BovineLabs.Core",
-        "BovineLabs.Core.Authoring",
         "BovineLabs.Core.Extensions",
-        "BovineLabs.Core.Extensions.Authoring",
-        "Colliders.Data",
         "Unity.Burst",
         "Unity.Collections",
         "Unity.Entities",
         "Unity.Entities.Graphics",
         "Unity.Entities.Hybrid",
         "Unity.InputSystem",
+        "Unity.Logging",
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms",
-        "TriggerSideEffects.Data"
+        "Unity.Transforms"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
@@ -26,9 +23,7 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": false,
-    "defineConstraints": [
-        "UNITY_EDITOR"
-    ],
+    "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false
 }

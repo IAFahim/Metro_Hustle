@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5287987355161702116}
   - component: {fileID: 1888095633616440346}
   - component: {fileID: 1959814603957885919}
+  - component: {fileID: 2705370391603092305}
   - component: {fileID: 4030623073371236027}
   - component: {fileID: 7113466084187135369}
   - component: {fileID: 2458706510287177954}
@@ -99,6 +100,26 @@ MonoBehaviour:
   values:
   - Key: Mobile
     Asset: {fileID: 9197481963319205126, guid: 125749038c1f7d843878ff5cea7251ae, type: 3}
+  - Key: Mission
+    Asset: {fileID: 9197481963319205126, guid: 79922edb93c146f498c12f613fab28ed, type: 3}
+--- !u!114 &2705370391603092305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7009687390992542841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a970f68dc5437da56ce4afbf60ee5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assets:
+  - m_AssetGUID: 063c0277b08920e45b22810b30816571
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
 --- !u!114 &4030623073371236027
 MonoBehaviour:
   m_ObjectHideFlags: 0

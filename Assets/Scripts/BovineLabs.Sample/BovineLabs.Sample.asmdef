@@ -27,8 +27,11 @@
         "Unity.Transforms",
         "Healths.Data",
         "BovineLabs.Core.Input",
-        "UXMLs.Data",
-        "Sprites.Data"
+        "UXMLs.Service",
+        "Sprites.Service",
+        "Missions.Service",
+        "Missions.Data",
+        "Unity.Addressables"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

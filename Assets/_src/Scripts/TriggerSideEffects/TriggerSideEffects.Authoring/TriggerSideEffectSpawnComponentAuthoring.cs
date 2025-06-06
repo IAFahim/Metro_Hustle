@@ -1,4 +1,5 @@
 ﻿using _src.Scripts.TriggerSideEffects.TriggerSideEffects.Data;
+using _src.Scripts.TriggerSideEffects.TriggerSideEffects.Data.enums;
 using BovineLabs.Core.Authoring.ObjectManagement;
 using JetBrains.Annotations;
 using Unity.Entities;
@@ -10,9 +11,9 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Authoring
     {
         [Header("Auto-calculated based on assigned ObjectDefinitions")] [SerializeField]
         private TriggerType triggerType;
+        [SerializeField] private ESideEffect sideEffect;
 
-        [Header("Object Definitions")] [CanBeNull]
-        public ObjectDefinition onForwardPre;
+        [Header("Object Definitions")]
 
         [CanBeNull] public ObjectDefinition onTop;
         [CanBeNull] public ObjectDefinition onInside;
@@ -27,9 +28,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Authoring
         private void UpdateTriggerType()
         {
             TriggerType newTriggerType = TriggerType.Nothing;
-
             
-            if (onForwardPre != null) newTriggerType |= TriggerType.HasForward;
             if (onTop != null) newTriggerType |= TriggerType.HasTop;
             if (onInside != null) newTriggerType |= TriggerType.HasInside;
 
@@ -47,14 +46,13 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Authoring
             {
                 var entity = GetEntity(TransformUsageFlags.None);
                 
-                DependsOn(authoring.onForwardPre);
                 DependsOn(authoring.onTop);
                 DependsOn(authoring.onInside);
                 
-                AddComponent(entity, new TriggerSideEffectSpawnComponent
+                AddComponent(entity, new TriggerSideEffectComponent
                 {
                     TriggerType = authoring.TriggerType,
-                    OnForwardPre = authoring.onForwardPre,
+                    PreSideEffect = authoring.sideEffect,
                     OnTop = authoring.onTop,
                     OnInside = authoring.onInside
                 });

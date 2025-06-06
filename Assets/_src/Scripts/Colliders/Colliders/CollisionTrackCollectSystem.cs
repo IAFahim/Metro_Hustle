@@ -20,7 +20,7 @@ namespace _src.Scripts.Colliders.Colliders
         public void OnUpdate(ref SystemState state)
         {
             var collisionTrackBuffers = SystemAPI.GetSingletonBuffer<CollisionTrackBuffer>();
-            var entities = SystemAPI.QueryBuilder().WithPresent<CollisionTrackTag>().Build()
+            var entities = SystemAPI.QueryBuilder().WithPresent<CollisionTrackComponent>().Build()
                 .ToEntityArray(Allocator.Temp);
             collisionTrackBuffers.Clear();
             foreach (var entity in entities)

@@ -7,7 +7,6 @@ namespace _src.Scripts.Missions.Missions.Authoring
     public class GoalBufferAuthoring : MonoBehaviour
     {
         public GoalBuffer[] goals;
-        public byte goalCompleteBit;
 
         public class GoalBufferBaker : Baker<GoalBufferAuthoring>
         {
@@ -16,10 +15,6 @@ namespace _src.Scripts.Missions.Missions.Authoring
                 var entity = GetEntity(TransformUsageFlags.None);
                 var goalBuffers = AddBuffer<GoalBuffer>(entity);
                 foreach (var goal in authoring.goals) goalBuffers.Add(goal);
-                AddComponent(entity, new GoalCompleteComponent
-                {
-                    CompleteBit = authoring.goalCompleteBit
-                });
             }
         }
     }

@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 063c0277b08920e45b22810b30816571
+    m_Address: Assets/Settings/Schemas/Mission/AllMissions.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2bb4b7d4894d9af40adae7fa0b572a63
     m_Address: Assets/Settings/Schemas/Mission/Ai/kol_5 Shyambazar_Shadows Mission.asset
     m_ReadOnly: 0

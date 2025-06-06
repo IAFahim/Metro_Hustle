@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ea920db2534d059bfb2b5367eebe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerType: 228
-  onForwardPre: {fileID: 0}
+  triggerType: 245
+  sideEffect: 255
   onTop: {fileID: 0}
   onInside: {fileID: 11400000, guid: 6e69083b22f9c704880b271bc0c99538, type: 2}
 --- !u!114 &3970968626038640438

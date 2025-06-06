@@ -2,8 +2,11 @@
 //     Copyright (c) BovineLabs. All rights reserved.
 // </copyright>
 
-using _src.Scripts.UXMLs.UXMLs.Data;
+using _src.Scripts.Missions.Missions.Data;
+using _src.Scripts.UiServices.Missions.Service;
+using _src.Scripts.UiServices.UXMLs.Service;
 using BovineLabs.Core;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace BovineLabs.Sample.UI.Views.Menu
 {
@@ -29,63 +32,41 @@ namespace BovineLabs.Sample.UI.Views.Menu
         private const string QuitDescriptionText = "@UI:quitDescription";
         private const string QuitCancelText = "@UI:quitCancel";
 
-        private readonly ActionButton continueButton;
-        private readonly ActionButton loadButton;
+        private readonly IUxmlService _uxmlService;
+        private readonly IMissionsService _missionsService;
 
-        public HomeView(HomeViewModel viewModel, IUxmlService uxmlService)
+        public HomeView(HomeViewModel viewModel, IUxmlService uxmlService, IMissionsService missionsService)
             : base(viewModel)
         {
-            this.AddToClassList(UssHomeClassName);
-
-            var left = new ActionGroup { direction = Direction.Vertical };
-            left.AddToClassList(LeftClassName);
-            this.Add(left);
-
-            var right = new VisualElement();
-            right.AddToClassList(RightClassName);
-            this.Add(right);
-
-            this.continueButton = new ActionButton(this.Continue) { label = ContinueText };
-            this.continueButton.AddToClassList(ButtonClassName);
-            left.Add(this.continueButton);
-            
-            var templateContainer = uxmlService.GetAsset("Mobile").Instantiate();
-            var visualElement = templateContainer.ElementAt(0);
-            Add(visualElement);
-            AddToClassList(".mobile__full");
-            var button = visualElement.Q<ActionButton>("PlayButton");
-            button.RegisterCallback<ClickEvent>((evt => Play()));
-
-            // var playButton = new ActionButton(this.Play)
-            // {
-            //     label = PlayText,
-            // };
-
-            // playButton.AddToClassList(ButtonClassName);
-            // left.Add(playButton);
-
-            var optionButton = new ActionButton(this.Options) { label = OptionsText };
-            optionButton.AddToClassList(ButtonClassName);
-            left.Add(optionButton);
-
-#if UNITY_STANDALONE
-            var quitButton = new ActionButton
-            {
-                label = QuitText,
-            };
-
-            quitButton.AddToClassList(ButtonClassName);
-            quitButton.clickable.clickedWithEventInfo += Quit;
-            left.Add(quitButton);
-#endif
+            _uxmlService = uxmlService;
+            _missionsService = missionsService;
+            var assetReferenceMissions = missionsService.GetCurrent();
+            var asyncOperationHandle = assetReferenceMissions.LoadAssetAsync();
+            asyncOperationHandle.Completed += OnMissionLoadComplete;
         }
 
-        protected override void OnEnter(NavController controller, NavDestination destination, Argument[] args)
+        private void OnMissionLoadComplete(AsyncOperationHandle<MissionsSettings> obj)
         {
-            base.OnEnter(controller, destination, args);
+            var root = _uxmlService.GetAsset("Mobile").Instantiate().ElementAt(0);
+            Add(root);
+            AddToClassList(".mobile__full");
+            var missionTemplate = _uxmlService.GetAsset("Mission");
+            var screen = root.Q<VisualElement>("Screen");
 
-            var hasSaveDisplay = false ? DisplayStyle.Flex : DisplayStyle.None;
-            this.continueButton.style.display = hasSaveDisplay;
+            var missionTemplateContainer = InstantiateMission(missionTemplate);
+            screen.Add(missionTemplateContainer);
+            
+            var button = root.Q<ActionButton>("PlayButton");
+            button.RegisterCallback<ClickEvent>(_ => Play());
+        }
+
+        private static TemplateContainer InstantiateMission(VisualTreeAsset missionTemplate)
+        {
+            var missionTemplateContainer = missionTemplate.Instantiate();
+            var missionNumberLabel = missionTemplateContainer.Q<Label>("mission_text_number");
+            var missionNumberLabelFormat = missionNumberLabel.text;
+            missionNumberLabel.text = string.Format(missionNumberLabelFormat, 1);
+            return missionTemplateContainer;
         }
 
 #if UNITY_STANDALONE
@@ -118,9 +99,6 @@ namespace BovineLabs.Sample.UI.Views.Menu
 
 #endif
 
-        private void Continue()
-        {
-        }
 
         private void Play()
         {

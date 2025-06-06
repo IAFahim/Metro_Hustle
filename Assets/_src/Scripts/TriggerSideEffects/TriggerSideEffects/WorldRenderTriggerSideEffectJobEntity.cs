@@ -1,5 +1,6 @@
 ﻿using _src.Scripts.Colliders.Colliders.Data;
 using _src.Scripts.TriggerSideEffects.TriggerSideEffects.Data;
+using _src.Scripts.TriggerSideEffects.TriggerSideEffects.Data.enums;
 using BovineLabs.Core.LifeCycle;
 using BovineLabs.Core.ObjectManagement;
 using BovineLabs.Reaction.Data.Core;
@@ -21,11 +22,12 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
         [ReadOnly] public ComponentLookup<PointColliderComponent> PointColliderLookup;
         [WriteOnly] public EntityCommandBuffer.ParallelWriter ECB;
         [ReadOnly] public ObjectDefinitionRegistry ObjectDefinitionRegistry;
+        [WriteOnly] public NativeQueue<(Entity entity, ESideEffect sideEffect)>.ParallelWriter PreCollisionQueue;
 
         private void Execute(
             [EntityIndexInQuery] int entityInQueryIndex, in Entity entity,
             in WorldRenderBounds worldRender,
-            in TriggerSideEffectSpawnComponent triggerSideEffectSpawn,
+            in TriggerSideEffectComponent triggerSideEffect,
             EnabledRefRW<DestroyEntity> destroyEntity
         )
         {
@@ -34,9 +36,19 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                 var target = collisionTrackBuffer.Entity;
                 var targetLtw = LocalToWorldLookup[target];
                 var pointColliderComponent = PointColliderLookup[target];
+                
+                var forwardOffset = new float3(0, 0, pointColliderComponent.ForwardPre);
+                bool isForwardTrigger = IsTrigger(
+                    triggerSideEffect, TriggerType.SendForward,
+                    worldRender, targetLtw.Position, forwardOffset
+                );
+                if (isForwardTrigger)
+                {
+                    PreCollisionQueue.Enqueue((entity, triggerSideEffect.PreSideEffect));
+                }
 
                 var isInsideTrigger = IsTrigger(
-                    triggerSideEffectSpawn, TriggerType.HasInside,
+                    triggerSideEffect, TriggerType.HasInside,
                     worldRender, targetLtw.Position, new float3(0, 0, 0)
                 );
 
@@ -44,45 +56,35 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
 
                 var upOffset = new float3(0, pointColliderComponent.UpOffset, 0);
                 bool isLegInTrigger = IsTrigger(
-                    triggerSideEffectSpawn, TriggerType.EnableTop,
+                    triggerSideEffect, TriggerType.EnableTop,
                     worldRender, targetLtw.Position, upOffset
                 );
 
                 if (isLegInTrigger)
                 {
-                    if (!triggerSideEffectSpawn.HasFlagFast(TriggerType.HasTop))
+                    if (!triggerSideEffect.HasFlagFast(TriggerType.HasTop))
                     {
-                        if (triggerSideEffectSpawn.HasFlagFast(TriggerType.DestroySelf)) destroyEntity.ValueRW = true;
-                        Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffectSpawn.OnInside);
+                        if (triggerSideEffect.HasFlagFast(TriggerType.DestroySelf)) destroyEntity.ValueRW = true;
+                        Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffect.OnInside);
                         return;
                     }
                 }
 
-                if (triggerSideEffectSpawn.HasFlagFast(TriggerType.HasInside))
+                if (triggerSideEffect.HasFlagFast(TriggerType.HasInside))
                 {
-                    if (triggerSideEffectSpawn.HasFlagFast(TriggerType.DestroySelf)) destroyEntity.ValueRW = true;
-                    Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffectSpawn.OnTop);
-                }
-
-                var forwardOffset = new float3(0, pointColliderComponent.ForwardPre, 0);
-                bool isForwardTrigger = IsTrigger(
-                    triggerSideEffectSpawn, TriggerType.HasForwardAndEnable,
-                    worldRender, targetLtw.Position, forwardOffset
-                );
-                if (isForwardTrigger)
-                {
-                    Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffectSpawn.OnForwardPre);
+                    if (triggerSideEffect.HasFlagFast(TriggerType.DestroySelf)) destroyEntity.ValueRW = true;
+                    Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffect.OnTop);
                 }
             }
         }
 
         [BurstCompile]
         private bool IsTrigger(
-            in TriggerSideEffectSpawnComponent triggerSideEffectSpawn, TriggerType triggerType,
+            in TriggerSideEffectComponent triggerSideEffect, TriggerType triggerType,
             in WorldRenderBounds worldRender, float3 position, float3 offset
         )
         {
-            if (!triggerSideEffectSpawn.HasFlagFast(triggerType)) return false;
+            if (!triggerSideEffect.HasFlagFast(triggerType)) return false;
             return worldRender.Value.Contains(position + offset);
         }
 

@@ -6,25 +6,65 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats Group/Player Stat.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats Group/Player Stat.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/5 JumpSpeed.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/5 JumpSpeed.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/null stat.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/null stat.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink.Data/CinemachineLinkerSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink.Data/CinemachineLinkerSingleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink/CinemachineLinkerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink/CinemachineLinkerSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses.Authoring/FocusComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses.Authoring/FocusComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses.Authoring/FocusManagerAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses.Authoring/FocusManagerAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses.Data/FocusComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses.Data/FocusComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses.Data/FocusManagerCurrentInfoComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses.Data/FocusCurrentComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses.Data/FocusManagerCurrentInfoComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses.Data/FocusCurrentComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses/FocusMangerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Focuses/Focuses/FocusMangerSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/BovineLabs.Sample.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/BovineLabs.Sample.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/BovineLabsAppBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/BovineLabsAppBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/Views/Game/GameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/Views/Game/GameView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/Views/Menu/HomeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/Views/Menu/HomeView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Authoring/GoalBufferAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Authoring/GoalBufferAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/GoalBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/GoalBuffer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/GoalCompleteComponenet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/GoalCompleteComponenet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionSchema.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionsSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions.Data/MissionsSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions/GoalJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions/GoalJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Authoring.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Authoring/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Authoring/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Authoring/Sprites.Authoring.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Authoring/Sprites.Authoring.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/Sprites.Service.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/ISpriteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/Sprites.Service/ISpriteService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/ISpriteService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/Sprites.Service/ISpriteService.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/SpriteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/Sprites.Service/SpriteService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/SpriteService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/Sprites.Service/SpriteService.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/Sprites.Data.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/Sprites.Service/Sprites.Service.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/Sprites.Data.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/Sprites.Service/Sprites.Service.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/SpritesServiceBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/Sprites.Service/SpritesServiceBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/SpritesServiceBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/Sprites.Service/SpritesServiceBehaviour.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites/Sprites.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites/Sprites.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Authoring.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Authoring/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Authoring/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Authoring/UXMLs.Authoring.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Authoring/UXMLs.Authoring.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/UXMLs.Service.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Data/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Data/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Data/IUxmlService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/UXMLs.Service/IUxmlService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Data/IUxmlService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/UXMLs.Service/IUxmlService.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Data/UXMLService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/UXMLs.Service/UXMLService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Data/UXMLService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/UXMLs.Service/UXMLService.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Data/UXMLServiceBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/UXMLs.Service/UXMLServiceBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Data/UXMLServiceBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/UXMLs.Service/UXMLServiceBehaviour.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Data/UXMLs.Data.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/UXMLs.Service/UXMLs.Service.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.Data/UXMLs.Data.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/UiServices/UXMLs.Service/UXMLs.Service.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs/UXMLs.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/UXMLs/UXMLs/UXMLs.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/UI Documents/Mobile.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/UI Documents/Mobile.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +119,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/HeightComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/LeftRightComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/Positioning.Data.asmdef" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements.Data/RoadMovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Sprites/Sprites.Data/SpritesServiceBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/ZBuildings/ZBuildings.Authoring/BlockSizeComponentAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
@@ -122,7 +163,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.5f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.6f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath G:\Metro_Hustle -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="G:\Metro_Hustle" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -133,7 +174,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.5f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.6f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath G:\Metro_Hustle -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="G:\Metro_Hustle" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -157,15 +198,13 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21088">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="21088" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -282,7 +321,9 @@
       <workItem from="1749120768510" duration="1401000" />
       <workItem from="1749124119991" duration="1574000" />
       <workItem from="1749125750581" duration="1992000" />
-      <workItem from="1749166810501" duration="2756000" />
+      <workItem from="1749166810501" duration="8846000" />
+      <workItem from="1749320735267" duration="99000" />
+      <workItem from="1749320856330" duration="4472000" />
     </task>
     <servers />
   </component>
@@ -362,6 +403,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs</url>
+          <line>64</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\TriggerSideEffects\TriggerSideEffects\WorldRenderTriggerSideEffectJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="2780" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2835" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs</url>
+          <line>74</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\TriggerSideEffects\TriggerSideEffects\WorldRenderTriggerSideEffectJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="3260" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3319" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />

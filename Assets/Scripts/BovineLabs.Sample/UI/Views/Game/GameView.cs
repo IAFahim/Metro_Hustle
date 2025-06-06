@@ -3,14 +3,13 @@
 // </copyright>
 
 using _src.Scripts.Healths.Healths.Data;
-using _src.Scripts.UXMLs.UXMLs.Data;
 using UnityEngine.UIElements;
 
 namespace BovineLabs.Sample.UI.Views.Game
 {
     public class GameView : GameBaseView<GameModel>
     {
-        public GameView(HealthView healthView, IUxmlService service)
+        public GameView(HealthView healthView)
             : base(new GameModel())
         {
             Add(healthView);

@@ -1,6 +1,5 @@
 using System;
 using _src.Scripts.StatsHelpers.StatsHelpers.Data;
-using BovineLabs.Core.ObjectManagement;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
@@ -9,9 +8,8 @@ using UnityEngine.AddressableAssets;
 namespace _src.Scripts.Missions.Missions.Data
 {
     [CreateAssetMenu(fileName = "MissionSchema", menuName = "Scriptable Objects/Mission/Schema")]
-    public class MissionSchema : ScriptableObject, IUID
+    public class MissionSchema : ScriptableObject
     {
-        [Header("Identification & Display")] public int id;
         public string title = "New Mission";
         [TextArea(3, 5)] public string description;
         public AssetReferenceSprite spriteAsset;
@@ -24,11 +22,6 @@ namespace _src.Scripts.Missions.Missions.Data
 
         [Header("Objectives")] public Objective[] objectives;
 
-        public int ID
-        {
-            get => id;
-            set => id = value;
-        }
     }
 
 

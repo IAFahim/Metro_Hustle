@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1984371787363550894}
   - component: {fileID: 3904942219876355388}
   - component: {fileID: -6217013060867154551}
+  - component: {fileID: 8272137515619712498}
   m_Layer: 0
   m_Name: Train
   m_TagString: Untagged
@@ -131,8 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ea920db2534d059bfb2b5367eebe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerType: 228
-  onForwardPre: {fileID: 0}
+  triggerType: 245
+  sideEffect: 255
   onTop: {fileID: 0}
   onInside: {fileID: 11400000, guid: 81ac34423d229ee4b8ed7c4b16db8e59, type: 2}
 --- !u!114 &3904942219876355388
@@ -159,14 +160,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5843df0182f41198fa3341f61770d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityEnable: 0
   gravity:
     value: 20352
   velocity:
-    value: 0
-  heightIncrease:
     value: 0
   leftRightOffset:
     value: 0
   forwardBackOffset:
     value: 50176
+--- !u!114 &8272137515619712498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397272447093054247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d487c41c256e40f3aa744c2f9e523feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height:
+    value: 0

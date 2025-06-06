@@ -10,7 +10,7 @@ using UnityEngine;
 namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Editor
 {
     [BurstCompile]
-    [WithAll(typeof(TriggerSideEffectSpawnComponent))]
+    [WithAll(typeof(TriggerSideEffectComponent))]
     public partial struct TriggerSideEffectVisualizationJobEntity : IJobEntity
     {
         public CommandBuilder Drawing;
@@ -25,15 +25,15 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Editor
         [BurstCompile]
         private void Execute(
             in WorldRenderBounds worldRender,
-            in TriggerSideEffectSpawnComponent triggerSideEffectSpawn
+            in TriggerSideEffectComponent triggerSideEffect
         )
         {
             var center = worldRender.Value.Center;
             var extents = worldRender.Value.Extents;
-            DrawTriggerInfo(center, extents, triggerSideEffectSpawn);
+            DrawTriggerInfo(center, extents, triggerSideEffect);
         }
 
-        private void DrawTriggerInfo(float3 center, float3 extents, in TriggerSideEffectSpawnComponent trigger)
+        private void DrawTriggerInfo(float3 center, float3 extents, in TriggerSideEffectComponent trigger)
         {
             var labelPos = center + new float3(0, extents.y + 0.3f, 0);
 
