@@ -9,8 +9,8 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
     {
         public half perBlockSize = new(10);
         public half ahead = new(200);
-        public half sizeOffset = new(10);
-        public GameObject[] leftPrefabs;
+        public half roadSize = new(10);
+        public GameObject[] segment50;
         public GameObject road;
         public GameObject[] obsticals;
 
@@ -23,12 +23,12 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
                 {
                     PerBlockSize = authoring.perBlockSize,
                     AHeadCreate = authoring.ahead,
-                    SideOffset = authoring.sizeOffset
+                    SideOffset = authoring.roadSize
                 });
                 var blockLeftBuffers = AddBuffer<BlockBuffer>(entity);
-                for (var i = 0; i < authoring.leftPrefabs.Length; i++)
+                for (var i = 0; i < authoring.segment50.Length; i++)
                 {
-                    var obj = authoring.leftPrefabs[i];
+                    var obj = authoring.segment50[i];
                     blockLeftBuffers.Add(new BlockBuffer
                     {
                         Left = GetEntity(obj, TransformUsageFlags.None),

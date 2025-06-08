@@ -982,14 +982,15 @@ MonoBehaviour:
     value: 21056
   ahead:
     value: 23728
-  sizeOffset:
+  roadSize:
     value: 18432
-  leftPrefabs:
+  segment50:
   - {fileID: 5669421507308461431, guid: 8004b0eec1a82e3498188d6dc0c8860a, type: 3}
   - {fileID: 1951927346711952549, guid: 775dec7037a419844aa45c3828cf2541, type: 3}
   - {fileID: 6510705297105038620, guid: 076890f1ac705b14583f4096c6950452, type: 3}
   - {fileID: 9010530340446442158, guid: 6851b57b3b83b5f4580629925841c546, type: 3}
   - {fileID: 8393215825451264840, guid: 03b1a5edfeaff3147a5f6c3c1154e8a5, type: 3}
+  - {fileID: 919132149155446097, guid: f5ac2e75a27f96649a05b4562dc16754, type: 3}
   road: {fileID: 3864285107160656504, guid: b46c82ac244f56a45a33022ca53ded4c, type: 3}
   obsticals:
   - {fileID: 1625318500984090841, guid: 3a3cb5aa2a07ded4196fa4467cbca9df, type: 3}
