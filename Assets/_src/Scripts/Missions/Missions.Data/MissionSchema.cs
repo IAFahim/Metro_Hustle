@@ -12,16 +12,15 @@ namespace _src.Scripts.Missions.Missions.Data
     {
         public string title = "New Mission";
         [TextArea(3, 5)] public string description;
-        public AssetReferenceSprite spriteAsset;
-
-        [Header("Route & Parcel")] public half weight;
         public half time = half.MinValueAsHalf;
+        public AssetReferenceItem item;
+
+        [Header("Route")] 
         public string startStation;
         public string endStation;
         public DayTime dayTime;
 
         [Header("Objectives")] public Objective[] objectives;
-
     }
 
 
@@ -32,11 +31,11 @@ namespace _src.Scripts.Missions.Missions.Data
         [TextArea(1, 5)] public string description;
         public AssetReferenceSprite spriteAsset;
         public GoalBuffer goalBuffer;
-        public Item[] reward;
+        public Reward[] reward;
     }
 
     [Serializable]
-    public struct Item : IBufferElementData
+    public struct Reward : IBufferElementData
     {
         public EIntrinsic intrinsic;
         public ushort count;

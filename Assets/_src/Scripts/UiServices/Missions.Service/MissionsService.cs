@@ -21,7 +21,7 @@ namespace _src.Scripts.UiServices.Missions.Service
 
         public AssetReferenceMissions GetCurrent()
         {
-            var currentLocation = PlayerPrefs.GetInt("Location", 0);
+            var currentLocation = PlayerPrefs.GetInt("mission_location", 0);
             return assets[currentLocation];
         }
     }

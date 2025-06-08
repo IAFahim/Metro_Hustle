@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3a0a78899fb79443a88f48e69e706b9, type: 3}
   m_Name: kol_1 First_Track_Run Mission
   m_EditorClassIdentifier: 
-  id: 1
   title: First Track Run
   description: Your first hustle. Just get the package to Baranagar. Watch out for
     junk on the tracks.
-  spriteAsset:
-    m_AssetGUID: 
+  time:
+    value: 64511
+  item:
+    m_AssetGUID: 207f32a695601da4b88c3d0bfc4abb24
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
@@ -27,24 +28,18 @@ MonoBehaviour:
   dayTime: 1
   objectives:
   - optional: 0
-    name: Deliver Package to Baranagar
+    description: 
     spriteAsset:
       m_AssetGUID: 
       m_SubObjectName: 
       m_SubObjectType: 
       m_SubObjectGUID: 
       m_EditorAssetChanged: 0
+    goalBuffer:
+      isComplete: 0
+      intrinsic: 0
+      comparison: 0
+      goal: 0
     reward:
     - intrinsic: 13
       count: 50
-    goal:
-      intrinsic: 4
-      comparison: 0
-      defaultValue:
-        value: 0
-      min:
-        value: 0
-      max:
-        value: 23104
-      timeLimit:
-        value: 48128

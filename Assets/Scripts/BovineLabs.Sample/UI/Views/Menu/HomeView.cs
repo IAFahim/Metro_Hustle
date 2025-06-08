@@ -2,10 +2,12 @@
 //     Copyright (c) BovineLabs. All rights reserved.
 // </copyright>
 
+using System.Collections.Generic;
 using _src.Scripts.Missions.Missions.Data;
 using _src.Scripts.UiServices.Missions.Service;
 using _src.Scripts.UiServices.UXMLs.Service;
 using BovineLabs.Core;
+using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace BovineLabs.Sample.UI.Views.Menu
@@ -33,13 +35,12 @@ namespace BovineLabs.Sample.UI.Views.Menu
         private const string QuitCancelText = "@UI:quitCancel";
 
         private readonly IUxmlService _uxmlService;
-        private readonly IMissionsService _missionsService;
+        private MissionsSettings _missionsSettings;
 
         public HomeView(HomeViewModel viewModel, IUxmlService uxmlService, IMissionsService missionsService)
             : base(viewModel)
         {
             _uxmlService = uxmlService;
-            _missionsService = missionsService;
             var assetReferenceMissions = missionsService.GetCurrent();
             var asyncOperationHandle = assetReferenceMissions.LoadAssetAsync();
             asyncOperationHandle.Completed += OnMissionLoadComplete;
@@ -47,26 +48,53 @@ namespace BovineLabs.Sample.UI.Views.Menu
 
         private void OnMissionLoadComplete(AsyncOperationHandle<MissionsSettings> obj)
         {
+            _missionsSettings = obj.Result;
             var root = _uxmlService.GetAsset("Mobile").Instantiate().ElementAt(0);
             Add(root);
             AddToClassList(".mobile__full");
             var missionTemplate = _uxmlService.GetAsset("Mission");
             var screen = root.Q<VisualElement>("Screen");
-
-            var missionTemplateContainer = InstantiateMission(missionTemplate);
+            (MissionSchema mission, int missionNumber) = _missionsSettings.GetCurrent();
+            var missionTemplateContainer = InstantiateMission(missionTemplate, mission, missionNumber);
             screen.Add(missionTemplateContainer);
-            
+
             var button = root.Q<ActionButton>("PlayButton");
             button.RegisterCallback<ClickEvent>(_ => Play());
         }
 
-        private static TemplateContainer InstantiateMission(VisualTreeAsset missionTemplate)
+        private static TemplateContainer InstantiateMission(
+            VisualTreeAsset missionTemplate,
+            MissionSchema missionSchema,
+            int missionNumber
+        )
         {
-            var missionTemplateContainer = missionTemplate.Instantiate();
-            var missionNumberLabel = missionTemplateContainer.Q<Label>("mission_text_number");
-            var missionNumberLabelFormat = missionNumberLabel.text;
-            missionNumberLabel.text = string.Format(missionNumberLabelFormat, 1);
+            TemplateContainer missionTemplateContainer = missionTemplate.Instantiate();
+            Format(missionTemplateContainer, "mission_text_number", missionNumber);
+            Format(missionTemplateContainer, "label_title", missionSchema.title);
+            var asyncOperationHandle = missionSchema.item.LoadAssetAsync();
+            asyncOperationHandle.Completed += (obj) => OnItemLoadComplete(missionTemplateContainer, obj);
+
             return missionTemplateContainer;
+        }
+
+        private static void OnItemLoadComplete(TemplateContainer container, AsyncOperationHandle<Item> obj)
+        {
+            var item = obj.Result;
+            Format(container, "label_item", item.title);
+            var asyncOperationHandle = item.spriteAsset.LoadAssetAsync();
+            asyncOperationHandle.Completed += handle => SetSprite(container, handle);
+        }
+
+        private static void SetSprite(TemplateContainer container, AsyncOperationHandle<Sprite> obj)
+        {
+            container.Q<Image>("image_item").image = obj.Result.texture;
+        }
+
+        public static void Format(TemplateContainer container, string name, object args)
+        {
+            var labelElement = container.Q<Label>(name);
+            var format = labelElement.text;
+            labelElement.text = string.Format(format, args);
         }
 
 #if UNITY_STANDALONE

@@ -9,18 +9,17 @@ namespace _src.Scripts.Missions.Missions.Data
     public class MissionsSettings : ScriptableObject
     {
         public List<MissionSchema> missionSchema = new();
-        private static bool _isActive;
-        public static bool IsActive => _isActive;
-        public static MissionSchema CurrentMission;
 
-        private void OnEnable()
+
+        public (MissionSchema mission, int missionNumber) GetCurrent()
         {
-            _isActive = true;
+            var missionNumber = PlayerPrefs.GetInt("current_mission", 0);
+            return (missionSchema[missionNumber], missionNumber + 1);
         }
     }
-    
+
     [Serializable]
-    public class AssetReferenceMissions: AssetReferenceT<MissionsSettings>
+    public class AssetReferenceMissions : AssetReferenceT<MissionsSettings>
     {
         public AssetReferenceMissions(string guid) : base(guid)
         {

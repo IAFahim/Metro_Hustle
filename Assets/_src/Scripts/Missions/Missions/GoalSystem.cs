@@ -15,7 +15,6 @@ namespace _src.Scripts.Missions.Missions
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            var isActive = MissionsSettings.IsActive;
             new GoalJobEntity()
             {
             }.ScheduleParallel();

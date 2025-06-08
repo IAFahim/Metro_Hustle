@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: Items
   m_EditorClassIdentifier: 
-  m_GroupName: Default Local Group
-  m_GUID: dc58c187233a4ea40a1295f07c65d68c
+  m_GroupName: Items
+  m_GUID: 66327a8bafe29af4ab4849f474a50d29
   m_SerializeEntries:
-  - m_GUID: dd53691b6a917b44b99b8ddb251d4e91
-    m_Address: Assets/_src/Sprites/Items/compact-disc.png
+  - m_GUID: 207f32a695601da4b88c3d0bfc4abb24
+    m_Address: Assets/Settings/Schemas/Items/Old CD.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -24,5 +24,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: a27b57eea9180c048b50a2f8830b7de7, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: c032eff557c118742ad61287935883b3, type: 2}
-    - {fileID: 11400000, guid: 54762a66ee5ca174396f2644d1770576, type: 2}
+    - {fileID: 11400000, guid: ed02d31e70a2b414393d2ded6f1f88f9, type: 2}
+    - {fileID: 11400000, guid: 63841ed9cb0e388418eeaf1e26c8d50f, type: 2}
