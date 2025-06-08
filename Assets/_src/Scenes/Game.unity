@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perBlockSize:
-    value: 18688
+    value: 21056
   ahead:
     value: 23728
   sizeOffset:
@@ -2827,6 +2827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611623e5b3e248e8956870217dd79883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sideEffect: 0
 --- !u!114 &5361059387469944097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2895,10 +2896,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - intrinsic: 1
+  - isComplete: 0
+    intrinsic: 1
     comparison: 0
     goal: 1
-  goalCompleteBit: 0
 --- !u!114 &8260355615061726109
 MonoBehaviour:
   m_ObjectHideFlags: 0

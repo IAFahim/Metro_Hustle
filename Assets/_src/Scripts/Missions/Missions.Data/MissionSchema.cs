@@ -18,7 +18,9 @@ namespace _src.Scripts.Missions.Missions.Data
         [Header("Route")] 
         public string startStation;
         public string endStation;
+        public float distance;
         public DayTime dayTime;
+        public ushort money;
 
         [Header("Objectives")] public Objective[] objectives;
     }

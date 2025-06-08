@@ -8,6 +8,7 @@ using _src.Scripts.UiServices.Missions.Service;
 using _src.Scripts.UiServices.UXMLs.Service;
 using BovineLabs.Core;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace BovineLabs.Sample.UI.Views.Menu
@@ -36,13 +37,16 @@ namespace BovineLabs.Sample.UI.Views.Menu
 
         private readonly IUxmlService _uxmlService;
         private MissionsSettings _missionsSettings;
+        private readonly List<AsyncOperationHandle> _assetReferences;
 
         public HomeView(HomeViewModel viewModel, IUxmlService uxmlService, IMissionsService missionsService)
             : base(viewModel)
         {
+            _assetReferences = new List<AsyncOperationHandle>();
             _uxmlService = uxmlService;
             var assetReferenceMissions = missionsService.GetCurrent();
             var asyncOperationHandle = assetReferenceMissions.LoadAssetAsync();
+            _assetReferences.Add(asyncOperationHandle);
             asyncOperationHandle.Completed += OnMissionLoadComplete;
         }
 
@@ -62,40 +66,78 @@ namespace BovineLabs.Sample.UI.Views.Menu
             button.RegisterCallback<ClickEvent>(_ => Play());
         }
 
-        private static TemplateContainer InstantiateMission(
+        private TemplateContainer InstantiateMission(
             VisualTreeAsset missionTemplate,
             MissionSchema missionSchema,
             int missionNumber
         )
         {
-            TemplateContainer missionTemplateContainer = missionTemplate.Instantiate();
-            Format(missionTemplateContainer, "mission_text_number", missionNumber);
-            Format(missionTemplateContainer, "label_title", missionSchema.title);
+            TemplateContainer container = missionTemplate.Instantiate();
+            Format(container, "mission_text_number", missionNumber);
+            Format(container, "label_title", missionSchema.title);
+            FormatText(container, "text_description", missionSchema.description);
+            Format(container, "label_destination", missionSchema.startStation, missionSchema.endStation);
+            Format(container, "label_time", missionSchema.time);
+            Format(container, "label_distance", missionSchema.distance);
+            Format(container, "label_reward", missionSchema.money);
             var asyncOperationHandle = missionSchema.item.LoadAssetAsync();
-            asyncOperationHandle.Completed += (obj) => OnItemLoadComplete(missionTemplateContainer, obj);
-
-            return missionTemplateContainer;
+            _assetReferences.Add(asyncOperationHandle);
+            asyncOperationHandle.Completed += obj => OnItemLoadComplete(container, obj);
+            return container;
         }
 
-        private static void OnItemLoadComplete(TemplateContainer container, AsyncOperationHandle<Item> obj)
+        private void OnItemLoadComplete(TemplateContainer container, AsyncOperationHandle<Item> obj)
         {
             var item = obj.Result;
-            Format(container, "label_item", item.title);
+            FormatText(container, "text_item", item.title);
             var asyncOperationHandle = item.spriteAsset.LoadAssetAsync();
+            _assetReferences.Add(asyncOperationHandle);
             asyncOperationHandle.Completed += handle => SetSprite(container, handle);
         }
 
         private static void SetSprite(TemplateContainer container, AsyncOperationHandle<Sprite> obj)
         {
-            container.Q<Image>("image_item").image = obj.Result.texture;
+            container.Q<Icon>("item_icon").image = obj.Result.texture;
         }
 
-        public static void Format(TemplateContainer container, string name, object args)
+        private static void Format(TemplateContainer container, string name, object args)
         {
-            var labelElement = container.Q<Label>(name);
-            var format = labelElement.text;
+            var labelElement = GetLabelAndOutFormat(container, name, out var format);
             labelElement.text = string.Format(format, args);
         }
+
+        private static void Format(TemplateContainer container, string name, params object[] args)
+        {
+            var labelElement = GetLabelAndOutFormat(container, name, out var format);
+            labelElement.text = string.Format(format, args);
+        }
+
+        private static Label GetLabelAndOutFormat(TemplateContainer container, string name, out string format)
+        {
+            var labelElement = container.Q<Label>(name);
+            format = labelElement.text;
+            return labelElement;
+        }
+
+        private static void FormatText(TemplateContainer container, string name, object args)
+        {
+            var labelElement = GetTextAndOutFormat(container, name, out var format);
+            labelElement.text = string.Format(format, args);
+        }
+        
+        private static Text GetTextAndOutFormat(TemplateContainer container, string name, out string format)
+        {
+            var labelElement = container.Q<Text>(name);
+            format = labelElement.text;
+            return labelElement;
+        }
+
+        protected override void OnExit(NavController controller, NavDestination destination, Argument[] args)
+        {
+            base.OnExit(controller, destination, args);
+            foreach (var asyncOperationHandle in _assetReferences) asyncOperationHandle.Release();
+        }
+
 
 #if UNITY_STANDALONE
         private static void Quit(EventBase evt)

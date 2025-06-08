@@ -1,6 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="Mission" style="flex-grow: 1; border-top-left-radius: 32px; border-top-right-radius: 32px; border-bottom-right-radius: 32px; border-bottom-left-radius: 32px; background-color: rgb(72, 90, 98); padding-left: 16px; padding-top: 16px; padding-right: 16px; padding-bottom: 16px; margin-left: 16px; margin-right: 128px; margin-bottom: 8px; height: 300px; min-height: 300px; max-height: 300px;">
-        <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 65px; min-height: 65px; max-height: 65px; margin-left: 32px; margin-right: 32px; margin-bottom: 8px; align-items: auto;">
+    <ui:VisualElement name="Mission" style="flex-grow: 1; border-top-left-radius: 32px; border-top-right-radius: 32px; border-bottom-right-radius: 32px; border-bottom-left-radius: 8px; background-color: rgb(72, 90, 98); padding-left: 16px; padding-top: 16px; padding-right: 16px; padding-bottom: 16px; margin-left: 16px; margin-right: 128px; margin-bottom: 8px; height: 300px; min-height: 300px; max-height: 300px;">
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 65px; min-height: 65px; max-height: 65px; margin-left: 32px; margin-right: 32px; margin-bottom: 4px; align-items: auto;">
             <ui:Label text="Mission {0}" name="mission_text_number" double-click-selects-word="false" triple-click-selects-line="false" display-tooltip-when-elided="false" emoji-fallback-support="false" style="color: rgb(255, 255, 255); font-size: 50px; -unity-font-style: bold; -unity-text-align: lower-left; margin-bottom: 0; padding-bottom: 0;" />
             <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse;">
                 <ui:VisualElement style="flex-grow: 1; width: 64px; height: 64px; min-height: 64px; max-height: 64px; max-width: 64px; min-width: 64px; background-color: rgb(255, 255, 255);" />
@@ -8,24 +8,25 @@
         </ui:VisualElement>
         <ui:VisualElement style="flex-grow: 1; flex-direction: column; background-color: rgb(200, 200, 200); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;">
             <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-between; margin-left: 8px; margin-right: 8px; align-items: flex-end; height: 64px; min-height: 64px; max-height: 64px;">
-                <ui:Label text="{0}" name="label_title" style="font-size: 60px; margin-bottom: 0; padding-bottom: 0; -unity-text-align: middle-left; background-color: rgba(255, 255, 255, 0);" />
-                <ui:Label text="{0}" name="label_reward" style="font-size: 50px; color: rgb(219, 255, 0); margin-bottom: 0; padding-bottom: 0; -unity-text-align: upper-right; -unity-font-style: bold;" />
+                <ui:Label text="{0}" name="label_title" style="font-size: 42px; margin-bottom: 0; padding-bottom: 0; -unity-text-align: middle-left; background-color: rgba(255, 255, 255, 0);" />
+                <ui:Label text="{0}" name="label_reward" style="font-size: 42px; color: rgb(219, 255, 0); margin-bottom: 0; padding-bottom: 0; -unity-text-align: upper-right; -unity-font-style: bold;" />
             </ui:VisualElement>
             <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 128px; min-height: 128px; max-height: 128px;">
                 <ui:VisualElement style="flex-grow: 1;">
                     <ui:VisualElement style="flex-grow: 1; flex-direction: column; justify-content: space-between; margin-left: 8px; margin-right: 8px; align-items: stretch; height: 128px; min-height: 128px; max-height: 128px;">
-                        <ui:Label text="{0}" name="label_item" style="font-size: 32px;" />
-                        <ui:Label text="{0}" name="label_objective_text" style="font-size: 20px; -unity-font-style: normal; margin-top: 2px;" />
-                        <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: stretch; justify-content: space-between;">
-                            <ui:Label text="{0} -  {1}" name="label_destination" style="font-size: 16px; -unity-font-style: normal; margin-top: 2px;" />
+                        <Unity.AppUI.UI.Text name="text_description" text="{0}" style="color: rgb(0, 0, 0); font-size: 24px; flex-grow: 1; -unity-text-align: upper-left;" />
+                        <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: stretch; justify-content: space-between; flex-shrink: 1; -unity-text-align: middle-left;">
+                            <ui:Label text="{0} -  {1}" name="label_destination" style="font-size: 16px; -unity-font-style: normal;" />
                             <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: flex-end;">
-                                <ui:Label text="{0}" name="label_time" style="font-size: 16px; -unity-font-style: bold; margin-top: 2px; background-color: rgb(0, 0, 0); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; color: rgb(255, 255, 255); -unity-text-align: middle-center; margin-bottom: 6px; padding-left: 8px; padding-right: 8px;" />
-                                <ui:Label text="{0}" name="label_distance" style="font-size: 16px; -unity-font-style: bold; margin-top: 2px; background-color: rgb(0, 0, 0); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; color: rgb(255, 255, 255); -unity-text-align: middle-center; min-width: 128px; max-width: 128px; width: 128px; margin-bottom: 6px;" />
+                                <ui:Label text="{0}" name="label_time" style="font-size: 16px; -unity-font-style: bold; background-color: rgb(0, 0, 0); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; color: rgb(255, 255, 255); -unity-text-align: middle-center; width: 80px;" />
+                                <ui:Label text="{0}" name="label_distance" style="font-size: 16px; -unity-font-style: bold; background-color: rgb(0, 0, 0); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; color: rgb(255, 255, 255); -unity-text-align: middle-center; width: 80px;" />
                             </ui:VisualElement>
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="image_item" style="flex-grow: 1; height: 128px; min-height: 128px; max-height: 128px; width: 128px; min-width: 128px; max-width: 128px;" />
+                <Unity.AppUI.UI.Icon name="item_icon" style="width: 128px; height: 128px; flex-direction: column-reverse;">
+                    <Unity.AppUI.UI.Text text="{0}" name="text_item" style="color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 16px; margin-bottom: 12px; -unity-font-style: normal;" />
+                </Unity.AppUI.UI.Icon>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
