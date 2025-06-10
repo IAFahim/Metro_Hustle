@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Your first hustle. Just get the package to Baranagar. Watch out for
     junk on the tracks.
   time:
-    value: 16384
+    value: 21056
   item:
     m_AssetGUID: 207f32a695601da4b88c3d0bfc4abb24
     m_SubObjectName: 

@@ -1,4 +1,5 @@
-﻿using Unity.Burst;
+﻿using _src.Scripts.Positioning.Positioning.Data;
+using Unity.Burst;
 using Unity.Entities;
 
 namespace _src.Scripts.Positioning.Positioning
@@ -17,7 +18,8 @@ namespace _src.Scripts.Positioning.Positioning
             var timeDeltaTime = SystemAPI.Time.DeltaTime;
             new PositioningJobEntity
             {
-                DeltaTime = timeDeltaTime
+                DeltaTime = timeDeltaTime,
+                FaceMoveDirectionTagLookup = SystemAPI.GetComponentLookup<FaceMoveDirectionTag>(true)
             }.ScheduleParallel();
         }
 

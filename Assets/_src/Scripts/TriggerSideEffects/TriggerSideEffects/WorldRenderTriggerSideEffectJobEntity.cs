@@ -36,8 +36,8 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                 var target = collisionTrackBuffer.Entity;
                 var targetLtw = LocalToWorldLookup[target];
                 var pointColliderComponent = PointColliderLookup[target];
-                
-                var forwardOffset = new float3(0, 0, pointColliderComponent.ForwardPre);
+
+                var forwardOffset = new float3(0, pointColliderComponent.UpOffset, pointColliderComponent.ForwardPre);
                 bool isForwardTrigger = IsTrigger(
                     triggerSideEffect, TriggerType.SendForward,
                     worldRender, targetLtw.Position, forwardOffset

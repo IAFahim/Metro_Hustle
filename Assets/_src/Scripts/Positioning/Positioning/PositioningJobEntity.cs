@@ -1,4 +1,5 @@
 ﻿using _src.Scripts.Positioning.Positioning.Data;
+using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
@@ -8,8 +9,10 @@ namespace _src.Scripts.Positioning.Positioning
     public partial struct PositioningJobEntity : IJobEntity
     {
         public float DeltaTime;
+        [ReadOnly] public ComponentLookup<FaceMoveDirectionTag> FaceMoveDirectionTagLookup;
 
         private void Execute(
+            Entity entity,
             ref LocalToWorld ltw,
             ref GravityComponent gravity,
             ref LeftRightComponent leftRight,
@@ -20,6 +23,15 @@ namespace _src.Scripts.Positioning.Positioning
             {
                 gravity.Velocity -= (half)(gravity.Gravity * DeltaTime * gravity.GMultiplier);
                 ltw.Value.c3.y += gravity.Velocity * DeltaTime;
+            }
+
+            if (FaceMoveDirectionTagLookup.HasComponent(entity))
+            {
+                if (forwardBack.Offset < 0)
+                {
+                    ltw.Value.c0.x = -1;
+                    ltw.Value.c2.z = -1;
+                }
             }
 
             ltw.Value.c3.z += forwardBack.Offset * DeltaTime;
