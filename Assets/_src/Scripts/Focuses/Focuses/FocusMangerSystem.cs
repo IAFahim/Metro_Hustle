@@ -19,7 +19,7 @@ namespace _src.Scripts.Focuses.Focuses
                 currentEntity = entity;
             }
 
-            SystemAPI.GetSingletonRW<FocusCurrentComponent>().ValueRW.Entity = currentEntity;
+            SystemAPI.GetSingletonRW<FocusSingletonComponent>().ValueRW.Entity = currentEntity;
         }
     }
 }

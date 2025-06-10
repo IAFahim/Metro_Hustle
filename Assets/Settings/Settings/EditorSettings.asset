@@ -37,6 +37,8 @@ MonoBehaviour:
     Path: Assets/Settings/Schemas/Intrinsics/
   - Key: distort.control
     Path: Assets/Settings/Schemas/Control/
+  - Key: bl.ar.conditioneventobject
+    Path: Assets/Settings/Schemas/Events/
   prebakeScenes: []
   startupScene: {fileID: 0}
   defaultSettingsAuthoring: {fileID: 0}

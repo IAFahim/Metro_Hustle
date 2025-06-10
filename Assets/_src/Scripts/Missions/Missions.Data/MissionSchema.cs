@@ -4,6 +4,7 @@ using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Serialization;
 
 namespace _src.Scripts.Missions.Missions.Data
 {
@@ -29,10 +30,9 @@ namespace _src.Scripts.Missions.Missions.Data
     [Serializable]
     public struct Objective
     {
-        public bool optional;
         [TextArea(1, 5)] public string description;
         public AssetReferenceSprite spriteAsset;
-        public GoalBuffer goalBuffer;
+        [FormerlySerializedAs("goalBuffer")] public Goal goal;
         public Reward[] reward;
     }
 

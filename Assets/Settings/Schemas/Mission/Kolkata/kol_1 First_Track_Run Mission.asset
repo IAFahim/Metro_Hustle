@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Your first hustle. Just get the package to Baranagar. Watch out for
     junk on the tracks.
   time:
-    value: 64511
+    value: 16384
   item:
     m_AssetGUID: 207f32a695601da4b88c3d0bfc4abb24
     m_SubObjectName: 
@@ -25,21 +25,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   startStation: Dakshineswar
   endStation: Baranagar
+  distance: 500
   dayTime: 1
-  objectives:
-  - optional: 0
-    description: 
-    spriteAsset:
-      m_AssetGUID: 
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
-    goalBuffer:
-      isComplete: 0
-      intrinsic: 0
-      comparison: 0
-      goal: 0
-    reward:
-    - intrinsic: 13
-      count: 50
+  money: 50
+  objectives: []

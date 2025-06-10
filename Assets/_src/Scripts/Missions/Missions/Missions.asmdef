@@ -22,7 +22,9 @@
         "Unity.Transforms",
         "Healths.Data",
         "StatsHelpers.Data",
-        "BovineLabs.Stats.Data"
+        "BovineLabs.Stats.Data",
+        "Focuses.Data",
+        "BovineLabs.Sample"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

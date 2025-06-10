@@ -36,8 +36,8 @@ namespace BovineLabs.Sample.UI.Views.Menu
         private const string QuitCancelText = "@UI:quitCancel";
 
         private readonly IUxmlService _uxmlService;
-        private MissionsSettings _missionsSettings;
         private readonly List<AsyncOperationHandle> _assetReferences;
+        public static MissionsSettings MissionsSettings;
 
         public HomeView(HomeViewModel viewModel, IUxmlService uxmlService, IMissionsService missionsService)
             : base(viewModel)
@@ -52,13 +52,13 @@ namespace BovineLabs.Sample.UI.Views.Menu
 
         private void OnMissionLoadComplete(AsyncOperationHandle<MissionsSettings> obj)
         {
-            _missionsSettings = obj.Result;
+            MissionsSettings = obj.Result;
             var root = _uxmlService.GetAsset("Mobile").Instantiate().ElementAt(0);
             Add(root);
             AddToClassList(".mobile__full");
             var missionTemplate = _uxmlService.GetAsset("Mission");
             var screen = root.Q<VisualElement>("Screen");
-            (MissionSchema mission, int missionNumber) = _missionsSettings.GetCurrent();
+            (MissionSchema mission, int missionNumber) = MissionsSettings.GetCurrent();
             var missionTemplateContainer = InstantiateMission(missionTemplate, mission, missionNumber);
             screen.Add(missionTemplateContainer);
 

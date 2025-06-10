@@ -9,7 +9,7 @@ namespace _src.Scripts.CinemachineLink.CinemachineLink
     {
         public void OnUpdate(ref SystemState state)
         {
-            var entity = SystemAPI.GetSingleton<FocusCurrentComponent>().Entity;
+            var entity = SystemAPI.GetSingleton<FocusSingletonComponent>().Entity;
             var ltwCurrent = SystemAPI.GetComponent<LocalToWorld>(entity); 
             CinemachineLinkerSingleton.Transform.SetLocalPositionAndRotation(
                 ltwCurrent.Position,

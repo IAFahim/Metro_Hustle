@@ -1,7 +1,10 @@
 ﻿using BovineLabs.Anchor;
+using BovineLabs.Core;
 using Unity.AppUI.UI;
+using Unity.Properties;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Toggle = Unity.AppUI.UI.Toggle;
 
 namespace _src.Scripts.Healths.Healths.Data
 {
@@ -22,7 +25,7 @@ namespace _src.Scripts.Healths.Healths.Data
             };
             Add(healthLabel);
 
-            
+
             var healthBar = new ProgressBar
             {
                 name = "health-bar", lowValue = 0, highValue = 1,
@@ -36,15 +39,15 @@ namespace _src.Scripts.Healths.Healths.Data
             healthLabel.SetBindingToUI(nameof(ProgressBar.title), nameof(GameModel.CurrentHealth));
             healthBar.SetBindingToUI(nameof(ProgressBar.value), nameof(GameModel.HealthNormalized));
             Add(healthBar);
-            
-            
+
+
             var distanceLabel = new Text
             {
                 name = "distance-label",
                 text = "Distance:"
             };
             Add(distanceLabel);
-            
+
             var distance = new Text
             {
                 name = "distance",
@@ -52,10 +55,27 @@ namespace _src.Scripts.Healths.Healths.Data
                 dataSource = ViewModel
             };
             distance.SetBindingToUI(nameof(Text.text), nameof(GameModel.TotalDistance));
-            
+
+            var exitGameToggle = new Toggle
+            {
+                label = "Exit",
+                dataSource = this.ViewModel
+            };
+
+            exitGameToggle.SetBinding(nameof(Toggle.value), new DataBinding
+            {
+                updateTrigger = BindingUpdateTrigger.EveryUpdate,
+                dataSourcePath = new PropertyPath(nameof(GameModel.ExitGame)),
+            });
+            exitGameToggle.RegisterValueChangedCallback(ToggleExit);
+            Add(exitGameToggle);
             Add(distance);
-            
-            
+        }
+
+        private void ToggleExit(ChangeEvent<bool> evt)
+        {
+            if (evt.newValue) BovineLabsBootstrap.Instance.DestroyGameWorld();
+            else BovineLabsBootstrap.Instance.CreateGameWorld();
         }
     }
 }

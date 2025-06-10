@@ -23,16 +23,16 @@
         "com.unity.collections": "2.5.3",
         "com.unity.dt.app-ui": "2.0.0-pre.19"
       },
-      "hash": "42f7174d6b80312cc85db321ffe1ca1fe7faba18"
+      "hash": "2f12e3e1801c5aae7ea6f7800af37cb3ca3a7be7"
     },
     "com.bovinelabs.core": {
-      "version": "https://gitlab.com/tertle/com.bovinelabs.core.git#1.4.3",
+      "version": "https://gitlab.com/tertle/com.bovinelabs.core.git#1.4.4",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.entities": "1.4.0-exp.2"
       },
-      "hash": "a940c334341b71ea442fc045c8279338802fe182"
+      "hash": "1f482356e108d0e0f7b3f025f3cac6c2cba060fa"
     },
     "com.bovinelabs.reaction": {
       "version": "https://gitlab.com/tertle/com.bovinelabs.reaction.git",
@@ -41,7 +41,7 @@
       "dependencies": {
         "com.bovinelabs.core": "1.4.3"
       },
-      "hash": "5ad393e7c1f562c5bfc5e22c1aaef24e8868881d"
+      "hash": "55c3f7982bcaae164b99eecae459a452818214d0"
     },
     "com.bovinelabs.stats": {
       "version": "https://gitlab.com/tertle/com.bovinelabs.stats.git",
@@ -51,7 +51,7 @@
         "com.bovinelabs.core": "1.4.3",
         "com.bovinelabs.reaction": "0.5.0"
       },
-      "hash": "e97302269329dfe64532ea26f30504b3fa1b5b0f"
+      "hash": "06934fa4c71990b1879d3827f6cb421ec47b2238"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
@@ -107,7 +107,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.21",
+      "version": "1.8.22",
       "depth": 0,
       "source": "registry",
       "dependencies": {

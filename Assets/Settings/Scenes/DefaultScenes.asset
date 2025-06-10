@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fae8bf25da0a405392fabd78f14fb4e1, type: 3}
-  m_Name: RequiredGame
+  m_Name: DefaultScenes
   m_EditorClassIdentifier: 
   ID: 0
-  Scenes:
-  - {fileID: 102900000, guid: f52c153b9ed97934b8bf91824b0952b0, type: 3}
+  Scenes: []
   TargetWorld: 1
-  IsRequired: 1
-  WaitForLoad: 0
+  IsRequired: 0
+  WaitForLoad: 1
   AutoLoad: 1

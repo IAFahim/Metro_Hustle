@@ -18,7 +18,7 @@ namespace BovineLabs.Sample.Editor.Services
             return property.name switch
             {
                 nameof(ControlSettings.Schemas) => new AssetCreator<ControlSchema>(
-                    this.serializedObject, property, "distort.control", "Assets/Settings/Schemas/Control/", "ControlSchema.asset").Element,
+                    this.serializedObject, property).Element,
                 _ => CreatePropertyField(property),
             };
         }

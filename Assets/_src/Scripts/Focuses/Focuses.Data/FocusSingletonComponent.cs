@@ -2,7 +2,7 @@
 
 namespace _src.Scripts.Focuses.Focuses.Data
 {
-    public struct FocusCurrentComponent : IComponentData
+    public struct FocusSingletonComponent : IComponentData
     {
         public Entity Entity;
     }

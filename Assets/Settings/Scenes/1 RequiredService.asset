@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f8a5def80249169fb86f23077b8286, type: 3}
-  m_Name: ReactionSettings
+  m_Script: {fileID: 11500000, guid: fae8bf25da0a405392fabd78f14fb4e1, type: 3}
+  m_Name: 1 RequiredService
   m_EditorClassIdentifier: 
-  conditionEvents:
-  - {fileID: 11400000, guid: 2c02fba152c7dbc46b169100c4e8a04a, type: 2}
-  enableables: f4651c22e4f91df7
+  ID: 1
+  Scenes:
+  - {fileID: 102900000, guid: 311dd84d210b11c4484650bceacb6f69, type: 3}
+  TargetWorld: 2
+  IsRequired: 1
+  WaitForLoad: 0
+  AutoLoad: 1

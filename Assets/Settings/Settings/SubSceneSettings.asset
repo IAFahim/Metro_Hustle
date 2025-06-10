@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: SubSceneSettings
   m_EditorClassIdentifier: 
   SceneSets:
+  - {fileID: 11400000, guid: ac186d05a0fa68a4785c19933cf2e804, type: 2}
   - {fileID: 11400000, guid: bb5b451007a245b488bf1bca868e54a6, type: 2}
+  - {fileID: 11400000, guid: 4a49a672d475ebb47a6adfabe233edde, type: 2}
   EditorSceneSets: []
   AssetSets:
   - {fileID: 11400000, guid: 84760d9d6df9d3e4bbb0024181190fdc, type: 2}
