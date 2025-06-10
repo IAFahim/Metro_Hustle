@@ -151,9 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0c1e301f314df1ae81afa77eb3373e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: -0.0015
-  y: -0.0015
-  z: -0.0015
+  x: 0.00083
+  y: 0
+  z: 0
   range: 200
 --- !u!4 &144375162
 Transform:

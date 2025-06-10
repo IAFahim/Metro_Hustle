@@ -64,7 +64,6 @@ namespace _src.Scripts.Healths.Healths.Data
 
             exitGameToggle.SetBinding(nameof(Toggle.value), new DataBinding
             {
-                updateTrigger = BindingUpdateTrigger.EveryUpdate,
                 dataSourcePath = new PropertyPath(nameof(GameModel.ExitGame)),
             });
             exitGameToggle.RegisterValueChangedCallback(ToggleExit);
