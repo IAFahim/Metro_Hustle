@@ -7,7 +7,7 @@ using Unity.Burst;
 namespace _src.Scripts.InputControls.InputControls.Data.enums
 {
     [Flags]
-    public enum DirectionEnableActiveFlag : byte
+    public enum InputDirectionFlag : byte
     {
         Nothing = 0b0000_0000,
         
@@ -28,5 +28,6 @@ namespace _src.Scripts.InputControls.InputControls.Data.enums
 
         ActiveStateFlagsMask = IsRight | IsUp | IsDown | IsLeft,
         EnableFlagsMask = UpEnable | DownEnable | LeftEnable | RightEnable,
+        Clear = EnableFlagsMask | IsUp | IsDown
     }
 }

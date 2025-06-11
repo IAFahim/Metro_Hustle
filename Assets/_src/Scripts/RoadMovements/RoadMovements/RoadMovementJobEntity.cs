@@ -44,7 +44,7 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             var intrinsic = intrinsicBuffer.AsMap();
             forwardBack.Offset = (half)(intrinsic.GetValue(new IntrinsicKey { Value = (ushort)EIntrinsic.ForwardSpeed })
                                         / 100f);
-            bool jumpInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsUpEnabledAndActive);
+            bool jumpInputActive = directionInput.HasFlagFast(InputDirectionFlag.IsUpEnabledAndActive);
             if (jumpInputActive && height.Value == ltw.Position.y)
             {
                 var jumpForce = (half)(intrinsic.GetValue(new IntrinsicKey { Value = (ushort)EIntrinsic.JumpForce })
@@ -56,15 +56,15 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             }
 
 
-            bool downInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsDownEnabledAndActive);
+            bool downInputActive = directionInput.HasFlagFast(InputDirectionFlag.IsDownEnabledAndActive);
             if (downInputActive)
             {
                 gravity.GMultiplier *= new half(2);
             }
 
 
-            bool rightInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsRightEnabledAndActive);
-            bool leftInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsLeftEnabledAndActive);
+            bool rightInputActive = directionInput.HasFlagFast(InputDirectionFlag.IsRightEnabledAndActive);
+            bool leftInputActive = directionInput.HasFlagFast(InputDirectionFlag.IsLeftEnabledAndActive);
 
             if (!(rightInputActive || leftInputActive)) return;
 

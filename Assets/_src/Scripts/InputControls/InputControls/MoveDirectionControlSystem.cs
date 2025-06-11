@@ -26,7 +26,7 @@ namespace _src.Scripts.InputControls.InputControls
             {
                 new MoveDirectionIJobEntity()
                 {
-                    RawInputCommand = DirectionEnableActiveFlag.EnableFlagsMask
+                    PlayerInputDirection = InputDirectionFlag.EnableFlagsMask
                 }.ScheduleParallel();
                 return;
             }
@@ -35,7 +35,7 @@ namespace _src.Scripts.InputControls.InputControls
             {
                 new MoveDirectionIJobEntity()
                 {
-                    RawInputCommand = DirectionEnableActiveFlag.EnableFlagsMask
+                    PlayerInputDirection = InputDirectionFlag.EnableFlagsMask
                 }.ScheduleParallel();
                 return;
             }
@@ -44,7 +44,7 @@ namespace _src.Scripts.InputControls.InputControls
             {
                 new MoveDirectionIJobEntity()
                 {
-                    RawInputCommand = DirectionEnableActiveFlag.EnableFlagsMask
+                    PlayerInputDirection = InputDirectionFlag.EnableFlagsMask
                 }.ScheduleParallel();
                 return;
             }
@@ -55,27 +55,27 @@ namespace _src.Scripts.InputControls.InputControls
             var threshold = SystemAPI.GetComponent<TouchInputThresholdSingleton>(inputComponentEntity);
             var moveDelta = inputComponent.MoveDelta;
 
-            DirectionEnableActiveFlag determinedRawInputFlag = DirectionEnableActiveFlag.Nothing;
+            InputDirectionFlag determinedRawInputFlag = InputDirectionFlag.Nothing;
             var absDelta = math.abs(moveDelta);
             var isUpDownDominant = absDelta.y > absDelta.x;
             if (isUpDownDominant)
             {
                 if (absDelta.y < threshold.Vertical) return;
                 // Debug.Log($"absDelta.y {absDelta.y}, threshold.Vertical {threshold.Vertical}");
-                if (moveDelta.y > 0) determinedRawInputFlag |= DirectionEnableActiveFlag.IsUp;
-                else if (moveDelta.y < 0) determinedRawInputFlag |= DirectionEnableActiveFlag.IsDown;
+                if (moveDelta.y > 0) determinedRawInputFlag |= InputDirectionFlag.IsUp;
+                else if (moveDelta.y < 0) determinedRawInputFlag |= InputDirectionFlag.IsDown;
             }
             else
             {
                 if (absDelta.x < threshold.Horizontal) return;
                 // Debug.Log($"absDelta.x  {absDelta.x}, threshold.Horizontal {threshold.Horizontal}");
-                if (moveDelta.x > 0) determinedRawInputFlag |= DirectionEnableActiveFlag.IsRight;
-                else if (moveDelta.x < 0) determinedRawInputFlag |= DirectionEnableActiveFlag.IsLeft;
+                if (moveDelta.x > 0) determinedRawInputFlag |= InputDirectionFlag.IsRight;
+                else if (moveDelta.x < 0) determinedRawInputFlag |= InputDirectionFlag.IsLeft;
             }
 
             new MoveDirectionIJobEntity()
             {
-                RawInputCommand = determinedRawInputFlag
+                PlayerInputDirection = determinedRawInputFlag
             }.ScheduleParallel();
         }
 

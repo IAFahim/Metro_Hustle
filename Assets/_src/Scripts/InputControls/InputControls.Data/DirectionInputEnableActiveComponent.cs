@@ -10,14 +10,14 @@ namespace _src.Scripts.InputControls.InputControls.Data
     [ChangeFilterTracking]
     public struct DirectionInputEnableActiveComponent : IComponentData
     {
-        public DirectionEnableActiveFlag Flag;
+        public InputDirectionFlag Flag;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public readonly bool HasFlagFast(DirectionEnableActiveFlag enableActiveFlag) => (Flag & enableActiveFlag) == enableActiveFlag;
+        public readonly bool HasFlagFast(InputDirectionFlag flag) => (Flag & flag) == flag;
 
         public readonly string ToStringFormatted()
         {
-            if (Flag == DirectionEnableActiveFlag.Nothing)
+            if (Flag == InputDirectionFlag.Nothing)
             {
                 return "Nothing";
             }
@@ -26,15 +26,15 @@ namespace _src.Scripts.InputControls.InputControls.Data
             var enabledParts = new List<string>();
             var activeParts = new List<string>();
 
-            if (HasFlagFast(DirectionEnableActiveFlag.UpEnable)) enabledParts.Add("Up");
-            if (HasFlagFast(DirectionEnableActiveFlag.DownEnable)) enabledParts.Add("Down");
-            if (HasFlagFast(DirectionEnableActiveFlag.LeftEnable)) enabledParts.Add("Left");
-            if (HasFlagFast(DirectionEnableActiveFlag.RightEnable)) enabledParts.Add("Right");
+            if (HasFlagFast(InputDirectionFlag.UpEnable)) enabledParts.Add("Up");
+            if (HasFlagFast(InputDirectionFlag.DownEnable)) enabledParts.Add("Down");
+            if (HasFlagFast(InputDirectionFlag.LeftEnable)) enabledParts.Add("Left");
+            if (HasFlagFast(InputDirectionFlag.RightEnable)) enabledParts.Add("Right");
 
-            if (HasFlagFast(DirectionEnableActiveFlag.IsUp)) activeParts.Add("Up");
-            if (HasFlagFast(DirectionEnableActiveFlag.IsDown)) activeParts.Add("Down");
-            if (HasFlagFast(DirectionEnableActiveFlag.IsLeft)) activeParts.Add("Left");
-            if (HasFlagFast(DirectionEnableActiveFlag.IsRight)) activeParts.Add("Right");
+            if (HasFlagFast(InputDirectionFlag.IsUp)) activeParts.Add("Up");
+            if (HasFlagFast(InputDirectionFlag.IsDown)) activeParts.Add("Down");
+            if (HasFlagFast(InputDirectionFlag.IsLeft)) activeParts.Add("Left");
+            if (HasFlagFast(InputDirectionFlag.IsRight)) activeParts.Add("Right");
 
             bool hasEnabled = enabledParts.Count > 0;
             bool hasActive = activeParts.Count > 0;
