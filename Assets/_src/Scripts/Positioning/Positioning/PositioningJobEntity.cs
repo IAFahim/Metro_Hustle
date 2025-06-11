@@ -21,7 +21,7 @@ namespace _src.Scripts.Positioning.Positioning
         {
             if (gravity.GMultiplier != 0)
             {
-                gravity.Velocity -= (half)(gravity.Gravity * DeltaTime * gravity.GMultiplier);
+                gravity.Velocity += (half)(gravity.Gravity * DeltaTime * gravity.GMultiplier);
                 ltw.Value.c3.y += gravity.Velocity * DeltaTime;
             }
 
@@ -29,8 +29,9 @@ namespace _src.Scripts.Positioning.Positioning
             {
                 if (forwardBack.Offset < 0)
                 {
-                    ltw.Value.c0.x = -1;
-                    ltw.Value.c2.z = -1;
+                    var c0X = math.abs(ltw.Value.c0.x);
+                    ltw.Value.c0.x = -c0X;
+                    ltw.Value.c2.z = -c0X;
                 }
             }
 

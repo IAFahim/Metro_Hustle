@@ -9,7 +9,7 @@ namespace _src.Scripts.Positioning.Positioning.Authoring
     [DisallowMultipleComponent]
     public class PositioningAuthoring : MonoBehaviour
     {
-        public half gravity = new(30);
+        public half gravity = new(-30);
         public half velocity;
         public half leftRightOffset;
         public half forwardBackOffset;

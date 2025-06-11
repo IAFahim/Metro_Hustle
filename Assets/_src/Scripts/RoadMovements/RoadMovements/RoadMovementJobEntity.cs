@@ -19,6 +19,7 @@ namespace _src.Scripts.RoadMovements.RoadMovements
     {
         public RoadComponent Road;
 
+        [BurstCompile]
         private void Execute(
             ref GravityComponent gravity,
             ref LeftRightComponent leftRight,
@@ -27,11 +28,10 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             ref ForwardBackComponent forwardBack,
             ref LocalToWorld ltw,
             in DirectionInputEnableActiveComponent directionInput,
-            in DynamicBuffer<Stat> statsBuffer,
+            in DynamicBuffer<Intrinsic> intrinsicBuffer,
             in HeightComponent height
         )
         {
-
             if (ltw.Value.c3.y < height.Value)
             {
                 ltw.Value.c3.y = height.Value;
@@ -39,15 +39,17 @@ namespace _src.Scripts.RoadMovements.RoadMovements
                 gravity.Velocity = new half(0);
                 animator.CurrentState = (sbyte)EAnimation.Running;
             }
-            
 
-            var statsMap = statsBuffer.AsMap();
-            forwardBack.Offset = (half)statsMap.Get(new StatKey { Value = (ushort)EStat.ForwardSpeed }).Value;
+
+            var intrinsic = intrinsicBuffer.AsMap();
+            forwardBack.Offset = (half)(intrinsic.GetValue(new IntrinsicKey { Value = (ushort)EIntrinsic.ForwardSpeed })
+                                        / 100f);
             bool jumpInputActive = directionInput.HasFlagFast(DirectionEnableActiveFlag.IsUpEnabledAndActive);
             if (jumpInputActive && height.Value == ltw.Position.y)
             {
-                var jumpForce = (half)statsMap.Get(new StatKey { Value = (ushort)EStat.JumpForce }).Value;
-                gravity.Velocity += new half(jumpForce);
+                var jumpForce = (half)(intrinsic.GetValue(new IntrinsicKey { Value = (ushort)EIntrinsic.JumpForce })
+                                       / 100f);
+                gravity.Velocity += jumpForce;
                 gravity.GMultiplier += new half(1);
                 animator.CurrentState = (sbyte)EAnimation.Jumping;
                 animator.OldState = 0;
@@ -132,7 +134,9 @@ namespace _src.Scripts.RoadMovements.RoadMovements
                 leftRight.Direction = newCalculatedDirection;
                 leftRight.Current = (half)currentEntityX;
                 leftRight.Target = (half)newCalculatedTargetX;
-                leftRight.Step = (half)10f;
+                leftRight.Step = (half)(intrinsic.GetValue(new IntrinsicKey
+                                            { Value = (ushort)EIntrinsic.LineSwitchSpeed })
+                                        / 100f);
                 movement.CurrentRoadFlag = newCalculatedRoadFlag;
             }
         }

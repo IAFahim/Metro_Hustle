@@ -10,7 +10,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings
 {
     public partial struct BuildingPlaceSystem : ISystem
     {
-        public static readonly float[] Road = { -2.5f, 0, 2.5f };
+        private static readonly float[] Road = { -2.5f, 0, 2.5f };
 
         [BurstCompile]
         public void OnCreate(ref SystemState state)
@@ -35,10 +35,10 @@ namespace _src.Scripts.ZBuildings.ZBuildings
                     .CreateCommandBuffer(state.WorldUnmanaged);
                 var blockBuffers = SystemAPI.GetSingletonBuffer<BlockBuffer>();
                 var obsticalBuffers = SystemAPI.GetSingletonBuffer<ObsticalBuffer>();
-                
+
                 var length = blockBuffers.Length;
                 var random = GlobalRandom.NextInt(length);
-                
+
                 var zOffset = perBlockSize * createLogic.ValueRO.CreateCount;
                 var position = new float3(-sideOffset, 0, zOffset);
                 var blockBuffer = blockBuffers[random];
@@ -48,13 +48,15 @@ namespace _src.Scripts.ZBuildings.ZBuildings
                     Rotation = quaternion.Euler(0, 180, 0),
                     Scale = 1
                 });
-                
+
                 var obsticleRoad = GlobalRandom.NextInt(3);
                 position = new float3(Road[obsticleRoad], 0, zOffset);
                 var obsticle = obsticalBuffers[GlobalRandom.NextInt(obsticalBuffers.Length)].Entity;
+                var obsLTW = SystemAPI.GetComponent<LocalToWorld>(obsticle);
+                obsLTW.Value.c3.xyz = position;
                 ecb.SetComponent(ecb.Instantiate(obsticle), new LocalToWorld()
                 {
-                    Value = float4x4.TRS(position, quaternion.identity, 1)
+                    Value = obsLTW.Value
                 });
 
                 position = new float3(0, 0, zOffset);
@@ -101,10 +103,13 @@ namespace _src.Scripts.ZBuildings.ZBuildings
 
                 var obsticleRoad = GlobalRandom.NextInt(3);
                 position = new float3(Road[obsticleRoad], 0, z);
+                
                 var obsticle = obsticalBuffersBatch[GlobalRandom.NextInt(obsticalBuffersBatch.Length)].Entity;
+                var obsLTW = SystemAPI.GetComponent<LocalToWorld>(obsticle);
+                obsLTW.Value.c3.xyz = position;
                 ECB.SetComponent(ECB.Instantiate(obsticle), new LocalToWorld()
                 {
-                    Value = float4x4.TRS(position, quaternion.identity, 1)
+                    Value = obsLTW.Value
                 });
 
                 position = new float3(0, 0, z);

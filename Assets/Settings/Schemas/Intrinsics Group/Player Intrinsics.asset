@@ -20,11 +20,11 @@ MonoBehaviour:
   - Intrinsic: {fileID: 11400000, guid: a3b20d7a0766b2d4b884cd623e7a7fbe, type: 2}
     Value: 0
   - Intrinsic: {fileID: 11400000, guid: f7bdb9d1be7e3a243811133fbcbfb977, type: 2}
-    Value: 0
+    Value: 10000
   - Intrinsic: {fileID: 11400000, guid: ef986ae9f3457d2428e5fd6898ec71ab, type: 2}
-    Value: 0
+    Value: 500
   - Intrinsic: {fileID: 11400000, guid: cb70d7d1709e83f45bebad0d667d9a96, type: 2}
-    Value: 0
+    Value: 800
   - Intrinsic: {fileID: 11400000, guid: 8db473954e2ebe445ab2183ba275b905, type: 2}
     Value: 0
   - Intrinsic: {fileID: 11400000, guid: 3686b814b54472f448f4624e76a68679, type: 2}
@@ -35,5 +35,15 @@ MonoBehaviour:
     Value: 0
   - Intrinsic: {fileID: 11400000, guid: 4af8bcda035eb924083498d701f7137b, type: 2}
     Value: 0
-  - Intrinsic: {fileID: 11400000, guid: 4af8bcda035eb924083498d701f7137b, type: 2}
+  - Intrinsic: {fileID: 11400000, guid: d396df26d1a1bbe4792137984a436b31, type: 2}
+    Value: 0
+  - Intrinsic: {fileID: 11400000, guid: bfe6c659b6be21b4292b5a0bbee2004a, type: 2}
+    Value: 100
+  - Intrinsic: {fileID: 11400000, guid: c3a50111ccb903044af262835cb64f74, type: 2}
+    Value: 1000
+  - Intrinsic: {fileID: 11400000, guid: eef8d6995d269c4438fa3b67dd2bf353, type: 2}
+    Value: 0
+  - Intrinsic: {fileID: 11400000, guid: e84e630941c60dd40a481323e841a952, type: 2}
+    Value: 0
+  - Intrinsic: {fileID: 11400000, guid: df055131ff2a8b24ab58eef516622256, type: 2}
     Value: 0
