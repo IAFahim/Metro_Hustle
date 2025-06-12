@@ -16,18 +16,20 @@ namespace _src.Scripts.InputControls.InputControls.Data.enums
         DownEnable = 0b0010_0000,
         RightEnable = 0b0001_0000,
 
-        IsLeft = 0b0000_1000,
-        IsUp = 0b0000_0100,
-        IsDown = 0b0000_0010,
-        IsRight = 0b0000_0001,
+        LeftActive = 0b0000_1000,
+        UpActive = 0b0000_0100,
+        DownActive = 0b0000_0010,
+        RightActive = 0b0000_0001,
 
-        IsRightEnabledAndActive = RightEnable | IsRight,
-        IsUpEnabledAndActive = UpEnable | IsUp,
-        IsDownEnabledAndActive = DownEnable | IsDown,
-        IsLeftEnabledAndActive = LeftEnable | IsLeft,
+        RightEnabledAndActive = RightEnable | RightActive,
+        UpEnabledAndActive = UpEnable | UpActive,
+        DownEnabledAndActive = DownEnable | DownActive,
+        LeftEnabledAndActive = LeftEnable | LeftActive,
+        
+        UpDownActive = UpActive | DownActive,
 
-        ActiveStateFlagsMask = IsRight | IsUp | IsDown | IsLeft,
+        ActiveStateFlagsMask = RightActive | UpActive | DownActive | LeftActive,
         EnableFlagsMask = UpEnable | DownEnable | LeftEnable | RightEnable,
-        Clear = EnableFlagsMask | IsUp | IsDown
+        Clear = EnableFlagsMask | UpActive | DownActive
     }
 }

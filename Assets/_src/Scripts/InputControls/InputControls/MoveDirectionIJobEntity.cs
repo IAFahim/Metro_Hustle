@@ -1,7 +1,7 @@
 ﻿using _src.Scripts.InputControls.InputControls.Data;
 using _src.Scripts.InputControls.InputControls.Data.enums;
 using Unity.Burst;
-using Unity.Collections;
+using Unity.Burst.CompilerServices;
 using Unity.Entities;
 
 namespace _src.Scripts.InputControls.InputControls
@@ -16,20 +16,23 @@ namespace _src.Scripts.InputControls.InputControls
         private void Execute(ref DirectionInputEnableActiveComponent directionInputEnableActive,
             EnabledRefRO<PlayerInputEnableTag> playerInputEnableTag)
         {
-            var directionFlag = directionInputEnableActive.Flag & InputDirectionFlag.Clear;
-            if (playerInputEnableTag.ValueRO)
-                directionInputEnableActive.Flag = directionFlag | PlayerInputDirection;
-            else
-                directionInputEnableActive.Flag = directionFlag;
+            var clearedFlag = directionInputEnableActive.Flag & InputDirectionFlag.Clear;
 
-            if ((directionInputEnableActive.Flag & InputDirectionFlag.IsUpEnabledAndActive) != 0)
+            if (Hint.Unlikely(playerInputEnableTag.ValueRO))
+                directionInputEnableActive.Flag = clearedFlag | PlayerInputDirection;
+            else directionInputEnableActive.Flag = clearedFlag;
+
+            if (directionInputEnableActive.HasFlagsFast(InputDirectionFlag.UpDownActive))
             {
-                directionInputEnableActive.Flag &= ~InputDirectionFlag.IsDown;
+                directionInputEnableActive.Flag &= ~InputDirectionFlag.UpDownActive;
             }
-
-            if ((directionInputEnableActive.Flag & InputDirectionFlag.IsDownEnabledAndActive) != 0)
+            else if (directionInputEnableActive.HasFlagFast(InputDirectionFlag.UpActive))
             {
-                directionInputEnableActive.Flag &= ~InputDirectionFlag.IsUp;
+                directionInputEnableActive.Flag &= ~InputDirectionFlag.DownActive;
+            }
+            else if (directionInputEnableActive.HasFlagFast(InputDirectionFlag.DownActive))
+            {
+                directionInputEnableActive.Flag &= ~InputDirectionFlag.UpActive;
             }
         }
     }

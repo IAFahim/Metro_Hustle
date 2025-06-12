@@ -62,15 +62,15 @@ namespace _src.Scripts.InputControls.InputControls
             {
                 if (absDelta.y < threshold.Vertical) return;
                 // Debug.Log($"absDelta.y {absDelta.y}, threshold.Vertical {threshold.Vertical}");
-                if (moveDelta.y > 0) determinedRawInputFlag |= InputDirectionFlag.IsUp;
-                else if (moveDelta.y < 0) determinedRawInputFlag |= InputDirectionFlag.IsDown;
+                if (moveDelta.y > 0) determinedRawInputFlag |= InputDirectionFlag.UpActive;
+                else if (moveDelta.y < 0) determinedRawInputFlag |= InputDirectionFlag.DownActive;
             }
             else
             {
                 if (absDelta.x < threshold.Horizontal) return;
                 // Debug.Log($"absDelta.x  {absDelta.x}, threshold.Horizontal {threshold.Horizontal}");
-                if (moveDelta.x > 0) determinedRawInputFlag |= InputDirectionFlag.IsRight;
-                else if (moveDelta.x < 0) determinedRawInputFlag |= InputDirectionFlag.IsLeft;
+                if (moveDelta.x > 0) determinedRawInputFlag |= InputDirectionFlag.RightActive;
+                else if (moveDelta.x < 0) determinedRawInputFlag |= InputDirectionFlag.LeftActive;
             }
 
             new MoveDirectionIJobEntity()

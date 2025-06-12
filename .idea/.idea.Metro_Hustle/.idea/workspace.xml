@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/DirectionInputAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/DirectionInputAuthoring.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/DirectionEnableActiveFlag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/InputDirectionFlag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/DirectionEnableActiveFlag.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/InputDirectionFlag.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/InputDirectionFlag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/enums/InputDirectionFlag.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionControlSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionControlSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionIJobEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionIJobEntity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionIJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionIJobEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,10 +147,10 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22668">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23760">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="22668" />
+      <option name="pid" value="23760" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -286,6 +283,7 @@
       <workItem from="1749577856641" duration="2373000" />
       <workItem from="1749612176878" duration="6173000" />
       <workItem from="1749623895821" duration="2721000" />
+      <workItem from="1749706408631" duration="4527000" />
     </task>
     <servers />
   </component>
@@ -378,45 +376,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Missions/Missions/GoalSystem.cs</url>
-          <line>37</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Missions\Missions\GoalSystem.cs" containingFunctionPresentation="Method 'OnUpdate'">
-            <startOffsets>
-              <option value="1164" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1204" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs</url>
-          <line>32</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Positioning\Positioning\PositioningJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
-            <startOffsets>
-              <option value="1080" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1102" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls/MoveDirectionIJobEntity.cs</url>
-          <line>24</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\InputControls\InputControls\MoveDirectionIJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
-            <startOffsets>
-              <option value="935" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1020" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="64" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
