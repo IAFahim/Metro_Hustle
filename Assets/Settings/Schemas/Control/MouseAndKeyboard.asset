@@ -18,21 +18,21 @@ MonoBehaviour:
     Bindings:
     - Name: '@Controls:forward'
       Binding:
-        Asset: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-        BindingId: 
+        Asset: {fileID: 385265639222330206, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+        BindingId: f0a88722-13b5-4f38-83b6-7cd001733b4d
         Bindable: 1
     - Name: '@Controls:backward'
       Binding:
-        Asset: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-        BindingId: 
+        Asset: {fileID: 385265639222330206, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+        BindingId: 0c980ae4-4616-4902-8870-df94edeef2c1
         Bindable: 1
     - Name: '@Controls:left'
       Binding:
-        Asset: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-        BindingId: 
+        Asset: {fileID: 385265639222330206, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+        BindingId: 73f80d7b-005b-4332-9a3c-56bb88e35778
         Bindable: 1
     - Name: '@Controls:right'
       Binding:
-        Asset: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-        BindingId: 
+        Asset: {fileID: 385265639222330206, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+        BindingId: cb2d91eb-1d52-4704-a78b-24b5046d06b7
         Bindable: 1

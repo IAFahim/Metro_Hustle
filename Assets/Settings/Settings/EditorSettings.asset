@@ -39,6 +39,38 @@ MonoBehaviour:
     Path: Assets/Settings/Schemas/Control/
   - Key: bl.ar.conditioneventobject
     Path: Assets/Settings/Schemas/Events/
+  - Key: 
+    Path: 
+  - Key: 
+    Path: 
+  - Key: 
+    Path: 
+  - Key: 
+    Path: 
+  - Key: 
+    Path: 
+  - Key: 
+    Path: 
+  - Key: bl.ar.objectdefinition
+    Path: Assets/Settings/ObjectDefinitions
+  - Key: bl.ar.objectgroup
+    Path: Assets/Settings/ObjectGroups
+  - Key: 
+    Path: 
+  - Key: 
+    Path: 
+  - Key: 
+    Path: 
+  - Key: 
+    Path: 
+  - Key: 
+    Path: 
+  - Key: bl.ar.statschemaobject
+    Path: Assets/Settings/Schemas/Stats
+  - Key: bl.ar.intrinsicschemaobject
+    Path: Assets/Settings/Schemas/Intrinsics/
+  - Key: bl.ar.sideeffectschemaobject
+    Path: Assets/Settings/Schemas/SideEffect/
   prebakeScenes: []
   startupScene: {fileID: 0}
   defaultSettingsAuthoring: {fileID: 0}

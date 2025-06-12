@@ -1,6 +1,5 @@
 using System;
 using _src.Scripts.StatsHelpers.StatsHelpers.Data;
-using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -33,15 +32,9 @@ namespace _src.Scripts.Missions.Missions.Data
         [TextArea(1, 5)] public string description;
         public AssetReferenceSprite spriteAsset;
         [FormerlySerializedAs("goalBuffer")] public Goal goal;
-        public Reward[] reward;
+        public KvIntrinsic[] reward;
     }
-
-    [Serializable]
-    public struct Reward : IBufferElementData
-    {
-        public EIntrinsic intrinsic;
-        public ushort count;
-    }
+    
 
     public enum DayTime : byte
     {
