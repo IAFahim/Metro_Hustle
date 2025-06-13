@@ -1,6 +1,5 @@
 using System;
 using System.Runtime.CompilerServices;
-using _src.Scripts.TriggerSideEffects.TriggerSideEffects.Data.enums;
 using BovineLabs.Core.ObjectManagement;
 using Unity.Burst;
 using Unity.Entities;
@@ -11,7 +10,6 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Data
     public struct TriggerSideEffectComponent : IComponentData
     {
         public TriggerType TriggerType;
-        public ESideEffect PreSideEffect; 
         public ObjectId OnTop;
         public ObjectId OnInside;
         

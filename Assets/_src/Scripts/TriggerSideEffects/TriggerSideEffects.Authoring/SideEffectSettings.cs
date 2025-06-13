@@ -11,7 +11,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Authoring
     [SettingsGroup(nameof(SideEffectSettings))]
     public class SideEffectSettings : SettingsBase
     {
-        public SideEffectSchemaObject[] triggerSideEffect = Array.Empty<SideEffectSchemaObject>();
+        public SideEffectSchemaObject[] sideEffectSchemas = Array.Empty<SideEffectSchemaObject>();
 
         public override void Bake(Baker<SettingsAuthoring> baker)
         {
@@ -21,15 +21,29 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Authoring
 
         private void SetupSideEffect(Baker<SettingsAuthoring> baker, Entity entity)
         {
-            var builder = new BlobBuilder(Allocator.Temp);
-            ref var blobData = ref builder.ConstructRoot<SideEffectBlob>();
-            var blobReference = builder.CreateBlobAssetReference<KvIntrinsic>(Allocator.Persistent);
-            builder.Dispose();
-            baker.AddBlobAsset(ref blobReference, out var hash);
+            var sideEffectsArray = SideEffectBlobRef();
+            baker.AddBlobAsset(ref sideEffectsArray, out _);
             baker.AddComponent(entity, new SideEffectBlobData
             {
-                Value = blobReference
+                SideEffectsArray = sideEffectsArray
             });
+        }
+
+        private BlobAssetReference<BlobArray<BlobArray<KvIntrinsic>>> SideEffectBlobRef()
+        {
+            using var builder = new BlobBuilder(Allocator.Temp);
+            ref var root = ref builder.ConstructRoot<BlobArray<BlobArray<KvIntrinsic>>>();
+            
+            var arrayBuilder = builder.Allocate(ref root, sideEffectSchemas.Length);
+            for (var i = 0; i < sideEffectSchemas.Length; i++)
+            {
+                var kvIntrinsics = sideEffectSchemas[i].sideEffects;
+                var sideEffectsLength = kvIntrinsics.Length;
+                var subArrayBuilder = builder.Allocate(ref arrayBuilder[i], sideEffectsLength);
+                for (int j = 0; j < sideEffectsLength; j++) subArrayBuilder[j] = kvIntrinsics[j];
+            }
+
+            return builder.CreateBlobAssetReference<BlobArray<BlobArray<KvIntrinsic>>>(Allocator.Persistent);
         }
     }
 }

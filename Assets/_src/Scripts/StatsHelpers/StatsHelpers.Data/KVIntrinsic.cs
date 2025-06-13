@@ -6,6 +6,6 @@ namespace _src.Scripts.StatsHelpers.StatsHelpers.Data
     public struct KvIntrinsic
     {
         public EIntrinsic key;
-        public ushort value;
+        public short value;
     }
 }

@@ -32,7 +32,7 @@
       "dependencies": {
         "com.unity.entities": "1.4.0-exp.2"
       },
-      "hash": "1f482356e108d0e0f7b3f025f3cac6c2cba060fa"
+      "hash": "8c87f4f81629738ccd2a63249016b2b69bcf8b02"
     },
     "com.bovinelabs.reaction": {
       "version": "https://gitlab.com/tertle/com.bovinelabs.reaction.git",
@@ -117,7 +117,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-      "version": "3.1.3",
+      "version": "3.1.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -127,11 +127,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collections": {
-      "version": "2.6.0-exp.2",
+      "version": "2.6.0-pre.3",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.burst": "1.8.19",
+        "com.unity.burst": "1.8.21",
         "com.unity.mathematics": "1.3.2",
         "com.unity.test-framework": "1.4.6",
         "com.unity.nuget.mono-cecil": "1.11.5",
@@ -140,7 +140,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.dt.app-ui": {
-      "version": "2.0.0-pre.19",
+      "version": "2.0.0-pre.20",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -156,8 +156,8 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.burst": "1.8.19",
-        "com.unity.collections": "2.6.0-exp.2",
+        "com.unity.burst": "1.8.21",
+        "com.unity.collections": "2.6.0-pre.3",
         "com.unity.mathematics": "1.3.2",
         "com.unity.nuget.mono-cecil": "1.11.5",
         "com.unity.profiling.core": "1.0.2",
@@ -171,7 +171,7 @@
         "com.unity.modules.unityanalytics": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0"
       },
-      "hash": "1d12ba0090ff4c75aa936a79052ae4348b9d46d1"
+      "hash": "8037190597b84ba327e02a8c8a7899b97a5b1619"
     },
     "com.unity.entities.graphics": {
       "version": "1.4.12",

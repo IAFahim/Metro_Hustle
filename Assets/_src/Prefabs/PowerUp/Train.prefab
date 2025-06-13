@@ -117,7 +117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerType: 245
-  sideEffect: 255
   onTop: {fileID: 0}
   onInside: {fileID: 11400000, guid: 81ac34423d229ee4b8ed7c4b16db8e59, type: 2}
 --- !u!114 &3904942219876355388

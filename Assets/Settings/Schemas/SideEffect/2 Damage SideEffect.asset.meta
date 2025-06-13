@@ -1,5 +1,7 @@
 fileFormatVersion: 2
-guid: 9b34cd9f54f73a941a9b997d9aaabbfc
+guid: a8d747708cf3b0049aa4a9bc225d81d6
+labels:
+- SideEffect
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

@@ -11,28 +11,4 @@
 }
 
 .bl-menu-view {
-    background-color: var(--appui-backgrounds-100);
-}
-
-.bl-home-view #unity-content-container {
-    flex-direction: row;
-}
-
-.bl-home-view__left {
-    padding-left: var(--appui-sizing-1250);
-    justify-content: center;
-    flex-grow: 1;
-}
-
-.bl-home-view__left .appui-actiongroup__container {
-    width: var(--appui-sizing-2550);
-    justify-content: center;
-}
-
-.bl-home-view__button {
-    margin: 4px;
-}
-
-.bl-home-view__right {
-    flex-grow: 1;
 }

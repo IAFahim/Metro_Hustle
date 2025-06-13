@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5cbb52be84341bb8fe8bd1e39564bc4, type: 3}
-  m_Name: SideEffectSettings
+  m_Script: {fileID: 11500000, guid: b88e0756a81d471e9a98766fecbc44d1, type: 3}
+  m_Name: 1 Money SideEffect
   m_EditorClassIdentifier: 
-  sideEffectSchemas:
-  - {fileID: 11400000, guid: 9b34cd9f54f73a941a9b997d9aaabbfc, type: 2}
-  - {fileID: 11400000, guid: c6d21b4ef27b7a64a9039eb421484def, type: 2}
+  sideEffects:
+  - key: 2
+    value: 1
+  key: 1

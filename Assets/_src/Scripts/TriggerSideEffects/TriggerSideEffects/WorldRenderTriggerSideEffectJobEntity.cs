@@ -1,6 +1,5 @@
 ﻿using _src.Scripts.Colliders.Colliders.Data;
 using _src.Scripts.TriggerSideEffects.TriggerSideEffects.Data;
-using _src.Scripts.TriggerSideEffects.TriggerSideEffects.Data.enums;
 using BovineLabs.Core.LifeCycle;
 using BovineLabs.Core.ObjectManagement;
 using BovineLabs.Reaction.Data.Core;
@@ -22,7 +21,6 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
         [ReadOnly] public ComponentLookup<PointColliderComponent> PointColliderLookup;
         [WriteOnly] public EntityCommandBuffer.ParallelWriter ECB;
         [ReadOnly] public ObjectDefinitionRegistry ObjectDefinitionRegistry;
-        [WriteOnly] public NativeQueue<(Entity entity, ESideEffect sideEffect)>.ParallelWriter PreCollisionQueue;
 
         private void Execute(
             [EntityIndexInQuery] int entityInQueryIndex, in Entity entity,
@@ -44,7 +42,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                 );
                 if (isForwardTrigger)
                 {
-                    PreCollisionQueue.Enqueue((entity, triggerSideEffect.PreSideEffect));
+                    // PreCollisionQueue.Enqueue((entity, triggerSideEffect.PreSideEffect));
                 }
 
                 var isInsideTrigger = IsTrigger(

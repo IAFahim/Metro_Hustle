@@ -1,5 +1,4 @@
 ﻿using _src.Scripts.TriggerSideEffects.TriggerSideEffects.Data;
-using _src.Scripts.TriggerSideEffects.TriggerSideEffects.Data.enums;
 using BovineLabs.Core.Authoring.ObjectManagement;
 using JetBrains.Annotations;
 using Unity.Entities;
@@ -11,7 +10,6 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Authoring
     {
         [Header("Auto-calculated based on assigned ObjectDefinitions")] [SerializeField]
         private TriggerType triggerType;
-        [SerializeField] private ESideEffect sideEffect;
 
         [Header("Object Definitions")]
 
@@ -52,7 +50,6 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Authoring
                 AddComponent(entity, new TriggerSideEffectComponent
                 {
                     TriggerType = authoring.TriggerType,
-                    PreSideEffect = authoring.sideEffect,
                     OnTop = authoring.onTop,
                     OnInside = authoring.onInside
                 });
