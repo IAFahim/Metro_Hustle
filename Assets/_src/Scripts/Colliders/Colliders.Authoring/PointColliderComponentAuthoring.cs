@@ -15,7 +15,7 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
             public override void Bake(PointColliderComponentAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.None);
-                AddComponent(entity, new PointColliderComponent
+                AddComponent(entity, new PointContactOffsetComponent
                 {
                     ForwardPre = authoring.forwardPre, 
                     UpOffset = authoring.upOffset

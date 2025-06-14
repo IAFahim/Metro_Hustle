@@ -3,7 +3,7 @@
 namespace _src.Scripts.Colliders.Colliders.Data
 {
     [InternalBufferCapacity(0)]
-    public struct CollisionTrackBuffer : IBufferElementData
+    public struct TrackCollidableEntityBuffer : IBufferElementData
     {
         public Entity Entity;
     }

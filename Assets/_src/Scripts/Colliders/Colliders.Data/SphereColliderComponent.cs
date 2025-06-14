@@ -3,8 +3,8 @@ using Unity.Mathematics;
 
 namespace _src.Scripts.Colliders.Colliders.Data
 {
-    public struct ColliderRangeComponent : IComponentData
+    public struct SphereColliderComponent : IComponentData
     {
-        public float Range;
+        public half Range;
     }
 }

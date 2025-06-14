@@ -13,7 +13,10 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Authoring
             public override void Bake(SideEffectLinkComponentAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
-                AddComponent(entity, new SideEffectLinkComponent { Index = (byte)authoring.sideEffectSchemaObject.ID });
+                AddComponent(entity, new SideEffectLinkComponent
+                {
+                    Index = (byte)authoring.sideEffectSchemaObject.ID
+                });
             }
         }
     }

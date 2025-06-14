@@ -22,7 +22,7 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
         private static readonly Color CollisionColor = Color.red;
         private const float LabelSize = 0.1f;
         private const float LabelLineHeight = LabelSize + 0.03f;
-        [ReadOnly] public NativeArray<CollisionTrackBuffer>.ReadOnly CollisionTrackBuffer;
+        [ReadOnly] public NativeArray<TrackCollidableEntityBuffer>.ReadOnly CollisionTrackBuffer;
         [ReadOnly] public ComponentLookup<LocalToWorld> LookupLocalToWorld;
 
 

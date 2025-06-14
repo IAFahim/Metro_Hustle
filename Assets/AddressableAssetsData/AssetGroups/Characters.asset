@@ -15,8 +15,8 @@ MonoBehaviour:
   m_GroupName: Characters
   m_GUID: 981e86835d5a6a94a8b9b89e093f72cf
   m_SerializeEntries:
-  - m_GUID: 62e3ad235c40a5e4cb87ad5afcea1e2c
-    m_Address: Assets/Alex For Unity v2.prefab
+  - m_GUID: ef0f88b8301a2874a981ab22b257ad5f
+    m_Address: Assets/Alex For Unity_v2.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

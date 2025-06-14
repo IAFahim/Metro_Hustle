@@ -16,9 +16,9 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
     [BurstCompile]
     public partial struct WorldRenderTriggerSideEffectJobEntity : IJobEntity
     {
-        [ReadOnly] public NativeArray<CollisionTrackBuffer>.ReadOnly CollisionTrackBuffer;
+        [ReadOnly] public NativeArray<TrackCollidableEntityBuffer>.ReadOnly CollisionTrackBuffer;
         [ReadOnly] public ComponentLookup<LocalToWorld> LocalToWorldLookup;
-        [ReadOnly] public ComponentLookup<PointColliderComponent> PointColliderLookup;
+        [ReadOnly] public ComponentLookup<PointContactOffsetComponent> PointContactOffsetLookup;
         [WriteOnly] public EntityCommandBuffer.ParallelWriter ECB;
         [ReadOnly] public ObjectDefinitionRegistry ObjectDefinitionRegistry;
 
@@ -32,13 +32,13 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
             foreach (var collisionTrackBuffer in CollisionTrackBuffer)
             {
                 var target = collisionTrackBuffer.Entity;
-                var targetLtw = LocalToWorldLookup[target];
-                var pointColliderComponent = PointColliderLookup[target];
+                var position = LocalToWorldLookup[target].Position;
+                var pointColliderComponent = PointContactOffsetLookup[target];
 
                 var forwardOffset = new float3(0, pointColliderComponent.UpOffset, pointColliderComponent.ForwardPre);
                 bool isForwardTrigger = IsTrigger(
                     triggerSideEffect, TriggerType.SendForward,
-                    worldRender, targetLtw.Position, forwardOffset
+                    worldRender, position, forwardOffset
                 );
                 if (isForwardTrigger)
                 {
@@ -47,7 +47,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
 
                 var isInsideTrigger = IsTrigger(
                     triggerSideEffect, TriggerType.HasInside,
-                    worldRender, targetLtw.Position, new float3(0, 0, 0)
+                    worldRender, position, new float3(0, 0, 0)
                 );
 
                 if (!isInsideTrigger) return;
@@ -55,7 +55,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                 var upOffset = new float3(0, pointColliderComponent.UpOffset, 0);
                 bool isLegInTrigger = IsTrigger(
                     triggerSideEffect, TriggerType.EnableTop,
-                    worldRender, targetLtw.Position, upOffset
+                    worldRender, position, upOffset
                 );
 
                 if (isLegInTrigger)

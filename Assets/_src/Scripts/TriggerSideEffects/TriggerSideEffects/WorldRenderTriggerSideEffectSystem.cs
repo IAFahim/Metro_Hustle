@@ -11,23 +11,23 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
-            state.RequireForUpdate<CollisionTrackBuffer>();
+            state.RequireForUpdate<TrackCollidableEntityBuffer>();
         }
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            SystemAPI.GetSingletonBuffer<CollisionTrackBuffer>();
+            SystemAPI.GetSingletonBuffer<TrackCollidableEntityBuffer>();
             var worldRenderTriggerSideEffectJobEntity = new WorldRenderTriggerSideEffectJobEntity()
             {
                 CollisionTrackBuffer =
-                    SystemAPI.GetSingletonBuffer<CollisionTrackBuffer>().AsNativeArray().AsReadOnly(),
-                LocalToWorldLookup = SystemAPI.GetComponentLookup<LocalToWorld>(true),
-                PointColliderLookup = SystemAPI.GetComponentLookup<PointColliderComponent>(true),
+                    SystemAPI.GetSingletonBuffer<TrackCollidableEntityBuffer>().AsNativeArray().AsReadOnly(),
                 ECB = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>()
                     .CreateCommandBuffer(state.WorldUnmanaged).AsParallelWriter(),
+                LocalToWorldLookup = SystemAPI.GetComponentLookup<LocalToWorld>(true),
+                PointContactOffsetLookup = SystemAPI.GetComponentLookup<PointContactOffsetComponent>(true),
                 ObjectDefinitionRegistry = SystemAPI.GetSingleton<ObjectDefinitionRegistry>()
-                
+                 
             };
             worldRenderTriggerSideEffectJobEntity.ScheduleParallel();
         }

@@ -8,30 +8,31 @@ namespace _src.Scripts.Colliders.Colliders
     [WorldSystemFilter(WorldSystemFilterFlags.Editor | WorldSystemFilterFlags.Default)]
     [BurstCompile]
     [UpdateInGroup(typeof(SimulationSystemGroup), OrderFirst = true)]
-    public partial struct CollisionTrackCollectSystem : ISystem
+    public partial struct CollectTrackEntityLocalToWorldSystem : ISystem
     {
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
-            state.RequireForUpdate<CollisionTrackBuffer>();
+#if UNITY_EDITOR
+            state.RequireForUpdate<TrackCollidableEntityBuffer>();
+#endif
         }
-        
+
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            var collisionTrackBuffers = SystemAPI.GetSingletonBuffer<CollisionTrackBuffer>();
-            var entities = SystemAPI.QueryBuilder().WithPresent<CollisionTrackComponent>().Build()
-                .ToEntityArray(Allocator.Temp);
+            var collisionTrackBuffers = SystemAPI.GetSingletonBuffer<TrackCollidableEntityBuffer>();
             collisionTrackBuffers.Clear();
-            foreach (var entity in entities)
+            foreach (var entity in SystemAPI.QueryBuilder()
+                         .WithPresent<TrackCollidableTag>().Build()
+                         .ToEntityArray(Allocator.Temp)
+                    )
             {
                 collisionTrackBuffers.Add(new()
                 {
                     Entity = entity
                 });
             }
-
-            entities.Dispose();
         }
     }
 }

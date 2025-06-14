@@ -13,7 +13,7 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
-            state.RequireForUpdate<CollisionTrackBuffer>();
+            state.RequireForUpdate<TrackCollidableEntityBuffer>();
         }
 
         public void OnUpdate(ref SystemState state)
@@ -31,7 +31,7 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
                 Drawing = builder,
                 EditorCameraRotation = editorCamRot,
                 CollisionTrackBuffer =
-                    SystemAPI.GetSingletonBuffer<CollisionTrackBuffer>().AsNativeArray().AsReadOnly(),
+                    SystemAPI.GetSingletonBuffer<TrackCollidableEntityBuffer>().AsNativeArray().AsReadOnly(),
                 LookupLocalToWorld = SystemAPI.GetComponentLookup<LocalToWorld>(true)
             };
             zCollisionEditorJobEntity.Schedule();
