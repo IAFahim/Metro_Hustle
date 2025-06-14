@@ -12,7 +12,6 @@ namespace _src.Scripts.Positioning.Positioning.Authoring
     {
         [FormerlySerializedAs("leftRightOffset")] 
         [Header("X")] public half leftRightSpeed;
-        public sbyte leftRightDirection;
         public half leftRightCurrent;
         public half leftRightTarget;
         
@@ -30,7 +29,6 @@ namespace _src.Scripts.Positioning.Positioning.Authoring
                 AddComponent(entity, new LeftRightComponent
                 {
                     Speed = authoring.leftRightSpeed ,
-                    Direction = authoring.leftRightDirection,
                     Current = authoring.leftRightCurrent,
                     Target = authoring.leftRightTarget
                 });

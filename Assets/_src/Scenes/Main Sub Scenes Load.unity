@@ -248,17 +248,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftRightSpeed:
-    value: 0
-  leftRightDirection: 0
+    value: 18688
+  leftRightDirection: 1
   leftRightCurrent:
     value: 0
   leftRightTarget:
-    value: 0
+    value: 16640
   gravity:
     value: 53120
   velocity:
-    value: 22080
-  gMultiplier: 0
+    value: 18688
+  gMultiplier: 1
   forwardBackSpeed:
     value: 0
 --- !u!114 &432410499

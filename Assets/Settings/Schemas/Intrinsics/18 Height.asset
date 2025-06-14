@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88e0756a81d471e9a98766fecbc44d1, type: 3}
-  m_Name: 1 Money SideEffect
+  m_Script: {fileID: 11500000, guid: 36ac892a84ab4fcfad4f0a55f02d0cda, type: 3}
+  m_Name: 18 Height
   m_EditorClassIdentifier: 
-  sideEffects:
-  - schema: {fileID: 11400000, guid: b0f66077393dcb3439dae4b0b4ec1e74, type: 2}
-    value: 1
-  key: 1
+  isGlobal: 0
+  key:
+    Value: 18
+  defaultValue: 0
+  range: {x: -2147483648, y: 2147483647}

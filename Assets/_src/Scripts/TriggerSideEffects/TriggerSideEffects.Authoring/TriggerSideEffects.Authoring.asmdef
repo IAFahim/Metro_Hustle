@@ -17,9 +17,10 @@
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
         "Unity.Transforms",
-        "StatsHelpers.Data"
+        "StatsHelpers.Data",
+        "StatsHelpers.Authoring",
+        "BovineLabs.Stats.Authoring"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,

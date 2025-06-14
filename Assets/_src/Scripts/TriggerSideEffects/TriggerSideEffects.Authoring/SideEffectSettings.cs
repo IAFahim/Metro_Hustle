@@ -33,14 +33,21 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects.Authoring
         {
             using var builder = new BlobBuilder(Allocator.Temp);
             ref var root = ref builder.ConstructRoot<BlobArray<BlobArray<KvIntrinsic>>>();
-            
+
             var arrayBuilder = builder.Allocate(ref root, sideEffectSchemas.Length);
             for (var i = 0; i < sideEffectSchemas.Length; i++)
             {
-                var kvIntrinsics = sideEffectSchemas[i].sideEffects;
-                var sideEffectsLength = kvIntrinsics.Length;
+                var kvSchemaIntrinsics = sideEffectSchemas[i].sideEffects;
+                var sideEffectsLength = kvSchemaIntrinsics.Length;
                 var subArrayBuilder = builder.Allocate(ref arrayBuilder[i], sideEffectsLength);
-                for (int j = 0; j < sideEffectsLength; j++) subArrayBuilder[j] = kvIntrinsics[j];
+                for (int j = 0; j < sideEffectsLength; j++)
+                {
+                    subArrayBuilder[j] = new KvIntrinsic
+                    {
+                        key = (byte)kvSchemaIntrinsics[j].schema.Key,
+                        value = kvSchemaIntrinsics[j].value
+                    };
+                }
             }
 
             return builder.CreateBlobAssetReference<BlobArray<BlobArray<KvIntrinsic>>>(Allocator.Persistent);

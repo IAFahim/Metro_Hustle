@@ -19,7 +19,8 @@
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
         "Unity.Transforms",
-        "ALINE"
+        "ALINE",
+        "Positioning.Data"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 2 Damage SideEffect
   m_EditorClassIdentifier: 
   sideEffects:
-  - key: 13
+  - schema: {fileID: 11400000, guid: bfe6c659b6be21b4292b5a0bbee2004a, type: 2}
     value: -100
   key: 2

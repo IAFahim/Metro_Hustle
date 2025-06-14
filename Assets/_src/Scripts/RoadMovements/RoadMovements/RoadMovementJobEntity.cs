@@ -72,37 +72,34 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             float currentEntityX = ltw.Value.c3.x;
             bool movementParamsUpdated = false;
 
-            var newCalculatedDirection = leftRight.Direction;
+            var direction = leftRight.GetDirection();
             float newCalculatedTargetX = leftRight.Target;
             var newCalculatedRoadFlag = movement.CurrentRoadFlag;
 
 
-            if (leftRight.Direction == 1 && leftInputActive)
+            if (direction == 1 && leftInputActive)
             {
                 var potentialSwitchFlag =
                     Road.GetAdjacentPosition(movement.CurrentRoadFlag, false, out var potentialSwitchX);
                 if (potentialSwitchFlag != movement.CurrentRoadFlag)
                 {
-                    newCalculatedDirection = -1;
                     newCalculatedTargetX = potentialSwitchX;
                     newCalculatedRoadFlag = potentialSwitchFlag;
                     movementParamsUpdated = true;
                 }
             }
-            else if (leftRight.Direction == -1 &&
-                     rightInputActive)
+            else if (direction == -1 && rightInputActive)
             {
                 var potentialSwitchFlag =
                     Road.GetAdjacentPosition(movement.CurrentRoadFlag, true, out var potentialSwitchX);
                 if (potentialSwitchFlag != movement.CurrentRoadFlag)
                 {
-                    newCalculatedDirection = 1;
                     newCalculatedTargetX = potentialSwitchX;
                     newCalculatedRoadFlag = potentialSwitchFlag;
                     movementParamsUpdated = true;
                 }
             }
-            else if (leftRight.Direction == 0)
+            else if (direction == 0)
             {
                 if (rightInputActive)
                 {
@@ -110,7 +107,6 @@ namespace _src.Scripts.RoadMovements.RoadMovements
                         Road.GetAdjacentPosition(movement.CurrentRoadFlag, true, out var potentialNewX);
                     if (potentialNewFlag != movement.CurrentRoadFlag)
                     {
-                        newCalculatedDirection = 1;
                         newCalculatedTargetX = potentialNewX;
                         newCalculatedRoadFlag = potentialNewFlag;
                         movementParamsUpdated = true;
@@ -122,7 +118,6 @@ namespace _src.Scripts.RoadMovements.RoadMovements
                         Road.GetAdjacentPosition(movement.CurrentRoadFlag, false, out var potentialNewX);
                     if (potentialNewFlag != movement.CurrentRoadFlag)
                     {
-                        newCalculatedDirection = -1;
                         newCalculatedTargetX = potentialNewX;
                         newCalculatedRoadFlag = potentialNewFlag;
                         movementParamsUpdated = true;
@@ -132,7 +127,6 @@ namespace _src.Scripts.RoadMovements.RoadMovements
 
             if (movementParamsUpdated)
             {
-                leftRight.Direction = newCalculatedDirection;
                 leftRight.Current = (half)currentEntityX;
                 leftRight.Target = (half)newCalculatedTargetX;
                 leftRight.Speed = (half)(intrinsic.GetValue(new IntrinsicKey

@@ -1,5 +1,4 @@
 ﻿using _src.Scripts.Positioning.Positioning.Data;
-using Unity.Burst.CompilerServices;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -21,12 +20,12 @@ namespace _src.Scripts.Positioning.Positioning
             in HeightComponent height
         )
         {
-            
             if (gravity.GMultiplier != 0)
             {
                 gravity.Velocity += (half)(gravity.Gravity * DeltaTime * gravity.GMultiplier);
                 ltw.Value.c3.y += gravity.Velocity * DeltaTime;
             }
+
             if (ltw.Value.c3.y < height.Value)
             {
                 ltw.Value.c3.y = height.Value;
@@ -46,20 +45,20 @@ namespace _src.Scripts.Positioning.Positioning
 
             ltw.Value.c3.z += forwardBack.Speed * DeltaTime;
 
-            if (leftRight.Direction == 0) return;
+            if (leftRight.Target == leftRight.Current) return;
             {
-                float movement = leftRight.Speed * leftRight.Direction * DeltaTime;
+                float direction = (leftRight.Current < leftRight.Target) ? 1 : -1;
+                float movement = leftRight.Speed * direction * DeltaTime;
                 float newX = ltw.Value.c3.x + movement;
                 float newCurrent = leftRight.Current + movement;
 
-                if (leftRight.Direction > 0)
+                if (direction > 0)
                 {
                     if (newCurrent >= leftRight.Target)
                     {
                         float overshoot = newCurrent - leftRight.Target;
                         newX -= overshoot;
                         newCurrent = leftRight.Target;
-                        leftRight.Direction = 0;
                     }
                 }
                 else
@@ -69,7 +68,6 @@ namespace _src.Scripts.Positioning.Positioning
                         float overshoot = leftRight.Target - newCurrent;
                         newX += overshoot;
                         newCurrent = leftRight.Target;
-                        leftRight.Direction = 0;
                     }
                 }
 

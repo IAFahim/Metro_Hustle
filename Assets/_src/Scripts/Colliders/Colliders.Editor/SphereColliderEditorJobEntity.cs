@@ -1,5 +1,6 @@
 ﻿#if ALINE
 using _src.Scripts.Colliders.Colliders.Data;
+using _src.Scripts.Positioning.Positioning.Data;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
@@ -16,15 +17,16 @@ namespace _src.Scripts.Colliders.Colliders.Editor
         [ReadOnly] public ComponentLookup<LocalToWorld> LtwLookup;
 
         [BurstCompile]
-        private void Execute(in LocalToWorld ltw, in SphereColliderComponent colliderComponent)
+        private void Execute(in LocalToWorld ltw, in SphereColliderComponent colliderComponent, ref LeftRightComponent leftRightComponent)
         {
             foreach (var entityBuffer in TrackCollidableEntityBuffer)
             {
                 var targetPosition = LtwLookup[entityBuffer.Entity].Position;
-                var distance = math.lengthsq(targetPosition - ltw.Position);
+                var difference = targetPosition - ltw.Position;
+                var distance = math.lengthsq(difference);
                 if (distance < colliderComponent.LengthSqrt)
                 {
-                    
+                    leftRightComponent.Target = (half)targetPosition.x;
                 }
             }
         }
