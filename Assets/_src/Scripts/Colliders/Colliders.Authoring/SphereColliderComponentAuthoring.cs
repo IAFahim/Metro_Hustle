@@ -5,13 +5,13 @@ using UnityEngine;
 
 namespace _src.Scripts.Colliders.Colliders.Authoring
 {
-    public class ColliderRangeComponentAuthoring : MonoBehaviour
+    public class SphereColliderComponentAuthoring : MonoBehaviour
     {
         public half range = new(1);
 
-        public class SphereColliderComponentBaker : Baker<ColliderRangeComponentAuthoring>
+        public class SphereColliderComponentBaker : Baker<SphereColliderComponentAuthoring>
         {
-            public override void Bake(ColliderRangeComponentAuthoring authoring)
+            public override void Bake(SphereColliderComponentAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
                 AddComponent(entity, new SphereColliderComponent

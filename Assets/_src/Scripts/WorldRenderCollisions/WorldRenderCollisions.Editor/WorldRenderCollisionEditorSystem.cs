@@ -34,7 +34,7 @@ namespace _src.Scripts.WorldRenderCollisions.WorldRenderCollisions.Editor
                     SystemAPI.GetSingletonBuffer<TrackCollidableEntityBuffer>().AsNativeArray().AsReadOnly(),
                 LookupLocalToWorld = SystemAPI.GetComponentLookup<LocalToWorld>(true)
             };
-            zCollisionEditorJobEntity.Schedule();
+            zCollisionEditorJobEntity.ScheduleParallel();
             builder.DisposeAfter(state.Dependency);
 #endif
         }
