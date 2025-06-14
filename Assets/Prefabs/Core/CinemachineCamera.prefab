@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7297034926185220290}
   - component: {fileID: 2125502019539087010}
   - component: {fileID: 5333395540446665831}
-  - component: {fileID: 4677062293463430336}
+  - component: {fileID: 767886603255785717}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -103,11 +103,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625c14eee3ad46c99df7c7c891ef668a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0, y: 4.31, z: 0}
-  VerticalArmLength: 0.4
-  CameraSide: 1
-  CameraDistance: 8
+  Damping: {x: 0, y: 0.5, z: 0}
+  ShoulderOffset: {x: 0, y: 5, z: 0}
+  VerticalArmLength: 0
+  CameraSide: 0
+  CameraDistance: 10
   AvoidObstacles:
     Enabled: 0
     CollisionFilter:
@@ -117,7 +117,7 @@ MonoBehaviour:
     CameraRadius: 0.2
     DampingIntoCollision: 0
     DampingFromCollision: 0.5
---- !u!114 &4677062293463430336
+--- !u!114 &767886603255785717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,4 +129,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8b78ac948f05a46a6d8339a503172b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LookAtOffset: {x: 0, y: -0.59, z: 0}
+  LookAtOffset: {x: 0, y: 2.5, z: 0}

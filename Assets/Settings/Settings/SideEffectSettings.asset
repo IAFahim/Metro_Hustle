@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SideEffectSettings
   m_EditorClassIdentifier: 
   sideEffectSchemas:
-  - {fileID: 11400000, guid: 9b34cd9f54f73a941a9b997d9aaabbfc, type: 2}
   - {fileID: 11400000, guid: c6d21b4ef27b7a64a9039eb421484def, type: 2}
+  - {fileID: 11400000, guid: a8d747708cf3b0049aa4a9bc225d81d6, type: 2}
