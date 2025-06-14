@@ -439,14 +439,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5843df0182f41198fa3341f61770d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftRightSpeed:
+    value: 0
+  leftRightDirection: 0
+  leftRightCurrent:
+    value: 0
+  leftRightTarget:
+    value: 0
   gravity:
     value: 53120
   velocity:
     value: 0
-  leftRightOffset:
+  gMultiplier: 0
+  forwardBackSpeed:
     value: 0
-  forwardBackOffset:
-    value: 18688
 --- !u!114 &2575152664787741606
 MonoBehaviour:
   m_ObjectHideFlags: 0

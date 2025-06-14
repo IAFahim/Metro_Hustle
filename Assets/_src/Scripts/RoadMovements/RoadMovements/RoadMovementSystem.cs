@@ -1,9 +1,12 @@
-﻿using _src.Scripts.ZBuildings.ZBuildings.Data;
+﻿using _src.Scripts.Positioning.Positioning;
+using _src.Scripts.ZBuildings.ZBuildings.Data;
 using Unity.Burst;
 using Unity.Entities;
 
 namespace _src.Scripts.RoadMovements.RoadMovements
 {
+    
+    [UpdateBefore(typeof(PositioningSystem))]
     public partial struct RoadMovementSystem : ISystem
     {
         [BurstCompile]

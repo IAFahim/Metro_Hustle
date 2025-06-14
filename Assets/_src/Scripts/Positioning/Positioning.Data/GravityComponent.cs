@@ -9,7 +9,7 @@ namespace _src.Scripts.Positioning.Positioning.Data
     public struct GravityComponent : IComponentData
     {
         public half Gravity;
-        public half GMultiplier;
+        public byte GMultiplier;
         public half Velocity;
     }
 }

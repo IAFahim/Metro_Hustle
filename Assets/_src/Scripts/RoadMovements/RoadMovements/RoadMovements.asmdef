@@ -26,7 +26,8 @@
         "Positioning.Data",
         "Animations.Data",
         "StatsHelpers.Data",
-        "BovineLabs.Stats.Data"
+        "BovineLabs.Stats.Data",
+        "Positioning"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

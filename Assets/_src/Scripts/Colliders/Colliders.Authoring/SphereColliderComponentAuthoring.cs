@@ -7,7 +7,7 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
 {
     public class SphereColliderComponentAuthoring : MonoBehaviour
     {
-        public half range = new(1);
+        public float range = 1f;
 
         public class SphereColliderComponentBaker : Baker<SphereColliderComponentAuthoring>
         {
@@ -16,7 +16,7 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
                 AddComponent(entity, new SphereColliderComponent
                 {
-                    Range = authoring.range
+                    LengthSqrt = math.sqrt(authoring.range)
                 });
             }
         }

@@ -2,6 +2,7 @@
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.Transforms;
 
 namespace _src.Scripts.Colliders.Colliders.Editor
 {
@@ -18,13 +19,14 @@ namespace _src.Scripts.Colliders.Colliders.Editor
         public void OnUpdate(ref SystemState state)
         {
 #if ALINE
-            // var builder = Drawing.DrawingManager.GetBuilder();
+            var builder = Drawing.DrawingManager.GetBuilder();
             var sphereColliderEditorJobEntity = new SphereColliderEditorJobEntity
             {
-                TrackCollidableEntityBuffer = SystemAPI.GetSingletonBuffer<TrackCollidableEntityBuffer>().ToNativeArray(Allocator.Temp).AsReadOnly()
+                TrackCollidableEntityBuffer = SystemAPI.GetSingletonBuffer<TrackCollidableEntityBuffer>().AsNativeArray().AsReadOnly(),
+                LtwLookup = SystemAPI.GetComponentLookup<LocalToWorld>(true)
             };
-            sphereColliderEditorJobEntity.ScheduleParallel(state.Dependency);
-            // builder.DisposeAfter(state.Dependency);
+            sphereColliderEditorJobEntity.ScheduleParallel();
+            builder.DisposeAfter(state.Dependency);
 #endif
         }
 

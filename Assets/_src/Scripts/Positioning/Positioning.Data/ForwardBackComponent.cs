@@ -5,6 +5,6 @@ namespace _src.Scripts.Positioning.Positioning.Data
 {
     public struct ForwardBackComponent : IComponentData
     {
-        public half Offset;
+        public half Speed;
     }
 }

@@ -17,7 +17,6 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            SystemAPI.GetSingletonBuffer<TrackCollidableEntityBuffer>();
             var worldRenderTriggerSideEffectJobEntity = new WorldRenderTriggerSideEffectJobEntity()
             {
                 CollisionTrackBuffer =

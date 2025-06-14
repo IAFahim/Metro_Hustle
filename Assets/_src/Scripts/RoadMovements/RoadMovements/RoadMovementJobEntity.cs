@@ -26,41 +26,42 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             ref RoadMovementComponent movement,
             ref AnimatorComponent animator,
             ref ForwardBackComponent forwardBack,
-            ref LocalToWorld ltw,
+            in LocalToWorld ltw,
             in DirectionInputEnableActiveComponent directionInput,
             in DynamicBuffer<Intrinsic> intrinsicBuffer,
             in HeightComponent height
         )
         {
-            if (ltw.Value.c3.y < height.Value)
+            if (gravity.GMultiplier == 0)
             {
-                ltw.Value.c3.y = height.Value;
-                gravity.GMultiplier = new half(0);
-                gravity.Velocity = new half(0);
-                animator.CurrentState = (sbyte)EAnimation.Running;
+                animator.CurrentState = (byte)EAnimation.Running;
             }
 
 
             var intrinsic = intrinsicBuffer.AsMap();
-            forwardBack.Offset = (half)(intrinsic.GetValue(new IntrinsicKey { Value = (ushort)EIntrinsic.ForwardSpeed })
-                                        / 100f);
-            bool jumpInputActive = directionInput.HasFlagsFast(InputDirectionFlag.UpEnabledAndActive);
-            if (jumpInputActive && height.Value == ltw.Position.y)
-            {
-                var jumpForce = (half)(intrinsic.GetValue(new IntrinsicKey { Value = (ushort)EIntrinsic.JumpForce })
+            forwardBack.Speed = (half)(intrinsic.GetValue(new IntrinsicKey { Value = (ushort)EIntrinsic.ForwardSpeed })
                                        / 100f);
-                gravity.Velocity += jumpForce;
-                gravity.GMultiplier += new half(1);
-                animator.CurrentState = (sbyte)EAnimation.Jumping;
-                animator.OldState = 0;
-            }
-
-
-            bool downInputActive = directionInput.HasFlagsFast(InputDirectionFlag.DownEnabledAndActive);
-            if (downInputActive)
+            bool jumpInputActive = directionInput.HasFlagsFast(InputDirectionFlag.UpEnabledAndActive);
+            if (jumpInputActive && height.Value == ltw.Value.c3.y)
             {
-                gravity.GMultiplier *= new half(2);
+                var jumpForce = (half)(intrinsic.GetValue(new IntrinsicKey { Value = (ushort)EIntrinsic.JumpForce }) /
+                                       100f);
+                gravity.Velocity += jumpForce;
+                gravity.GMultiplier += 1;
+                animator.OldState = 0;
+                animator.CurrentState = (byte)EAnimation.Jumping;
             }
+            else
+            {
+                bool downInputActive = directionInput.HasFlagsFast(InputDirectionFlag.DownEnabledAndActive);
+                if (downInputActive)
+                {
+                    gravity.GMultiplier = (byte)(gravity.GMultiplier * 2);
+                }    
+            }
+
+
+            
 
 
             bool rightInputActive = directionInput.HasFlagsFast(InputDirectionFlag.RightEnabledAndActive);
@@ -71,37 +72,37 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             float currentEntityX = ltw.Value.c3.x;
             bool movementParamsUpdated = false;
 
-            half newCalculatedDirection = leftRight.Direction;
+            var newCalculatedDirection = leftRight.Direction;
             float newCalculatedTargetX = leftRight.Target;
             var newCalculatedRoadFlag = movement.CurrentRoadFlag;
 
 
-            if (leftRight.Direction == (half)1 && leftInputActive)
+            if (leftRight.Direction == 1 && leftInputActive)
             {
                 var potentialSwitchFlag =
                     Road.GetAdjacentPosition(movement.CurrentRoadFlag, false, out var potentialSwitchX);
                 if (potentialSwitchFlag != movement.CurrentRoadFlag)
                 {
-                    newCalculatedDirection = (half)(-1);
+                    newCalculatedDirection = -1;
                     newCalculatedTargetX = potentialSwitchX;
                     newCalculatedRoadFlag = potentialSwitchFlag;
                     movementParamsUpdated = true;
                 }
             }
-            else if (leftRight.Direction == (half)(-1) &&
+            else if (leftRight.Direction == -1 &&
                      rightInputActive)
             {
                 var potentialSwitchFlag =
                     Road.GetAdjacentPosition(movement.CurrentRoadFlag, true, out var potentialSwitchX);
                 if (potentialSwitchFlag != movement.CurrentRoadFlag)
                 {
-                    newCalculatedDirection = (half)1;
+                    newCalculatedDirection = 1;
                     newCalculatedTargetX = potentialSwitchX;
                     newCalculatedRoadFlag = potentialSwitchFlag;
                     movementParamsUpdated = true;
                 }
             }
-            else if (leftRight.Direction == (half)0)
+            else if (leftRight.Direction == 0)
             {
                 if (rightInputActive)
                 {
@@ -109,7 +110,7 @@ namespace _src.Scripts.RoadMovements.RoadMovements
                         Road.GetAdjacentPosition(movement.CurrentRoadFlag, true, out var potentialNewX);
                     if (potentialNewFlag != movement.CurrentRoadFlag)
                     {
-                        newCalculatedDirection = (half)1;
+                        newCalculatedDirection = 1;
                         newCalculatedTargetX = potentialNewX;
                         newCalculatedRoadFlag = potentialNewFlag;
                         movementParamsUpdated = true;
@@ -121,7 +122,7 @@ namespace _src.Scripts.RoadMovements.RoadMovements
                         Road.GetAdjacentPosition(movement.CurrentRoadFlag, false, out var potentialNewX);
                     if (potentialNewFlag != movement.CurrentRoadFlag)
                     {
-                        newCalculatedDirection = (half)(-1);
+                        newCalculatedDirection = -1;
                         newCalculatedTargetX = potentialNewX;
                         newCalculatedRoadFlag = potentialNewFlag;
                         movementParamsUpdated = true;
@@ -134,9 +135,9 @@ namespace _src.Scripts.RoadMovements.RoadMovements
                 leftRight.Direction = newCalculatedDirection;
                 leftRight.Current = (half)currentEntityX;
                 leftRight.Target = (half)newCalculatedTargetX;
-                leftRight.Step = (half)(intrinsic.GetValue(new IntrinsicKey
-                                            { Value = (ushort)EIntrinsic.LineSwitchSpeed })
-                                        / 100f);
+                leftRight.Speed = (half)(intrinsic.GetValue(new IntrinsicKey
+                                             { Value = (ushort)EIntrinsic.LineSwitchSpeed })
+                                         / 100f);
                 movement.CurrentRoadFlag = newCalculatedRoadFlag;
             }
         }

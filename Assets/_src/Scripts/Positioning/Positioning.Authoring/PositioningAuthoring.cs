@@ -2,6 +2,7 @@
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _src.Scripts.Positioning.Positioning.Authoring
 {
@@ -9,23 +10,39 @@ namespace _src.Scripts.Positioning.Positioning.Authoring
     [DisallowMultipleComponent]
     public class PositioningAuthoring : MonoBehaviour
     {
-        public half gravity = new(-30);
+        [FormerlySerializedAs("leftRightOffset")] 
+        [Header("X")] public half leftRightSpeed;
+        public sbyte leftRightDirection;
+        public half leftRightCurrent;
+        public half leftRightTarget;
+        
+        [Header("Y")] public half gravity = new(-30);
         public half velocity;
-        public half leftRightOffset;
-        public half forwardBackOffset;
+        public byte gMultiplier;
+
+        [FormerlySerializedAs("forwardBackOffset")] [Header("Z")] public half forwardBackSpeed;
 
         public class LeftRightOffsetBaker : Baker<PositioningAuthoring>
         {
             public override void Bake(PositioningAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.None);
-                AddComponent(entity, new LeftRightComponent { Step = authoring.leftRightOffset });
-                AddComponent(entity, new ForwardBackComponent { Offset = authoring.forwardBackOffset });
+                AddComponent(entity, new LeftRightComponent
+                {
+                    Speed = authoring.leftRightSpeed ,
+                    Direction = authoring.leftRightDirection,
+                    Current = authoring.leftRightCurrent,
+                    Target = authoring.leftRightTarget
+                });
+                
                 AddComponent(entity, new GravityComponent
                 {
                     Gravity = authoring.gravity,
-                    Velocity = authoring.velocity
+                    Velocity = authoring.velocity,
+                    GMultiplier = authoring.gMultiplier
                 });
+                
+                AddComponent(entity, new ForwardBackComponent { Speed = authoring.forwardBackSpeed });
             }
         }
     }

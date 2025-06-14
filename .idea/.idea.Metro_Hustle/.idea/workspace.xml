@@ -6,12 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UI/Panel Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UI/Panel Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/ColliderRangeComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/SphereColliderComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/ColliderRangeComponentAuthoring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/SphereColliderComponentAuthoring.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderEditorSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderEditorSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions.Editor/WorldRenderCollisionEditorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/WorldRenderCollisions/WorldRenderCollisions.Editor/WorldRenderCollisionEditorSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Animations/Animations.Data/AnimatorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Animations/Animations.Data/AnimatorComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Animations/Animations/InstantiateAnimatorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Animations/Animations/InstantiateAnimatorSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/SphereColliderComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/SphereColliderComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/SphereColliderComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/SphereColliderComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderEditorJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderEditorJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderEditorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderEditorSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/ForwardBackComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/ForwardBackComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/GravityComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/GravityComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/LeftRightComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/LeftRightComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovements.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovements.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/KVIntrinsic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/KVIntrinsic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EntitiesClientSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EntitiesClientSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.asset-manager-for-unity/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.asset-manager-for-unity/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,10 +166,10 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13232">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19952">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="13232" />
+      <option name="pid" value="19952" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -293,6 +310,7 @@
       <workItem from="1749810618598" duration="1060000" />
       <workItem from="1749874955560" duration="1788000" />
       <workItem from="1749893583774" duration="5688000" />
+      <workItem from="1749933463748" duration="6802000" />
     </task>
     <servers />
   </component>
@@ -387,17 +405,147 @@
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders/CollectTrackEntityLocalToWorldSystem.cs</url>
-          <line>30</line>
-          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Colliders\Colliders\CollectTrackEntityLocalToWorldSystem.cs" containingFunctionPresentation="Method 'OnUpdate'">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs</url>
+          <line>46</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\RoadMovements\RoadMovements\RoadMovementJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="1065" />
+              <option value="1764" />
             </startOffsets>
             <endOffsets>
-              <option value="1170" />
+              <option value="1912" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="61" />
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs</url>
+          <line>44</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\RoadMovements\RoadMovements\RoadMovementJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="1679" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1733" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs</url>
+          <line>31</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Positioning\Positioning\PositioningJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="1027" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1057" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs</url>
+          <line>36</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\RoadMovements\RoadMovements\RoadMovementJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="1277" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1326" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs</url>
+          <line>26</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Positioning\Positioning\PositioningJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="793" />
+            </startOffsets>
+            <endOffsets>
+              <option value="871" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs</url>
+          <line>24</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Positioning\Positioning\PositioningJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="733" />
+            </startOffsets>
+            <endOffsets>
+              <option value="762" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs</url>
+          <line>29</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Positioning\Positioning\PositioningJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="962" />
+            </startOffsets>
+            <endOffsets>
+              <option value="996" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs</url>
+          <line>27</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Positioning\Positioning\PositioningJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="888" />
+            </startOffsets>
+            <endOffsets>
+              <option value="935" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs</url>
+          <line>28</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Positioning\Positioning\PositioningJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="948" />
+            </startOffsets>
+            <endOffsets>
+              <option value="949" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs</url>
+          <line>36</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Positioning\Positioning\PositioningJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="1174" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1226" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs</url>
+          <line>58</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\RoadMovements\RoadMovements\RoadMovementJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="2336" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2391" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="102" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
