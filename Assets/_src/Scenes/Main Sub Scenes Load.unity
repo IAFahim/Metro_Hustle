@@ -158,7 +158,7 @@ MonoBehaviour:
   AddIntrinsics: 1
   IntrinsicDefaults:
   - Intrinsic: {fileID: 11400000, guid: bfe6c659b6be21b4292b5a0bbee2004a, type: 2}
-    Value: -1
+    Value: 0
   IntrinsicDefaultGroups: []
   Initialize:
     CopyFrom: 3
