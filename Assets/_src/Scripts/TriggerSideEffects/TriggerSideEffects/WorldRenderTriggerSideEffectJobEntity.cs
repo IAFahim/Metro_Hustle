@@ -19,6 +19,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
         [ReadOnly] public NativeArray<TrackCollidableEntityBuffer>.ReadOnly CollisionTrackBuffer;
         [ReadOnly] public ComponentLookup<LocalToWorld> LocalToWorldLookup;
         [ReadOnly] public ComponentLookup<CollidePointOffsetComponent> PointContactOffsetLookup;
+        
         [WriteOnly] public EntityCommandBuffer.ParallelWriter ECB;
         [ReadOnly] public ObjectDefinitionRegistry ObjectDefinitionRegistry;
 
@@ -45,20 +46,17 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                     // PreCollisionQueue.Enqueue((entity, triggerSideEffect.PreSideEffect));
                 }
 
-                var isInsideTrigger = IsTrigger(
+                var isLegTouching = IsTrigger(
                     triggerSideEffect, TriggerType.HasInside,
                     worldRender, position, new float3(0, 0, 0)
                 );
-
-                if (!isInsideTrigger) return;
-
-                var upOffset = new float3(0, pointColliderComponent.Center, 0);
-                bool isLegInTrigger = IsTrigger(
+                
+                bool isBodyIn = IsTrigger(
                     triggerSideEffect, TriggerType.EnableTop,
-                    worldRender, position, upOffset
+                    worldRender, position, new float3(0, pointColliderComponent.Center, 0)
                 );
 
-                if (isLegInTrigger)
+                if (isBodyIn)
                 {
                     if (!triggerSideEffect.HasFlagFast(TriggerType.HasTop))
                     {
@@ -68,7 +66,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                     }
                 }
 
-                if (triggerSideEffect.HasFlagFast(TriggerType.HasInside))
+                if (isLegTouching && triggerSideEffect.HasFlagFast(TriggerType.HasInside))
                 {
                     if (triggerSideEffect.HasFlagFast(TriggerType.DestroySelf)) destroyEntity.ValueRW = true;
                     Spawn(entityInQueryIndex, entity, entity, target, triggerSideEffect.OnTop);
@@ -86,6 +84,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
             return worldRender.Value.Contains(position + offset);
         }
 
+        [BurstCompile]
         private bool Spawn(int entityInQueryIndex, Entity owner, Entity source, Entity target, ObjectId objectId)
         {
             var entityPrefab = ObjectDefinitionRegistry[objectId];

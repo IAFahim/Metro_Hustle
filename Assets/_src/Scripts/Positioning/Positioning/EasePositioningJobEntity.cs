@@ -16,6 +16,7 @@ namespace _src.Scripts.Positioning.Positioning
     {
         [NativeDisableParallelForRestriction] public ComponentLookup<LocalToWorld> LtwLookup;
         [ReadOnly] public float DeltaTime;
+        [ReadOnly] public ComponentLookup<CollidePointOffsetComponent> CollidePointLookup;
 
         private void Execute(
             Entity entity,
@@ -23,8 +24,7 @@ namespace _src.Scripts.Positioning.Positioning
             EnabledRefRW<StartPositionRecordComponent> startPositionRecorded,
             ref StartPositionRecordComponent startPosition,
             in Targets targets,
-            EnabledRefRW<EaseComponent> ease,
-            in CollidePointOffsetComponent collidePointOffset
+            EnabledRefRW<EaseComponent> ease
         )
         {
             var ltw = LtwLookup.GetRefRW(entity);
@@ -35,7 +35,7 @@ namespace _src.Scripts.Positioning.Positioning
             }
 
             var targetPosition = LtwLookup[targets.Target].Position;
-            targetPosition.y += collidePointOffset.Center;
+            targetPosition.y += CollidePointLookup[targets.Target].Center;
             if (easeComponent.Elapsed >= easeComponent.Duration)
             {
                 ltw.ValueRW.Value.c3.xyz = targetPosition;

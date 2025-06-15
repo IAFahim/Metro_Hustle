@@ -28,10 +28,8 @@ namespace _src.Scripts.Colliders.Colliders.Editor
         private void Execute(
             in LocalToWorld ltw,
             EnabledRefRO<ConditionAllActive> conditionAllActive,
-            EnabledRefRW<DestroyEntity> destroyFlag,
             ref Targets targets,
             in DynamicBuffer<Stat> statBuffer,
-            ref WorldRenderBounds bounds,
             EnabledRefRW<ConditionSatisfied> conditionSatisfied
         )
         {
@@ -49,7 +47,6 @@ namespace _src.Scripts.Colliders.Colliders.Editor
                 {
                     if (!conditionSatisfied.ValueRO) conditionSatisfied.ValueRW = true;
                     targets.Target = entityBuffer.Entity;
-                    if (bounds.Value.Contains(targetPosition)) destroyFlag.ValueRW = true;
                     inRange++;
                 }
             }

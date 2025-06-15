@@ -1,4 +1,5 @@
-﻿using Unity.Burst;
+﻿using _src.Scripts.Colliders.Colliders.Data;
+using Unity.Burst;
 using Unity.Entities;
 using Unity.Transforms;
 
@@ -18,7 +19,8 @@ namespace _src.Scripts.Positioning.Positioning
             var easePositioningJobEntity = new EasePositioningJobEntity
             {
                 LtwLookup = SystemAPI.GetComponentLookup<LocalToWorld>(),
-                DeltaTime = SystemAPI.Time.DeltaTime
+                DeltaTime = SystemAPI.Time.DeltaTime,
+                CollidePointLookup = SystemAPI.GetComponentLookup<CollidePointOffsetComponent>(true)
             };
             easePositioningJobEntity.ScheduleParallel();
         }
