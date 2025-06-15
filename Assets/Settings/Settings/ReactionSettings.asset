@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conditionEvents:
   - {fileID: 11400000, guid: 2c02fba152c7dbc46b169100c4e8a04a, type: 2}
-  enableables: 
+  - {fileID: -9097083840502594755, guid: 4da0bd7c711d04041ae0dbb6838222c5, type: 2}
+  enableables: 920e36ed9043a555

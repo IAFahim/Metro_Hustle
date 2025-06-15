@@ -8,7 +8,7 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
     internal class PointColliderComponentAuthoring : MonoBehaviour
     {
         public half forwardPre = new(1);
-        public half upOffset = new(.2);
+        public half center = new(0.5f);
 
         private class CollisionEnterComponentBaker : Baker<PointColliderComponentAuthoring>
         {
@@ -17,8 +17,8 @@ namespace _src.Scripts.Colliders.Colliders.Authoring
                 var entity = GetEntity(TransformUsageFlags.None);
                 AddComponent(entity, new PointContactOffsetComponent
                 {
-                    ForwardPre = authoring.forwardPre, 
-                    UpOffset = authoring.upOffset
+                    ForwardPre = authoring.forwardPre,
+                    Center = authoring.center
                 });
             }
         }

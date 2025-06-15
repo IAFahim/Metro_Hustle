@@ -1,9 +1,12 @@
 {
-    "name": "Positioning.Data",
+    "name": "Easings.Authoring",
     "rootNamespace": "",
     "references": [
         "BovineLabs.Core",
+        "BovineLabs.Core.Authoring",
         "BovineLabs.Core.Extensions",
+        "BovineLabs.Core.Extensions.Authoring",
+        "Easings.Data",
         "Unity.Burst",
         "Unity.Collections",
         "Unity.Entities",
@@ -13,8 +16,7 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms",
-        "Easings.Runtime"
+        "Unity.Transforms"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
@@ -23,7 +25,9 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": false,
-    "defineConstraints": [],
+    "defineConstraints": [
+        "UNITY_EDITOR"
+    ],
     "versionDefines": [],
     "noEngineReferences": false
 }

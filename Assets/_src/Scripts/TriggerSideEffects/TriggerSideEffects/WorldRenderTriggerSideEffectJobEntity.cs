@@ -35,7 +35,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                 var position = LocalToWorldLookup[target].Position;
                 var pointColliderComponent = PointContactOffsetLookup[target];
 
-                var forwardOffset = new float3(0, pointColliderComponent.UpOffset, pointColliderComponent.ForwardPre);
+                var forwardOffset = new float3(0, pointColliderComponent.Center, pointColliderComponent.ForwardPre);
                 bool isForwardTrigger = IsTrigger(
                     triggerSideEffect, TriggerType.SendForward,
                     worldRender, position, forwardOffset
@@ -52,7 +52,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
 
                 if (!isInsideTrigger) return;
 
-                var upOffset = new float3(0, pointColliderComponent.UpOffset, 0);
+                var upOffset = new float3(0, pointColliderComponent.Center, 0);
                 bool isLegInTrigger = IsTrigger(
                     triggerSideEffect, TriggerType.EnableTop,
                     worldRender, position, upOffset

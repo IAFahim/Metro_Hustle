@@ -44,6 +44,7 @@ namespace _src.Scripts.Easings.Runtime.Datas
     {
         const float PI = math.PI;
 
+        [BurstCompile]
         public static float Evaluate(this Ease ease, float t)
         {
             return ease switch
