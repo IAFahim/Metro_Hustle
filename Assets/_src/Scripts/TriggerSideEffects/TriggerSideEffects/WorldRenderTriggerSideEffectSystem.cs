@@ -24,7 +24,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
                 ECB = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>()
                     .CreateCommandBuffer(state.WorldUnmanaged).AsParallelWriter(),
                 LocalToWorldLookup = SystemAPI.GetComponentLookup<LocalToWorld>(true),
-                PointContactOffsetLookup = SystemAPI.GetComponentLookup<PointContactOffsetComponent>(true),
+                PointContactOffsetLookup = SystemAPI.GetComponentLookup<CollidePointOffsetComponent>(true),
                 ObjectDefinitionRegistry = SystemAPI.GetSingleton<ObjectDefinitionRegistry>()
                  
             };

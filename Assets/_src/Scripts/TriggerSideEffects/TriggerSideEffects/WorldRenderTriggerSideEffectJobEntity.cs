@@ -18,7 +18,7 @@ namespace _src.Scripts.TriggerSideEffects.TriggerSideEffects
     {
         [ReadOnly] public NativeArray<TrackCollidableEntityBuffer>.ReadOnly CollisionTrackBuffer;
         [ReadOnly] public ComponentLookup<LocalToWorld> LocalToWorldLookup;
-        [ReadOnly] public ComponentLookup<PointContactOffsetComponent> PointContactOffsetLookup;
+        [ReadOnly] public ComponentLookup<CollidePointOffsetComponent> PointContactOffsetLookup;
         [WriteOnly] public EntityCommandBuffer.ParallelWriter ECB;
         [ReadOnly] public ObjectDefinitionRegistry ObjectDefinitionRegistry;
 

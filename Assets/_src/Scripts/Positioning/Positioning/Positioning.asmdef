@@ -20,7 +20,9 @@
         "Unity.Physics",
         "Unity.Transforms",
         "Easings.Data",
-        "BovineLabs.Reaction.Data"
+        "BovineLabs.Reaction.Data",
+        "Conditions.Data",
+        "Colliders.Data"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

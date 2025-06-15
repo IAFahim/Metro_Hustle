@@ -17,7 +17,8 @@ namespace _src.Scripts.Positioning.Positioning
         {
             var easePositioningJobEntity = new EasePositioningJobEntity
             {
-                LtwLookup = SystemAPI.GetComponentLookup<LocalToWorld>(true)
+                LtwLookup = SystemAPI.GetComponentLookup<LocalToWorld>(),
+                DeltaTime = SystemAPI.Time.DeltaTime
             };
             easePositioningJobEntity.ScheduleParallel();
         }

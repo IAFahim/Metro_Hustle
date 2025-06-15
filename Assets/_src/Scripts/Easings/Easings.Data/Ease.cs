@@ -1,42 +1,65 @@
 ﻿using Unity.Burst;
 using Unity.Mathematics;
 
-namespace _src.Scripts.Easings.Runtime.Datas
+namespace _src.Scripts.Easings.Easings.Data
 {
     public enum Ease : byte
     {
-        Linear,
-        InSine,
-        OutSine,
-        InOutSine,
-        InQuad,
-        OutQuad,
-        InOutQuad,
-        InCubic,
-        OutCubic,
-        InOutCubic,
-        InQuart,
-        OutQuart,
-        InOutQuart,
-        InQuint,
-        OutQuint,
-        InOutQuint,
-        InExpo,
-        OutExpo,
-        InOutExpo,
-        InCirc,
-        OutCirc,
-        InOutCirc,
-        InElastic,
-        OutElastic,
-        InOutElastic,
-        InBack,
-        OutBack,
-        InOutBack,
-        InBounce,
-        OutBounce,
-        InOutBounce,
-        Custom
+        // ────────────── Straight diagonal line
+        Linear, // /
+
+        // ────────────── Sine Wave Based (Smooth S-curves)
+        InSine, // ╰─ Slow start, normal end
+        OutSine, // ─╮ Normal start, slow end  
+        InOutSine, // ╰─╮ Slow start and end, fast middle
+
+        // ────────────── Quadratic (Gentle curves)
+        InQuad, // ╰── Gentle acceleration
+        OutQuad, // ──╮ Gentle deceleration
+        InOutQuad, // ╰─╮ Gentle ease in and out
+
+        // ────────────── Cubic (More pronounced curves)
+        InCubic, // ╰─── Moderate acceleration
+        OutCubic, // ───╮ Moderate deceleration  
+        InOutCubic, // ╰──╮ Moderate ease in and out
+
+        // ────────────── Quartic (Strong curves)
+        InQuart, // ╰──── Strong acceleration
+        OutQuart, // ────╮ Strong deceleration
+        InOutQuart, // ╰───╮ Strong ease in and out
+
+        // ────────────── Quintic (Very strong curves)
+        InQuint, // ╰───── Very strong acceleration  
+        OutQuint, // ─────╮ Very strong deceleration
+        InOutQuint, // ╰────╮ Very strong ease in and out
+
+        // ────────────── Exponential (Extreme curves)
+        InExpo, // ╰────── Explosive acceleration
+        OutExpo, // ──────╮ Explosive deceleration
+        InOutExpo, // ╰─────╮ Explosive ease in and out
+
+        // ────────────── Circular (Quarter circle curves)
+        InCirc, // ╰─────── Quarter circle acceleration
+        OutCirc, // ───────╮ Quarter circle deceleration  
+        InOutCirc, // ╰──────╮ Quarter circle ease in and out
+
+        // ────────────── Elastic (Rubber band effect)
+        InElastic, // ╰~~~── Pulls back then snaps forward
+        OutElastic, // ──~~~╮ Overshoots then settles back
+        InOutElastic, // ╰~~╮~~ Pulls back, snaps, overshoots, settles
+
+        // ────────────── Back (Overshoots)
+        InBack, // ╰\──── Pulls back slightly before moving forward
+        OutBack, // ────/╮ Overshoots target then comes back
+        InOutBack, // ╰\─/╮ Pulls back, overshoots, settles
+
+        // ────────────── Bounce (Ball dropping effect)
+        InBounce, // ╰.,'.─ Multiple small bounces before reaching end
+        OutBounce, // ─'.,╮ Big bounce then smaller bounces at end
+        InOutBounce, // ╰.,'╮ Bounces at start and end
+
+        // ────────────── User Defined
+        Custom // ????? Whatever curve you define!
     }
 
     [BurstCompile]

@@ -24,7 +24,8 @@
         "Conditions.Data",
         "Speeds.Data",
         "BovineLabs.Reaction.Data",
-        "BovineLabs.Stats.Data"
+        "BovineLabs.Stats.Data",
+        "StatsHelpers.Data"
     ],
     "includePlatforms": [
         "Editor"

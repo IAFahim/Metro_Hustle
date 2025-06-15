@@ -1,15 +1,16 @@
-﻿using _src.Scripts.Easings.Runtime.Datas;
+﻿using _src.Scripts.Easings.Easings.Data;
 using Unity.Entities;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace _src.Scripts.Easings.Easings.Authoring
 {
     internal class EaseComponentAuthoring : MonoBehaviour
     {
-        public float duration;
-        public float elapsed;
-        public Ease ease;
-        public bool active;
+        public bool enable;
+        public half duration = new(1);
+        public half elapsed;
+        public Ease ease = Ease.Linear;
 
         internal class EasePositioningBaker : Baker<EaseComponentAuthoring>
         {
@@ -22,7 +23,7 @@ namespace _src.Scripts.Easings.Easings.Authoring
                     Elapsed = authoring.elapsed,
                     Ease = authoring.ease
                 });
-                SetComponentEnabled<EaseComponent>(entity, authoring.active);
+                SetComponentEnabled<EaseComponent>(entity, authoring.enable);
             }
         }
     }

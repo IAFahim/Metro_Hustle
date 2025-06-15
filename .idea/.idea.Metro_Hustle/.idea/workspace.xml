@@ -6,47 +6,41 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core/Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/1 Weight.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/1 Weight.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/1 Max Forward Speed.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/1 Max Forward Speed.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/3 Max Strength.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/3 Max Strength.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/6 Max Stamina.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Stats/6 Max Stamina.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/ReactionSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/ReactionSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Asset Helper.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Asset Helper.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/PointColliderComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/PointColliderComponentAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/PointContactOffsetComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/PointContactOffsetComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/SphereColliderComponentAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Authoring/SphereColliderComponentAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/SphereColliderComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Data/SphereColliderComponent.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/Colliders.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/Colliders.Editor.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderEditorJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderEditorJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Authoring/ConditionSatisfiedFlagComponentAuthoring.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Authoring/ConditionSatisfiedFlagComponentAuthoring.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Data/ConditionSatisfiedFlagComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Data/ConditionSatisfiedFlagComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Editor/Easings.Editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Editor/Easings.Editor.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Editor/Settings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Editor/Settings/Easings.DebugSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Editor/Settings/Easings.DebugSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Runtime.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Runtime/Datas.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Runtime/Datas/Ease.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Easings.Data/Ease.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Runtime/Datas/Ease.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Easings.Data/Ease.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Runtime/Easings.Runtime.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Runtime/Easings.Runtime.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Runtime/Settings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/Positioning.Authoring.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/Positioning.Authoring.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/Positioning.Data.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/Positioning.Data.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Authoring.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Authoring/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Authoring/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Authoring/Conditions.Authoring.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Authoring/Conditions.Authoring.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Data/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Data/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Data/Conditions.Data.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Data/Conditions.Data.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions/Conditions.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions/Conditions.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Easings.Authoring/EaseComponentAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Easings.Authoring/EaseComponentAuthoring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Easings.Data/Ease.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Easings.Data/Ease.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Easings.Data/EaseComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Easings/Easings.Data/EaseComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/EasePositioningJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/EasePositioningJobEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/EasePositioningSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/EasePositioningSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/Positioning.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/Positioning.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Speeds/Speeds.Authoring/SpeedTransferComponentAuthoring.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Speeds/Speeds.Authoring/SpeedTransferComponentAuthoring.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Speeds/Speeds.Data/SpeedTransferComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Speeds/Speeds.Data/SpeedTransferComponent.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EStat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects/WorldRenderTriggerSideEffectJobEntity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +95,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BovineLabs.Sample/UI/Views/Game/GameView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink.Data/CinemachineLinkerSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/CinemachineLink/CinemachineLink/CinemachineLinkerSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Conditions/Conditions.Data/ConditionSatisfied.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/Healths/Healths/UpdateHealthUISystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Authoring/InputEnableTagAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_src/Scripts/InputControls/InputControls.Data/DirectionInputEnableActiveComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -186,13 +181,15 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17828">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="17828" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -332,6 +329,7 @@
       <workItem from="1749942224543" duration="9693000" />
       <workItem from="1749983177395" duration="3090000" />
       <workItem from="1750003062977" duration="2987000" />
+      <workItem from="1750018416844" duration="7337000" />
     </task>
     <servers />
   </component>
@@ -424,6 +422,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/EasePositioningJobEntity.cs</url>
+          <line>29</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Positioning\Positioning\EasePositioningJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="1062" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1105" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderEditorJobEntity.cs</url>
+          <line>49</line>
+          <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\Colliders\Colliders.Editor\SphereColliderEditorJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
+            <startOffsets>
+              <option value="1873" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1905" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
