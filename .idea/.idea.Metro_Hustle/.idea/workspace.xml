@@ -6,28 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3743f67a-418b-4434-a625-6c8949ed42d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Metro_Hustle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/11 Current Threats.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/11 Current Threats.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/13 Health.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/13 Health.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/14 Line Switch Speed.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/14 Line Switch Speed.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/15 Hide Perfromed.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/15 Hide Perfromed.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/16 Slide Perfromed.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/16 Slide Perfromed.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/17 Line Switched.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/Intrinsics/17 Line Switched.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/SideEffect/1 Money SideEffect.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/SideEffect/1 Money SideEffect.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Schemas/SideEffect/2 Damage SideEffect.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Schemas/SideEffect/2 Damage SideEffect.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Settings/StatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Prefabs/PowerUp/Train.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Prefabs/PowerUp/Train.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scenes/Main Sub Scenes Load.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/Colliders.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/Colliders.Editor.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderEditorJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Colliders/Colliders.Editor/SphereColliderEditorJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Authoring/PositioningAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/LeftRightComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning.Data/LeftRightComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/Positioning/Positioning/PositioningJobEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EIntrinsic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/StatsHelpers/StatsHelpers.Data/EIntrinsic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Authoring/SideEffectSchemaObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Authoring/SideEffectSchemaObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Authoring/SideEffectSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Authoring/SideEffectSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Authoring/TriggerSideEffects.Authoring.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_src/Scripts/TriggerSideEffects/TriggerSideEffects.Authoring/TriggerSideEffects.Authoring.asmdef" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,7 +289,7 @@
       <workItem from="1749874955560" duration="1788000" />
       <workItem from="1749893583774" duration="5688000" />
       <workItem from="1749933463748" duration="7039000" />
-      <workItem from="1749942224543" duration="2600000" />
+      <workItem from="1749942224543" duration="3705000" />
     </task>
     <servers />
   </component>
@@ -406,13 +385,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_src/Scripts/RoadMovements/RoadMovements/RoadMovementJobEntity.cs</url>
-          <line>36</line>
+          <line>39</line>
           <properties documentPath="G:\Metro_Hustle\Assets\_src\Scripts\RoadMovements\RoadMovements\RoadMovementJobEntity.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="1277" />
+              <option value="1385" />
             </startOffsets>
             <endOffsets>
-              <option value="1326" />
+              <option value="1434" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="105" />
