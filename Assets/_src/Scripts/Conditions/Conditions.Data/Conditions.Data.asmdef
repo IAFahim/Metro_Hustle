@@ -1,14 +1,9 @@
 {
-    "name": "Colliders.Editor",
+    "name": "Conditions.Data",
     "rootNamespace": "",
     "references": [
         "BovineLabs.Core",
-        "BovineLabs.Core.Editor",
         "BovineLabs.Core.Extensions",
-        "BovineLabs.Core.Extensions.Editor",
-        "Colliders",
-        "Colliders.Authoring",
-        "Colliders.Data",
         "Unity.Burst",
         "Unity.Collections",
         "Unity.Entities",
@@ -18,28 +13,16 @@
         "Unity.Mathematics",
         "Unity.Mathematics.Extensions",
         "Unity.Physics",
-        "Unity.Transforms",
-        "ALINE",
-        "Positioning.Data",
-        "Conditions.Data",
-        "Speeds.Data"
+        "Unity.Transforms"
     ],
     "optionalUnityReferences": [],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": false,
     "defineConstraints": [],
-    "versionDefines": [
-        {
-            "name": "com.arongranberg.aline",
-            "expression": "1.0.0",
-            "define": "ALINE"
-        }
-    ],
+    "versionDefines": [],
     "noEngineReferences": false
 }

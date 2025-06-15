@@ -10,9 +10,8 @@ namespace _src.Scripts.Positioning.Positioning.Authoring
     [DisallowMultipleComponent]
     public class PositioningAuthoring : MonoBehaviour
     {
-        [FormerlySerializedAs("leftRightOffset")] 
+        [FormerlySerializedAs("leftRightOffset")]
         [Header("X")] public half leftRightSpeed;
-        public half leftRightCurrent;
         public half leftRightTarget;
         
         [Header("Y")] public half gravity = new(-30);
@@ -29,7 +28,6 @@ namespace _src.Scripts.Positioning.Positioning.Authoring
                 AddComponent(entity, new LeftRightComponent
                 {
                     Speed = authoring.leftRightSpeed ,
-                    Current = authoring.leftRightCurrent,
                     Target = authoring.leftRightTarget
                 });
                 

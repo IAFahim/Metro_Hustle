@@ -1,4 +1,5 @@
 ﻿using _src.Scripts.Positioning.Positioning.Data;
+using Unity.Burst.CompilerServices;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -45,34 +46,23 @@ namespace _src.Scripts.Positioning.Positioning
 
             ltw.Value.c3.z += forwardBack.Speed * DeltaTime;
 
-            if (leftRight.Target == leftRight.Current) return;
+            var currentX = ltw.Value.c3.x;
+            float direction = leftRight.GetDirection(currentX);
+            if (Hint.Likely(direction == 0 || leftRight.Speed == 0)) return;
             {
-                float direction = (leftRight.Current < leftRight.Target) ? 1 : -1;
-                float movement = leftRight.Speed * direction * DeltaTime;
-                float newX = ltw.Value.c3.x + movement;
-                float newCurrent = leftRight.Current + movement;
-
+                float offset = leftRight.Speed * direction * DeltaTime;
+                float newX = currentX + offset;
+                float newCurrent = newX;
                 if (direction > 0)
                 {
-                    if (newCurrent >= leftRight.Target)
-                    {
-                        float overshoot = newCurrent - leftRight.Target;
-                        newX -= overshoot;
-                        newCurrent = leftRight.Target;
-                    }
+                    if (newX > leftRight.Target) newCurrent = leftRight.Target;
                 }
                 else
                 {
-                    if (newCurrent <= leftRight.Target)
-                    {
-                        float overshoot = leftRight.Target - newCurrent;
-                        newX += overshoot;
-                        newCurrent = leftRight.Target;
-                    }
+                    if (newCurrent < leftRight.Target) newCurrent = leftRight.Target;
                 }
 
-                ltw.Value.c3.x = newX;
-                leftRight.Current = (half)newCurrent;
+                ltw.Value.c3.x = newCurrent;
             }
         }
     }

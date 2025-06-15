@@ -77,10 +77,10 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             bool leftInputActive = directionInput.HasFlagsFast(InputDirectionFlag.LeftEnabledAndActive);
             if (!(rightInputActive || leftInputActive)) return;
 
-            float currentEntityX = ltw.Value.c3.x;
             bool movementParamsUpdated = false;
 
-            var direction = leftRight.GetDirection();
+            float currentX = ltw.Value.c3.x;
+            var direction = leftRight.GetDirection(currentX);
             float newCalculatedTargetX = leftRight.Target;
             var newCalculatedRoadFlag = movement.CurrentRoadFlag;
 
@@ -132,7 +132,6 @@ namespace _src.Scripts.RoadMovements.RoadMovements
             }
 
             if (!movementParamsUpdated) return;
-            leftRight.Current = (half)currentEntityX;
             leftRight.Target = (half)newCalculatedTargetX;
             var intrinsicKey = new IntrinsicKey { Value = (ushort)EIntrinsic.LineSwitchSpeed };
             leftRight.Speed = (half)(intrinsic.GetValue(intrinsicKey) / 100f);

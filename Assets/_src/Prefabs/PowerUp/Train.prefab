@@ -145,9 +145,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftRightSpeed:
     value: 0
-  leftRightDirection: 0
-  leftRightCurrent:
-    value: 0
   leftRightTarget:
     value: 0
   gravity:

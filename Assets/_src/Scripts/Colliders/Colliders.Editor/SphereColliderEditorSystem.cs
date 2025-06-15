@@ -23,7 +23,8 @@ namespace _src.Scripts.Colliders.Colliders.Editor
             var sphereColliderEditorJobEntity = new SphereColliderEditorJobEntity
             {
                 TrackCollidableEntityBuffer = SystemAPI.GetSingletonBuffer<TrackCollidableEntityBuffer>().AsNativeArray().AsReadOnly(),
-                LtwLookup = SystemAPI.GetComponentLookup<LocalToWorld>(true)
+                LtwLookup = SystemAPI.GetComponentLookup<LocalToWorld>(true),
+                CommandBuilder = builder
             };
             sphereColliderEditorJobEntity.ScheduleParallel();
             builder.DisposeAfter(state.Dependency);

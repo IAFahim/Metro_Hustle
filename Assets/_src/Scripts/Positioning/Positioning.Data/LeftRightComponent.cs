@@ -10,15 +10,14 @@ namespace _src.Scripts.Positioning.Positioning.Data
     public struct LeftRightComponent : IComponentData
     {
         public half Speed;
-        public half Current;
-        public half Target;
+        public float Target;
 
         [BurstCompile]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public readonly int GetDirection()
+        public readonly int GetDirection(float current)
         {
-            if (Hint.Likely(Current == Target)) return 0;
-            return (Current < Target) ? 1 : -1;
+            if (Hint.Likely(current == Target)) return 0;
+            return (current < Target) ? 1 : -1;
         }
     }
 }

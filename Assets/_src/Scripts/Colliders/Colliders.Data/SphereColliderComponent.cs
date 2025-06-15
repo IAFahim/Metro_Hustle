@@ -5,6 +5,7 @@ namespace _src.Scripts.Colliders.Colliders.Data
 {
     public struct SphereColliderComponent : IComponentData
     {
-        public float LengthSqrt;
+        public float LengthSq;
+        public half DestroySq;
     }
 }
