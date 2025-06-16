@@ -1,4 +1,5 @@
-﻿using _src.Scripts.ZBuildings.ZBuildings.Data;
+﻿using System;
+using _src.Scripts.ZBuildings.ZBuildings.Data;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
@@ -6,12 +7,12 @@ using UnityEngine.Serialization;
 
 namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
 {
-    public class BlockBufferAuthoring : MonoBehaviour
+    internal class BlockBufferAuthoring : MonoBehaviour
     {
         public half perBlockSize = new(10);
         public half ahead = new(200);
         public half roadSize = new(10);
-        [FormerlySerializedAs("segment50")] public GameObject[] segment;
+        [FormerlySerializedAs("segment50")] public Building[] blocks;
         public GameObject road;
         public GameObject[] obsticals;
 
@@ -27,14 +28,13 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
                     SideOffset = authoring.roadSize
                 });
                 var blockLeftBuffers = AddBuffer<BlockBuffer>(entity);
-                for (var i = 0; i < authoring.segment.Length; i++)
+                foreach (var block in authoring.blocks)
                 {
-                    var obj = authoring.segment[i];
                     blockLeftBuffers.Add(new BlockBuffer
                     {
-                        Left = GetEntity(obj, TransformUsageFlags.None),
+                        Left = GetEntity(block.left, TransformUsageFlags.None),
                         Road = GetEntity(authoring.road, TransformUsageFlags.None),
-                        Right = GetEntity(obj, TransformUsageFlags.None)
+                        Right = GetEntity(block.right, TransformUsageFlags.None)
                     });
                 }
 
@@ -48,6 +48,13 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
                     });
                 }
             }
+        }
+
+        [Serializable]
+        internal class Building
+        {
+            public GameObject left;
+            public GameObject right;
         }
     }
 }
