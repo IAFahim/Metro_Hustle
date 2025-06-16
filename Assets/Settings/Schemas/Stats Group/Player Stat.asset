@@ -28,6 +28,6 @@ MonoBehaviour:
   - Stat: {fileID: 11400000, guid: f15bb5f96a6e80d49ae58f0f35652d14, type: 2}
     ModifyType: 0
     Value: 10
-  - Stat: {fileID: 11400000, guid: 0ae1015f4b4ad954da4a51bf0ce06fd1, type: 2}
+  - Stat: {fileID: 11400000, guid: 11d4cea24b07a714eaa5c99c310aebe5, type: 2}
     ModifyType: 0
     Value: 10
