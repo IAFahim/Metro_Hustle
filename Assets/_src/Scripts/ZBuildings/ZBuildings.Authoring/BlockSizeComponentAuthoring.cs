@@ -2,6 +2,7 @@
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
 {
@@ -10,7 +11,7 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
         public half perBlockSize = new(10);
         public half ahead = new(200);
         public half roadSize = new(10);
-        public GameObject[] segment50;
+        [FormerlySerializedAs("segment50")] public GameObject[] segment;
         public GameObject road;
         public GameObject[] obsticals;
 
@@ -26,9 +27,9 @@ namespace _src.Scripts.ZBuildings.ZBuildings.Authoring
                     SideOffset = authoring.roadSize
                 });
                 var blockLeftBuffers = AddBuffer<BlockBuffer>(entity);
-                for (var i = 0; i < authoring.segment50.Length; i++)
+                for (var i = 0; i < authoring.segment.Length; i++)
                 {
-                    var obj = authoring.segment50[i];
+                    var obj = authoring.segment[i];
                     blockLeftBuffers.Add(new BlockBuffer
                     {
                         Left = GetEntity(obj, TransformUsageFlags.None),

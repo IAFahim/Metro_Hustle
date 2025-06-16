@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 1487358445}
   - component: {fileID: 1487358444}
   - component: {fileID: 1487358448}
-  - component: {fileID: 1487358447}
+  - component: {fileID: 1487358449}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
@@ -280,20 +280,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1487358447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487358443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 518dbd8d31b947d4a7ba9596b86e330e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftGroups: []
-  rightGroups: []
 --- !u!114 &1487358448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,7 +298,7 @@ MonoBehaviour:
     value: 23728
   roadSize:
     value: 18432
-  segment50:
+  segment:
   - {fileID: 5669421507308461431, guid: 8004b0eec1a82e3498188d6dc0c8860a, type: 3}
   - {fileID: 1951927346711952549, guid: 775dec7037a419844aa45c3828cf2541, type: 3}
   - {fileID: 6510705297105038620, guid: 076890f1ac705b14583f4096c6950452, type: 3}
@@ -321,6 +307,22 @@ MonoBehaviour:
   road: {fileID: 3864285107160656504, guid: b46c82ac244f56a45a33022ca53ded4c, type: 3}
   obsticals:
   - {fileID: 3397272447093054247, guid: b80b612bccc7f4e4c946216219d93ff0, type: 3}
+--- !u!114 &1487358449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487358443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee01a3a4114e4fa79c5f1606c051860a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startBlock: {fileID: 5985251880542872701, guid: 2fb3cd4218074874f9cfbdd638e59b79, type: 3}
+  startRoad: {fileID: 3864285107160656504, guid: b46c82ac244f56a45a33022ca53ded4c, type: 3}
+  endBlock: {fileID: 5985251880542872701, guid: 2fb3cd4218074874f9cfbdd638e59b79, type: 3}
+  endRoad: {fileID: 3864285107160656504, guid: b46c82ac244f56a45a33022ca53ded4c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
